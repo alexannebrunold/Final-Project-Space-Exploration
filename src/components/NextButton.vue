@@ -13,7 +13,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .nextButton {
 	border: 3px solid #ffffff;
 	border-radius: 5px;
