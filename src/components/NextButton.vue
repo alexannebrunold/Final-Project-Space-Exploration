@@ -1,21 +1,25 @@
 <template>
 	<div>
-		<button class="nextButton">
+		<router-link class="nextButton" to="/about">
 			Suivant
 			<img src="../assets/img/Vector.svg" />
-		</button>
+		</router-link>
 	</div>
 </template>
 
 <script>
 export default {
+	props: {
+		nom: String,
+	},
 	name: "NextButton",
 }
 </script>
 
 <style lang="scss">
 .nextButton {
-	border: 3px solid #ffffff;
+	text-decoration: none;
+	border: 3px solid $white;
 	border-radius: 5px;
 	color: #ffffff;
 	width: 80px;
@@ -23,7 +27,7 @@ export default {
 	padding: 0.8%;
 	text-align: center;
 	&:hover {
-		background-color: #ffffff;
+		background-color: $white;
 		color: #000000;
 		cursor: pointer;
 
