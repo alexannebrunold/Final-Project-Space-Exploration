@@ -21,7 +21,7 @@ export default {
 		},
 		nextPageName: function() {
 			return this.routes.find((e) => {
-				return (e.path = this.currentPage)
+				return e.name === this.currentPage
 			}).nextPage
 		},
 	},
