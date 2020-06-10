@@ -11,14 +11,6 @@ export default {
 		textPrimaryButton: String,
 		name: String,
 	},
-	// computed: {
-	// 	nextPageName: function() {
-	// 		console.log("e")
-	// 		return this.routes.find((e) => {
-	// 			return e.name
-	// 		})
-	// 	},
-	// },
 	mounted() {
 		console.log("aaaa" + this.$router.params)
 	},

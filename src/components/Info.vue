@@ -1,24 +1,22 @@
 <template>
-	<div>
-		<router-link class="info" to="">
-			<div class="info__Img">
-				<img :src="require(`@/assets/${imageUrl}`)" />
-				<div class="info__Img__Quote">
-					{{ quoteInfo }}
-				</div>
+	<div class="info" to="">
+		<div class="info__Img">
+			<img :src="imageUrl" />
+			<div class="info__Img__Quote">
+				{{ quoteInfo }}
 			</div>
-			<div class="info__Content">
-				<div class="info__Content__Subtitle">
-					{{ titleInfo }}
-				</div>
-				<div class="info__Content__Text">
-					{{ textInfo }}
-				</div>
-				<div class="info__Content__LearnMore">
-					<LearnMore />
-				</div>
+		</div>
+		<div class="info__Content">
+			<div class="info__Content__Subtitle">
+				{{ titleInfo }}
 			</div>
-		</router-link>
+			<div class="info__Content__Text">
+				{{ textInfo }}
+			</div>
+			<div class="info__Content__LearnMore">
+				<LearnMore />
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -30,7 +28,7 @@ export default {
 		LearnMore,
 	},
 	props: {
-		imageUrl: String,
+		imageUrl: {},
 		quoteInfo: String,
 		titleInfo: String,
 		textInfo: String,
@@ -38,18 +36,17 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .info {
 	font-family: "Poppins";
 	color: white;
 	display: flex;
-
+	background-color: $black;
 	&__Img {
-		width: auto;
+		width: 100%;
 		height: 100vh;
 		position: relative;
 		display: flex;
-
 		&__Quote {
 			background: black;
 			opacity: 40%;
@@ -59,7 +56,6 @@ export default {
 			font-size: 12pt;
 			position: absolute;
 			bottom: 25px;
-
 			& p {
 				background: none;
 			}
