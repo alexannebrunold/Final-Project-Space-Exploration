@@ -29,7 +29,7 @@ export default {
 .primaryButton {
 	font-family: "Poppins";
 	font-weight: regular;
-	font-size: 22px;
+	font-size: 18px;
 	background-color: #ffffff;
 	border-radius: 5px;
 	border: solid 3px #ffffff;

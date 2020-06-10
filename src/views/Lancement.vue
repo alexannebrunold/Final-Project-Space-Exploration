@@ -4,7 +4,7 @@
 			<PrimaryButton textPrimaryButton="Lancer Spoutnik 1" class="launch__button" />
 		</div>
 		<div class="launch__container">
-			<p class="container__text">La course à l’espace démarre le 4 octobre 1957, Le petit satellite soviétique Spoutnik 1 est envoyé dans l’espace.</p>
+			<p>La course à l’espace démarre le 4 octobre 1957, Le petit satellite soviétique Spoutnik 1 est envoyé dans l’espace.</p>
 		</div>
 	</div>
 </template>
@@ -42,15 +42,22 @@ export default {
 		justify-content: center;
 		position: absolute;
 		bottom: 5%;
-		min-width: 100vw;
+    min-width: 100vw;
+    
+    & p {
+      font-family: "Poppins";
+      font-weight: regular;
+      font-size: 26px;
+      width: 50%;
+      line-height: 150%;
+    }
+    
+    & p::selection {
+      background: black;
+    }
 	}
-	.container__text {
-		font-family: "Poppins";
-		font-weight: regular;
-		font-size: 26px;
-		width: 50%;
-		line-height: 150%;
-	}
+  
+
 }
 
 </style>
