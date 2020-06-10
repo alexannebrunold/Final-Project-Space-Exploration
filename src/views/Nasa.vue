@@ -22,6 +22,10 @@
 <style lang="scss">
 .nasa {
   background-image: url("~@/assets/img/nasabackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
 
   &__container {
     display: flex;
