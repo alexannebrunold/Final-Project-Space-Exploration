@@ -1,5 +1,5 @@
 <template>
-	<div class="about">
+	<div class="about page">
 		<div class="about__title">
 			<p>We choose to go to the</p>
 			<h1>Moon</h1>
@@ -12,20 +12,25 @@
 		</div>
 
 		<PrimaryButton textPrimaryButton="Component Gobal Button" class="about__inputName" />
-		<NextButton class="about__decollage" />
-		<!-- <PrimaryButton textPrimaryButton="Décollage" class="about__decollage" /> -->
+		<PrimaryButton
+			textPrimaryButton="Décollage"
+			class="about__decollage"
+			@click.native="$router.push('/lancement')"
+		/>
 		<p class="about__schoolProject">Projet étudiant Hétic - 2020</p>
 	</div>
 </template>
 
 <script>
 import PrimaryButton from "@/components/PrimaryButton.vue"
-import NextButton from "@/components/NextButton.vue"
+
 export default {
 	name: "about",
 	components: {
 		PrimaryButton,
-		NextButton,
+	},
+	mounted() {
+		console.log(PrimaryButton)
 	},
 }
 </script>
@@ -34,6 +39,10 @@ export default {
 .about {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: brown;
+
 	&__title {
 		font-size: 24px;
 		margin-top: 8%;
