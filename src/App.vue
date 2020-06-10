@@ -9,7 +9,7 @@
 
 <style lang="scss">
 .page {
-	min-height: 100vh;
+	height: 100vh;
 	width: 100vw;
 	font-family: "Poppins";
 }
