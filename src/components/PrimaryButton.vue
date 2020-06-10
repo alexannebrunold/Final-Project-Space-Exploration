@@ -1,9 +1,7 @@
 <template>
-	<div>
-		<button class="primaryButton">
-			{{ textPrimaryButton }}
-		</button>
-	</div>
+	<button class="primaryButton">
+		{{ textPrimaryButton }}
+	</button>
 </template>
 
 <script>
@@ -11,11 +9,23 @@ export default {
 	name: "PrimaryButton",
 	props: {
 		textPrimaryButton: String,
+		name: String,
+	},
+	// computed: {
+	// 	nextPageName: function() {
+	// 		console.log("e")
+	// 		return this.routes.find((e) => {
+	// 			return e.name
+	// 		})
+	// 	},
+	// },
+	mounted() {
+		console.log("aaaa" + this.$router.params)
 	},
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .primaryButton {
 	font-family: "Poppins";
 	font-weight: regular;
