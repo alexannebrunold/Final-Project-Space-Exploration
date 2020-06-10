@@ -35,6 +35,7 @@ export default {
 	border: solid 3px #ffffff;
 	color: #000000;
 	padding: 15px 50px;
+	user-select: none;
 	transition: ease-out 0.2s;
 	&:hover {
 		transition: ease-out 0.2s;
