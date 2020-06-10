@@ -1,26 +1,118 @@
 <template>
-  <div class="home">
-    <h1 class="title">La course À l’espace</h1>
-    <NextButton />
-  </div>
+	<div class="about page">
+		<video autoplay loop class="about__video">
+		<source src="../assets/videos/bg-video.mp4" type="video/mp4">
+		</video>
+		<div class="about__title">
+			<p>We choose to go to the</p>
+			<h1>Moon</h1>
+		</div>
+		<div class="about__textPresentation">
+			<p>Bienvenue parmis nous pour un incroyable voyage lunaire</p>
+			<p class="about__textPresentation--nameUtilisateur">
+				Dis nous en plus, quel est ton nom ?
+			</p>
+		</div>
+
+		<PrimaryButton textPrimaryButton="Component Gobal Button" class="about__inputName" />
+		<PrimaryButton
+			textPrimaryButton="Décollage"
+			class="about__decollage"
+			@click.native="$router.push('/lancement')"
+		/>
+		<p class="about__schoolProject">Projet étudiant Hétic - 2020</p>
+	</div>
 </template>
 
 <script>
-import NextButton from "@/components/NextButton.vue";
+import PrimaryButton from "@/components/PrimaryButton.vue"
 
 export default {
-  name: "Home",
-  components: {
-    NextButton,
-  },
-};
+	name: "about",
+	components: {
+		PrimaryButton,
+	},
+	mounted() {
+		console.log(PrimaryButton)
+	},
+}
 </script>
 
 <style lang="scss">
-.title {
-  font-family: "Poppins";
-  font-weight: bold;
-  letter-spacing: 2px;
-  line-height: 125%;
+.about {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+	&__video {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -10;
+	}
+
+	&__title {
+		font-size: 24px;
+		margin-top: 10%;
+		font-family: "Poppins";
+		font-weight: lighter;
+		
+		@include smartphone {
+			font-size: 16px;
+		}
+		& h1 {
+			margin-bottom: 10%;
+			font-size: 144px;
+			text-transform: uppercase;
+			-webkit-text-stroke: 1px;
+			-webkit-text-stroke-color: $white;
+			color: transparent;
+			font-weight: bold;
+			@include smartphone {
+				font-size: 80px;
+			}
+		}
+
+		& h1::selection { 
+			background: black; 
+		}
+
+		& p {
+			margin-bottom: 10%;
+		}
+		& p::selection {
+			background: black;
+		}
+	}
+	&__textPresentation {
+		margin-bottom: 5%;
+		font-size: 30px;
+		font-family: "Poppins";
+		font-weight: normal;
+		&--nameUtilisateur {
+			font-size: 22px;
+			margin-top: 10px;
+		}
+		& p::selection {
+			background: black;
+		}
+	}
+	&__inputName {
+		margin-bottom: 5%;
+	}
+	&__decollage {
+		margin-bottom: 5%;
+	}
+	&__schoolProject {
+		font-family: "Poppins";
+		font-weight: normal;
+		position: absolute;
+		font-size: 14px;
+		bottom: 5px;
+	}
 }
 </style>
