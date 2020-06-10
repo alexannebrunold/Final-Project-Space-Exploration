@@ -23,7 +23,6 @@ export default {
 .launch {
 	background-image: url('~@/assets/img/lancement.png');
 	width: auto;
-	height: 100vh;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;

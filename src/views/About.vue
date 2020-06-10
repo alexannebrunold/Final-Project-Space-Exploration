@@ -1,5 +1,8 @@
 <template>
 	<div class="about page">
+		<video autoplay loop class="about__video">
+		<source src="../assets/videos/bg-video.mp4" type="video/mp4">
+		</video>
 		<div class="about__title">
 			<p>We choose to go to the</p>
 			<h1>Moon</h1>
@@ -41,19 +44,30 @@ export default {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: brown;
+
+	&__video {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -10;
+	}
 
 	&__title {
 		font-size: 24px;
-		margin-top: 8%;
+		margin-top: 10%;
+		font-family: "Poppins";
 		font-weight: lighter;
+		
 		@include smartphone {
 			font-size: 16px;
 		}
 		& h1 {
+			margin-top: 7%;
 			font-size: 144px;
 			text-transform: uppercase;
-			-webkit-text-stroke: 2px;
+			-webkit-text-stroke: 1px;
 			-webkit-text-stroke-color: $white;
 			color: transparent;
 			font-weight: bold;
@@ -61,13 +75,26 @@ export default {
 				font-size: 80px;
 			}
 		}
+
+		& h1::selection { 
+			background: black; 
+		}
+
+		& p::selection {
+			background: black;
+		}
 	}
 	&__textPresentation {
 		margin-top: 2%;
-		font-size: 24px;
-		font-weight: 500;
+		font-size: 30px;
+		font-family: "Poppins";
+		font-weight: normal;
 		&--nameUtilisateur {
-			font-size: 18px;
+			font-size: 22px;
+			margin-top: 10px;
+		}
+		& p::selection {
+			background: black;
 		}
 	}
 	&__inputName {
