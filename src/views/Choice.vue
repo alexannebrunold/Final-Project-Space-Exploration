@@ -17,6 +17,7 @@
 <style lang="scss">
 .choice {
 	background-color: $black;
+	overflow: hidden;
 	&__views {
 		display: flex;
 		flex-direction: row;
@@ -28,7 +29,7 @@
 			filter: grayscale(100%);
 			& img {
 				position: relative;
-				height: 680px;
+				height: 100%;
 				width: 100%;
 				object-fit: cover;
 				object-position: top;
@@ -50,7 +51,6 @@
 			-webkit-filter: grayscale(100%);
 			filter: grayscale(100%);
 			& img {
-				height: 680px;
 				width: 100%;
 				object-fit: cover;
 			}
