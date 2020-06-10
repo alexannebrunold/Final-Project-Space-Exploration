@@ -1,17 +1,17 @@
 @mixin smartphone {
-  @media (max-width: $smartphone) {
+  @media (min-width: $smartphone) {
     @content;
   }
 }
 
-// @mixin tablette{
-//     @media (min-width:$tablette){
-//         @content;
-//     }
-// }
+ @mixin tablette {
+     @media (max-width:$tablette){
+        @content;
+    }
+ }
 
-@mixin pc {
-  @media (min-width: $pc) {
+@mixin laptop {
+  @media (max-width: $laptop) {
     @content;
   }
 }

@@ -13,8 +13,6 @@
 				Dis nous en plus, quel est ton nom ?
 			</p>
 		</div>
-
-		<PrimaryButton textPrimaryButton="Component Gobal Button" class="about__inputName" />
 		<PrimaryButton
 			textPrimaryButton="Décollage"
 			class="about__decollage"
@@ -38,7 +36,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">*
+
 .about {
 	display: flex;
 	flex-direction: column;
@@ -56,17 +55,12 @@ export default {
 	}
 
 	&__title {
-		font-size: 24px;
-		margin-top: 10%;
+		font-size: 18px;
+		padding-bottom: 5%;
 		font-family: "Poppins";
 		font-weight: lighter;
-		
-		@include smartphone {
-			font-size: 16px;
-		}
 		& h1 {
-			margin-bottom: 10%;
-			font-size: 144px;
+			padding-bottom: 5%;
 			text-transform: uppercase;
 			-webkit-text-stroke: 1px;
 			-webkit-text-stroke-color: $white;
@@ -82,30 +76,30 @@ export default {
 		}
 
 		& p {
-			margin-bottom: 10%;
+			padding-bottom: 20px;
 		}
 		& p::selection {
 			background: black;
 		}
 	}
 	&__textPresentation {
-		margin-bottom: 5%;
-		font-size: 30px;
+		margin-bottom: 20px;
+		padding: 0 10px;
+		font-size: 18px;
 		font-family: "Poppins";
 		font-weight: normal;
 		&--nameUtilisateur {
-			font-size: 22px;
+			font-size: 14px;
 			margin-top: 10px;
 		}
 		& p::selection {
 			background: black;
 		}
 	}
-	&__inputName {
-		margin-bottom: 5%;
-	}
+
 	&__decollage {
-		margin-bottom: 5%;
+		font-size: 16px;
+		margin-top: 20px;
 	}
 	&__schoolProject {
 		font-family: "Poppins";
@@ -114,5 +108,11 @@ export default {
 		font-size: 14px;
 		bottom: 5px;
 	}
+
+	&__schoolProject::selection {
+		background: black;
+	}
+
 }
+
 </style>
