@@ -25,17 +25,22 @@ const routes = [
 		path: "/loading",
 		name: "Loading",
 		nextPage: "Contexte",
-		component: () => import(/* webpackChunkName: "about" */ "../views/Loading.vue"),
+		component: () => import(/* webpackChunkName: "about" */ "@/views/Loading.vue"),
 	},
 	{
 		path: "/contexte",
 		name: "Contexte",
-		component: () => import("../views/Contexte.vue"),
+		component: () => import("@/views/Contexte.vue"),
 	},
 	{
 		path: "/lancement",
 		name: "Lancement",
-		component: () => import("../views/Lancement.vue"),
+		component: () => import("@/views/Lancement.vue"),
+	},
+	{
+		path: "/choice",
+		name: "Choice",
+		component: () => import("@/views/Choice.vue"),
 	},
 ]
 
