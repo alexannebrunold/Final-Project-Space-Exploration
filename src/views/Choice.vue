@@ -23,23 +23,32 @@
 		font-size: 78px;
 		font-weight: 100;
 		letter-spacing: 0.35em;
-
 		&__US {
+			-webkit-filter: grayscale(100%);
+			filter: grayscale(100%);
 			& img {
 				position: relative;
 				height: 680px;
 				width: 100%;
-				// object-fit: cover;
-				// top: 2%;
+				object-fit: cover;
+				object-position: top;
 			}
 			& p {
 				position: absolute;
 				vertical-align: middle;
 				top: 40%;
-				width: 50%;
+				width: 100%;
+			}
+			&:hover {
+				-webkit-filter: grayscale(0%);
+				filter: grayscale(0%);
+				box-shadow: 14px 0 50px #000000;
+				z-index: 1;
 			}
 		}
 		&__URSS {
+			-webkit-filter: grayscale(100%);
+			filter: grayscale(100%);
 			& img {
 				height: 680px;
 				width: 100%;
@@ -49,7 +58,13 @@
 				position: absolute;
 				vertical-align: middle;
 				top: 40%;
-				width: 50%;
+				width: 100%;
+			}
+			&:hover {
+				-webkit-filter: grayscale(0%);
+				filter: grayscale(0%);
+				box-shadow: -14px 0 50px #000000;
+				z-index: 1;
 			}
 		}
 	}
@@ -59,6 +74,7 @@
 		top: 80%;
 		width: 100%;
 		font-size: 64px;
+		z-index: 2;
 		font-weight: 300;
 	}
 }
