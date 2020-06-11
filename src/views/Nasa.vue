@@ -44,29 +44,53 @@ export default {
   }
 
   &__logo {
-    padding-left: 50px;
-    height: 120px;
-    display: flex;
-    align-items: center;
+    display: none;
+    @include tablette {
+      display: block;
+      padding-left: 20px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+    }
+    @include laptop {
+      padding-left: 50px;
+    }
   }
 
   &__trait {
-    width: 80px;
-    border-bottom: 8px dotted;
-    color: white;
+    @include tablette {
+      width: 40px;
+      border-bottom: 6px dotted;
+      color: white;
+    }
+    @include laptop {
+      width: 80px;
+      border-bottom: 8px dotted;
+    }
   }
 
   &__title {
-    padding-right: 50px;
-    padding-top: 20px;
+    padding-top: 40px;
     width: 830px;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include tablette {
+      width: 830px;
+    }
+    @include laptop {
+      padding-right: 50px;
+    }
 
     h1 {
-      font-size: 78px;
+      font-size: 48px;
       font-family: "Poppins";
       text-transform: uppercase;
       color: #ffffff;
-      text-align: right;
+      text-align: center;
+      @include tablette {
+        font-size: 78px;
+        text-align: right;
+      }
     }
 
     h2 {
@@ -75,21 +99,43 @@ export default {
       font-family: "Poppins";
       font-weight: lighter;
       text-transform: uppercase;
-      text-align: right;
-      padding-bottom: 10px;
+      text-align: center;
+      padding-bottom: 60px;
+      @include tablette {
+        text-align: right;
+        padding-bottom: 10px;
+      }
     }
 
     h3 {
+<<<<<<< HEAD
       font-size: 22px;
+=======
+      font-size: 24px;
+>>>>>>> 8958df57bf0d3e5421fa7a9bf2553e8695aa02c8
       color: white;
       font-family: "Poppins";
-      text-align: right;
+      text-align: left;
+      display: flex;
+      justify-content: center;
+      @include tablette {
+        font-size: 22px;
+        text-align: right;
+      }
     }
   }
   &__btn {
     display: flex;
-    justify-content: flex-end;
-    padding: 50px;
+    justify-content: center;
+    padding: 80px 20px;
+    @include tablette {
+      display: flex;
+      justify-content: flex-end;
+      padding: 50px 20px;
+    }
+    @include laptop {
+      padding: 50px;
+    }
   }
 }
 </style>
