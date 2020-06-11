@@ -7,9 +7,7 @@
 			<p>We choose to go to the</p>
 			<h1>Moon</h1>
 		</div>
-		<div class="home__textLeft">
-			<p>The moon race</p>
-		</div>
+		<p class="home__textLeft">The moon race</p>
 		<div class="home__textPresentation">
 			<p>Bienvenue parmis nous pour un incroyable voyage lunaire</p>
 			<p class="home__textPresentation--nameUtilisateur">
@@ -68,7 +66,7 @@ export default {
 		padding-bottom: 10px;
 		font-family: "Poppins";
 		font-weight: lighter;
-		@include tablette {
+		@include tablet {
 			font-size: 24px;
 		}
 		@include laptop {
@@ -86,7 +84,7 @@ export default {
 			color: transparent;
 			font-weight: bold;
 			font-size: 80px;
-			@include tablette {
+			@include tablet {
 				font-size: 110px;
 			}
 			@include laptop {
@@ -112,6 +110,7 @@ export default {
 	&__textLeft {
 		color: transparent;
 		font-size: 30px;
+		height: 1em;
 		font-family: "Poppins";
 		font-weight: 300;
 		text-transform: uppercase;
@@ -123,7 +122,8 @@ export default {
 		position: absolute;
 		user-select: none;
 
-		@include tablette {
+		@include tablet {
+		height: auto;
 		font-size: 55px;
 		left: 5px;
 		text-orientation: sideways;
@@ -143,7 +143,7 @@ export default {
 		font-size: 18px;
 		font-family: "Poppins";
 		font-weight: normal;
-		@include tablette {
+		@include tablet {
 			width: 75%;
 			font-size: 24px;
 			margin-top: 10px;
@@ -157,7 +157,7 @@ export default {
 		&--nameUtilisateur {
 			font-size: 14px;
 			margin-top: 10px;
-			@include tablette {
+			@include tablet {
 				font-size: 16px;
 			}
 			@include laptop {
@@ -179,7 +179,7 @@ export default {
 
 	&__decollage {
 		margin-top: 20px;
-		@include tablette {
+		@include tablet {
 			margin-top: 30px;
 		}
 		@include laptop {
