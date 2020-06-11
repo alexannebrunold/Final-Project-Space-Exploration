@@ -17,19 +17,19 @@
       <div class="info__Content__Text">
         {{ textInfo }}
       </div>
-      <div class="info__Content__LearnMore">
-        <LearnMore />
+      <div class="info__Content__PrimaryButton">
+        <PrimaryButton />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import LearnMore from "@/components/LearnMore.vue";
+import PrimaryButton from "@/components/PrimaryButton.vue";
 export default {
   name: "Info",
   components: {
-    LearnMore,
+    PrimaryButton,
   },
   props: {
     imageUrl: {},

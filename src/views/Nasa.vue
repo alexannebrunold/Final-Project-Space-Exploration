@@ -16,16 +16,20 @@
         </h3>
       </div>
     </div>
-    <LearnMore textLearnMore="En savoir plus" class="nasa__btn" />
+      <PrimaryButton
+			textPrimaryButton="Décollage"
+			class="nasa__btn"
+			@click.native="$router.push('/Contexte')"
+		/>
   </div>
 </template>
 
 <script>
-import LearnMore from "@/components/LearnMore.vue";
+import PrimaryButton from "@/components/PrimaryButton.vue";
 export default {
-  name: "lancement",
+  name: "nasa",
   components: {
-    LearnMore,
+    PrimaryButton,
   },
 };
 </script>
@@ -108,10 +112,10 @@ export default {
     }
 
     h3 {
-      font-size: 24px;
+      font-size: 20px;
       color: white;
       font-family: "Poppins";
-      text-align: left;
+      text-align: center;
       display: flex;
       justify-content: center;
       @include tablet {
@@ -121,16 +125,13 @@ export default {
     }
   }
   &__btn {
-    display: flex;
-    justify-content: center;
-    padding: 80px 20px;
+    margin-top: 50px;
     @include tablet {
-      display: flex;
-      justify-content: flex-end;
-      padding: 50px 20px;
+   
+
     }
     @include laptop {
-      padding: 50px;
+      
     }
   }
 }
