@@ -3,7 +3,9 @@
 		<div id="nav">
 			<!-- <router-link to="/">Home</router-link> -->
 		</div>
-		<router-view />
+		<transition name="view">
+			<router-view />
+		</transition>
 	</div>
 </template>
 
@@ -43,6 +45,44 @@
 		&.router-link-exact-active {
 			color: $white;
 		}
+	}
+}
+
+.view-leave-active,
+.view-enter-active {
+	transition-delay: 1s;
+	animation: stretch 1s ease-in-out;
+}
+//  {
+// 	transition-delay: 0.8s;
+// 	animation: stretch 0.8s ease-in;
+// }
+.view-enter {
+	opacity: 0;
+	// transform: translateX(100px);
+}
+.view-enter-to {
+	opacity: 1;
+	// transform: translateX(0px);
+}
+.view-leave {
+	opacity: 0;
+	// transform: translateY(0px);
+}
+.view-leave-to {
+	opacity: 1;
+	// transform: translateX(-100px);
+}
+
+@keyframes stretch {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 0;
 	}
 }
 </style>

@@ -10,9 +10,6 @@
 <script>
 export default {
 	name: "LearnMore",
-	props: {
-		nom: String,
-	},
 }
 </script>
 
