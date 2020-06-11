@@ -32,9 +32,11 @@ export default {
 	@include tablette {
 		font-size: 16px;
 	}
-
 	@include laptop {
 		font-size: 18px;
+	}
+	@include pc {
+		font-size: 28px;
 	}
 
 	&:hover {
