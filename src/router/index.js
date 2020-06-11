@@ -41,6 +41,11 @@ const routes = [
     name: "Nasa",
     component: () => import("@/views/Nasa.vue"),
   },
+  {
+    path: "/liftoff",
+    name: "Liftoff",
+    component: () => import("@/views/Liftoff.vue"),
+  },
 ];
 
 const router = new VueRouter({
