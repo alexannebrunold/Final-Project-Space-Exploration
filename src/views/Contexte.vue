@@ -2,7 +2,8 @@
   <div class="context">
     <Info
       class="context__info"
-      :imageUrl="imageSrc"
+      :imageUrlLaptop="imageSrcLaptop"
+      :imageUrlPhone="imageSrcPhone"
       quoteInfo="Moi envoyer fusée dans espace faire vroum"
       titleInfo="Sergei"
       subtitleInfo="Le premier satellite dans l'espace"
@@ -18,7 +19,8 @@ export default {
   name: "context",
   data() {
     return {
-      imageSrc: require("../assets/img/sergei_korolev.png"),
+      imageSrcLaptop: require("../assets/img/sergei_korolev.png"),
+      imageSrcPhone: require("../assets/img/sergei_korolev_phone.png"),
     };
   },
   components: {
