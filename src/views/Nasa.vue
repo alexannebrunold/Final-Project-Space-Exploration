@@ -108,7 +108,7 @@ export default {
     }
 
     h3 {
-      font-size: 26px;
+      font-size: 24px;
       color: white;
       font-family: "Poppins";
       text-align: left;
@@ -123,7 +123,7 @@ export default {
   &__btn {
     display: flex;
     justify-content: center;
-    padding: 100px 20px;
+    padding: 80px 20px;
     @include tablette {
       display: flex;
       justify-content: flex-end;
