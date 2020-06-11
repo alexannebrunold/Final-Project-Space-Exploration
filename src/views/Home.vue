@@ -22,7 +22,7 @@
 		<PrimaryButton
 			textPrimaryButton="Décollage"
 			class="home__decollage"
-			@click.native="$router.push('/lancement')"
+			@click.native="$router.push('/Contexte')"
 		/>
 		<p class="home__schoolProject">Projet étudiant Hétic - 2020</p>
 	</div>
@@ -133,7 +133,7 @@ export default {
 			font-size: 65px;
 		}
 		@include pc {
-			font-size: 110px;
+			font-size: 90px;
 		}
 	}
 

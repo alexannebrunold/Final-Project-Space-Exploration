@@ -35,7 +35,7 @@ form {
 			font-size: 20px;
 		}
 		@include pc {
-			font-size: 28px;
+			font-size: 24px;
 		}
 	}
 	input::placeholder {
