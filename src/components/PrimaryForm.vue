@@ -31,8 +31,11 @@ form {
 			font-size: 18px;
 		}
 		@include laptop {
-				padding: 20px 50px;
+			padding: 20px 50px;
 			font-size: 20px;
+		}
+		@include pc {
+			font-size: 28px;
 		}
 	}
 	input::placeholder {

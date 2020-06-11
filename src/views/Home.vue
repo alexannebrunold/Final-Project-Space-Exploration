@@ -74,6 +74,9 @@ export default {
 		@include laptop {
 			font-size: 28px;
 		}
+		@include pc {
+			font-size: 36px;
+		}
 
 		& h1 {
 			padding-bottom: 5%;
@@ -88,6 +91,9 @@ export default {
 			}
 			@include laptop {
 				font-size: 125px;
+			}
+			@include pc {
+				font-size: 200px;
 			}
 		}
 
@@ -110,7 +116,7 @@ export default {
 		font-weight: 300;
 		text-transform: uppercase;
 		letter-spacing: 5px;
-		-webkit-text-stroke: 0.2px;
+		-webkit-text-stroke: 0.3px;
 		-webkit-text-stroke-color: $white;
 		top: 5px;
 		bottom: 0;
@@ -126,6 +132,9 @@ export default {
 		@include laptop {
 			font-size: 65px;
 		}
+		@include pc {
+			font-size: 110px;
+		}
 	}
 
 	&__textPresentation {
@@ -137,9 +146,13 @@ export default {
 		@include tablette {
 			width: 75%;
 			font-size: 24px;
+			margin-top: 10px;
 		}
 		@include laptop {
 			font-size: 28px;
+		}
+		@include pc {
+			font-size: 40px;
 		}
 		&--nameUtilisateur {
 			font-size: 14px;
@@ -148,7 +161,11 @@ export default {
 				font-size: 16px;
 			}
 			@include laptop {
+				margin-bottom: 20px;
 				font-size: 18px;
+			}
+			@include pc {
+				font-size: 26px;
 			}
 		}
 		& p::selection {
@@ -162,6 +179,12 @@ export default {
 
 	&__decollage {
 		margin-top: 20px;
+		@include tablette {
+			margin-top: 30px;
+		}
+		@include laptop {
+			margin-top: 50px;
+		}
 	}
 	&__schoolProject {
 		font-family: "Poppins";
