@@ -16,10 +16,21 @@
         </h3>
       </div>
     </div>
+    <LearnMore textLearnMore="En savoir plus" class="nasa__btn" />
   </div>
 </template>
 
-<style lang="scss">
+<script>
+import LearnMore from "@/components/LearnMore.vue";
+export default {
+  name: "lancement",
+  components: {
+    LearnMore,
+  },
+};
+</script>
+
+<style scoped lang="scss">
 .nasa {
   background-image: url("~@/assets/img/nasabackground.png");
   background-size: cover;
@@ -48,6 +59,8 @@
   &__title {
     padding-right: 50px;
     padding-top: 20px;
+    width: 830px;
+
     h1 {
       font-size: 78px;
       font-family: "Poppins";
@@ -71,8 +84,12 @@
       color: white;
       font-family: "Poppins";
       text-align: right;
-      width: 840px;
     }
+  }
+  &__btn {
+    display: flex;
+    justify-content: flex-end;
+    padding: 50px;
   }
 }
 </style>
