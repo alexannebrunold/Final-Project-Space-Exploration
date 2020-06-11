@@ -45,7 +45,7 @@ export default {
 
   &__logo {
     display: none;
-    @include tablette {
+    @include tablet {
       display: block;
       padding-left: 20px;
       height: 120px;
@@ -58,7 +58,7 @@ export default {
   }
 
   &__trait {
-    @include tablette {
+    @include tablet {
       width: 40px;
       border-bottom: 6px dotted;
       color: white;
