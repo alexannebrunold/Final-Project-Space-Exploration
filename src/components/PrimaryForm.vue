@@ -27,7 +27,7 @@ form {
 		background-color: transparent;
 		color: #ffffff;
 		padding: 20px 30px;
-		@include tablette {
+		@include tablet {
 			font-size: 18px;
 		}
 		@include laptop {

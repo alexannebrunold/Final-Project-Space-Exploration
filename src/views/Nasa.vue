@@ -16,16 +16,20 @@
         </h3>
       </div>
     </div>
-    <LearnMore textLearnMore="En savoir plus" class="nasa__btn" />
+      <PrimaryButton
+			textPrimaryButton="Décollage"
+			class="nasa__btn"
+			@click.native="$router.push('/Contexte')"
+		/>
   </div>
 </template>
 
 <script>
-import LearnMore from "@/components/LearnMore.vue";
+import PrimaryButton from "@/components/PrimaryButton.vue";
 export default {
-  name: "lancement",
+  name: "nasa",
   components: {
-    LearnMore,
+    PrimaryButton,
   },
 };
 </script>
@@ -45,7 +49,7 @@ export default {
 
   &__logo {
     display: none;
-    @include tablette {
+    @include tablet {
       display: block;
       padding-left: 20px;
       height: 120px;
@@ -58,7 +62,7 @@ export default {
   }
 
   &__trait {
-    @include tablette {
+    @include tablet {
       width: 40px;
       border-bottom: 6px dotted;
       color: white;
@@ -74,7 +78,7 @@ export default {
     width: 830px;
     padding-left: 20px;
     padding-right: 20px;
-    @include tablette {
+    @include tablet {
       width: 830px;
     }
     @include laptop {
@@ -87,7 +91,7 @@ export default {
       text-transform: uppercase;
       color: #ffffff;
       text-align: center;
-      @include tablette {
+      @include tablet {
         font-size: 78px;
         text-align: right;
       }
@@ -101,36 +105,34 @@ export default {
       text-transform: uppercase;
       text-align: center;
       padding-bottom: 60px;
-      @include tablette {
+      @include tablet {
         text-align: right;
         padding-bottom: 10px;
       }
     }
 
     h3 {
-      font-size: 22px;
+
+      font-size: 20px;
       color: white;
       font-family: "Poppins";
-      text-align: left;
+      text-align: center;
       display: flex;
       justify-content: center;
-      @include tablette {
+      @include tablet {
         font-size: 22px;
         text-align: right;
       }
     }
   }
   &__btn {
-    display: flex;
-    justify-content: center;
-    padding: 80px 20px;
-    @include tablette {
-      display: flex;
-      justify-content: flex-end;
-      padding: 50px 20px;
+    margin-top: 50px;
+    @include tablet {
+   
+
     }
     @include laptop {
-      padding: 50px;
+      
     }
   }
 }

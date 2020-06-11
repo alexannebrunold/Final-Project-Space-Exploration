@@ -1,12 +1,14 @@
 <template>
-	<div class="launch page">
+	<div id="parallax" class="launch page">
 		<div>
-			<PrimaryButton textPrimaryButton="Lancer Spoutnik 1" class="launch__button" />
+			<PrimaryButton textPrimaryButton="Lancer Spoutnik 1" class="launch__button"
+      @click.native="$router.push('/Liftoff')"/>
+
 		</div>
 		<div class="launch__container">
 			<p>La course à l’espace démarre le 4 octobre 1957, Le petit satellite soviétique Spoutnik 1 est envoyé dans l’espace.</p>
 		</div>
-	</div>
+</div>
 </template>
 
 <script>
@@ -21,7 +23,7 @@ export default {
 
 <style scoped lang="scss">
 .launch {
-	background-image: url('~@/assets/img/lancement.png');
+  background-image: url('~@/assets/img/lancement.png');
 	width: auto;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -46,19 +48,23 @@ export default {
     
     & p {
       font-family: "Poppins";
-      font-weight: regular;
-      font-size: 26px;
-      width: 50%;
+      font-weight: normal;
+      font-size: 18px;
+      width: 85%;
       line-height: 150%;
+      @include tablet {
+        width: 70%;
+        font-size: 24px;
+      }
+      @include laptop {
+        width: 50%;
+        font-size: 28px;
+      }
     }
     
     & p::selection {
       background: black;
     }
 	}
-  
-
 }
-
 </style>
-
