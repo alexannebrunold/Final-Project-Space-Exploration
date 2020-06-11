@@ -9,11 +9,8 @@
 
 <script>
 export default {
-  name: "LearnMore",
-  props: {
-    nom: String,
-  },
-};
+	name: "LearnMore",
+}
 </script>
 
 <style lang="scss" scoped>

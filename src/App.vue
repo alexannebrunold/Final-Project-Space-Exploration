@@ -3,7 +3,9 @@
 		<div id="nav">
 			<!-- <router-link to="/">Home</router-link> -->
 		</div>
-		<router-view />
+		<transition name="fade" mode="out-in">
+			<router-view />
+		</transition>
 	</div>
 </template>
 
@@ -44,5 +46,23 @@
 			color: $white;
 		}
 	}
+}
+
+.fade-enter {
+	opacity: 1;
+}
+
+.fade-enter-active {
+	transition: opacity 0.4s ease-in-out;
+	background-color: #000000;
+}
+
+// .fade-leave {
+// }
+
+.fade-leave-active {
+	transition: opacity 0.4s ease-in-out;
+	opacity: 0.9;
+	background-color: #000000;
 }
 </style>
