@@ -74,7 +74,7 @@ export default {
     width: 830px;
     padding-left: 20px;
     padding-right: 20px;
-    @include tablette {
+    @include tablet {
       width: 830px;
     }
     @include laptop {
@@ -87,7 +87,7 @@ export default {
       text-transform: uppercase;
       color: #ffffff;
       text-align: center;
-      @include tablette {
+      @include tablet {
         font-size: 78px;
         text-align: right;
       }
@@ -101,7 +101,7 @@ export default {
       text-transform: uppercase;
       text-align: center;
       padding-bottom: 60px;
-      @include tablette {
+      @include tablet {
         text-align: right;
         padding-bottom: 10px;
       }
@@ -114,7 +114,7 @@ export default {
       text-align: left;
       display: flex;
       justify-content: center;
-      @include tablette {
+      @include tablet {
         font-size: 22px;
         text-align: right;
       }
@@ -124,7 +124,7 @@ export default {
     display: flex;
     justify-content: center;
     padding: 80px 20px;
-    @include tablette {
+    @include tablet {
       display: flex;
       justify-content: flex-end;
       padding: 50px 20px;
