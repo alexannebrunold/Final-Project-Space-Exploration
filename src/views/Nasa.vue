@@ -112,6 +112,7 @@ export default {
     }
 
     h3 {
+
       font-size: 20px;
       color: white;
       font-family: "Poppins";
