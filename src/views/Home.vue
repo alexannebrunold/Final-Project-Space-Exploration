@@ -1,34 +1,42 @@
 <template>
-	<div class="about page">
-		<video autoplay loop class="about__video">
+	<div class="home page">
+		<video autoplay loop class="home__video">
 		<source src="../assets/videos/bg-video.mp4" type="video/mp4">
 		</video>
-		<div class="about__title">
+		<div class="home__title">
 			<p>We choose to go to the</p>
 			<h1>Moon</h1>
 		</div>
-		<div class="about__textPresentation">
+		<div class="home__textLeft">
+			<p>The moon race</p>
+		</div>
+		<div class="home__textPresentation">
 			<p>Bienvenue parmis nous pour un incroyable voyage lunaire</p>
-			<p class="about__textPresentation--nameUtilisateur">
+			<p class="home__textPresentation--nameUtilisateur">
 				Dis nous en plus, quel est ton nom ?
 			</p>
 		</div>
+		<PrimaryForm
+			class="home__form"
+		/>
 		<PrimaryButton
 			textPrimaryButton="Décollage"
-			class="about__decollage"
+			class="home__decollage"
 			@click.native="$router.push('/lancement')"
 		/>
-		<p class="about__schoolProject">Projet étudiant Hétic - 2020</p>
+		<p class="home__schoolProject">Projet étudiant Hétic - 2020</p>
 	</div>
 </template>
 
 <script>
 import PrimaryButton from "@/components/PrimaryButton.vue"
+import PrimaryForm from "@/components/PrimaryForm.vue"
 
 export default {
-	name: "about",
+	name: "home",
 	components: {
 		PrimaryButton,
+		PrimaryForm,
 	},
 	mounted() {
 		console.log(PrimaryButton)
@@ -38,7 +46,7 @@ export default {
 
 <style scoped lang="scss">*
 
-.about {
+.home {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -52,13 +60,21 @@ export default {
 	min-width: 100%;
 	min-height: 100%;
 	z-index: -10;
+	filter: brightness(50%);
 	}
 
 	&__title {
 		font-size: 18px;
-		padding-bottom: 5%;
+		padding-bottom: 10px;
 		font-family: "Poppins";
 		font-weight: lighter;
+		@include tablette {
+			font-size: 24px;
+		}
+		@include laptop {
+			font-size: 28px;
+		}
+
 		& h1 {
 			padding-bottom: 5%;
 			text-transform: uppercase;
@@ -66,8 +82,12 @@ export default {
 			-webkit-text-stroke-color: $white;
 			color: transparent;
 			font-weight: bold;
-			@include smartphone {
-				font-size: 80px;
+			font-size: 80px;
+			@include tablette {
+				font-size: 110px;
+			}
+			@include laptop {
+				font-size: 125px;
 			}
 		}
 
@@ -82,23 +102,65 @@ export default {
 			background: black;
 		}
 	}
+
+	&__textLeft {
+		color: transparent;
+		font-size: 30px;
+		font-family: "Poppins";
+		font-weight: 300;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		-webkit-text-stroke: 0.2px;
+		-webkit-text-stroke-color: $white;
+		top: 5px;
+		bottom: 0;
+		position: absolute;
+		user-select: none;
+
+		@include tablette {
+		font-size: 55px;
+		left: 5px;
+		text-orientation: sideways;
+		writing-mode: vertical-rl;
+		}
+		@include laptop {
+			font-size: 65px;
+		}
+	}
+
 	&__textPresentation {
-		margin-bottom: 20px;
+		margin-bottom: 40px;
 		padding: 0 10px;
 		font-size: 18px;
 		font-family: "Poppins";
 		font-weight: normal;
+		@include tablette {
+			width: 75%;
+			font-size: 24px;
+		}
+		@include laptop {
+			font-size: 28px;
+		}
 		&--nameUtilisateur {
 			font-size: 14px;
 			margin-top: 10px;
+			@include tablette {
+				font-size: 16px;
+			}
+			@include laptop {
+				font-size: 18px;
+			}
 		}
 		& p::selection {
 			background: black;
 		}
 	}
 
+	&__form {
+		margin-bottom: 20px;
+	}
+
 	&__decollage {
-		font-size: 16px;
 		margin-top: 20px;
 	}
 	&__schoolProject {
@@ -112,7 +174,5 @@ export default {
 	&__schoolProject::selection {
 		background: black;
 	}
-
 }
-
 </style>
