@@ -9,8 +9,8 @@
 
 <script>
 export default {
-	name: "LearnMore",
-}
+  name: "LearnMore",
+};
 </script>
 
 <style lang="scss" scoped>
@@ -18,16 +18,21 @@ export default {
   text-decoration: none;
   background-color: white;
   border: 3px solid white;
-  border-radius: 3px;
-  padding: 10px 15px;
+  border-radius: 5px;
+  padding: 5px 10px;
   color: #000000;
   width: 130px;
   height: fit-content;
   text-align: center;
-  font-size: 18px;
+  font-size: 12px;
+
+  @include laptop {
+    padding: 10px 15px;
+    font-size: 18px;
+  }
   &:hover {
     border: 3px solid white;
-    border-radius: 3px;
+    border-radius: 7px;
     color: $black;
     cursor: pointer;
 
