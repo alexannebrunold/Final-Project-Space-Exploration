@@ -49,20 +49,20 @@
 }
 
 .fade-enter {
-	opacity: 1;
+	opacity: 0.8;
 }
 
 .fade-enter-active {
-	transition: opacity 0.4s ease-in-out;
+	transition: opacity 1s ease-in;
 	background-color: #000000;
 }
 
-// .fade-leave {
-// }
+.fade-leave {
+	opacity: 1;
+}
 
 .fade-leave-active {
-	transition: opacity 0.4s ease-in-out;
-	opacity: 0.9;
+	transition: opacity 0.4s ease-in;
 	background-color: #000000;
 }
 </style>
