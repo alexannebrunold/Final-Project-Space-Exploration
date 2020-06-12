@@ -40,15 +40,18 @@ export default {
 
 <style lang="scss" scoped>
 .cardTimeline {
+	z-index: 2;
 	display: table;
 	height: 538px;
 	width: auto;
 	text-align: left;
 	padding-left: 1%;
 	padding-right: 1%;
-	&:hover {
-		transform: scale(1.1);
-		cursor: pointer;
+	& img {
+		&:hover {
+			transform: scale(1.1);
+			cursor: pointer;
+		}
 	}
 	&__div {
 		display: table;
@@ -60,6 +63,10 @@ export default {
 			border-radius: 20px;
 			background: #c4c4c4;
 			margin-top: 4%;
+			&:hover {
+				background: $white;
+				cursor: pointer;
+			}
 		}
 	}
 
