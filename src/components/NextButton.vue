@@ -21,12 +21,12 @@ export default {
 .nextButton {
   font-family: "Poppins";
   font-weight: regular;
-  font-size: 14px;
+  font-size: 10px;
   background-color: transparent;
   border-radius: 5px;
   border: solid 3px #ffffff;
   color: $white;
-  padding: 10px 40px;
+  padding: 5px 20px;
   user-select: none;
   transition: ease-out 0.2s;
   display: flex;
@@ -35,6 +35,7 @@ export default {
 
   @include tablet {
     font-size: 16px;
+    padding: 10px 40px;
   }
   @include laptop {
     font-size: 18px;

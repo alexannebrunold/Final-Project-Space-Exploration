@@ -4,7 +4,6 @@
       <img class="info__Img__Laptop" :src="imageUrlLaptop" />
       <img class="info__Img__Phone" :src="imageUrlPhone" />
       <div class="info__Img__Quote">
-        .
         {{ quoteInfo }}
       </div>
     </div>
@@ -19,8 +18,11 @@
       <div class="info__Content__Text">
         {{ textInfo }}
       </div>
-      <div class="info__Content__LearnMore">
-        <PrimaryButton textPrimaryButton="En savoir plus" />
+      <div class="info__Content__Button">
+        <div class="info__Content__Button__LearnMore">
+          <PrimaryButton textPrimaryButton="En savoir plus" />
+        </div>
+        <div class="info__Content__Button__Next">
         <NextButton class="next" textNextButton="Suivant" 
         @click.native="$router.push('/Lancement')"/>
       </div>
@@ -149,10 +151,8 @@ export default {
     }
 
     &__Subtitle,
-    &__Text,
-    &__LearnMore,
-    &__NextButton {
-      padding-top: 20pt;
+    &__Text {
+      padding-top: 15%;
       line-height: 150%;
       @include laptop {
         padding-top: 55pt;
@@ -183,6 +183,7 @@ export default {
       font-size: 14px;
       font-weight: 300;
       margin: 0 auto;
+      padding-top: 10%;
 
       @include tablet {
         font-size: 24px;
@@ -195,22 +196,21 @@ export default {
       }
     }
 
-    &__LearnMore {
-      margin: 0;
-
-      @include tablet {
-        margin: 0 7.5%;
-        padding-top: 25pt;
-      }
-
-      @include laptop {
-        padding-top: 55pt;
-        position: relative;
-
-        .next {
-          position: absolute;
-          right: 10px;
-          bottom: 10px;
+    &__Button {
+      display: flex;
+      
+      &__LearnMore,
+      &__Next {
+        padding-top: 15%;
+        width: fit-content;
+        margin-right: 20px;
+        @include tablet {
+          margin: 0 7.5%;
+          padding-top: 25pt;
+        }
+        @include laptop {
+          padding-top: 55pt;
+          line-height: 120%;
         }
       }
     }
