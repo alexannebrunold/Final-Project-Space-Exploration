@@ -18,8 +18,8 @@
     </div>
     <div class="nasa__btn">
       <PrimaryButton textPrimaryButton="En savoir plus" class="nasa__btn1" />
-
-      <NextButton textNextButton="Suivant" class="nasa__btn2" />
+      <NextButton textNextButton="Suivant" class="nasa__btn2"
+       @click.native="$router.push('/choice')" />
     </div>
   </div>
 </template>
