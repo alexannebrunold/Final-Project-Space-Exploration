@@ -14,6 +14,26 @@
 export default {
 	props: {
 		item: Object,
+		cardStart: Boolean,
+		cardEnd: Boolean,
+	},
+	mounted() {
+		setTimeout(() => {
+			const el = this.$el
+			if (this.cardStart) {
+				console.log(el.querySelector(".cardTimeline__div--circle").offsetLeft)
+				this.$emit(
+					"updateTimelinePostionStart",
+					el.querySelector(".cardTimeline__div--circle").offsetLeft
+				)
+			} else if (this.cardEnd) {
+				console.log("cardEnd")
+				this.$emit(
+					"updateTimelinePostionEnd",
+					el.querySelector(".cardTimeline__div--circle").offsetLeft
+				)
+			}
+		}, 1000)
 	},
 }
 </script>
