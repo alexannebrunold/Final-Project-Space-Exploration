@@ -36,7 +36,7 @@ export default {
 	margin: 0 auto;
 	display: block;
 	background-color: $white;
-	z-index: 5;
+	z-index: 1;
 	position: absolute;
 	top: 30%;
 	left: 0;

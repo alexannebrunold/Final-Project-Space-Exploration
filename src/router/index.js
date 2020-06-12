@@ -1,7 +1,6 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
-import Test from "../views/Test.vue";
+import Vue from "vue"
+import VueRouter from "vue-router"
+import Home from "../views/Home.vue"
 
 Vue.use(VueRouter);
 
@@ -15,53 +14,44 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
   },
+	{
+		path: "/luna",
+		name: "Luna",
+		component: () => import(/* webpackChunkName: "about" */ "@/views/Luna.vue"),
+	},
+	{
+		path: "/loading",
+		name: "Loading",
+		nextPage: "Contexte",
+		component: () => import(/* webpackChunkName: "about" */ "@/views/Loading.vue"),
+	},
+	{
+		path: "/contexte",
+		name: "Contexte",
+		component: () => import("@/views/Contexte.vue"),
+	},
+	{
+		path: "/lancement",
+		name: "Lancement",
+		component: () => import("@/views/Lancement.vue"),
+	},
+	{
+		path: "/choice",
+		name: "Choice",
+		component: () => import("@/views/Choice.vue"),
+	},
+	{
+		path: "/nasa",
+		name: "Nasa",
+		component: () => import("@/views/Nasa.vue"),
+	},
+	{
+		path: "/liftoff",
+		name: "Liftoff",
+		component: () => import("@/views/Liftoff.vue"),
+	},
+]
 
-  {
-    path: "/test",
-    name: "Test",
-    component: Test,
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-  },
-  {
-    path: "/loading",
-    name: "Loading",
-    nextPage: "Contexte",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "@/views/Loading.vue"),
-  },
-  {
-    path: "/contexte",
-    name: "Contexte",
-    component: () => import("@/views/Contexte.vue"),
-  },
-  {
-    path: "/lancement",
-    name: "Lancement",
-    component: () => import("@/views/Lancement.vue"),
-  },
-  {
-    path: "/choice",
-    name: "Choice",
-    component: () => import("@/views/Choice.vue"),
-  },
-  {
-    path: "/nasa",
-    name: "Nasa",
-    component: () => import("@/views/Nasa.vue"),
-  },
-  {
-    path: "/liftoff",
-    name: "Liftoff",
-    component: () => import("@/views/Liftoff.vue"),
-  },
-  {
-    path: "/audiorocard",
-    name: "Audiorocard",
-    component: () => import("@/views/Audiorocard.vue"),
-  },
-];
 
 const router = new VueRouter({
   mode: "history",
