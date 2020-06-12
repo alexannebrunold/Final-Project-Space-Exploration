@@ -1,6 +1,6 @@
 <template>
-	<div class="home page">
-		<video autoplay loop class="home__video">
+	<div  class="home page">
+		<video ref="video" loop class="home__video">
 		<source src="../assets/videos/bg-video.mp4" type="video/mp4">
 		</video>
 		<div class="home__title">
@@ -22,11 +22,17 @@
 			class="home__decollage"
 			@click.native="$router.push('/Contexte')"
 		/>
-		<p class="home__schoolProject">Projet étudiant Hétic - 2020</p>
+    <img @click="toggleMute" class="home__sound" src="../assets/img/home/sound.svg" alt="">
+    <div class="home__better ">
+      <p>For a better experience use</p>
+      <img src="../assets/img/home/screen.svg" alt="">
+      <img src="../assets/img/home/headphones.svg" alt="">
+    </div>
+    <p class="home__schoolProject">Projet étudiant Hétic - 2020</p>
 	</div>
 </template>
 
-<script>
+<script defer>
 import PrimaryButton from "@/components/PrimaryButton.vue"
 import PrimaryForm from "@/components/PrimaryForm.vue"
 
@@ -35,10 +41,21 @@ export default {
 	components: {
 		PrimaryButton,
 		PrimaryForm,
-	},
+  },
 	mounted() {
-		console.log(PrimaryButton)
-	},
+    console.log(PrimaryButton)
+    this.play()
+
+  },
+  methods: {
+    play() {
+      this.$refs.video.play();
+    },
+    toggleMute () {
+      var vid = this.$refs.video
+      vid.muted = !vid.muted
+    },
+  }
 }
 </script>
 
@@ -77,13 +94,19 @@ export default {
 		}
 
 		& h1 {
+      transition: linear 0.8s;
+      text-transform: uppercase;
 			padding-bottom: 5%;
-			text-transform: uppercase;
-			-webkit-text-stroke: 1px;
-			-webkit-text-stroke-color: $white;
-			color: transparent;
+      background-clip: text;
+      background-size:cover;
+      -webkit-text-stroke: 1px;
+      -webkit-text-stroke-color: $white;
+      color: transparent;
+      
+      cursor: pointer;
 			font-weight: bold;
 			font-size: 80px;
+
 			@include tablet {
 				font-size: 110px;
 			}
@@ -95,12 +118,18 @@ export default {
 			}
 		}
 
+		& h1:hover {
+      color: white;
+      transition: linear 0.8s;
+
+		}
+
 		& h1::selection { 
 			background: black; 
 		}
 
 		& p {
-			padding-bottom: 20px;
+			padding-bottom: 5px;
 		}
 		& p::selection {
 			background: black;
@@ -119,9 +148,9 @@ export default {
 		-webkit-text-stroke-color: $white;
 		top: 5px;
 		bottom: 0;
-		position: absolute;
-		user-select: none;
-
+    position: absolute;
+     transition: linear 0.4s ;
+		
 		@include tablet {
 		height: auto;
 		font-size: 55px;
@@ -134,8 +163,18 @@ export default {
 		}
 		@include pc {
 			font-size: 90px;
-		}
-	}
+    }
+  }
+  
+  &__textLeft:hover {
+    color: white;
+    transition: linear 0.4s;
+    cursor: pointer;
+  }
+
+  &__textLeft::selection {
+    background: black;
+  }
 
 	&__textPresentation {
 		margin-bottom: 40px;
@@ -185,7 +224,46 @@ export default {
 		@include laptop {
 			margin-top: 50px;
 		}
-	}
+  }
+  
+  &__sound {
+    position: absolute;
+    bottom: 55px;
+    width: 25px;
+    user-select: none;
+    cursor: pointer;
+    @include tablet {
+      width: 40px;
+      right: 25px;
+      bottom: 25px;
+    }
+  }
+
+  &__better {
+    position: absolute;
+    bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & p {
+      font-family: "Poppins";
+      font-weight: lighter;
+      font-size: 16px;
+      margin-right: 5px;
+    }
+
+    & p::selection {
+      background: black;
+    }
+
+    & img {
+      height: 20px;
+      margin-left: 10px;
+      user-select: none;
+    }
+  }
+
 	&__schoolProject {
 		font-family: "Poppins";
 		font-weight: normal;

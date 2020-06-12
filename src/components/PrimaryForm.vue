@@ -38,7 +38,11 @@ form {
 			font-size: 24px;
 		}
 	}
+	input::selection {
+		background: black;
+	}
 	input::placeholder {
+		user-select: none;
 		font-family: "Poppins";
 		font-weight: regular;
 		color: $white;
