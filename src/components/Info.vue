@@ -1,5 +1,5 @@
 <template>
-  <div class="info" to="">
+  <div class="info page" to="">
     <div class="info__Img">
       <img class="info__Img__Laptop" :src="imageUrlLaptop" />
       <img class="info__Img__Phone" :src="imageUrlPhone" />
@@ -20,7 +20,7 @@
         {{ textInfo }}
       </div>
       <div class="info__Content__LearnMore">
-        <PrimaryButton />
+        <PrimaryButton textPrimaryButton="En savoir plus" />
       </div>
     </div>
   </div>
@@ -46,7 +46,6 @@ export default {
 
 <style lang="scss" scoped>
 .info {
-  height: 100vh;
   font-family: "Poppins";
   color: white;
   display: flex;
@@ -55,6 +54,7 @@ export default {
   @include laptop {
     flex-flow: row;
   }
+
   &__Img {
     height: auto;
     width: 100%;
@@ -89,9 +89,18 @@ export default {
       bottom: 5px;
       left: 15%;
       right: 15%;
+
+      @include tablet {
+        font-size: 10px;
+        width: fit-content;
+        left: 35%;
+        right: 35%;
+      }
       @include laptop {
         font-size: 12px;
         bottom: 25px;
+        left: 25%;
+        right: 25%;
       }
       & p {
         background: none;
@@ -109,7 +118,7 @@ export default {
     justify-content: center;
     @include laptop {
       width: 50%;
-      padding-top: 80px;
+      padding-top: 0px;
     }
     &__Title {
       width: fit-content;
@@ -122,7 +131,13 @@ export default {
       color: transparent;
       text-align: center;
 
+      @include tablet {
+        padding-top: 25px;
+        font-size: 80px;
+      }
+
       @include laptop {
+        padding-top: 0px;
         font-size: 106px;
         -webkit-text-stroke: 2px;
         -webkit-text-stroke-color: $white;
@@ -146,10 +161,16 @@ export default {
       font-size: 24px;
       font-weight: 300;
       width: 100%;
+      margin: 0 auto;
+
+      @include tablet {
+        font-size: 40px;
+        width: 85%;
+        padding-top: 75px;
+      }
 
       @include laptop {
         font-size: 58px;
-        width: 85%;
         padding-top: 100px;
       }
     }
@@ -157,11 +178,29 @@ export default {
     &__Text {
       font-size: 14px;
       font-weight: 300;
+      margin: 0 auto;
+
+      @include tablet {
+        font-size: 24px;
+        font-weight: 200;
+        width: 85%;
+      }
 
       @include laptop {
-        font-size: 32px;
-        width: 85%;
-        font-weight: 200;
+        font-size: 28px;
+      }
+    }
+
+    &__LearnMore {
+      margin: 0;
+
+      @include tablet {
+        margin: 0 7.5%;
+        padding-top: 25pt;
+      }
+
+      @include laptop {
+        padding-top: 55pt;
       }
     }
   }
