@@ -16,14 +16,20 @@
         </h3>
       </div>
     </div>
-    <NextButton textNextButton="En savoir plus" class="nasa__btn" />
+    <div class="nasa__btn">
+      <PrimaryButton textPrimaryButton="En savoir plus" class="nasa__btn1" />
+
+      <NextButton textNextButton="Suivant" class="nasa__btn2" />
+    </div>
   </div>
 </template>
 <script>
+import PrimaryButton from "@/components/PrimaryButton.vue";
 import NextButton from "@/components/NextButton.vue";
 export default {
   name: "lancement",
   components: {
+    PrimaryButton,
     NextButton,
   },
 };
@@ -91,7 +97,7 @@ export default {
       font-weight: lighter;
       text-transform: uppercase;
       text-align: center;
-      padding-bottom: 60px;
+      padding-bottom: 50px;
       @include tablet {
         text-align: right;
         padding-bottom: 10px;
@@ -112,9 +118,24 @@ export default {
     }
   }
   &__btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     @include tablet {
+      flex-direction: row;
+      justify-content: flex-end;
+      padding-right: 20px;
     }
     @include laptop {
+      padding-right: 50px;
+    }
+  }
+  &__btn1 {
+    margin-bottom: 30px;
+    @include tablet {
+      margin-bottom: 0;
+      margin-right: 30px;
     }
   }
 }
