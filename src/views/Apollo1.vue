@@ -20,9 +20,9 @@ export default {
   name: "apollo",
   data() {
     return {
-      imageSrcLaptop: require("../assets/img/apollo1_crew_laptop.png"),
-      imageSrcPhone: require("../assets/img/apollo1_crew_phone.png"),
-      logoSrc: require("../assets/img/apollo_logo/apollo_1.png"),
+      imageSrcLaptop: require("../assets/img/apollo/popup/apollo1_crew_laptop.png"),
+      imageSrcPhone: require("../assets/img/apollo/popup/apollo1_crew_phone.png"),
+      logoSrc: require("../assets/img/apollo/apollo_logo/apollo_1.png"),
     };
   },
   components: {
