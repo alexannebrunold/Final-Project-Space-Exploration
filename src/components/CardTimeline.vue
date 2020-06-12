@@ -6,7 +6,7 @@
 		</span>
 		<h1 class="cardTimeline__date">{{ item.date }}</h1>
 		<p class="cardTimeline__title">{{ item.title }}</p>
-		<p class="cardTimeline__description">Premier engin spatial à passer à proximité de la Lune.</p>
+		<p class="cardTimeline__description">{{ item.description }}</p>
 	</span>
 </template>
 
