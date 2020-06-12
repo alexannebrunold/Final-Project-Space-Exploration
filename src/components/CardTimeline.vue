@@ -1,7 +1,7 @@
 <template>
 	<span class="cardTimeline">
 		<span class="cardTimeline__div">
-			<img src="../assets/img/Ellipse.svg" alt="" />
+			<img :src="item.image" alt="" />
 			<div class="cardTimeline__div--circle"></div>
 		</span>
 		<h1 class="cardTimeline__date">{{ item.date }}</h1>
