@@ -1,5 +1,4 @@
-$smartphone: 320px;
-$tablette: 768px;
+$tablet: 768px;
 $laptop: 1024px;
 $pc: 1660px;
 
@@ -7,6 +6,13 @@ $pc: 1660px;
 // $primary:;
 $black: #191919;
 $white: #ffffff;
+
+// Animation
+
+$duration: 4s;
+$ease: cubic-bezier(0.38, 0.11, 0.56, 0.83);
+$easeCircle: cubic-bezier(0.38, 0.11, 0.54, 1);
+
 
 //Fonts
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap");

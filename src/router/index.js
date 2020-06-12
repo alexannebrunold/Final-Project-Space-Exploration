@@ -15,6 +15,7 @@ const routes = [
 		// this generates a separate chunk (about.[hash].js) for this route
 		// which is lazy-loaded when the route is visited.
 	},
+
 	{
 		path: "/test",
 		name: "Test",
@@ -49,7 +50,12 @@ const routes = [
 		name: "Nasa",
 		component: () => import("@/views/Nasa.vue"),
 	},
-]
+  {
+    path: "/liftoff",
+    name: "Liftoff",
+    component: () => import("@/views/Liftoff.vue"),
+  },
+];
 
 const router = new VueRouter({
 	mode: "history",

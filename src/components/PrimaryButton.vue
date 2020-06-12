@@ -29,7 +29,7 @@ export default {
 	padding: 10px 40px;
 	user-select: none;
 	transition: ease-out 0.2s;
-	@include tablette {
+	@include tablet {
 		font-size: 16px;
 	}
 	@include laptop {

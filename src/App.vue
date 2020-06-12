@@ -32,9 +32,6 @@
 		color: transparent;
 		text-align: center;
 		margin-top: 15%;
-		@include smartphone {
-			font-size: 80px;
-		}
 	}
 }
 
