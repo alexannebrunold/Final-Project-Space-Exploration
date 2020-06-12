@@ -21,6 +21,8 @@
       </div>
       <div class="info__Content__LearnMore">
         <PrimaryButton textPrimaryButton="En savoir plus" />
+        <NextButton class="next" textNextButton="Suivant" 
+        @click.native="$router.push('/Lancement')"/>
       </div>
     </div>
   </div>
@@ -28,10 +30,12 @@
 
 <script>
 import PrimaryButton from "@/components/PrimaryButton.vue";
+import NextButton from "@/components/NextButton.vue";
 export default {
   name: "Info",
   components: {
     PrimaryButton,
+    NextButton,
   },
   props: {
     imageUrlLaptop: {},
@@ -201,6 +205,13 @@ export default {
 
       @include laptop {
         padding-top: 55pt;
+        position: relative;
+
+        .next {
+          position: absolute;
+          right: 10px;
+          bottom: 10px;
+        }
       }
     }
   }
