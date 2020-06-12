@@ -1,6 +1,8 @@
 <template>
 	<div class="timeline">
-		<div class="cardContainer"><CardTimeline v-for="item in arrayTest" :key="item.id" /></div>
+		<div class="cardContainer">
+			<CardTimeline v-for="item in tableauTimeline" :key="item.title" :item="item" />
+		</div>
 		<div class="line"></div>
 	</div>
 </template>
@@ -9,17 +11,11 @@
 import CardTimeline from "./CardTimeline.vue"
 
 export default {
+	props: {
+		tableauTimeline: Array,
+	},
 	components: {
 		CardTimeline,
-	},
-	computed: {
-		arrayTest: function() {
-			let array = []
-			for (let i = 0; i < 10; i++) {
-				array.push(0)
-			}
-			return array
-		},
 	},
 }
 </script>
@@ -35,13 +31,15 @@ export default {
 }
 
 .line {
-	width: 90%;
+	height: 3px;
+	width: 96%;
 	margin: 0 auto;
 	display: block;
-	height: 10px;
 	background-color: $white;
 	z-index: 5;
 	position: absolute;
 	top: 30%;
+	left: 0;
+	right: 0;
 }
 </style>

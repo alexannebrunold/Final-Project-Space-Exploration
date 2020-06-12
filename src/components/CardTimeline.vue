@@ -1,14 +1,22 @@
 <template>
-	<span class="cardTimeline page">
+	<span class="cardTimeline">
 		<span class="cardTimeline__div">
 			<img src="../assets/img/Ellipse.svg" alt="" />
 			<div class="cardTimeline__div--circle"></div>
 		</span>
-		<h1 class="cardTimeline__date">1959</h1>
-		<p class="cardTimeline__title">Luna 1</p>
+		<h1 class="cardTimeline__date">{{ item.date }}</h1>
+		<p class="cardTimeline__title">{{ item.title }}</p>
 		<p class="cardTimeline__description">Premier engin spatial à passer à proximité de la Lune.</p>
 	</span>
 </template>
+
+<script>
+export default {
+	props: {
+		item: Object,
+	},
+}
+</script>
 
 <style lang="scss" scoped>
 .cardTimeline {
@@ -16,8 +24,8 @@
 	height: 538px;
 	width: auto;
 	text-align: left;
-	margin-left: 4%;
-	margin-right: 4%;
+	padding-left: 4%;
+	padding-right: 4%;
 	&__div {
 		display: table;
 		margin-bottom: 4%;
