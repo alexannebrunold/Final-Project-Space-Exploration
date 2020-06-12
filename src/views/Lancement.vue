@@ -1,9 +1,10 @@
 <template>
-	<div id="parallax" class="launch page">
+	<div class="launch page">
 		<div>
+			<BackButton class="launch__back" textBackButton="Retour"
+			@click.native="$router.push('/Contexte')"/>
 			<PrimaryButton textPrimaryButton="Lancer Spoutnik 1" class="launch__button"
       @click.native="$router.push('/Liftoff')"/>
-
 		</div>
 		<div class="launch__container">
 			<p>La course à l’espace démarre le 4 octobre 1957, Le petit satellite soviétique Spoutnik 1 est envoyé dans l’espace.</p>
@@ -13,10 +14,12 @@
 
 <script>
 import PrimaryButton from "@/components/PrimaryButton.vue"
+import BackButton from "@/components/BackButton.vue"
 export default {
 	name: "lancement",
 	components: {
 		PrimaryButton,
+		BackButton,
 	},
 }
 </script>
@@ -34,11 +37,12 @@ export default {
 	flex-direction: column;
 	position: relative;
 
-	&__button {
-		font-family: "Poppins";
-		font-weight: regular;
+	&__back {
+		position: absolute;
+		top: 10px;
+		left: 10px;
 	}
-	
+
 	&__container {
 		display: flex;
 		justify-content: center;
