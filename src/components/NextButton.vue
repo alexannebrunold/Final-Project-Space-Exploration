@@ -1,62 +1,54 @@
 <template>
-	<div>
-		<router-link class="nextButton" :to="{ name: nextPageName }">
-			Suivant
-			<img src="../assets/img/Vector.svg" />
-		</router-link>
-	</div>
+	<button class="nextButton">
+		{{ textNextButton }}
+	</button>
 </template>
 
 <script>
 export default {
+	name: "NextButton",
 	props: {
-		nom: String,
-	},
-	computed: {
-		routes: function() {
-			return this.$router.options.routes
-		},
-		currentPage: function() {
-			return this.$router.history.current.name
-		},
-		nextPageName: function() {
-			return this.routes.find((e) => {
-				return e.name === this.currentPage
-			}).nextPage
-		},
+		textNextButton: String,
+		name: String,
 	},
 	mounted() {
-		console.log(this.nextPageName)
+		console.log("aaaa" + this.$router.params)
 	},
-	name: "NextButton",
 }
 </script>
 
 <style lang="scss" scoped>
 .nextButton {
-	text-decoration: none;
-	border: 3px solid $white;
+	font-family: "Poppins";
+	font-weight: regular;
+	font-size: 14px;
+	background-color: transparent;
 	border-radius: 5px;
-	color: #ffffff;
-	width: 80px;
-	height: fit-content;
-	padding: 0.8%;
-	text-align: center;
-	&:hover {
-		background-color: $white;
-		color: #000000;
-		cursor: pointer;
+	border: solid 3px #ffffff;
+	color: $white;
+	padding: 10px 40px;
+	user-select: none;
+	transition: ease-out 0.2s;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 
-		& img {
-			display: inline-block;
-		}
+	@include tablet {
+		font-size: 16px;
 	}
-	& img {
-		width: 10px;
-		padding-left: 2%;
-		vertical-align: middle;
-		background-color: transparent;
-		display: none;
+	@include laptop {
+		font-size: 18px;
+	}
+	@include pc {
+		font-size: 24px;
+	}
+
+	&:hover {
+		transition: ease-out 0.2s;
+		border: solid 3px rgb(255, 255, 255);
+		background-color: white;
+		color: $black;
+		cursor: pointer;
 	}
 }
 </style>
