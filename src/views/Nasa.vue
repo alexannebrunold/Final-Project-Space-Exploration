@@ -1,3 +1,4 @@
+  
 <template>
   <div class="nasa page">
     <div class="nasa__container">
@@ -41,12 +42,10 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
-
   &__container {
     display: flex;
     justify-content: space-between;
   }
-
   &__logo {
     display: none;
     @include tablet {
@@ -60,7 +59,6 @@ export default {
       padding-left: 50px;
     }
   }
-
   &__trait {
     @include tablet {
       width: 40px;
@@ -72,7 +70,6 @@ export default {
       border-bottom: 8px dotted;
     }
   }
-
   &__title {
     padding-top: 40px;
     width: 830px;
@@ -84,7 +81,6 @@ export default {
     @include laptop {
       padding-right: 50px;
     }
-
     h1 {
       font-size: 48px;
       font-family: "Poppins";
@@ -96,7 +92,6 @@ export default {
         text-align: right;
       }
     }
-
     h2 {
       font-size: 24px;
       color: white;
@@ -110,9 +105,7 @@ export default {
         padding-bottom: 10px;
       }
     }
-
     h3 {
-
       font-size: 20px;
       color: white;
       font-family: "Poppins";
@@ -129,7 +122,6 @@ export default {
     margin-top: 50px;
     @include tablet {
    
-
     }
     @include laptop {
       

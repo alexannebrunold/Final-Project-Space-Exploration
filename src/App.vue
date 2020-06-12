@@ -11,8 +11,9 @@
 
 <style lang="scss">
 .page {
-	height: 100vh;
-	width: 100vw;
+	min-height: 100vh;
+	min-width: 100vw;
+	display: table;
 	font-family: "Poppins";
 }
 
