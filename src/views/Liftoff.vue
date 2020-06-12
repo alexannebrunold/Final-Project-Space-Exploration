@@ -39,11 +39,9 @@ export default {
 
     &__button {
       position: absolute;
-      z-index: 1;
-      bottom: 6%;
-      margin: auto;
-      left: 0;
-      right: 0;
+      z-index: 10;
+      bottom: 50px;
+      
 
     }
   }
