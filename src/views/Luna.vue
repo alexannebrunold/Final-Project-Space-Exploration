@@ -1,5 +1,5 @@
 <template>
-	<div class="test page">
+	<div class="luna page">
 		<Timeline :tableauTimeline="tableauTimeline" />
 	</div>
 </template>
@@ -93,7 +93,7 @@ export default {
 </script>
 
 <style lang="scss">
-.test {
+.luna {
 	background-color: $black;
 }
 </style>
