@@ -26,6 +26,10 @@ export default {
 	text-align: left;
 	padding-left: 1%;
 	padding-right: 1%;
+	&:hover {
+		transform: scale(1.1);
+		cursor: pointer;
+	}
 	&__div {
 		display: table;
 		margin-bottom: 4%;
