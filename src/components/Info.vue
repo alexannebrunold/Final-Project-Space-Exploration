@@ -23,8 +23,8 @@
           <PrimaryButton textPrimaryButton="En savoir plus" />
         </div>
         <div class="info__Content__Button__Next">
-          <NextButton textNextButton="Suivant" />
-        </div>
+        <NextButton class="next" textNextButton="Suivant" 
+        @click.native="$router.push('/Lancement')"/>
       </div>
     </div>
   </div>
@@ -198,7 +198,7 @@ export default {
 
     &__Button {
       display: flex;
-
+      
       &__LearnMore,
       &__Next {
         padding-top: 15%;

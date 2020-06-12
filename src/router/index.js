@@ -1,28 +1,23 @@
 import Vue from "vue"
 import VueRouter from "vue-router"
 import Home from "../views/Home.vue"
-import Test from "../views/Test.vue"
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
+  {
+    path: "/",
+    name: "Home",
+    component: Home,
+    nextPage: "Loading",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+  },
 	{
-		path: "/",
-		name: "Home",
-		component: Home,
-		nextPage: "Loading",
-		// route level code-splitting
-		// this generates a separate chunk (about.[hash].js) for this route
-		// which is lazy-loaded when the route is visited.
-	},
-
-	{
-		path: "/test",
-		name: "Test",
-		component: Test,
-		// route level code-splitting
-		// this generates a separate chunk (about.[hash].js) for this route
-		// which is lazy-loaded when the route is visited.
+		path: "/luna",
+		name: "Luna",
+		component: () => import(/* webpackChunkName: "about" */ "@/views/Luna.vue"),
 	},
 	{
 		path: "/loading",
@@ -50,16 +45,17 @@ const routes = [
 		name: "Nasa",
 		component: () => import("@/views/Nasa.vue"),
 	},
-  {
-    path: "/liftoff",
-    name: "Liftoff",
-    component: () => import("@/views/Liftoff.vue"),
-  },
-];
+	{
+		path: "/liftoff",
+		name: "Liftoff",
+		component: () => import("@/views/Liftoff.vue"),
+	},
+]
+
 
 const router = new VueRouter({
-	mode: "history",
-	routes,
-})
+  mode: "history",
+  routes,
+});
 
-export default router
+export default router;

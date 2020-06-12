@@ -1,4 +1,3 @@
-  
 <template>
   <div class="nasa page">
     <div class="nasa__container">
@@ -17,24 +16,24 @@
         </h3>
       </div>
     </div>
-      <PrimaryButton
-			textPrimaryButton="Décollage"
-			class="nasa__btn"
-			@click.native="$router.push('/Contexte')"
-		/>
+    <div class="nasa__btn">
+      <PrimaryButton textPrimaryButton="En savoir plus" class="nasa__btn1" />
+
+      <NextButton textNextButton="Suivant" class="nasa__btn2" />
+    </div>
   </div>
 </template>
-
 <script>
 import PrimaryButton from "@/components/PrimaryButton.vue";
+import NextButton from "@/components/NextButton.vue";
 export default {
-  name: "nasa",
+  name: "lancement",
   components: {
     PrimaryButton,
+    NextButton,
   },
 };
 </script>
-
 <style scoped lang="scss">
 .nasa {
   background-image: url("~@/assets/img/nasabackground.png");
@@ -72,11 +71,10 @@ export default {
   }
   &__title {
     padding-top: 40px;
-    width: 830px;
+
     padding-left: 20px;
     padding-right: 20px;
     @include tablet {
-      width: 830px;
     }
     @include laptop {
       padding-right: 50px;
@@ -99,17 +97,18 @@ export default {
       font-weight: lighter;
       text-transform: uppercase;
       text-align: center;
-      padding-bottom: 60px;
+      padding-bottom: 50px;
       @include tablet {
         text-align: right;
         padding-bottom: 10px;
       }
     }
     h3 {
-      font-size: 20px;
+      padding-bottom: 30px;
+      font-size: 22px;
       color: white;
       font-family: "Poppins";
-      text-align: center;
+      text-align: justify;
       display: flex;
       justify-content: center;
       @include tablet {
@@ -119,12 +118,24 @@ export default {
     }
   }
   &__btn {
-    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     @include tablet {
-   
+      flex-direction: row;
+      justify-content: flex-end;
+      padding-right: 20px;
     }
     @include laptop {
-      
+      padding-right: 50px;
+    }
+  }
+  &__btn1 {
+    margin-bottom: 30px;
+    @include tablet {
+      margin-bottom: 0;
+      margin-right: 30px;
     }
   }
 }

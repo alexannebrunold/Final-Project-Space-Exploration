@@ -1,12 +1,12 @@
 <template>
 	<span class="cardTimeline">
 		<span class="cardTimeline__div">
-			<img src="../assets/img/Ellipse.svg" alt="" />
+			<img :src="item.image" alt="" />
 			<div class="cardTimeline__div--circle"></div>
 		</span>
 		<h1 class="cardTimeline__date">{{ item.date }}</h1>
 		<p class="cardTimeline__title">{{ item.title }}</p>
-		<p class="cardTimeline__description">Premier engin spatial à passer à proximité de la Lune.</p>
+		<p class="cardTimeline__description">{{ item.description }}</p>
 	</span>
 </template>
 
@@ -24,8 +24,8 @@ export default {
 	height: 538px;
 	width: auto;
 	text-align: left;
-	padding-left: 4%;
-	padding-right: 4%;
+	padding-left: 1%;
+	padding-right: 1%;
 	&__div {
 		display: table;
 		margin-bottom: 4%;
@@ -40,17 +40,20 @@ export default {
 	}
 
 	&__date {
-		font-size: 48px;
+		font-size: 32px;
 		font-weight: 800;
+		margin-bottom: 1%;
 	}
 	&__title {
-		font-size: 32px;
+		font-size: 24px;
 		text-align: left;
+		margin-top: 4%;
 	}
 	&__description {
-		font-size: 18px;
+		font-size: 16px;
 		width: 230px;
 		color: #dbd4d4;
+		margin-top: 6%;
 	}
 }
 </style>
