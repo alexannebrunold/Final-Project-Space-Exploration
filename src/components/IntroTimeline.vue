@@ -1,5 +1,5 @@
 <template>
-	<div class="introTimeline page" to="">
+	<div class="introTimeline page" @click="startAutoplay()">
 		<div class="introTimeline__content">
 			<div class="introTimeline__content--title">
 				{{ introTitle }}
@@ -7,15 +7,9 @@
 			<!-- <div class="introTimeline__content__img">
 				<img class="introTimeline__content__img--laptop" :src="imageUrlLaptop" />
 				<img class="introTimeline__content__img--Phone" :src="imageUrlPhone" /> -->
-			<video class="introTimeline__content--video" @loadedmetadata="startAutoplay()">
+			<video class="introTimeline__content--video" autoplay controls>
 				<source src="@/assets/videos/1959-luna-2-ussr (1).mp4" type="video/mp4" />
 			</video>
-			<!-- <video
-				src="@/assets/videos/1959-luna-2-ussr (1).mp4"
-				:data-id="id"
-				@loadedmetadata="startAutoplay()"
-			/> -->
-
 			<!-- </div> -->
 
 			<div class="introTimeline__content--button">
