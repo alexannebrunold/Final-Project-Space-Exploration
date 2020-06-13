@@ -20,13 +20,13 @@
 			class="home__decollage"
 			@click.native="$router.push('/Contexte')"
 		/>
-    <img @click="toggleMute" class="home__sound" src="../assets/img/home/sound.svg" alt="">
-    <div class="home__better ">
-      <p>For a better experience use</p>
-      <img src="../assets/img/home/screen.svg" alt="">
-      <img src="../assets/img/home/headphones.svg" alt="">
-    </div>
-    <p class="home__schoolProject">Projet étudiant Hétic - 2020</p>
+		<img @click="toggleMute" class="home__sound" src="../assets/img/home/sound.svg" alt="" />
+		<div class="home__better ">
+			<p>For a better experience use</p>
+			<img src="../assets/img/home/screen.svg" alt="" />
+			<img src="../assets/img/home/headphones.svg" alt="" />
+		</div>
+		<p class="home__schoolProject">Projet étudiant Hétic - 2020</p>
 	</div>
 </template>
 
@@ -39,25 +39,23 @@ export default {
 		PrimaryButton,
   },
 	mounted() {
-    console.log(PrimaryButton)
-    this.play()
-
-  },
-  methods: {
-    play() {
-      this.$refs.video.play();
-    },
-    toggleMute () {
-      var vid = this.$refs.video
-      vid.muted = !vid.muted
-    },
-  }
+		console.log(PrimaryButton)
+		this.play()
+	},
+	methods: {
+		play() {
+			this.$refs.video.play()
+		},
+		toggleMute() {
+			var vid = this.$refs.video
+			vid.muted = !vid.muted
+		},
+	},
 }
 </script>
 
-<style scoped lang="scss">*
-
-.home {
+<style scoped lang="scss">
+* .home {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -65,13 +63,13 @@ export default {
 	position: relative;
 
 	&__video {
-	position: fixed;
-	right: 0;
-	bottom: 0;
-	min-width: 100%;
-	min-height: 100%;
-	z-index: -10;
-	filter: brightness(50%);
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		min-width: 100%;
+		min-height: 100%;
+		z-index: -10;
+		filter: brightness(50%);
 	}
 
 	&__missions {
@@ -106,16 +104,16 @@ export default {
 		}
 
 		& h1 {
-      transition: linear 0.8s;
-      text-transform: uppercase;
+			transition: linear 0.8s;
+			text-transform: uppercase;
 			padding-bottom: 5%;
-      background-clip: text;
-      background-size:cover;
-      -webkit-text-stroke: 1px;
-      -webkit-text-stroke-color: $white;
-      color: transparent;
-      
-      cursor: pointer;
+			background-clip: text;
+			background-size: cover;
+			-webkit-text-stroke: 1px;
+			-webkit-text-stroke-color: $white;
+			color: transparent;
+
+			cursor: pointer;
 			font-weight: bold;
 			font-size: 80px;
 
@@ -131,13 +129,12 @@ export default {
 		}
 
 		& h1:hover {
-      color: white;
-      transition: linear 0.8s;
-
+			color: white;
+			transition: linear 0.8s;
 		}
 
-		& h1::selection { 
-			background: black; 
+		& h1::selection {
+			background: black;
 		}
 
 		& p {
@@ -160,33 +157,33 @@ export default {
 		-webkit-text-stroke-color: $white;
 		top: 5px;
 		bottom: 0;
-    position: absolute;
-     transition: linear 0.4s ;
-		
+		position: absolute;
+		transition: linear 0.4s;
+
 		@include tablet {
-		height: auto;
-		font-size: 55px;
-		left: 5px;
-		text-orientation: sideways;
-		writing-mode: vertical-rl;
+			height: auto;
+			font-size: 55px;
+			left: 5px;
+			text-orientation: sideways;
+			writing-mode: vertical-rl;
 		}
 		@include laptop {
 			font-size: 65px;
 		}
 		@include pc {
 			font-size: 90px;
-    }
-  }
-  
-  &__textLeft:hover {
-    color: white;
-    transition: linear 0.4s;
-    cursor: pointer;
-  }
+		}
+	}
 
-  &__textLeft::selection {
-    background: black;
-  }
+	&__textLeft:hover {
+		color: white;
+		transition: linear 0.4s;
+		cursor: pointer;
+	}
+
+	&__textLeft::selection {
+		background: black;
+	}
 
 	&__textPresentation {
 		margin-bottom: 40px;
@@ -232,45 +229,45 @@ export default {
 		@include laptop {
 			margin-top: 50px;
 		}
-  }
-  
-  &__sound {
-    position: absolute;
-    bottom: 55px;
-    width: 25px;
-    user-select: none;
-    cursor: pointer;
-    @include tablet {
-      width: 40px;
-      right: 25px;
-      bottom: 25px;
-    }
-  }
+	}
 
-  &__better {
-    position: absolute;
-    bottom: 25px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+	&__sound {
+		position: absolute;
+		bottom: 55px;
+		width: 25px;
+		user-select: none;
+		cursor: pointer;
+		@include tablet {
+			width: 40px;
+			right: 25px;
+			bottom: 25px;
+		}
+	}
 
-    & p {
-      font-family: "Poppins";
-      font-weight: lighter;
-      font-size: 16px;
-      margin-right: 5px;
-    }
+	&__better {
+		position: absolute;
+		bottom: 25px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 
-    & p::selection {
-      background: black;
-    }
+		& p {
+			font-family: "Poppins";
+			font-weight: lighter;
+			font-size: 16px;
+			margin-right: 5px;
+		}
 
-    & img {
-      height: 20px;
-      margin-left: 10px;
-      user-select: none;
-    }
-  }
+		& p::selection {
+			background: black;
+		}
+
+		& img {
+			height: 20px;
+			margin-left: 10px;
+			user-select: none;
+		}
+	}
 
 	&__schoolProject {
 		font-family: "Poppins";
