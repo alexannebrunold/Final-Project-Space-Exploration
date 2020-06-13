@@ -6,7 +6,11 @@
 				<p>USA</p>
 			</div>
 			<div class="choice__views__URSS">
-				<img src="../assets/img/Youri-Gagarine.png" alt="Youri Gargarine URSS" />
+				<img
+					src="../assets/img/Youri-Gagarine.png"
+					alt="Youri Gargarine URSS"
+					@click="$router.push('/luna')"
+				/>
 				<p>URSS</p>
 			</div>
 		</div>
@@ -18,6 +22,7 @@
 .choice {
 	background-color: $black;
 	overflow: hidden;
+	cursor: pointer;
 	&__views {
 		display: flex;
 		flex-direction: row;
