@@ -7,9 +7,15 @@
 			<!-- <div class="introTimeline__content__img">
 				<img class="introTimeline__content__img--laptop" :src="imageUrlLaptop" />
 				<img class="introTimeline__content__img--Phone" :src="imageUrlPhone" /> -->
-			<video autoplay="true" preload controls class="introTimeline__content--video">
+			<video class="introTimeline__content--video" @loadedmetadata="startAutoplay()">
 				<source src="@/assets/videos/1959-luna-2-ussr (1).mp4" type="video/mp4" />
 			</video>
+			<!-- <video
+				src="@/assets/videos/1959-luna-2-ussr (1).mp4"
+				:data-id="id"
+				@loadedmetadata="startAutoplay()"
+			/> -->
+
 			<!-- </div> -->
 
 			<div class="introTimeline__content--button">
@@ -38,6 +44,12 @@ export default {
 		imageUrlLaptop: {},
 		imageUrlPhone: {},
 		introTitle: String,
+	},
+	methods: {
+		startAutoplay() {
+			var c = document.querySelector(".introTimeline__content--video")
+			c.play()
+		},
 	},
 }
 </script>
