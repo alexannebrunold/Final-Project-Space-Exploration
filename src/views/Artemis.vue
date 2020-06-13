@@ -1,5 +1,5 @@
 <template>
-	<div class="luna page">
+	<div class="artemis">
 		<IntroTimeline introTitle="Artemis" :introTimelineVideoSrc="introTimelineVideoSrc" />
 		<Timeline :tableauTimeline="tableauTimeline" />
 	</div>
@@ -16,79 +16,42 @@ export default {
 	},
 	data() {
 		return {
-			introTimelineVideoSrc: require("@/assets/videos/1959-luna-2-ussr (1).mp4"),
+			introTimelineVideoSrc: require("@/assets/videos/Artemis.mp4"),
 			tableauTimeline: [
 				{
-					image: require("../assets/img/Luna/Luna1.svg"),
-					date: "1959",
-					title: "Luna 1",
-					description: "Premier engin spatial à passer à proximité de la Lune.",
-				},
-				{
-					image: require("../assets/img/Luna/Luna2.svg"),
-					date: "1959",
-					title: "Luna 2",
-					description: "Premier engin spatial à entrer en contact avec un autre corps céleste.",
-				},
-				{
-					image: require("../assets/img/Luna/Luna3.svg"),
-					date: "1959",
-					title: "Luna 3",
+					image: require("../assets/img/Artemis/Artemis.svg"),
+					date: "2019",
+					title: "Annonce",
 					description:
-						"Premier engin spatial à transmettre des photographies de la face cachée de la Lune.",
+						"Le programme Artemis est un programme spatial habité de la NASA, l'agence spatiale américaine, dont l'objectif est d'amener un équipage sur le sol lunaire d'ici 2024",
 				},
 				{
-					image: require("../assets/img/Luna/Luna4-8.svg"),
-					date: "1963 - 65",
-					title: "Luna 4-8",
-					description: "Séries d’échecs des premières sondes soviétiques.",
-				},
-				{
-					image: require("../assets/img/Luna/Luna9.svg"),
-					date: "1966",
-					title: "Luna 9",
+					image: require("../assets/img/Artemis/Artemis1.svg"),
+					date: "2020-21",
+					title: "Artemis 1",
 					description:
-						"Sonde spatiale soviétique qui a réussi le premier atterrissage en douceur sur la Lune.",
+						"L'objectif principal est de valider le fonctionnement du nouveau lanceur Space Launch System ainsi que celui du vaisseau Orion sans équipage. ",
 				},
 				{
-					image: require("../assets/img/Luna/Luna10.svg"),
-					date: "1966",
-					title: "Luna 10",
+					image: require("../assets/img/Artemis/Artemis2.svg"),
+					date: "2022-2023",
+					title: "Artemis 2",
 					description:
-						"Premier appareil à se placer en orbite autour de la Lune et le premier à se placer en orbite autour d'un autre corps céleste que la Terre.",
+						"Artemis 2  est le second vol prévu du lanceur américain Space Launch System et le premier avec un équipage du vaisseau spatial Orion. Le lancement est prévu pour 2022-20233",
 				},
 				{
-					image: require("../assets/img/Luna/Luna11-14.svg"),
-					date: "1966 - 68",
-					title: "Luna 11-14",
-					description: "Séries de sondes en orbite lunaire avec pour objectifs divers études.",
-				},
-				{
-					image: require("../assets/img/Luna/Luna16.svg"),
-					date: "1970",
-					title: "Luna 16",
+					image: require("../assets/img/Artemis/Artemis3.svg"),
+					date: "2024",
+					title: "Artemis 3",
 					description:
-						"Première fois dans l'histoire de l'exploration spatiale à recueillir et rapporter sans intervention humaine un échantillon du sol d'un autre corps céleste sur Terre.",
+						"Artemis 3 est le troisième vol du vaisseau Orion et la première mission du programme Artemis qui déposera un équipage à la surface de la Lune.",
 				},
 				{
-					image: require("../assets/img/Luna/Luna17.svg"),
-					title: "Luna 17",
-					date: "1970",
-					description: "Premier appareil à déployer un Rover robotique sur la surface de la Lune.",
-				},
-				{
-					image: require("../assets/img/Luna/Luna18-23.svg"),
-					date: "1971 - 76",
-					title: "Luna 18-23",
+					image: require("../assets/img/Artemis/Mars.svg"),
+					date: "Projection",
+					title: "Mars",
 					description:
-						"Séries de sondes sur la surface lunaire afin de récuperer des échantillons de roche.",
-				},
-				{
-					image: require("../assets/img/Luna/Luna24.svg"),
-					date: "1976",
-					title: "Luna 24",
-					description:
-						"Dernière sonde soviétique à se poser sur la Lune et à retourner des échantillons de sol lunaire vers la Terre.",
+						"Ces missions sont les premières d'une longue série dont l'objectif est d'effectuer des séjours  à la surface de la Lune  et mettre au point les techniques nécessaires à des missions habitées à la surface de Mars.",
 				},
 			],
 		}
@@ -97,7 +60,7 @@ export default {
 </script>
 
 <style lang="scss">
-.luna {
+.artemis {
 	background-color: $black;
 	display: flex;
 	flex-direction: row;
