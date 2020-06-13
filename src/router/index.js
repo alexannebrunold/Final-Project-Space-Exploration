@@ -2,18 +2,18 @@ import Vue from "vue"
 import VueRouter from "vue-router"
 import Home from "../views/Home.vue"
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: "/",
-    name: "Home",
-    component: Home,
-    nextPage: "Loading",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-  },
+	{
+		path: "/",
+		name: "Home",
+		component: Home,
+		nextPage: "Loading",
+		// route level code-splitting
+		// this generates a separate chunk (about.[hash].js) for this route
+		// which is lazy-loaded when the route is visited.
+	},
 	{
 		path: "/luna",
 		name: "Luna",
@@ -50,12 +50,21 @@ const routes = [
 		name: "Liftoff",
 		component: () => import("@/views/Liftoff.vue"),
 	},
+	{
+		path: "/apollo",
+		name: "Apollo",
+		component: () => import("@/views/Apollo.vue"),
+	},
+	{
+		path: "/artemis",
+		name: "Artemis",
+		component: () => import("@/views/Artemis.vue"),
+	},
 ]
 
-
 const router = new VueRouter({
-  mode: "history",
-  routes,
-});
+	mode: "history",
+	routes,
+})
 
-export default router;
+export default router
