@@ -1,57 +1,57 @@
 <template>
-	<div class="info page" to="">
-		<div class="info__Img">
-			<img class="info__Img__Laptop" :src="imageUrlLaptop" />
-			<img class="info__Img__Phone" :src="imageUrlPhone" />
-			<div class="info__Img__Quote">
-				{{ quoteInfo }}
-			</div>
-		</div>
+  <div class="info page" to="">
+    <div class="info__Img">
+      <img class="info__Img__Laptop" :src="imageUrlLaptop" />
+      <img class="info__Img__Phone" :src="imageUrlPhone" />
+      <div class="info__Img__Quote">
+        {{ quoteInfo }}
+      </div>
+    </div>
 
-		<div class="info__Content">
-			<div class="info__Content__Title">
-				{{ titleInfo }}
-			</div>
-			<div class="info__Content__Subtitle">
-				{{ subtitleInfo }}
-			</div>
-			<div class="info__Content__Text">
-				{{ textInfo }}
-			</div>
-			<div class="info__Content__Button">
-				<div class="info__Content__Button__LearnMore">
-					<PrimaryButton textPrimaryButton="En savoir plus" />
-				</div>
-				<div class="info__Content__Button__Next">
-					<NextButton
-						class="next"
-						textNextButton="Suivant"
-						@click.native="$router.push('/Lancement')"
-					/>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="info__Content">
+      <div class="info__Content__Title">
+        {{ titleInfo }}
+      </div>
+      <div class="info__Content__Subtitle">
+        {{ subtitleInfo }}
+      </div>
+      <div class="info__Content__Text">
+        {{ textInfo }}
+      </div>
+      <div class="info__Content__Button">
+        <div class="info__Content__Button__LearnMore">
+          <PrimaryButton textPrimaryButton="En savoir plus" />
+        </div>
+        <div class="info__Content__Button__Next">
+          <NextButton
+            class="next"
+            textNextButton="Suivant"
+            @click.native="$router.push('/Lancement')"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import PrimaryButton from "@/components/PrimaryButton.vue"
-import NextButton from "@/components/NextButton.vue"
+import PrimaryButton from "@/components/PrimaryButton.vue";
+import NextButton from "@/components/NextButton.vue";
 export default {
-	name: "Info",
-	components: {
-		PrimaryButton,
-		NextButton,
-	},
-	props: {
-		imageUrlLaptop: {},
-		imageUrlPhone: {},
-		quoteInfo: String,
-		titleInfo: String,
-		subtitleInfo: String,
-		textInfo: String,
-	},
-}
+  name: "Info",
+  components: {
+    PrimaryButton,
+    NextButton,
+  },
+  props: {
+    imageUrlLaptop: {},
+    imageUrlPhone: {},
+    quoteInfo: String,
+    titleInfo: String,
+    subtitleInfo: String,
+    textInfo: String,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
