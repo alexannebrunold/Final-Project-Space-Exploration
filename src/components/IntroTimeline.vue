@@ -5,8 +5,8 @@
 				{{ introTitle }}
 			</div>
 			<!-- <div class="introTimeline__content__img">-->
-			<video class="introTimeline__content--video" autoplay controls>
-				<source src="@/assets/videos/1959-luna-2-ussr (1).mp4" type="video/mp4" />
+			<video class="introTimeline__content--video" controls>
+				<source :src="introTimelineVideoSrc" type="video/mp4" />
 			</video>
 			<!-- </div> -->
 
@@ -25,8 +25,7 @@ export default {
 	name: "Info",
 	components: {},
 	props: {
-		imageUrlLaptop: {},
-		imageUrlPhone: {},
+		introTimelineVideoSrc: String,
 		introTitle: String,
 	},
 	methods: {
@@ -34,6 +33,9 @@ export default {
 			var c = document.querySelector(".introTimeline__content--video")
 			c.play()
 		},
+	},
+	mounted() {
+		console.log(document.querySelector("source"))
 	},
 }
 </script>
