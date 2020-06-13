@@ -4,10 +4,13 @@
 			<div class="introTimeline__content--title">
 				{{ introTitle }}
 			</div>
-			<div class="introTimeline__content__img">
+			<!-- <div class="introTimeline__content__img">
 				<img class="introTimeline__content__img--laptop" :src="imageUrlLaptop" />
-				<img class="introTimeline__content__img--Phone" :src="imageUrlPhone" />
-			</div>
+				<img class="introTimeline__content__img--Phone" :src="imageUrlPhone" /> -->
+			<video autoplay="true" preload controls class="introTimeline__content--video">
+				<source src="@/assets/videos/1959-luna-2-ussr (1).mp4" type="video/mp4" />
+			</video>
+			<!-- </div> -->
 
 			<div class="introTimeline__content--button">
 				<!-- <div class="info__Content__Button__LearnMore">
@@ -58,6 +61,7 @@ export default {
 		@include laptop {
 			// width: 50%;
 		}
+
 		&--title {
 			width: fit-content;
 			font-size: 50px;
@@ -76,30 +80,43 @@ export default {
 				-webkit-text-stroke-color: $white;
 			}
 		}
-
-		&__img {
-			height: 500px;
-			width: 100%;
-			@include laptop {
-				// height: 100vh;
-				// width: auto;
-			}
-
-			&--laptop {
-				display: none;
-				height: inherit;
-				@include laptop {
-					display: block;
-				}
-			}
-
-			&--phone {
-				width: 100%;
-				@include laptop {
-					display: none;
-				}
-			}
+		&--video {
+			// z-index: -10;
+			// filter: grayscale(1);
+			// position: fixed;
+			// right: 0;
+			// bottom: 0;
+			// margin: auto;
+			// left: 0;
+			// top: 0;
+			max-width: 100vw;
+			max-height: 100%;
+			// filter: brightness(75%);
 		}
+		// &__img {
+		// 	height: 500px;
+		// 	width: 100%;
+		// 	@include laptop {
+		// 		// height: 100vh;
+		// 		// width: auto;
+		// 	}
+
+		// 	&--laptop {
+		// 		display: none;
+		// 		height: inherit;
+		// 		@include laptop {
+		// 			display: block;
+		// 		}
+		// 	}
+
+		// 	&--phone {
+		// 		width: 100%;
+		// 		@include laptop {
+		// 			display: none;
+		// 		}
+		// 	}
+
+		// }
 
 		&__Button {
 			display: flex;

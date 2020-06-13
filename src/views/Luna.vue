@@ -1,10 +1,6 @@
 <template>
 	<div class="luna page">
-		<IntroTimeline
-			introTitle="Luna"
-			:imageUrlLaptop="imageSrcLaptop"
-			:imageUrlPhone="imageSrcPhone"
-		/>
+		<IntroTimeline introTitle="Luna" />
 		<!-- <img src="@/assets/img/Luna/a.png" alt="" /> -->
 		<Timeline :tableauTimeline="tableauTimeline" />
 	</div>
