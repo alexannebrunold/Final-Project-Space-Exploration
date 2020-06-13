@@ -4,19 +4,12 @@
 			<div class="introTimeline__content--title">
 				{{ introTitle }}
 			</div>
-			<!-- <div class="introTimeline__content__img">-->
 			<video class="introTimeline__content--video" controls>
 				<source :src="introTimelineVideoSrc" type="video/mp4" />
 			</video>
-			<!-- </div> -->
-
-			<!-- <div class="introTimeline__content--button"> -->
-			<!-- <div class="introTimeline__content__button--learnMore">
-					<PrimaryButton textPrimaryButton="En savoir plus" />
-				</div> -->
+			<p>Scroll à gauche pour voir la frise</p>
 		</div>
 	</div>
-	<!-- </div> -->
 </template>
 
 <script>
