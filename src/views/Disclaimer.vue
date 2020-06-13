@@ -25,9 +25,17 @@ export default {
 </script>
 
 <style lang="scss">
-.fade {
-  @include fade-out;
+.fade-enter-active,
+.fade-leave-active {
+  transition: 0.3s ease;
 }
+
+.fade-enter,
+.fade-leave-active {
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
 .disclaimer {
   background: $black;
   display: flex;
