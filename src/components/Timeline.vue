@@ -59,6 +59,7 @@ export default {
 .cardContainer {
 	display: flex;
 	z-index: 10;
+	margin-top: 5%;
 }
 
 .line {

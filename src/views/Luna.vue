@@ -1,19 +1,27 @@
 <template>
 	<div class="luna page">
+		<IntroTimeline
+			introTitle="Luna"
+			:imageUrlLaptop="imageSrcLaptop"
+			:imageUrlPhone="imageSrcPhone"
+		/>
 		<!-- <img src="@/assets/img/Luna/a.png" alt="" /> -->
 		<Timeline :tableauTimeline="tableauTimeline" />
 	</div>
 </template>
 
 <script>
+import IntroTimeline from "@/components/IntroTimeline.vue"
 import Timeline from "@/components/Timeline.vue"
 export default {
 	name: "lancement",
 	components: {
 		Timeline,
+		IntroTimeline,
 	},
 	data() {
 		return {
+			imageSrcLaptop: require("../assets/img/Group 74.png"),
 			tableauTimeline: [
 				{
 					image: require("../assets/img/Luna/Luna1.svg"),
@@ -96,5 +104,8 @@ export default {
 <style lang="scss">
 .luna {
 	background-color: $black;
+	display: flex;
+	flex-direction: row;
+	width: fit-content;
 }
 </style>
