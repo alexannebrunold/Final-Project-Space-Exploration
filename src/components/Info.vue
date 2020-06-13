@@ -91,26 +91,23 @@ export default {
 		}
 
 		&__Quote {
+			width: fit-content;
 			background: black;
 			opacity: 40%;
 			padding: 10px;
 			font-size: 8px;
 			position: absolute;
 			bottom: 5px;
-			left: 15%;
-			right: 15%;
+			left: 0;
+			right: 0;
+			margin: auto;
 
 			@include tablet {
-				font-size: 10px;
-				width: fit-content;
-				left: 35%;
-				right: 35%;
+				font-size: 12px;
 			}
 			@include laptop {
-				font-size: 12px;
-				bottom: 25px;
-				left: 25%;
-				right: 25%;
+				font-size: 14px;
+				bottom: 15px;
 			}
 			& p {
 				background: none;
@@ -143,14 +140,17 @@ export default {
 
 			@include tablet {
 				padding-top: 25px;
-				font-size: 80px;
+				font-size: 60px;
 			}
 
 			@include laptop {
 				padding-top: 0px;
+				font-size: 90px;
+			}
+
+			@include pc {
+				padding-top: 0px;
 				font-size: 106px;
-				-webkit-text-stroke: 2px;
-				-webkit-text-stroke-color: $white;
 			}
 		}
 
@@ -178,7 +178,11 @@ export default {
 			}
 
 			@include laptop {
-				font-size: 58px;
+				font-size: 45px;
+				padding-top: 100px;
+			}
+			@include pc {
+				font-size: 60px;
 				padding-top: 100px;
 			}
 		}
@@ -190,24 +194,25 @@ export default {
 			padding-top: 10%;
 
 			@include tablet {
-				font-size: 24px;
-				font-weight: 200;
+				font-size: 16px;
 				width: 85%;
 			}
 
 			@include laptop {
-				font-size: 28px;
+				font-size: 18px;
+			}
+			@include pc {
+				font-size: 24px;
 			}
 		}
 
 		&__Button {
 			display: flex;
-
+			justify-content: space-between;
+			
 			&__LearnMore,
 			&__Next {
 				padding-top: 15%;
-				width: fit-content;
-				margin-right: 20px;
 				@include tablet {
 					margin: 0 7.5%;
 					padding-top: 25pt;

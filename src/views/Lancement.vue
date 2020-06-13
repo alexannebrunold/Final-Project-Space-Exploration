@@ -26,17 +26,15 @@ export default {
 
 <style scoped lang="scss">
 .launch {
-  background-image: url('~@/assets/img/lancement.png');
+	background-image: url('~@/assets/img/lancement.png');
 	width: auto;
 	background-size: cover;
-	background-repeat: no-repeat;
 	background-position: center;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	position: relative;
-
 	&__back {
 		position: absolute;
 		top: 10px;
@@ -71,4 +69,15 @@ export default {
     }
 	}
 }
+
+/*@keyframes  animatedBackground {
+	from {
+		background-size: 120%;
+		
+	}
+
+	to {
+		background-size: 100%;
+	}
+}*/
 </style>
