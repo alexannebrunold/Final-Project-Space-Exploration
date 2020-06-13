@@ -4,33 +4,23 @@
 			<div class="introTimeline__content--title">
 				{{ introTitle }}
 			</div>
-			<!-- <div class="introTimeline__content__img">
-				<img class="introTimeline__content__img--laptop" :src="imageUrlLaptop" />
-				<img class="introTimeline__content__img--Phone" :src="imageUrlPhone" /> -->
+			<!-- <div class="introTimeline__content__img">-->
 			<video class="introTimeline__content--video" autoplay controls>
 				<source src="@/assets/videos/1959-luna-2-ussr (1).mp4" type="video/mp4" />
 			</video>
 			<!-- </div> -->
 
-			<div class="introTimeline__content--button">
-				<!-- <div class="info__Content__Button__LearnMore">
+			<!-- <div class="introTimeline__content--button"> -->
+			<!-- <div class="introTimeline__content__button--learnMore">
 					<PrimaryButton textPrimaryButton="En savoir plus" />
 				</div> -->
-				<!-- <div class="info__Content__Button__Next">
-					<NextButton
-						class="next"
-						textNextButton="Suivant"
-						@click.native="$router.push('/Lancement')"
-					/>
-				</div> -->
-			</div>
 		</div>
 	</div>
+	<!-- </div> -->
 </template>
 
 <script>
 // import PrimaryButton from "@/components/PrimaryButton.vue"
-// import NextButton from "@/components/NextButton.vue"
 export default {
 	name: "Info",
 	components: {},
@@ -55,31 +45,27 @@ export default {
 	display: flex;
 	text-align: center;
 	background-color: $black;
-	// @include laptop {
-	// }
 	&__content {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		// width: 80%;
+		justify-content: space-around;
 		margin: 0 auto;
-		justify-content: center;
 		@include laptop {
 			// width: 50%;
 		}
-
 		&--title {
 			width: fit-content;
 			font-size: 50px;
-			font-weight: bold;
+			font-weight: 200;
 			text-transform: uppercase;
-			-webkit-text-stroke: 1px;
-			-webkit-text-stroke-color: $white;
-			color: transparent;
+			letter-spacing: 0.1em;
+			// -webkit-text-stroke: 1px;
+			// -webkit-text-stroke-color: $white;
+			color: $white;
 			@include tablet {
 				font-size: 80px;
 			}
-
 			@include laptop {
 				font-size: 96px;
 				-webkit-text-stroke: 2px;
@@ -87,48 +73,12 @@ export default {
 			}
 		}
 		&--video {
-			// z-index: -10;
-			// filter: grayscale(1);
-			// position: fixed;
-			// right: 0;
-			// bottom: 0;
-			// margin: auto;
-			// left: 0;
-			// top: 0;
-			max-width: 100vw;
-			max-height: 100%;
-			// filter: brightness(75%);
+			width: 600px;
+			height: auto;
 		}
-		// &__img {
-		// 	height: 500px;
-		// 	width: 100%;
-		// 	@include laptop {
-		// 		// height: 100vh;
-		// 		// width: auto;
-		// 	}
-
-		// 	&--laptop {
-		// 		display: none;
-		// 		height: inherit;
-		// 		@include laptop {
-		// 			display: block;
-		// 		}
-		// 	}
-
-		// 	&--phone {
-		// 		width: 100%;
-		// 		@include laptop {
-		// 			display: none;
-		// 		}
-		// 	}
-
-		// }
-
-		&__Button {
+		&__button {
 			display: flex;
-
-			&__LearnMore,
-			&__Next {
+			&--learnMore {
 				padding-top: 15%;
 				width: fit-content;
 				margin-right: 20px;
