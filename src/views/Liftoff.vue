@@ -1,12 +1,13 @@
 <template>
-	<div class="liftoff page">
-		<video autoplay class="liftoff__video" @ended="$router.push('/nasa')">
-			<source src="../assets/videos/liftoff.mp4" type="video/mp4" />
-		</video>
-		<div class="liftoff__button">
-			<PrimaryButton textPrimaryButton="Passer" @click.native="$router.push('/nasa')" />
-		</div>
-	</div>
+  <div class="liftoff page">
+    <video rel="preload" autoplay class="liftoff__video" @ended="$router.push('/nasa')">
+        <source src="../assets/videos/liftoff.mp4" type="video/mp4">
+    </video>
+    <div class="liftoff__button">
+    <PrimaryButton textPrimaryButton="Passer"
+    @click.native="$router.push('/nasa')"/>
+    </div>
+  </div>
 </template>
 
 <script>

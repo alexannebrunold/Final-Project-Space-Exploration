@@ -1,8 +1,9 @@
 <template>
-	<div class="home page">
-		<video ref="video" loop class="home__video">
-			<source src="../assets/videos/bg-video.mp4" type="video/mp4" />
+	<div  class="home page">
+		<video rel="preload" ref="video" loop class="home__video">
+		<source src="../assets/videos/bg-video.mp4" type="video/mp4">
 		</video>
+		<p class="home__missions">Spoutnik | Apollo | Luna | Artemis</P>
 		<div class="home__title">
 			<p>We choose to go to the</p>
 			<h1>Moon</h1>
@@ -11,7 +12,7 @@
 		<div class="home__textPresentation">
 			<p>Bienvenue parmis nous pour un incroyable voyage lunaire</p>
 			<p class="home__textPresentation--nameUtilisateur">
-				Dis nous en plus, quel est ton nom ?
+				Temps estimé : 20 min_
 			</p>
 		</div>
 		<PrimaryButton
@@ -36,7 +37,7 @@ export default {
 	name: "home",
 	components: {
 		PrimaryButton,
-	},
+  },
 	mounted() {
 		console.log(PrimaryButton)
 		this.play()
@@ -71,6 +72,22 @@ export default {
 		filter: brightness(50%);
 	}
 
+	&__missions {
+		display: none; 
+	@include tablet {
+		display: block;
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		font-size: 18px;
+		font-family: "Poppins";
+		font-weight: lighter;
+		cursor: pointer;
+		}
+	}
+	&__missions::selection {
+		background: black;
+	}
 	&__title {
 		font-size: 18px;
 		padding-bottom: 10px;
@@ -202,10 +219,6 @@ export default {
 		& p::selection {
 			background: black;
 		}
-	}
-
-	&__form {
-		margin-bottom: 20px;
 	}
 
 	&__decollage {
