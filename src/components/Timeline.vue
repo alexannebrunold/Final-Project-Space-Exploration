@@ -1,25 +1,27 @@
 <template>
-	<div width="200" class="timeline">
-		<div class="cardContainer">
-			<CardTimeline
-				v-for="(item, index) in tableauTimeline"
-				:cardStart="index === 0"
-				:cardEnd="index == tableauTimeline.length - 1"
-				@updateTimelinePostionStart="
-					(position) => {
-						timelinePostionStart = position
-					}
-				"
-				@updateTimelinePostionEnd="
-					(position) => {
-						timelinePostionEnd = position
-					}
-				"
-				:key="item.title"
-				:item="item"
-			/>
+	<div class="a">
+		<div width="200" class="timeline">
+			<div class="cardContainer">
+				<CardTimeline
+					v-for="(item, index) in tableauTimeline"
+					:cardStart="index === 0"
+					:cardEnd="index == tableauTimeline.length - 1"
+					@updateTimelinePostionStart="
+						(position) => {
+							timelinePostionStart = position
+						}
+					"
+					@updateTimelinePostionEnd="
+						(position) => {
+							timelinePostionEnd = position
+						}
+					"
+					:key="item.title"
+					:item="item"
+				/>
+			</div>
+			<div class="line" :style="{ width: widthTimeline }"></div>
 		</div>
-		<div class="line" :style="{ width: widthTimeline }"></div>
 	</div>
 </template>
 
@@ -54,21 +56,20 @@ export default {
 .timeline {
 	position: relative;
 }
-
 .cardContainer {
 	display: flex;
 	z-index: 10;
+	margin-top: 5%;
 }
 
 .line {
 	height: 3px;
 	margin: 0 auto;
 	display: block;
-	background-color: $white;
+	background-color: #c4c4c4;
 	z-index: 1;
 	position: absolute;
-	top: 30%;
-	left: 144px;
-	// right: 0;
+	top: 31%;
+	left: 108px;
 }
 </style>
