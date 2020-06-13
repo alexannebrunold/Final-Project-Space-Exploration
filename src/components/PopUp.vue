@@ -91,12 +91,7 @@ export default {
       flex-flow: column;
       width: fit-content;
       margin: 0 auto;
-      font-size: 50px;
-      font-weight: bold;
-      text-transform: uppercase;
-      -webkit-text-stroke: 1px;
-      -webkit-text-stroke-color: $white;
-      color: transparent;
+      @include text-stroke;
       text-align: center;
       align-items: center;
       height: 150px;
