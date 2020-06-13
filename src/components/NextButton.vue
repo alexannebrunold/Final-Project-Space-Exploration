@@ -21,12 +21,12 @@ export default {
 .nextButton {
   font-family: "Poppins";
   font-weight: regular;
-  font-size: 10px;
+  font-size: 14px;
   background-color: transparent;
   border-radius: 5px;
   border: solid 3px #ffffff;
   color: $white;
-  padding: 5px 20px;
+  padding: 10px 20px;
   user-select: none;
   transition: ease-out 0.2s;
   display: flex;
@@ -38,10 +38,10 @@ export default {
     padding: 10px 40px;
   }
   @include laptop {
-    font-size: 18px;
+    font-size: 16px;
   }
   @include pc {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   &:hover {

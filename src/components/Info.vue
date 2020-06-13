@@ -56,163 +56,173 @@ export default {
 
 <style lang="scss" scoped>
 .info {
-  font-family: "Poppins";
-  color: white;
-  display: flex;
-  flex-flow: column;
-  background-color: $black;
-  @include laptop {
-    flex-flow: row;
-  }
+	font-family: "Poppins";
+	color: white;
+	display: flex;
+	flex-flow: column;
+	background-color: $black;
+	@include laptop {
+		flex-flow: row;
+	}
 
-  &__Img {
-    height: auto;
-    width: 100%;
-    position: relative;
-    display: flex;
-    @include laptop {
-      height: 100vh;
-      width: auto;
-    }
+	&__Img {
+		height: auto;
+		width: 100%;
+		position: relative;
+		display: flex;
+		@include laptop {
+			height: 100vh;
+			width: auto;
+		}
 
-    &__Laptop {
-      display: none;
-      height: inherit;
-      @include laptop {
-        display: block;
-      }
-    }
+		&__Laptop {
+			display: none;
+			height: inherit;
+			@include laptop {
+				display: block;
+			}
+		}
 
-    &__Phone {
-      width: 100%;
-      @include laptop {
-        display: none;
-      }
-    }
+		&__Phone {
+			width: 100%;
+			@include laptop {
+				display: none;
+			}
+		}
 
-    &__Quote {
-      background: black;
-      opacity: 40%;
-      padding: 10px;
-      font-size: 8px;
-      position: absolute;
-      bottom: 5px;
-      left: 15%;
-      right: 15%;
+		&__Quote {
+			width: fit-content;
+			background: black;
+			opacity: 40%;
+			padding: 10px;
+			font-size: 8px;
+			position: absolute;
+			bottom: 5px;
+			left: 0;
+			right: 0;
+			margin: auto;
 
-      @include tablet {
-        font-size: 10px;
-        width: fit-content;
-        left: 35%;
-        right: 35%;
-      }
-      @include laptop {
-        font-size: 12px;
-        bottom: 25px;
-        left: 25%;
-        right: 25%;
-      }
-      & p {
-        background: none;
-      }
-    }
-  }
+			@include tablet {
+				font-size: 12px;
+			}
+			@include laptop {
+				font-size: 14px;
+				bottom: 15px;
+			}
+			& p {
+				background: none;
+			}
+		}
+	}
 
-  &__Content {
-    display: flex;
-    flex-direction: column;
-    padding-top: 20px;
-    text-align: left;
-    width: 80%;
-    margin: 0 auto;
-    justify-content: center;
-    @include laptop {
-      width: 50%;
-      padding-top: 0px;
-    }
-    &__Title {
-      width: fit-content;
-      margin: 0 auto;
-      @include text-stroke;
-      text-align: center;
+	&__Content {
+		display: flex;
+		flex-direction: column;
+		padding-top: 20px;
+		text-align: left;
+		width: 80%;
+		margin: 0 auto;
+		justify-content: center;
+		@include laptop {
+			width: 50%;
+			padding-top: 0px;
+		}
+		&__Title {
+			width: fit-content;
+			margin: 0 auto;
+			font-size: 50px;
+			font-weight: bold;
+			text-transform: uppercase;
+			-webkit-text-stroke: 1px;
+			-webkit-text-stroke-color: $white;
+			color: transparent;
+			text-align: center;
 
-      @include tablet {
-        padding-top: 25px;
-        font-size: 80px;
-      }
+			@include tablet {
+				padding-top: 25px;
+				font-size: 60px;
+			}
 
-      @include laptop {
-        padding-top: 0px;
-        font-size: 106px;
-        -webkit-text-stroke: 2px;
-        -webkit-text-stroke-color: $white;
-      }
-    }
+			@include laptop {
+				padding-top: 0px;
+				font-size: 90px;
+			}
 
-    &__Subtitle,
-    &__Text {
-      padding-top: 15%;
-      line-height: 150%;
-      @include laptop {
-        padding-top: 55pt;
-        margin: 0 10%;
-        line-height: 120%;
-      }
-    }
+			@include pc {
+				padding-top: 0px;
+				font-size: 106px;
+			}
+		}
 
-    &__Subtitle {
-      font-size: 24px;
-      font-weight: 300;
-      width: 100%;
-      margin: 0 auto;
+		&__Subtitle,
+		&__Text {
+			padding-top: 15%;
+			line-height: 150%;
+			@include laptop {
+				padding-top: 55pt;
+				margin: 0 10%;
+				line-height: 120%;
+			}
+		}
 
-      @include tablet {
-        font-size: 40px;
-        width: 85%;
-        padding-top: 75px;
-      }
+		&__Subtitle {
+			font-size: 24px;
+			font-weight: 300;
+			width: 100%;
+			margin: 0 auto;
 
-      @include laptop {
-        font-size: 58px;
-        padding-top: 100px;
-      }
-    }
+			@include tablet {
+				font-size: 40px;
+				width: 85%;
+				padding-top: 75px;
+			}
 
-    &__Text {
-      font-size: 14px;
-      font-weight: 300;
-      margin: 0 auto;
-      padding-top: 10%;
+			@include laptop {
+				font-size: 45px;
+				padding-top: 100px;
+			}
+			@include pc {
+				font-size: 60px;
+				padding-top: 100px;
+			}
+		}
 
-      @include tablet {
-        font-size: 24px;
-        font-weight: 200;
-        width: 85%;
-      }
+		&__Text {
+			font-size: 14px;
+			font-weight: 300;
+			margin: 0 auto;
+			padding-top: 10%;
 
-      @include laptop {
-        font-size: 28px;
-      }
-    }
+			@include tablet {
+				font-size: 16px;
+				width: 85%;
+			}
 
-    &__Button {
-      display: flex;
+			@include laptop {
+				font-size: 18px;
+			}
+			@include pc {
+				font-size: 24px;
+			}
+		}
 
-      &__LearnMore,
-      &__Next {
-        padding-top: 15%;
-        width: fit-content;
-        margin-right: 20px;
-        @include tablet {
-          margin: 0 7.5%;
-          padding-top: 25pt;
-        }
-        @include laptop {
-          padding-top: 55pt;
-          line-height: 120%;
-        }
-      }
-    }
-  }
+		&__Button {
+			display: flex;
+			justify-content: space-between;
+			
+			&__LearnMore,
+			&__Next {
+				padding-top: 15%;
+				@include tablet {
+					margin: 0 7.5%;
+					padding-top: 25pt;
+				}
+				@include laptop {
+					padding-top: 55pt;
+					line-height: 120%;
+				}
+			}
+		}
+	}
 }
 </style>
