@@ -1,9 +1,27 @@
 <template>
 	<div class="timeline">
-		<div class="cardContainer">
-			<CardTimeline v-for="item in tableauTimeline" :key="item.title" :item="item" />
+		<div width="200" class="timeline">
+			<div class="cardContainer">
+				<CardTimeline
+					v-for="(item, index) in tableauTimeline"
+					:cardStart="index === 0"
+					:cardEnd="index == tableauTimeline.length - 1"
+					@updateTimelinePostionStart="
+						(position) => {
+							timelinePostionStart = position
+						}
+					"
+					@updateTimelinePostionEnd="
+						(position) => {
+							timelinePostionEnd = position
+						}
+					"
+					:key="item.title"
+					:item="item"
+				/>
+			</div>
+			<div class="line" :style="{ width: widthTimeline }"></div>
 		</div>
-		<div class="line"></div>
 	</div>
 </template>
 
@@ -11,6 +29,12 @@
 import CardTimeline from "./CardTimeline.vue"
 
 export default {
+	data() {
+		return {
+			timelinePostionStart: 0,
+			timelinePostionEnd: 0,
+		}
+	},
 	props: {
 		tableauTimeline: Array,
 	},
@@ -19,16 +43,11 @@ export default {
 	},
 	computed: {
 		widthTimeline() {
-			let a = document.querySelector(".line").offsetLeft
-			let b = document.querySelector(".cardContainer").offsetWidth
-			var c = b - a
-			return c
+			return this.timelinePostionEnd - this.timelinePostionStart + "px"
 		},
 	},
 	mounted() {
-		console.log(
-			this.$el.querySelector(".cardContainer").offsetWidth / (this.tableauTimeline.length + 1)
-		)
+		console.log()
 	},
 }
 </script>
@@ -37,22 +56,20 @@ export default {
 .timeline {
 	position: relative;
 }
-
 .cardContainer {
 	display: flex;
 	z-index: 10;
+	margin-top: 5%;
 }
 
 .line {
 	height: 3px;
-	width: 96%;
 	margin: 0 auto;
 	display: block;
-	background-color: $white;
+	background-color: #c4c4c4;
 	z-index: 1;
 	position: absolute;
-	top: 30%;
-	left: 3.1%;
-	// right: 0;
+	top: 31%;
+	left: 108px;
 }
 </style>

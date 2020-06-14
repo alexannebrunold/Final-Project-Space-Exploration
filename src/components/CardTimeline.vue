@@ -1,7 +1,7 @@
 <template>
 	<span class="cardTimeline">
 		<span class="cardTimeline__div">
-			<img :src="item.image" alt="" />
+			<img :src="item.image" alt="" @click="$router.push(`popUp/${toSlug(item.title)}`)" />
 			<div class="cardTimeline__div--circle"></div>
 		</span>
 		<h1 class="cardTimeline__date">{{ item.date }}</h1>
@@ -14,21 +14,49 @@
 export default {
 	props: {
 		item: Object,
+		cardStart: Boolean,
+		cardEnd: Boolean,
+	},
+	methods: {
+		toSlug: function(title) {
+			return title.replace(" ", "-").toLowerCase()
+		},
+	},
+	mounted() {
+		setTimeout(() => {
+			const el = this.$el
+			if (this.cardStart) {
+				console.log(el.querySelector(".cardTimeline__div--circle").offsetLeft)
+				this.$emit(
+					"updateTimelinePostionStart",
+					el.querySelector(".cardTimeline__div--circle").offsetLeft
+				)
+			} else if (this.cardEnd) {
+				console.log("cardEnd")
+				this.$emit(
+					"updateTimelinePostionEnd",
+					el.querySelector(".cardTimeline__div--circle").offsetLeft
+				)
+			}
+		}, 1000)
 	},
 }
 </script>
 
 <style lang="scss" scoped>
 .cardTimeline {
+	z-index: 2;
 	display: table;
 	height: 538px;
 	width: auto;
 	text-align: left;
 	padding-left: 1%;
 	padding-right: 1%;
-	&:hover {
-		transform: scale(1.1);
-		cursor: pointer;
+	& img {
+		&:hover {
+			transform: scale(1.1);
+			cursor: pointer;
+		}
 	}
 	&__div {
 		display: table;
@@ -40,6 +68,10 @@ export default {
 			border-radius: 20px;
 			background: #c4c4c4;
 			margin-top: 4%;
+			&:hover {
+				background: $white;
+				cursor: pointer;
+			}
 		}
 	}
 
