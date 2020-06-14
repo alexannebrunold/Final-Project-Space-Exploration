@@ -1,7 +1,11 @@
 <template>
-	<div class="artemis">
-		<IntroTimeline introTitle="Artemis" :introTimelineVideoSrc="introTimelineVideoSrc" />
-		<Timeline :tableauTimeline="tableauTimeline" />
+	<div class="artemis page">
+		<IntroTimeline
+			:backgroundImg="backgroundImg"
+			introTitle="Artemis"
+			:introTimelineVideoSrc="introTimelineVideoSrc"
+		/>
+		<Timeline :tableauTimeline="tableauTimeline" class="timelineComponent" />
 	</div>
 </template>
 
@@ -16,6 +20,7 @@ export default {
 	},
 	data() {
 		return {
+			backgroundImg: require("@/assets/img/Artemis/ApolloBackground.svg"),
 			introTimelineVideoSrc: require("@/assets/videos/Artemis.mp4"),
 			tableauTimeline: [
 				{

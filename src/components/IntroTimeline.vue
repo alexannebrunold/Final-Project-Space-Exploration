@@ -1,6 +1,6 @@
 <template>
 	<div class="introTimeline" @click="startAutoplay()">
-		<img src="@/assets/img/Artemis/Group 84.svg" alt="" />
+		<img :src="backgroundImg" alt="" />
 		<div class="introTimeline__content">
 			<div class="introTimeline__content--title">
 				{{ introTitle }}
@@ -19,6 +19,7 @@ export default {
 	name: "Info",
 	components: {},
 	props: {
+		backgroundImg: String,
 		introTimelineVideoSrc: String,
 		introTitle: String,
 	},
@@ -36,25 +37,26 @@ export default {
 
 <style lang="scss" scoped>
 .introTimeline {
-	height: 100vh;
 	font-family: "Poppins";
 	color: white;
 	display: flex;
 	text-align: center;
 	background-color: $black;
-	margin: 0;
+	height: 100vh;
 	& img {
 		z-index: 0;
 		position: absolute;
 		filter: opacity(20%);
+		overflow: hidden;
+		height: 100%;
+		width: auto;
 	}
 	&__content {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
-		margin-left: 16%;
-		padding-right: 40%;
+		padding: 0 80px;
 		position: relative;
 		@include laptop {
 			// width: 50%;
