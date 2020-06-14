@@ -60,7 +60,6 @@ export default {
 	@include laptop {
 		flex-flow: row;
 	}
-
 	&__Img {
 		height: auto;
 		width: 100%;
@@ -70,7 +69,6 @@ export default {
 			height: 100vh;
 			width: auto;
 		}
-
 		&__Laptop {
 			display: none;
 			height: inherit;
@@ -78,14 +76,12 @@ export default {
 				display: block;
 			}
 		}
-
 		&__Phone {
 			width: 100%;
 			@include laptop {
 				display: none;
 			}
 		}
-
 		&__Quote {
 			width: fit-content;
 			background: black;
@@ -97,7 +93,6 @@ export default {
 			left: 0;
 			right: 0;
 			margin: auto;
-
 			@include tablet {
 				font-size: 12px;
 			}
@@ -110,7 +105,6 @@ export default {
 			}
 		}
 	}
-
 	&__Content {
 		display: flex;
 		flex-direction: column;
@@ -133,23 +127,19 @@ export default {
 			-webkit-text-stroke-color: $white;
 			color: transparent;
 			text-align: center;
-
 			@include tablet {
 				padding-top: 25px;
 				font-size: 60px;
 			}
-
 			@include laptop {
 				padding-top: 0px;
 				font-size: 90px;
 			}
-
 			@include pc {
 				padding-top: 0px;
 				font-size: 106px;
 			}
 		}
-
 		&__Subtitle,
 		&__Text {
 			padding-top: 15%;
@@ -159,20 +149,18 @@ export default {
 				margin: 0 10%;
 				line-height: 120%;
 			}
-		}
-
+    }
+    
 		&__Subtitle {
 			font-size: 24px;
 			font-weight: 300;
 			width: 100%;
 			margin: 0 auto;
-
 			@include tablet {
 				font-size: 40px;
 				width: 85%;
 				padding-top: 75px;
 			}
-
 			@include laptop {
 				font-size: 45px;
 				padding-top: 100px;
@@ -182,18 +170,15 @@ export default {
 				padding-top: 100px;
 			}
 		}
-
 		&__Text {
 			font-size: 14px;
 			font-weight: 300;
 			margin: 0 auto;
 			padding-top: 10%;
-
 			@include tablet {
 				font-size: 16px;
 				width: 85%;
 			}
-
 			@include laptop {
 				font-size: 18px;
 			}
@@ -201,11 +186,9 @@ export default {
 				font-size: 24px;
 			}
 		}
-
 		&__Button {
 			display: flex;
 			justify-content: space-between;
-
 			&__LearnMore,
 			&__Next {
 				padding-top: 15%;
