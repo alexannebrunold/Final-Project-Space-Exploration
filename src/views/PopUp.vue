@@ -1,5 +1,5 @@
 <template>
-	<div class="popup page" to="">
+	<div class="popup page">
 		<div class="popup__Img">
 			<img class="popup__Img__Laptop" :src="currentPage.image" />
 			<img class="popup__Img__Phone" :src="imageUrlPhone" />
@@ -25,15 +25,6 @@
 <script>
 export default {
 	name: "PopUp",
-	props: {
-		imageUrlLaptop: {},
-		imageUrlPhone: {},
-		logoUrl: {},
-		datePopUp: String,
-		titlePopUp: String,
-		subtitlePopUp: String,
-		textPopUp: String,
-	},
 	data() {
 		return {
 			"luna-1": {
@@ -70,6 +61,48 @@ export default {
 				subtitle: "L’orbite lunaire",
 				text: "Lorem",
 				date: "31 Mars 1966",
+			},
+			apollo: {
+				image: require("../assets/img/PopUp/Luna/Luna1.svg"),
+				title: "LUNA 10",
+				subtitle: "L’orbite lunaire",
+				text: "Lorem",
+				date: "31 Mars 1966",
+			},
+			annonce: {
+				image: require("../assets/img/PopUp/Artemis/Artemis-0.svg"),
+				title: "Artemis",
+				subtitle: "Le Programme Artemis",
+				text:
+					"Le programme Artemis est un programme spatial habité de la NASA, l'agence spatiale américaine, dont l'objectif est d'amener un équipage sur le sol lunaire d'ici 2024",
+			},
+			"artemis-1": {
+				image: require("../assets/img/PopUp/Artemis/Artemis-1.svg"),
+				title: "Artemis 1",
+				subtitle: "Premier essai du lanceur",
+				text:
+					"L'objectif principal est de valider le fonctionnement du nouveau lanceur Space Launch System ainsi que celui du vaisseau Orion sans équipage. Ce dernier sera testé durant les différentes phases d'une mission autour de la Lune : insertion en orbite autour de celle-ci, modification de l'orbite, injection sur une orbite de retour vers la Terre, rentrée atmosphérique à grande vitesse.",
+			},
+			"artemis-2": {
+				image: require("../assets/img/PopUp/Artemis/Artemis-2.svg"),
+				title: "Artemis 2",
+				subtitle: "Premier essai du lanceur",
+				text:
+					"L'objectif principal est de valider le fonctionnement du nouveau lanceur Space Launch System ainsi que celui du vaisseau Orion sans équipage. Ce dernier sera testé durant les différentes phases d'une mission autour de la Lune : insertion en orbite autour de celle-ci, modification de l'orbite, injection sur une orbite de retour vers la Terre, rentrée atmosphérique à grande vitesse.",
+			},
+			"artemis-3": {
+				image: require("../assets/img/PopUp/Artemis/Artemis-3.svg"),
+				title: "Artemis 3",
+				subtitle: "De retour sur la lune",
+				text:
+					"L'objectif principal est de valider le fonctionnement du nouveau lanceur Space Launch System ainsi que celui du vaisseau Orion sans équipage. Ce dernier sera testé durant les différentes phases d'une mission autour de la Lune : insertion en orbite autour de celle-ci, modification de l'orbite, injection sur une orbite de retour vers la Terre, rentrée atmosphérique à grande vitesse.",
+			},
+			mars: {
+				image: require("../assets/img/PopUp/Artemis/Mars.svg"),
+				title: "ET APRÈS ?",
+				subtitle: "Objectif Mars",
+				text:
+					"L'objectif principal est de valider le fonctionnement du nouveau lanceur Space Launch System ainsi que celui du vaisseau Orion sans équipage. Ce dernier sera testé durant les différentes phases d'une mission autour de la Lune : insertion en orbite autour de celle-ci, modification de l'orbite, injection sur une orbite de retour vers la Terre, rentrée atmosphérique à grande vitesse.",
 			},
 		}
 	},
