@@ -35,7 +35,7 @@ export default {
 
 <style scoped lang="scss">
 .launch {
-	background-image: url("~@/assets/img/lancement.png");
+	background-image: url("~@/assets/img/lancement.jpg");
 	width: auto;
 	background-size: cover;
 	background-position: center;
