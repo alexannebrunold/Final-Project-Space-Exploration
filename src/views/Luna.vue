@@ -1,6 +1,10 @@
 <template>
 	<div class="luna page">
-		<IntroTimeline introTitle="Luna" :introTimelineVideoSrc="introTimelineVideoSrc" />
+		<IntroTimeline
+			:backgroundImg="backgroundImg"
+			introTitle="Luna"
+			:introTimelineVideoSrc="introTimelineVideoSrc"
+		/>
 		<Timeline :tableauTimeline="tableauTimeline" />
 	</div>
 </template>
@@ -16,6 +20,7 @@ export default {
 	},
 	data() {
 		return {
+			backgroundImg: require("@/assets/img/Luna/LunaBackground.svg"),
 			introTimelineVideoSrc: require("@/assets/videos/1959-luna-2-ussr (1).mp4"),
 
 			tableauTimeline: [
