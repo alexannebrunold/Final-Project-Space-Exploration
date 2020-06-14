@@ -1,5 +1,5 @@
 <template>
-	<div class="a">
+	<div class="timeline">
 		<div width="200" class="timeline">
 			<div class="cardContainer">
 				<CardTimeline
