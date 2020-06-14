@@ -41,7 +41,6 @@ export default {
 	padding: 10px 20px;
 	user-select: none;
 	transition: ease-out 0.2s;
-	display: flex;
 	flex-direction: row;
 	align-items: center;
 

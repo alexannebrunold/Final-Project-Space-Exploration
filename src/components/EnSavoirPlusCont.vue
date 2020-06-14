@@ -1,5 +1,8 @@
 <template>
   <div class="learnMore">
+    <div class="learMore__Right__Button">
+        <BackButton class="back" />
+      </div>
     <div class="learnMore__Left">
 
       <img class="learnMore__Left__Laptop" :src="imageUrlLaptopLeft" />
@@ -28,9 +31,9 @@
       <div class="learnMore__Right__Text">
         {{ textInfoRight }}
       </div>
-      
+
       <div class="learMore__Right__Button">
-        <PrimaryButton />
+        <NextButton class="next" />
       </div>
     </div>
   </div>
@@ -38,11 +41,13 @@
 </template>
 
 <script>
-import PrimaryButton from "@/components/PrimaryButton.vue";
+import NextButton from "@/components/NextButton.vue"
+import BackButton from "@/components/BackButton.vue"
 export default {
   name: "EnSavoirPlus",
   components: {
-    PrimaryButton,
+    NextButton,
+    BackButton,
   },
   props: {
     imageUrlLaptopLeft: {},
@@ -135,7 +140,9 @@ export default {
   height: 2px;
   background-color: grey;
   @include laptop {
-    height: 2px;
+    background-color: grey;
+    width: 2px;
+    height: 100%;
     rotate: 90deg;
   }
 }
@@ -203,14 +210,12 @@ export default {
           font-weight: normal;
         }
         &__button {
-          padding: 5px 20px;
-          border: 3px solid #FFFFFF;
-          box-sizing: border-box;
-          border-radius: 5px;
+          margin-top: 48px;
+          margin-bottom: 38px;
           @include laptop {
-            border: 3px solid #FFFFFF;
-            box-sizing: border-box;
-            border-radius: 5px;
+            margin-top: 58px;
+            width: 237px;
+            height: 69px;
           }
         }
       }
