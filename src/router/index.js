@@ -14,22 +14,7 @@ const routes = [
 		path: "/home",
 		name: "Home",
 		component: Home,
-		nextPage: "Contexte",
-		// route level code-splitting
-		// this generates a separate chunk (about.[hash].js) for this route
-		// which is lazy-loaded when the route is visited.
-	},
-
-	{
-		path: "/luna",
-		name: "Luna",
-		component: () => import(/* webpackChunkName: "about" */ "@/views/Luna.vue"),
-	},
-	{
-		path: "/loading",
-		name: "Loading",
-		nextPage: "Contexte",
-		component: () => import(/* webpackChunkName: "about" */ "@/views/Loading.vue"),
+		nextPage: "contexte",
 	},
 	{
 		path: "/contexte",
@@ -38,20 +23,20 @@ const routes = [
 		nextPage: "Lancement",
 	},
 	{
-		path: "/enSavoirPlus",
-		name: "EnSavoirPlus",
-		component: () => import("@/views/EnSavoirPlus.vue"),
-		nextPage: "Lifftoff",
-	},
-	{
 		path: "/lancement",
 		name: "Lancement",
 		component: () => import("@/views/Lancement.vue"),
 	},
 	{
-		path: "/choice",
-		name: "Choice",
-		component: () => import("@/views/Choice.vue"),
+		path: "/loading",
+		name: "Loading",
+		nextPage: "Contexte",
+		component: () => import("@/views/Loading.vue"),
+	},
+	{
+		path: "/liftoff",
+		name: "Liftoff",
+		component: () => import("@/views/Liftoff.vue"),
 	},
 	{
 		path: "/nasa",
@@ -60,19 +45,37 @@ const routes = [
 		nextPage: "Choice",
 	},
 	{
-		path: "/liftoff",
-		name: "Liftoff",
-		component: () => import("@/views/Liftoff.vue"),
+		path: "/choice",
+		name: "Choice",
+		component: () => import("@/views/Choice.vue"),
+	},
+	{
+		path: "/luna",
+		name: "Luna",
+		component: () => import("@/views/Luna.vue"),
 	},
 	{
 		path: "/apollo",
 		name: "Apollo",
 		component: () => import("@/views/Apollo.vue"),
 	},
+
+	{
+		path: "/enSavoirPlus",
+		name: "EnSavoirPlus",
+		component: () => import("@/views/EnSavoirPlus.vue"),
+		nextPage: "Lifftoff",
+	},
+
 	{
 		path: "/artemis",
 		name: "Artemis",
 		component: () => import("@/views/Artemis.vue"),
+	},
+	{
+		path: "/popUp/:name",
+		name: "PopUp",
+		component: () => import("@/views/PopUp.vue"),
 	},
 ]
 

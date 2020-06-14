@@ -1,7 +1,7 @@
 <template>
 	<span class="cardTimeline">
 		<span class="cardTimeline__div">
-			<img :src="item.image" alt="" />
+			<img :src="item.image" alt="" @click="$router.push(`popUp/${toSlug(item.title)}`)" />
 			<div class="cardTimeline__div--circle"></div>
 		</span>
 		<h1 class="cardTimeline__date">{{ item.date }}</h1>
@@ -16,6 +16,11 @@ export default {
 		item: Object,
 		cardStart: Boolean,
 		cardEnd: Boolean,
+	},
+	methods: {
+		toSlug: function(title) {
+			return title.replace(" ", "-").toLowerCase()
+		},
 	},
 	mounted() {
 		setTimeout(() => {

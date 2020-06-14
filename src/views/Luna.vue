@@ -17,6 +17,7 @@ export default {
 	data() {
 		return {
 			introTimelineVideoSrc: require("@/assets/videos/1959-luna-2-ussr (1).mp4"),
+
 			tableauTimeline: [
 				{
 					image: require("../assets/img/Luna/Luna1.svg"),
