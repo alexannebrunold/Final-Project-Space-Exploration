@@ -18,7 +18,7 @@
 		<PrimaryButton
 			textPrimaryButton="Décollage"
 			class="home__decollage"
-			@click.native="$router.push('/Contexte')"
+			@click.native="$router.push('/Loading')"
 		/>
 		<img @click="toggleMute" class="home__sound" src="../assets/img/home/sound.svg" alt="" />
 		<div class="home__better ">

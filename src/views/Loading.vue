@@ -23,10 +23,23 @@
       </div>
     </div>
     <div class="loader__txt">
-      <p>Temps estimé : 20min</p>
+      <p>Chargement veuillez patienter</p>
+      <div class="ball-loader">
+      <div class="ball-loader-ball ball1"></div>
+      <div class="ball-loader-ball ball2"></div>
+      <div class="ball-loader-ball ball3"></div>
+      </div>
     </div>
   </div>
 </template>
+<script>
+
+export default {
+  created() {
+    setTimeout(() => this.$router.push({ path: "/home" }), 5000);
+  },
+};
+</script>
 
 <style lang="scss">
 .loading {
@@ -62,7 +75,6 @@
 
 .loader__rocket {
   position: absolute;
-
   width: 100%;
   height: 100%;
   animation: spin $duration $ease infinite;
@@ -71,7 +83,7 @@
 
 .loader__icon {
   position: absolute;
-  top: -1.05em;
+  top: -3.05em;
   left: calc(50% - 1em);
   display: block;
   transform: rotate(-90deg);
@@ -82,7 +94,7 @@
   stroke: $white;
   stroke-dashoffset: 500;
   stroke-linecap: square;
-  stroke-width: 5;
+  stroke-width: 3;
   animation: dash $duration $easeCircle infinite;
 }
 
@@ -96,10 +108,55 @@
 
 .loader__txt {
   padding-bottom: 60px;
-  padding-top: 40px;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: row;
+  p {
   font-family: "Poppins";
   font-size: 20px;
+  padding-right: 50px;
+  }
+
+$width: 60;
+$color: white;
+.ball-loader{
+  width: $width + 0px;
+  height: ($width / 3) - 10px;
+
+  transform: translateX(-50%) translateY(-50%);
 }
+.ball-loader-ball{
+  margin-top: 10px;
+  will-change: transform;
+  height:($width / 3) - 10px;
+  width: ($width / 3) - 10px;
+  border-radius: 50%;
+  background-color: $color;
+  position: absolute;
+  animation: grow 1s ease-in-out infinite alternate;
+  
+  &.ball1{
+    left:0;
+    transform-origin: 100% 50%;
+  }
+  &.ball2{
+    left:50%;
+    transform: translateX(-50%) scale(1);
+    animation-delay: 0.33s;
+  }
+  &.ball3{
+    right:0;
+    animation-delay: 0.66s;
+  }
+}
+
+@keyframes grow{
+  to{
+    transform: translateX(-50%) scale(0);
+  }
+}
+}
+
 
 /*
    Loader animations
