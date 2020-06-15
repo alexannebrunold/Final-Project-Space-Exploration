@@ -61,9 +61,9 @@ const routes = [
   },
 
   {
-    path: "/enSavoirPlus",
-    name: "EnSavoirPlus",
-    component: () => import("@/views/EnSavoirPlus.vue"),
+    path: "/contexteSpoutnik",
+    name: "ContexteSpoutnik",
+    component: () => import("@/views/ContexteSpoutnik.vue"),
     nextPage: "Lifftoff",
   },
 

@@ -109,6 +109,7 @@ export default {
 			}
 		}
 		p {
+			line-height: 130%;
 			padding-bottom: 30px;
 			font-size: 14px;
 			color: white;
