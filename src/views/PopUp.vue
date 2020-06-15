@@ -48,6 +48,13 @@ export default {
 				text: "Luna 3 (appelée aussi Lunik 3 ou Objet 00021) fut le premier engin spatial à transmettre des photographies de la face cachée de la Lune. La sonde automatique ne retransmit que des clichés de mauvaise qualité, mais par traitement informatique on parvint à produire à partir de ceux-ci le premier atlas de la face cachée. Très accidentée, celle-ci s'avérait fort différente de la face visible.",
 				date: "14 Septembre 1959",
 			},
+			"luna-4-8": {
+				image: require("../assets/img/PopUp/Luna/Luna4-8.svg"),
+				title: "LUNA 4-8",
+				subtitle: "Des échecs répéter",
+				text: "Pas moins de 13 sondes Luna sont envoyer (deux modèles YE-3 et 11 YE-6) entre 1960 et 1965, mais aucune de ces missions ne parvient à remplir leurs objectifs. Entre les échecs de lancement les erreurs de trajectoire et deux récents crashs lunaires (Luna 7 et 8) le modèle YE-6 et finalement abandonner, tout comme le nouveau système de lanceur. Cette innovation, conçus pour l'YE-6 sera à l'origine d'un grand nombre de défaillances du lanceur.",
+				date: "14 Septembre 1959",
+			},
 			"luna-9": {
 				image: require("../assets/img/PopUp/Luna/Luna9.svg"),
 				title: "LUNA 9",
@@ -61,6 +68,27 @@ export default {
 				subtitle: "L’orbite lunaire",
 				text: "Luna 10 (appelée aussi Lunik 10 ou Objet 02126) se plaça en orbite lunaire le 3 avril 1966 et termina sa première révolution au bout de 3 heures, devenant ainsi le premier satellite artificiel de la lune. Des études du champ de gravitation lunaire furent également menées. Pour l'anecdote, la sonde retransmit vers la Terre un enregistrement de l'Internationale lors du XXIIe congrès du Parti Communiste Soviétique.",
 				date: "31 Mars 1966",
+			},
+			"luna-11-14": {
+				image: require("../assets/img/PopUp/Luna/Luna11-14.svg"),
+				title: "LUNA 11-14",
+				subtitle: "Des missions qui se diversifi",
+				text: "Les sondes Luna 11 à 14 sont pour la majorité de grande réussite avec des missions en tout genre comme prendre des photos depuis l'orbite lunaire (Luna 12), se poser en douceur sur la lune (Luna13) ou encore la Cartographie détaillée de la lune, mesure du champ de gravité et test des futurs systèmes de télécommunications (Luna 14).",
+				date: "31 Mars 1966",
+			},
+			"luna-16": {
+				image: require("../assets/img/PopUp/Luna/Luna16.svg"),
+				title: "LUNA 16",
+				subtitle: "Le premier échantillon lunaire",
+				text: "La sonde spatiale Luna 16 réussit pour la première fois dans l'histoire de l'exploration spatiale à recueillir et rapporter sans intervention humaine un échantillon du sol d'un autre corps céleste sur Terre. À la date de lancement, des roches lunaires avaient déjà été rapportées sur Terre par les missions américaines Apollo 11 et Apollo 12.",
+				date: "31 Mars 1966",
+			},
+			"luna-17": {
+				image: require("../assets/img/PopUp/Luna/Luna17.svg"),
+				title: "LUNA 17",
+				subtitle: "Le premier échantillon lunaire",
+				text: "Le vaisseau se posa sur la Lune le 17 novembre. Il déploya une double rampe qui permit à Lunokhod 1 de descendre vers la surface lunaire. Il fut déclaré officiellement inactif le 4 octobre 1971. Lunokhod a voyagé sur une distance de 10 540 mètres 1er a transmis plus de 20 000 images, et plus de 200 panoramas. Il a aussi effectué plus de 500 tests sur le sol lunaire.",
+				date: "15 novembre 1970",
 			},
 			apollo: {
 				image: require("../assets/img/PopUp/Luna/Luna1.svg"),
