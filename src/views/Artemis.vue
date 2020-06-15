@@ -6,12 +6,53 @@
 			:introTimelineVideoSrc="introTimelineVideoSrc"
 		/>
 		<Timeline :tableauTimeline="tableauTimeline" class="timelineComponent" />
+		<div class="endTimeline">
+			<div class="endTimeline--title">
+				<p>We choose to go to the</p>
+				<h1>Moon</h1>
+			</div>
+			<p class="endTimeline--paragraphe">
+				La
+				<span>Lune</span>
+				fut donc un enjeu politique majeur durant la guerre froide, grâce à
+				<span>Apollo 11</span>
+				les
+
+				<span>Etats-Unis</span>
+				finissent
+				<span>vainqueur</span>
+				de la conquête lunaire malgré l’avance de l’URSS plusieurs années avant.
+				<br />
+				<br />
+				Le
+				<span>retour</span>
+				des hommes sur la lune redevient un thème recurent de nouveau motivé pour des
+				<span>raisons politiques</span>
+				plus qu’économique.
+				<br />
+				D’autres nations se lancent dans la course à la lune, comme l’Inde, l’Europe et nottament la
+				<span>Chine</span>
+				et son programme
+				<span>CLEP</span>
+				.
+				<br />
+				<br />
+				Les Etats-Unis annoncent enfin le
+				<span>programme Artemis</span>
+				afin de renvoyer des hommes sur la
+				<span>Lune</span>
+				puis permettre des missions sur la surface de
+				<span>Mars</span>
+				.
+			</p>
+		</div>
 	</div>
 </template>
 
 <script>
 import IntroTimeline from "@/components/IntroTimeline.vue"
 import Timeline from "@/components/Timeline.vue"
+
 export default {
 	name: "lancement",
 	components: {
@@ -70,5 +111,105 @@ export default {
 	display: flex;
 	flex-direction: row;
 	width: fit-content;
+}
+.endTimeline {
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 1%;
+	margin-right: 1%;
+	margin-left: 1%;
+
+	@include tablet {
+		width: 90vw;
+	}
+	@include laptop {
+		width: 80vw;
+	}
+	&--title {
+		font-size: 18px;
+		padding-bottom: 10px;
+		font-family: "Poppins";
+		font-weight: lighter;
+		@include tablet {
+			font-size: 24px;
+			margin-top: 16%;
+		}
+		@include laptop {
+			font-size: 28px;
+			margin-top: 4%;
+		}
+		@include pc {
+			font-size: 36px;
+		}
+
+		& h1 {
+			transition: linear 0.8s;
+			text-transform: uppercase;
+			padding-bottom: 5%;
+			background-clip: text;
+			background-size: cover;
+			-webkit-text-stroke: 1px;
+			-webkit-text-stroke-color: $white;
+			color: transparent;
+
+			cursor: pointer;
+			font-weight: bold;
+			font-size: 80px;
+
+			@include tablet {
+				font-size: 110px;
+			}
+			@include laptop {
+				font-size: 125px;
+			}
+			@include pc {
+				font-size: 200px;
+			}
+		}
+
+		& h1:hover {
+			color: white;
+			transition: linear 0.8s;
+		}
+
+		& h1::selection {
+			background: black;
+		}
+
+		& p {
+			padding-bottom: 5px;
+		}
+		& p::selection {
+			background: black;
+		}
+	}
+	&--paragraphe {
+		padding-bottom: 30px;
+		font-size: 14px;
+		font-family: "Poppins";
+		width: 100%;
+		margin-top: 8%;
+		text-align: left;
+		font-weight: 300;
+		& span {
+			font-weight: 500;
+		}
+		@include tablet {
+			font-size: 16px;
+			width: 70%;
+		}
+		@include laptop {
+			font-size: 18px;
+			width: 80%;
+			margin-top: 4%;
+			padding-bottom: 0px;
+			line-height: 140%;
+		}
+		@include pc {
+			font-size: 24px;
+		}
+	}
 }
 </style>
