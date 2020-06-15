@@ -2,8 +2,8 @@
 	<div class="endTimeline">
 		<h1 class="endTimeline--title">{{ titleEnd }}</h1>
 		<p class="endTimeline--paragraphe">{{ paragrapheEnd }}</p>
-		<PrimaryButton />
-		<PrimaryButton />
+		<PrimaryButton :textPrimaryButton="textPrimaryButton" />
+		<PrimaryButton :textPrimaryButton="textPrimaryButtonTwo" />
 	</div>
 </template>
 
@@ -16,6 +16,8 @@ export default {
 	props: {
 		titleEnd: String,
 		paragrapheEnd: String,
+		textPrimaryButton: String,
+		textPrimaryButtonTwo: String,
 	},
 }
 </script>

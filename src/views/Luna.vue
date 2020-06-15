@@ -6,7 +6,12 @@
 			:introTimelineVideoSrc="introTimelineVideoSrc"
 		/>
 		<Timeline :tableauTimeline="tableauTimeline" />
-		<EndTimeline titleEnd="coucou" paragrapheEnd="Lorem" />
+		<EndTimeline
+			titleEnd="coucou"
+			paragrapheEnd="Lorem"
+			textPrimaryButton="Apollo"
+			textPrimaryButtonTwo="Artemis"
+		/>
 	</div>
 </template>
 
