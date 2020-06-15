@@ -9,11 +9,16 @@
 			<div class="nasa__title">
 				<h1>Création de la NASA</h1>
 				<h2>1 octobre 1958</h2>
-				<p>
-					Dans un contexte de Guerre Froide une compétition entre les États-Unis et l'Union
-					soviétique apparait Entre 1957 et 1975. Ils essayent, par l’astronautique de prouver leur
-					supériorité politique.
-				</p>
+				<vue-typed-js
+					:strings="[
+						'Dans un contexte de Guerre Froid une compétition entre les Etats-Unis et l\'Union soviétique apparait entre 1957 et 1975. Ils essayent, par l\'astronautique de prouver leur supériorité politique.',
+					]"
+					:typeSpeed="80"
+					:smartBackspace="true"
+					:showCursor="false"
+				>
+					<p class="typing"></p>
+				</vue-typed-js>
 			</div>
 		</div>
 		<div class="nasa__btn">
@@ -70,7 +75,6 @@ export default {
 	}
 	&__title {
 		padding-top: 40px;
-
 		padding-left: 20px;
 		padding-right: 20px;
 		@include tablet {
