@@ -4,7 +4,6 @@
       class="morgan__info"
       :imageUrl="imageSrc"
       quoteInfo=" J'ai aidé à envoyer 12 personnes sur la Lune. Et j'aime le raconter à tout le monde"
-      titleInfo="JoAnn morgan"
       subtitleInfo="Les pionnières de la conquête spatiale."
       textInfo="Après la mission Apollo, JoAnn Morgan est devenue la première femme haute dirigeante du Centre spatial Kennedy (Floride). Aujourd'hui retraitée, elle aime se rappeler son rôle dans la mission Apollo. "
     />

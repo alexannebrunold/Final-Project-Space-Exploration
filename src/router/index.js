@@ -7,14 +7,8 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Disclaimer",
-    component: () => import("@/views/Disclaimer.vue"),
-  },
-  {
-    path: "/home",
     name: "Home",
     component: Home,
-    nextPage: "contexte",
   },
   {
     path: "/contexte",
@@ -60,14 +54,22 @@ const routes = [
     component: () => import("@/views/Apollo.vue"),
   },
   {
-    path: "/houbolt",
-    name: "Houbolt",
-    component: () => import("@/views/Houbolt.vue"),
-  },
-  {
     path: "/morgan",
     name: "Morgan",
     component: () => import("@/views/Morgan.vue"),
+    nextPage: "Apollo",
+  },
+  {
+    path: "/morgan/more",
+    name: "Morgan",
+    component: () => import("@/views/MorganMore.vue"),
+    nextPage: "Apollo",
+  },
+  {
+    path: "/houbolt",
+    name: "Houbolt",
+    component: () => import("@/views/Houbolt.vue"),
+    nextPage: "Morgan",
   },
   {
     path: "/vostok",
@@ -80,10 +82,10 @@ const routes = [
     component: () => import("@/views/ProgramLuna.vue"),
   },
   {
-    path: "/contexteSpoutnik",
+    path: "/contexte/spoutnik",
     name: "ContexteSpoutnik",
     component: () => import("@/views/ContexteSpoutnik.vue"),
-    nextPage: "Lifftoff",
+    nextPage: "Lancement",
   },
   {
     path: "/rocard",
@@ -99,6 +101,18 @@ const routes = [
     path: "/popUp/:name",
     name: "PopUp",
     component: () => import("@/views/PopUp.vue"),
+  },
+  {
+    path: "/nasa/more",
+    name: "NasaMore",
+    component: () => import("@/views/NasaMore.vue"),
+    nextPage: "Choice",
+  },
+  {
+    path: "/houbolt/nasa",
+    name: "HouboltNasa",
+    component: () => import("@/views/HouboltNasa.vue"),
+    nextPage: "Morgan",
   },
 ];
 

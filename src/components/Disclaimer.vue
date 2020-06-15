@@ -18,10 +18,8 @@
 
 <script>
 export default {
-  created() {
-    setTimeout(() => this.$router.push({ path: "/home" }), 5000);
-  },
-};
+	name: "disclaimer",
+}
 </script>
 
 <style lang="scss">
@@ -37,7 +35,6 @@ export default {
 }
 
 .disclaimer {
-  background: $black;
   display: flex;
   flex-flow: column;
   width: fit-content;

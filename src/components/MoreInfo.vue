@@ -122,7 +122,7 @@ export default {
       font-size: 16px;
     }
     @include laptop {
-      font-size: 18px;
+      font-size: 16px;
     }
     @include pc {
       font-size: 24px;
@@ -196,7 +196,7 @@ export default {
       font-size: 16px;
     }
     @include laptop {
-      font-size: 18px;
+      font-size: 16px;
     }
     @include pc {
       font-size: 24px;

@@ -36,7 +36,7 @@
 
 export default {
   created() {
-    setTimeout(() => this.$router.push({ path: "/home" }), 5000);
+    setTimeout(() => this.$router.push({ path: "/Contexte" }), 5000);
   },
 };
 </script>

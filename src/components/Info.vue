@@ -22,10 +22,7 @@
           <PrimaryButton textPrimaryButton="En savoir plus" />
         </div>
         <div class="info__Content__Button__Next">
-          <NextButton
-            class="next"
-            textNextButton="Suivant"
-            @click.native="$router.push('/Lancement')"
+          <NextButton class="next"
           />
         </div>
       </div>
@@ -233,6 +230,7 @@ export default {
 			@include laptop {
 				font-size: 45px;
 				padding-top: 100px;
+				font-weight: 400;
 			}
 			@include pc {
 				font-size: 60px;
