@@ -228,6 +228,7 @@ export default {
 			}
 		}
 		&__Text {
+			line-height: 130%;
 			font-size: 14px;
 			font-weight: 300;
 			margin: 0 auto;

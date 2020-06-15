@@ -80,9 +80,9 @@ const routes = [
     component: () => import("@/views/ProgramLuna.vue"),
   },
   {
-    path: "/enSavoirPlus",
-    name: "EnSavoirPlus",
-    component: () => import("@/views/EnSavoirPlus.vue"),
+    path: "/contexteSpoutnik",
+    name: "ContexteSpoutnik",
+    component: () => import("@/views/ContexteSpoutnik.vue"),
     nextPage: "Lifftoff",
   },
   {

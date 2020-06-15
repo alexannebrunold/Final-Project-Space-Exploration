@@ -62,7 +62,7 @@ export default {
 			font-weight: normal;
 			font-size: 18px;
 			width: 85%;
-			line-height: 150%;
+			line-height: 130%;;
 			@include tablet {
 				width: 70%;
 				font-size: 24px;
