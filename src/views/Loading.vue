@@ -28,10 +28,10 @@
 </template>
 <script>
 export default {
-	created() {
-		setTimeout(() => this.$router.push({ path: "/nasa" }), 5000)
-	},
-}
+  created() {
+    setTimeout(() => this.$router.push({ path: "/Contexte" }), 5000);
+  },
+};
 </script>
 
 <style lang="scss">

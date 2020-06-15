@@ -18,9 +18,7 @@
 
 <script>
 export default {
-	created() {
-		setTimeout(() => this.$router.push({ path: "/home" }), 5000)
-	},
+	name: "disclaimer",
 }
 </script>
 
@@ -37,11 +35,10 @@ export default {
 }
 
 .disclaimer {
-	background: $black;
-	display: flex;
-	flex-flow: column;
-	width: fit-content;
-	justify-content: space-between;
+  display: flex;
+  flex-flow: column;
+  width: fit-content;
+  justify-content: space-between;
 
 	&__Title {
 		margin: 25% auto;

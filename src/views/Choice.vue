@@ -1,6 +1,6 @@
 <template>
 	<div class="choice page">
-		<div class="choice__US" @click="$router.push('/apollo')">
+		<div class="choice__US" @click="$router.push('/Houbolt')">
 			<img src="../assets/img/Astronaute.jpg" alt="Astronaute US" />
 			<p>USA</p>
 		</div>
