@@ -58,7 +58,31 @@
           </svg>
         </div>
       </div>
-      <div class="rocard__wave"></div>
+
+      <div class="rocard__wave">
+        <div class="rocard__wave1">
+          <i class="bar"></i>
+          <i class="bar"></i>
+          <i class="bar"></i>
+          <i class="bar"></i>
+          <i class="bar"></i>
+          <i class="bar"></i>
+          <i class="bar"></i>
+          <i class="bar"></i>
+          <i class="bar"></i>
+          <i class="bar"></i>
+          <i class="bar"></i>
+          <i class="bar"></i>
+          <i class="bar"></i>
+          <i class="bar"></i>
+          <i class="bar"></i>
+          <i class="bar"></i>
+          <i class="bar"></i>
+          <i class="bar"></i>
+          <i class="bar"></i>
+          <i class="bar"></i>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -161,6 +185,165 @@
     @include laptop {
       padding-top: 15px;
     }
+  }
+
+  &__wave {
+    @include laptop {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__wave1 {
+    display: none;
+    @include laptop {
+      position: absolute;
+      bottom: 0;
+      width: 500px;
+      height: 120px;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+    }
+  }
+  .bar {
+    display: none;
+    @include laptop {
+      display: block;
+      background: white;
+      animation: sound 0ms -800ms linear infinite alternate;
+      transition: height 0.8s;
+    }
+  }
+
+  @keyframes sound {
+    0% {
+      opacity: 0.35;
+      height: 6px;
+    }
+    100% {
+      opacity: 1;
+      height: 50px;
+    }
+  }
+
+  .bar:nth-child(1) {
+    width: 12px;
+    height: 30px;
+    animation-duration: 474ms;
+  }
+
+  .bar:nth-child(2) {
+    width: 12px;
+
+    animation-duration: 433ms;
+  }
+
+  .bar:nth-child(3) {
+    width: 12px;
+    animation-duration: 407ms;
+  }
+
+  .bar:nth-child(4) {
+    width: 12px;
+    height: 26px;
+    animation-duration: 458ms;
+  }
+
+  .bar:nth-child(5) {
+    width: 12px;
+    height: 30px;
+    animation-duration: 400ms;
+  }
+
+  .bar:nth-child(6) {
+    width: 12px;
+    height: 32px;
+    animation-duration: 427ms;
+  }
+
+  .bar:nth-child(7) {
+    width: 12px;
+    height: 34px;
+    animation-duration: 441ms;
+  }
+
+  .bar:nth-child(8) {
+    width: 12px;
+    height: 36px;
+    animation-duration: 419ms;
+  }
+
+  .bar:nth-child(9) {
+    width: 12px;
+    height: 40px;
+    animation-duration: 487ms;
+  }
+
+  .bar:nth-child(10) {
+    width: 12px;
+    height: 46px;
+    animation-duration: 442ms;
+  }
+
+  .bar:nth-child(11) {
+    width: 12px;
+    height: 2px;
+    animation-duration: 474ms;
+  }
+
+  .bar:nth-child(12) {
+    width: 12px;
+    height: 10px;
+    animation-duration: 433ms;
+  }
+
+  .bar:nth-child(13) {
+    width: 12px;
+    height: 18px;
+    animation-duration: 407ms;
+  }
+
+  .bar:nth-child(14) {
+    width: 12px;
+    height: 26px;
+    animation-duration: 458ms;
+  }
+
+  .bar:nth-child(15) {
+    width: 12px;
+    height: 30px;
+    animation-duration: 400ms;
+  }
+
+  .bar:nth-child(16) {
+    width: 12px;
+    height: 32px;
+    animation-duration: 427ms;
+  }
+
+  .bar:nth-child(17) {
+    width: 12px;
+    height: 34px;
+    animation-duration: 441ms;
+  }
+
+  .bar:nth-child(18) {
+    width: 12px;
+    height: 36px;
+    animation-duration: 419ms;
+  }
+
+  .bar:nth-child(19) {
+    width: 12px;
+    height: 40px;
+    animation-duration: 487ms;
+  }
+
+  .bar:nth-child(20) {
+    width: 12px;
+    height: 46px;
+    animation-duration: 442ms;
   }
 }
 </style>
