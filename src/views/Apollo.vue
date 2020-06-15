@@ -62,77 +62,91 @@ export default {
 			introTimelineVideoSrc: require("@/assets/videos/bg-video.mp4"),
 			tableauTimeline: [
 				{
-					image: require("../assets/img/Luna/Luna1.svg"),
+					image: require("../assets/img/apollo/Apollo1logo.svg"),
 					date: "1961",
 					title: "Apollo 1",
 					description:
 						" Un incendie se déclare dans le vaisseau Apollo lors d’une répétition au sol en conditions réelles,",
 				},
 				{
-					image: require("../assets/img/Luna/Luna2.svg"),
+					image: require("../assets/img/apollo/Apollo2-6logo.svg"),
 					date: "1962-1968",
 					title: "Apollo 2 à 6",
 					description: " mission non habitée, essai du lanceur Saturn V et du module lunaire.",
 				},
 				{
-					image: require("../assets/img/Luna/Luna3.svg"),
-					date: "1959",
-					title: "Apollo 3",
+					image: require("../assets/img/apollo/Apollo7logo.svg"),
+					date: "1968",
+					title: "Apollo 7",
 					description:
-						"Premier engin spatial à transmettre des photographies de la face cachée de la Lune.",
+						"Apollo 7 est la première mission habitée du programme Apollo. ",
 				},
 				{
-					image: require("../assets/img/Luna/Luna4-8.svg"),
-					date: "1963 - 65",
-					title: "Luna 4-8",
-					description: "Séries d’échecs des premières sondes soviétiques.",
+					image: require("../assets/img/apollo/Apollo8logo.svg"),
+					date: "1968",
+					title: "Luna 8",
+					description: "La mission Apollo 8 est le premier vol habité à quitter l’orbite terrestre. ",
 				},
 				{
-					image: require("../assets/img/Luna/Luna9.svg"),
-					date: "1966",
-					title: "Luna 9",
+					image: require("../assets/img/apollo/Apollo9logo.svg"),
+					date: "1969",
+					title: "Apollo 9",
 					description:
-						"Sonde spatiale soviétique qui a réussi le premier atterrissage en douceur sur la Lune.",
+						"Apollo 9 constitue le premier essai en vol de l’ensemble des équipements prévus pour une mission lunaire.",
 				},
 				{
-					image: require("../assets/img/Luna/Luna10.svg"),
-					date: "1966",
+					image: require("../assets/img/apollo/Apollo10logo.svg"),
+					date: "1969",
 					title: "Luna 10",
 					description:
-						"Premier appareil à se placer en orbite autour de la Lune et le premier à se placer en orbite autour d'un autre corps céleste que la Terre.",
+						"Cette mission à failli être celle du premier atterrissage sur le sol lunaire.",
 				},
 				{
-					image: require("../assets/img/Luna/Luna11-14.svg"),
-					date: "1966 - 68",
-					title: "Luna 11-14",
-					description: "Séries de sondes en orbite lunaire avec pour objectifs divers études.",
+					image: require("../assets/img/apollo/Apollo11logo.svg"),
+					date: "1969",
+					title: "Apollo 11",
+					description: "« C’est un petit pas pour [un] homme, mais un bond de géant pour l’Humanité »",
 				},
 				{
-					image: require("../assets/img/Luna/Luna16.svg"),
-					date: "1970",
-					title: "Luna 16",
+					image: require("../assets/img/apollo/Apollo12logo.svg"),
+					date: "1969",
+					title: "Apollo 12",
 					description:
-						"Première fois dans l'histoire de l'exploration spatiale à recueillir et rapporter sans intervention humaine un échantillon du sol d'un autre corps céleste sur Terre.",
+						"Apollo 12, et la deuxième à se poser sur la Lune.",
 				},
 				{
-					image: require("../assets/img/Luna/Luna17.svg"),
-					title: "Luna 17",
+					image: require("../assets/img/apollo/Apollo13logo.svg"),
+					title: "Apollo 13",
 					date: "1970",
-					description: "Premier appareil à déployer un Rover robotique sur la surface de la Lune.",
+					description: "Cette mission à failli tourner au drame a cause de problèmes techniques.",
 				},
 				{
-					image: require("../assets/img/Luna/Luna18-23.svg"),
-					date: "1971 - 76",
-					title: "Luna 18-23",
+					image: require("../assets/img/apollo/Apollo14logo.svg"),
+					date: "1971",
+					title: "Apollo 14",
 					description:
-						"Séries de sondes sur la surface lunaire afin de récuperer des échantillons de roche.",
+						" Il s'agit de la première mission dont le but principal est scientifique",
 				},
 				{
-					image: require("../assets/img/Luna/Luna24.svg"),
+					image: require("../assets/img/apollo/Apollo15logo.svg"),
+					date: "1971",
+					title: "Apollo 15",
+					description:
+						"Apollo 15 et la cinquième mission ayant pour objectif de déposer un équipage à la surface de la Lune.",
+				},
+				{
+					image: require("../assets/img/apollo/Apollo16logo.svg"),
+					date: "1972",
+					title: "Apollo 16",
+					description:
+						"Apollo 16 est la première mission à se poser sur de hauts plateaux lunaires",
+				},
+				{
+					image: require("../assets/img/apollo/Apollo17logo.svg"),
 					date: "1976",
-					title: "Luna 24",
+					title: "Apollo 17",
 					description:
-						"Dernière sonde soviétique à se poser sur la Lune et à retourner des échantillons de sol lunaire vers la Terre.",
+						"Apollo 17 et la dernière mission du programme spatial Apollo",
 				},
 			],
 		}
