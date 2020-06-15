@@ -6,17 +6,20 @@
 			:introTimelineVideoSrc="introTimelineVideoSrc"
 		/>
 		<Timeline :tableauTimeline="tableauTimeline" />
+		<EndTimeline titleEnd="coucou" paragrapheEnd="Lorem" />
 	</div>
 </template>
 
 <script>
 import IntroTimeline from "@/components/IntroTimeline.vue"
 import Timeline from "@/components/Timeline.vue"
+import EndTimeline from "@/components/EndTimeline.vue"
 export default {
 	name: "lancement",
 	components: {
 		Timeline,
 		IntroTimeline,
+		EndTimeline,
 	},
 	data() {
 		return {
