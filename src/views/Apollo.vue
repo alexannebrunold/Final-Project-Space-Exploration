@@ -1,6 +1,10 @@
 <template>
-	<div class="luna page">
-		<IntroTimeline introTitle="Apollo" :introTimelineVideoSrc="introTimelineVideoSrc" />
+	<div class="apollo page">
+		<IntroTimeline
+			introTitle="Apollo"
+			:backgroundImg="backgroundImg"
+			:introTimelineVideoSrc="introTimelineVideoSrc"
+		/>
 		<Timeline :tableauTimeline="tableauTimeline" />
 
 		<div class="endTimeline">
@@ -59,6 +63,7 @@ export default {
 	},
 	data() {
 		return {
+			backgroundImg: require("@/assets/img/apollo_intro.jpg"),
 			introTimelineVideoSrc: require("@/assets/videos/bg-video.mp4"),
 			tableauTimeline: [
 				{
@@ -141,7 +146,7 @@ export default {
 </script>
 
 <style lang="scss">
-.luna {
+.apollo {
 	background-color: $black;
 	display: flex;
 	flex-direction: row;

@@ -49,7 +49,7 @@ export default {
 		filter: opacity(20%);
 		overflow: hidden;
 		height: 100%;
-		width: auto;
+		width: 100%;
 	}
 	&__content {
 		display: flex;
