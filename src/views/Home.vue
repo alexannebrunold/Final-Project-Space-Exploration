@@ -10,7 +10,7 @@
 		</div>
 		<p class="home__textLeft">The moon race</p>
 		<div class="home__textPresentation">
-			<p>Bienvenue parmis nous pour un incroyable voyage lunaire</p>
+			<p>Bienvenue parmi nous pour un incroyable voyage lunaire</p>
 			<p class="home__textPresentation--nameUtilisateur">
 				Temps estimé : 20 min_
 			</p>

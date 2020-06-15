@@ -10,8 +10,8 @@
 				<h1>Création de la NASA</h1>
 				<h2>1 octobre 1958</h2>
 				<p>
-					Dans un contexte de Guerre Froide Une compétition entre les États-Unis et l'Union
-					soviétique apparait Entre 1957 et 1975 ils essayent, par l’astronautique de prouver leur
+					Dans un contexte de Guerre Froide une compétition entre les États-Unis et l'Union
+					soviétique apparait Entre 1957 et 1975. Ils essayent, par l’astronautique de prouver leur
 					supériorité politique.
 				</p>
 			</div>

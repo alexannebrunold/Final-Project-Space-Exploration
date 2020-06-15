@@ -37,28 +37,28 @@ export default {
 			"luna-2": {
 				image: require("../assets/img/PopUp/Luna/Luna2.svg"),
 				title: "LUNA 2",
-				subtitle: "Le coup de feu de l’exploration du Système solaire",
-				text: "Luna 2 (ou Lunik 2 ou Objet 00114) marque le début de l'exploration du Système solaire par des engins spatiaux. Pour la première fois, un engin construit par l'homme atteint la surface d'un autre corps céleste. La sonde s'écrase. Tous les instruments scientifiques ont parfaitement fonctionné et l'absence de champ magnétique lunaire significatif est confirmé.",
+				subtitle: "Le début d'une course effrénée",
+				text: "Luna 2 (ou Lunik 2 ou Objet 00114) marque le début de l'exploration du Système solaire par des engins spatiaux. Pour la première fois, un engin construit par l'homme atteint la surface d'un autre corps céleste. La sonde s'écrase. Tous les instruments scientifiques ont parfaitement fonctionnés et l'absence de champ magnétique lunaire significatif est confirmé.",
 				date: "14 Septembre 1959",
 			},
 			"luna-3": {
 				image: require("../assets/img/PopUp/Luna/Luna3.svg"),
 				title: "LUNA 3",
-				subtitle: "La face plus si cachée",
+				subtitle: "Un angle de vue inédit",
 				text: "Luna 3 (appelée aussi Lunik 3 ou Objet 00021) fut le premier engin spatial à transmettre des photographies de la face cachée de la Lune. La sonde automatique ne retransmit que des clichés de mauvaise qualité, mais par traitement informatique on parvint à produire à partir de ceux-ci le premier atlas de la face cachée. Très accidentée, celle-ci s'avérait fort différente de la face visible.",
 				date: "4 octobre 1959",
 			},
 			"luna-4-8": {
 				image: require("../assets/img/PopUp/Luna/Luna4-8.svg"),
 				title: "LUNA 4-8",
-				subtitle: "Des échecs répéter",
-				text: "Pas moins de 13 sondes Luna sont envoyer (deux modèles YE-3 et 11 YE-6) entre 1960 et 1965, mais aucune de ces missions ne parvient à remplir leurs objectifs. Entre les échecs de lancement les erreurs de trajectoire et deux récents crashs lunaires (Luna 7 et 8) le modèle YE-6 et finalement abandonner, tout comme le nouveau système de lanceur. Cette innovation, conçus pour l'YE-6 sera à l'origine d'un grand nombre de défaillances du lanceur.",
+				subtitle: "Des échecs répétés",
+				text: "Pas moins de 13 sondes Luna sont envoyées (deux modèles YE-3 et 11 YE-6) entre 1960 et 1965, mais aucune de ces missions ne parvient à remplir leurs objectifs. Entre les échecs de lancement les erreurs de trajectoire et deux récents crashs lunaires (Luna 7 et 8) le modèle YE-6 est finalement abandonné, tout comme le nouveau système de lanceur. Cette innovation, conçue pour l'YE-6 sera à l'origine d'un grand nombre de défaillances du lanceur.",
 				date: "11963-1965",
 			},
 			"luna-9": {
 				image: require("../assets/img/PopUp/Luna/Luna9.svg"),
 				title: "LUNA 9",
-				subtitle: "Atterir sur la Lune, une réalité",
+				subtitle: "Atterrir sur la Lune, une réalité",
 				text: "Luna 9 (appelée aussi Lunik 9 ou Objet 01954) qui a réussi le premier atterrissage en douceur sur la Lune. Les Soviétiques battent ainsi une fois de plus les Américains qui parviennent à poser Surveyor 1 le 2 juin 1966 à la première tentative. L'objectif de la mission Luna 9 était d'obtenir des informations sur les caractéristiques du sol lunaire.",
 				date: "	31 janvier 1966",
 			},
@@ -72,8 +72,8 @@ export default {
 			"luna-11-14": {
 				image: require("../assets/img/PopUp/Luna/Luna11-14.svg"),
 				title: "LUNA 11-14",
-				subtitle: "Des missions qui se diversifi",
-				text: "Les sondes Luna 11 à 14 sont pour la majorité de grande réussite avec des missions en tout genre comme prendre des photos depuis l'orbite lunaire (Luna 12), se poser en douceur sur la lune (Luna13) ou encore la Cartographie détaillée de la lune, mesure du champ de gravité et test des futurs systèmes de télécommunications (Luna 14).",
+				subtitle: "Des missions qui se diversifient",
+				text: "Les sondes Luna 11 à 14 sont pour la majorité de grandes réussites avec des missions en tout genre comme prendre des photos depuis l'orbite lunaire (Luna 12), se poser en douceur sur la lune (Luna13) ou encore la Cartographie détaillée de la lune, mesure du champ de gravité et test des futurs systèmes de télécommunications (Luna 14).",
 				date: "1966-1968",
 			},
 			"luna-16": {
@@ -87,7 +87,7 @@ export default {
 				image: require("../assets/img/PopUp/Luna/Luna17.svg"),
 				title: "LUNA 17",
 				subtitle: "Le premier échantillon lunaire",
-				text: "Le vaisseau se posa sur la Lune le 17 novembre. Il déploya une double rampe qui permit à Lunokhod 1 de descendre vers la surface lunaire. Il fut déclaré officiellement inactif le 4 octobre 1971. Lunokhod a voyagé sur une distance de 10 540 mètres 1er a transmis plus de 20 000 images, et plus de 200 panoramas. Il a aussi effectué plus de 500 tests sur le sol lunaire.",
+				text: "Le vaisseau se posa sur la Lune le 17 novembre. Il déploya une double rampe qui permit à Lunokhod 1 de descendre vers la surface lunaire. Il fut déclaré officiellement inactif le 4 octobre 1971. Lunokhod a voyagé sur une distance de 10 540 mètres c'est le premier à transmettre plus de 20 000 images et 200 panoramas. Il a aussi effectué plus de 500 tests sur le sol lunaire.",
 				date: "15 novembre 1970",
 			},
 			"luna-18-23": {
@@ -100,8 +100,8 @@ export default {
 			"luna-24": {
 				image: require("../assets/img/PopUp/Luna/Luna24.svg"),
 				title: "LUNA 24",
-				subtitle: "Une derniere mission",
-				text: "Ce fut la dernière sonde soviétique à se poser sur la Lune et à retourner des échantillons de sol lunaire vers la Terre, près de 4 ans après la dernière mission humaine, Apollo 17.",
+				subtitle: "Une dernière mission",
+				text: "Ce fut la dernière sonde soviétique à se poser sur la Lune et à rapporter des échantillons de sol lunaire vers la Terre, près de 4 ans après la dernière mission humaine, Apollo 17.",
 				date: "13 août 1976",
 			},
 			apollo: {
