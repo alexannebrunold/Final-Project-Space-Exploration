@@ -7,8 +7,17 @@
 		/>
 		<Timeline :tableauTimeline="tableauTimeline" />
 		<EndTimeline
-			titleEnd="coucou"
-			paragrapheEnd="Lorem"
+			titleEnd="Le manque de moyens de l’urss"
+			paragrapheEnd="		Le programme Luna regroupe toutes les missions spatiales automatiques lancées
+			par l’Union soviétique vers la Lune entre 1959 et 1976.
+
+			Vingt-quatre sondes spatiales font officiellement partie de ce programme mais il y
+			en eut en réalité 45 en tout. Quinze de ces missions ont atteint leurs objectifs. Dès le 
+			début, les considérations politiques visant à démontrer la supériorité du savoir-faire
+			soviétique sur celui des États-Unis ont eu le pas sur les motivations scientifiques.
+			Lorsque les enjeux de la course à l'espace disparaissent, le programme Luna prend fin
+			tandis que les États-Unis orientent leur programme d'Exploration principalement vers
+			Mars et les planètes externes du système solaire."
 			textPrimaryButton="Apollo"
 			textPrimaryButtonTwo="Artemis"
 		/>
