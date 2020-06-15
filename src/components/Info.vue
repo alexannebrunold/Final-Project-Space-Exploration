@@ -1,8 +1,7 @@
 <template>
   <div class="info page" to="">
     <div class="info__Img">
-      <img class="info__Img__Laptop" :src="imageUrlLaptop" />
-      <img class="info__Img__Phone" :src="imageUrlPhone" />
+      <img class="info__Img__Url" :src="imageUrl" />
       <div class="info__Img__Quote">
         {{ quoteInfo }}
       </div>
@@ -44,8 +43,7 @@ export default {
     NextButton,
   },
   props: {
-    imageUrlLaptop: {},
-    imageUrlPhone: {},
+    imageUrl: {},
     quoteInfo: String,
     titleInfo: String,
     subtitleInfo: String,
@@ -73,20 +71,16 @@ export default {
     @include laptop {
       height: 100vh;
       width: auto;
+      width: 40%;
     }
 
-    &__Laptop {
-      display: none;
-      height: inherit;
-      @include laptop {
-        display: block;
-      }
-    }
-
-    &__Phone {
+    &__Url {
       width: 100%;
+      height: inherit;
+      object-fit: cover;
+      object-position: 10%;
+
       @include laptop {
-        display: none;
       }
     }
 
