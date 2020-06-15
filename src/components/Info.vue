@@ -58,54 +58,64 @@ export default {
   color: white;
   display: flex;
   flex-flow: column;
-  background-color: $black;
-  @include laptop {
+	background-color: $black;
+  @include tablet {
     flex-flow: row;
   }
 
   &__Img {
-    height: auto;
-    width: 100%;
+    max-height: 25vh;
+    width: auto;
     position: relative;
-    display: flex;
-    @include laptop {
+		display: flex;
+    @include tablet {
+			max-height: 100vh;
       height: 100vh;
       width: auto;
-      width: 40%;
-    }
+			width: 40%;
+			max-height: auto;
+			width: 50%;
+		}
+		@include laptop {
+			width: 40%;
+		}
 
     &__Url {
       width: 100%;
       height: inherit;
       object-fit: cover;
-      object-position: 10%;
-
-      @include laptop {
-      }
+			object-position: top;
+			@include tablet {
+				object-position: 20%;
+			}
     }
 
     &__Quote {
       background: black;
       opacity: 40%;
       padding: 10px;
-      font-size: 8px;
+			font-size: 8px;
+			width: fit-content;
       position: absolute;
       bottom: 5px;
-      left: 15%;
-      right: 15%;
+      left: 0;
+			right: 0;
+			margin: auto;
 
       @include tablet {
         font-size: 10px;
         width: fit-content;
-        left: 35%;
-        right: 35%;
+         bottom: 15px;
       }
       @include laptop {
         font-size: 12px;
         bottom: 25px;
-        left: 25%;
-        right: 25%;
-      }
+
+			}
+			
+			@include pc {
+				font-size: 15px;
+			}
       & p {
         background: none;
       }
@@ -117,7 +127,7 @@ export default {
     flex-direction: column;
     padding-top: 20px;
     text-align: left;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     justify-content: center;
     @include laptop {
@@ -190,13 +200,15 @@ export default {
     }
 
     &__Button {
-      display: flex;
+			display: flex;
 
-      &__LearnMore,
+      &__LearnMore {
+				margin-left: 3%;
+			}
       &__Next {
+				margin-right: 3%;
         padding-top: 15%;
         width: fit-content;
-        margin-right: 20px;
         @include tablet {
           margin: 0 7.5%;
           padding-top: 25pt;
