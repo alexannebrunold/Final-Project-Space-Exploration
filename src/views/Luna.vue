@@ -6,34 +6,56 @@
 			:introTimelineVideoSrc="introTimelineVideoSrc"
 		/>
 		<Timeline :tableauTimeline="tableauTimeline" />
-		<EndTimeline
-			titleEnd="Le manque de moyens de l’urss"
-			paragrapheEnd="		Le programme Luna regroupe toutes les missions spatiales automatiques lancées
-			par l’Union soviétique vers la Lune entre 1959 et 1976.
-
-			Vingt-quatre sondes spatiales font officiellement partie de ce programme mais il y
-			en eut en réalité 45 en tout. Quinze de ces missions ont atteint leurs objectifs. Dès le 
-			début, les considérations politiques visant à démontrer la supériorité du savoir-faire
-			soviétique sur celui des États-Unis ont eu le pas sur les motivations scientifiques.
-			Lorsque les enjeux de la course à l'espace disparaissent, le programme Luna prend fin
-			tandis que les États-Unis orientent leur programme d'Exploration principalement vers
-			Mars et les planètes externes du système solaire."
-			textPrimaryButton="Apollo"
-			textPrimaryButtonTwo="Artemis"
-		/>
+		<div class="endTimeline">
+			<h1 class="endTimeline--title">Le manque de moyens de l’urss</h1>
+			<p class="endTimeline--paragraphe">
+				Le programme
+				<span>Luna</span>
+				regroupe toutes les missions spatiales automatiques lancées par
+				<span>l’Union soviétique</span>
+				vers la Lune entre 1959 et 1976.
+				<br />
+				<br />
+				Vingt-quatre
+				<span>sondes spatiales</span>
+				font officiellement partie de ce programme mais il y en eut en réalité 45 en tout. Quinze de
+				ces missions ont atteint leurs objectifs. Dès le début, les considérations politiques visant
+				à démontrer la supériorité du savoir-faire
+				<span>soviétique</span>
+				sur celui des
+				<span>États-Unis</span>
+				ont eu le pas sur les motivations scientifiques. Lorsque les enjeux de la
+				<span>course à l'espace</span>
+				disparaissent, le programme Luna prend fin tandis que les
+				<span>États-Unis</span>
+				orientent leur programme d'Exploration principalement vers
+				<span>Mars</span>
+				et les planètes externes du
+				<span>système solaire</span>
+				.
+			</p>
+			<div class="endTimeline__buttons">
+				<PrimaryButton
+					textPrimaryButton="Apollo"
+					class="endTimeline__buttons--firstButton"
+					@click.native="$router.push('/apollo')"
+				/>
+				<PrimaryButton textPrimaryButton="Artemis" @click.native="$router.push('/artemis')" />
+			</div>
+		</div>
 	</div>
 </template>
 
 <script>
 import IntroTimeline from "@/components/IntroTimeline.vue"
 import Timeline from "@/components/Timeline.vue"
-import EndTimeline from "@/components/EndTimeline.vue"
+import PrimaryButton from "@/components/PrimaryButton.vue"
 export default {
 	name: "lancement",
 	components: {
 		Timeline,
 		IntroTimeline,
-		EndTimeline,
+		PrimaryButton,
 	},
 	data() {
 		return {
@@ -125,5 +147,71 @@ export default {
 	display: flex;
 	flex-direction: row;
 	width: fit-content;
+}
+.endTimeline {
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 1%;
+	margin-right: 1%;
+	margin-left: 1%;
+
+	@include tablet {
+		width: 90vw;
+	}
+	@include laptop {
+		width: 80vw;
+	}
+	&--title {
+		font-size: 24px;
+		font-family: "Poppins";
+		text-align: center;
+
+		@include tablet {
+			font-size: 40px;
+		}
+		@include laptop {
+			font-size: 48px;
+			margin-top: 10%;
+		}
+		@include pc {
+			font-size: 60px;
+		}
+	}
+	&--paragraphe {
+		padding-bottom: 30px;
+		font-size: 14px;
+		font-family: "Poppins";
+		width: 100%;
+		margin-top: 8%;
+		text-align: left;
+		font-weight: 300;
+		& span {
+			font-weight: 500;
+		}
+		@include tablet {
+			font-size: 16px;
+		}
+		@include laptop {
+			font-size: 18px;
+			width: 80%;
+			margin-top: 8%;
+			padding-bottom: 0px;
+			line-height: 140%;
+		}
+		@include pc {
+			font-size: 24px;
+		}
+	}
+	&__buttons {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin-top: 8%;
+		&--firstButton {
+			margin-right: 18%;
+		}
+	}
 }
 </style>
