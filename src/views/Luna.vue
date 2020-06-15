@@ -106,7 +106,8 @@ export default {
 					image: require("../assets/img/Luna/Luna11-14.svg"),
 					date: "1966 - 68",
 					title: "Luna 11-14",
-					description: "Séries de sondes en orbite lunaire avec pour objectifs diverses études scientifiques.",
+					description:
+						"Séries de sondes en orbite lunaire avec pour objectifs diverses études scientifiques.",
 				},
 				{
 					image: require("../assets/img/Luna/Luna16.svg"),
