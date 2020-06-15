@@ -7,7 +7,7 @@
 		/>
 		<Timeline :tableauTimeline="tableauTimeline" />
 		<div class="endTimeline">
-			<h1 class="endTimeline--title">Le manque de moyens de l’urss</h1>
+			<h1 class="endTimeline--title">Le manque de moyens de l’URSS</h1>
 			<p class="endTimeline--paragraphe">
 				Le programme
 				<span>Luna</span>
@@ -106,7 +106,7 @@ export default {
 					image: require("../assets/img/Luna/Luna11-14.svg"),
 					date: "1966 - 68",
 					title: "Luna 11-14",
-					description: "Séries de sondes en orbite lunaire avec pour objectifs divers études.",
+					description: "Séries de sondes en orbite lunaire avec pour objectifs diverses études scientifiques.",
 				},
 				{
 					image: require("../assets/img/Luna/Luna16.svg"),
@@ -133,7 +133,7 @@ export default {
 					date: "1976",
 					title: "Luna 24",
 					description:
-						"Dernière sonde soviétique à se poser sur la Lune et à retourner des échantillons de sol lunaire vers la Terre.",
+						"Dernière sonde soviétique à se poser sur la Lune et à rapporter des échantillons de sol lunaire vers la Terre.",
 				},
 			],
 		}
