@@ -2,17 +2,25 @@
 	<div class="luna page">
 		<IntroTimeline introTitle="Apollo" :introTimelineVideoSrc="introTimelineVideoSrc" />
 		<Timeline :tableauTimeline="tableauTimeline" />
+		<EndTimeline
+			titleEnd="Hey"
+			paragrapheEnd="Lorem"
+			textPrimaryButton="Luna"
+			textPrimaryButtonTwo="Artemis"
+		/>
 	</div>
 </template>
 
 <script>
 import IntroTimeline from "@/components/IntroTimeline.vue"
 import Timeline from "@/components/Timeline.vue"
+import EndTimeline from "@/components/EndTimeline.vue"
 export default {
 	name: "lancement",
 	components: {
 		Timeline,
 		IntroTimeline,
+		EndTimeline,
 	},
 	data() {
 		return {
