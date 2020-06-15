@@ -59,20 +59,37 @@ const routes = [
     name: "Apollo",
     component: () => import("@/views/Apollo.vue"),
   },
-
+  {
+    path: "/houbolt",
+    name: "Houbolt",
+    component: () => import("@/views/Houbolt.vue"),
+  },
+  {
+    path: "/morgan",
+    name: "Morgan",
+    component: () => import("@/views/Morgan.vue"),
+  },
+  {
+    path: "/vostok",
+    name: "Vostok",
+    component: () => import("@/views/Vostok.vue"),
+  },
+  {
+    path: "/programluna",
+    name: "Programluna",
+    component: () => import("@/views/ProgramLuna.vue"),
+  },
   {
     path: "/enSavoirPlus",
     name: "EnSavoirPlus",
     component: () => import("@/views/EnSavoirPlus.vue"),
     nextPage: "Lifftoff",
   },
-
   {
     path: "/rocard",
     name: "Rocard",
     component: () => import("@/views/Rocard.vue"),
   },
-
   {
     path: "/artemis",
     name: "Artemis",
