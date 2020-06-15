@@ -2,25 +2,60 @@
 	<div class="luna page">
 		<IntroTimeline introTitle="Apollo" :introTimelineVideoSrc="introTimelineVideoSrc" />
 		<Timeline :tableauTimeline="tableauTimeline" />
-		<EndTimeline
-			titleEnd="Hey"
-			paragrapheEnd="Lorem"
-			textPrimaryButton="Luna"
-			textPrimaryButtonTwo="Artemis"
-		/>
+
+		<div class="endTimeline">
+			<h1 class="endTimeline--title">La fin prématurée du programme Apollo</h1>
+			<p class="endTimeline--paragraphe">
+				Ces expéditions ont permis de rapporter
+				<span>382 kilogrammes</span>
+				de roche lunaire et de mettre en place plusieurs batteries d'instruments scientifiques. Les
+				astronautes ont effectué des observations in situ au cours d'excursions sur le sol lunaire
+				d'une durée pouvant atteindre huit heures, assistés à partir d'Apollo 15 par un véhicule
+				tout-terrain, le
+				<span>rover lunaire</span>
+				. La NASA propose plusieurs types de mission dont le
+
+				<span>lancement en orbite</span>
+				d'une station spatiale, des séjours prolongés sur la Lune mettant en œuvre plusieurs
+				nouveaux modules dérivés du LEM, une mission
+				<span>habitée vers Mars</span>
+				, le survol de Vénus par une mission habitée, etc. Mais les objectifs scientifiques trop
+				vagues ne réussissent pas à convaincre le Congrès américain beaucoup moins motivé par les
+				programmes spatiaux « post-Apollo ».
+				<br />
+				<br />
+
+				Par ailleurs, les priorités des
+				<span>États-Unis</span>
+				ont changé : les dispositifs sociaux mis en place par le président Lyndon Johnson dans le
+				cadre de sa
+				<span>guerre contre la pauvreté</span>
+				(Medicare et Medicaid) et surtout un
+				<span>conflit vietnamien</span>
+				qui s'envenime prélèvent une part croissante du budget.
+			</p>
+			<div class="endTimeline__buttons">
+				<PrimaryButton
+					textPrimaryButton="Luna"
+					class="endTimeline__buttons--firstButton"
+					@click.native="$router.push('/luna')"
+				/>
+				<PrimaryButton textPrimaryButton="Artemis" @click.native="$router.push('/artemis')" />
+			</div>
+		</div>
 	</div>
 </template>
 
 <script>
 import IntroTimeline from "@/components/IntroTimeline.vue"
 import Timeline from "@/components/Timeline.vue"
-import EndTimeline from "@/components/EndTimeline.vue"
+import PrimaryButton from "@/components/PrimaryButton.vue"
 export default {
 	name: "lancement",
 	components: {
 		Timeline,
 		IntroTimeline,
-		EndTimeline,
+		PrimaryButton,
 	},
 	data() {
 		return {
@@ -111,5 +146,71 @@ export default {
 	display: flex;
 	flex-direction: row;
 	width: fit-content;
+}
+.endTimeline {
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 1%;
+	margin-right: 1%;
+	margin-left: 1%;
+
+	@include tablet {
+		width: 90vw;
+	}
+	@include laptop {
+		width: 80vw;
+	}
+	&--title {
+		font-size: 24px;
+		font-family: "Poppins";
+		text-align: center;
+
+		@include tablet {
+			font-size: 40px;
+		}
+		@include laptop {
+			font-size: 48px;
+			margin-top: 1%;
+		}
+		@include pc {
+			font-size: 60px;
+		}
+	}
+	&--paragraphe {
+		padding-bottom: 30px;
+		font-size: 14px;
+		font-family: "Poppins";
+		width: 100%;
+		margin-top: 8%;
+		text-align: left;
+		font-weight: 300;
+		& span {
+			font-weight: 500;
+		}
+		@include tablet {
+			font-size: 16px;
+		}
+		@include laptop {
+			font-size: 18px;
+			width: 80%;
+			margin-top: 6%;
+			padding-bottom: 0px;
+			line-height: 140%;
+		}
+		@include pc {
+			font-size: 24px;
+		}
+	}
+	&__buttons {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin-top: 4%;
+		&--firstButton {
+			margin-right: 18%;
+		}
+	}
 }
 </style>

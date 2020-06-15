@@ -173,7 +173,7 @@ export default {
 		}
 		@include laptop {
 			font-size: 48px;
-			margin-top: 10%;
+			margin-top: 2%;
 		}
 		@include pc {
 			font-size: 60px;
