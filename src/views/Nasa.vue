@@ -9,11 +9,11 @@
 			<div class="nasa__title">
 				<h1>Création de la NASA</h1>
 				<h2>1 octobre 1958</h2>
-				<h3>
+				<p>
 					Dans un contexte de Guerre Froide Une compétition entre les États-Unis et l'Union
 					soviétique apparait Entre 1957 et 1975 ils essayent, par l’astronautique de prouver leur
 					supériorité politique.
-				</h3>
+				</p>
 			</div>
 		</div>
 		<div class="nasa__btn">
@@ -79,14 +79,20 @@ export default {
 			padding-right: 50px;
 		}
 		h1 {
-			font-size: 48px;
+			font-size: 24px;
 			font-family: "Poppins";
 			text-transform: uppercase;
 			color: #ffffff;
 			text-align: center;
 			@include tablet {
-				font-size: 78px;
+				font-size: 40px;
 				text-align: right;
+			}
+			@include laptop {
+				font-size: 45px;
+			}
+			@include pc {
+				font-size: 60px;
 			}
 		}
 		h2 {
@@ -102,17 +108,23 @@ export default {
 				padding-bottom: 10px;
 			}
 		}
-		h3 {
+		p {
 			padding-bottom: 30px;
-			font-size: 22px;
+			font-size: 14px;
 			color: white;
 			font-family: "Poppins";
 			text-align: justify;
 			display: flex;
 			justify-content: center;
 			@include tablet {
-				font-size: 22px;
+				font-size: 16px;
 				text-align: right;
+			}
+			@include laptop {
+				font-size: 18px;
+			}
+			@include pc {
+				font-size: 24px;
 			}
 		}
 	}

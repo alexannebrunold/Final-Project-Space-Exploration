@@ -35,8 +35,8 @@
     & img:hover {
       -webkit-filter: grayscale(0%);
       filter: grayscale(0%);
-      transform: scale(1.3);
-      object-position: 50% -2000%;
+      transform: scale(1.1);
+      object-position: 50% -200%;
     }
     & p {
       width: fit-content;
@@ -77,7 +77,7 @@
     & img:hover {
       -webkit-filter: grayscale(0%);
       filter: grayscale(0%);
-      transform: scale(1.3);
+      transform: scale(1.1);
       object-position: 50% -50%;
     }
     & p {

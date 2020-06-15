@@ -1,6 +1,8 @@
 <template>
-	<router-link class="nextButton" :to="{ name: nextPageName }">
-		Suivant
+	<router-link :to="{ name: nextPageName }">
+		<button  class="nextButton">
+			Suivant
+		</button>
 	</router-link>
 </template>
 
@@ -31,6 +33,7 @@ export default {
 
 <style lang="scss" scoped>
 .nextButton {
+	text-decoration: none;
 	font-family: "Poppins";
 	font-weight: regular;
 	font-size: 14px;
