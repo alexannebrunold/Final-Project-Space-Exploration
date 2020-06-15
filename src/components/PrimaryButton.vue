@@ -20,23 +20,23 @@ export default {
 <style lang="scss" scoped>
 .primaryButton {
   font-family: "Poppins";
-  font-size: 10px;
+  font-size: 14px;
   background-color: #ffffff;
   border-radius: 5px;
   border: solid 3px #ffffff;
   color: #000000;
-  padding: 5px 20px;
+  padding: 10px 20px;
   user-select: none;
   transition: ease-out 0.2s;
   @include tablet {
-    font-size: 16px;
     padding: 10px 40px;
+    font-size: 16px;
   }
   @include laptop {
-    font-size: 18px;
+    font-size: 16px;
   }
   @include pc {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   &:hover {

@@ -34,8 +34,8 @@
 </template>
 
 <script>
-import PrimaryButton from "@/components/PrimaryButton.vue";
-import NextButton from "@/components/NextButton.vue";
+import PrimaryButton from "@/components/PrimaryButton.vue"
+import NextButton from "@/components/NextButton.vue"
 export default {
   name: "Info",
   components: {
@@ -207,6 +207,58 @@ export default {
         }
       }
     }
-  }
+    
+		&__Subtitle {
+			font-size: 24px;
+			font-weight: 300;
+			width: 100%;
+			margin: 0 auto;
+			@include tablet {
+				font-size: 40px;
+				width: 85%;
+				padding-top: 75px;
+			}
+			@include laptop {
+				font-size: 45px;
+				padding-top: 100px;
+			}
+			@include pc {
+				font-size: 60px;
+				padding-top: 100px;
+			}
+		}
+		&__Text {
+			font-size: 14px;
+			font-weight: 300;
+			margin: 0 auto;
+			padding-top: 10%;
+			@include tablet {
+				font-size: 16px;
+				width: 85%;
+			}
+			@include laptop {
+				font-size: 18px;
+			}
+			@include pc {
+				font-size: 24px;
+			}
+		}
+		&__Button {
+			display: flex;
+			justify-content: space-between;
+			&__LearnMore,
+			&__Next {
+				padding-top: 15%;
+				@include tablet {
+					margin: 0 7.5%;
+					padding-top: 25pt;
+				}
+				@include laptop {
+					padding-top: 55pt;
+					line-height: 120%;
+				}
+			}
+		}
+	}
 }
 </style>

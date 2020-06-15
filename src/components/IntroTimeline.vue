@@ -1,5 +1,6 @@
 <template>
-	<div class="introTimeline page" @click="startAutoplay()">
+	<div class="introTimeline" @click="startAutoplay()">
+		<img :src="backgroundImg" alt="" />
 		<div class="introTimeline__content">
 			<div class="introTimeline__content--title">
 				{{ introTitle }}
@@ -18,6 +19,7 @@ export default {
 	name: "Info",
 	components: {},
 	props: {
+		backgroundImg: String,
 		introTimelineVideoSrc: String,
 		introTitle: String,
 	},
@@ -40,12 +42,22 @@ export default {
 	display: flex;
 	text-align: center;
 	background-color: $black;
+	height: 100vh;
+	& img {
+		z-index: 0;
+		position: absolute;
+		filter: opacity(20%);
+		overflow: hidden;
+		height: 100%;
+		width: auto;
+	}
 	&__content {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
-		margin: 0 auto;
+		padding: 0 80px;
+		position: relative;
 		@include laptop {
 			// width: 50%;
 		}
