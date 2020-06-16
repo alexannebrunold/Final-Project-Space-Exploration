@@ -1,5 +1,10 @@
 <template>
-	<div class="apollo page">
+	<div
+		class="apollo page"
+		id="horizontal__scroll"
+		@mousewheel="scrollHorizontal()"
+		ref="bodyScroll"
+	>
 		<IntroTimeline
 			introTitle="Apollo"
 			:backgroundImg="backgroundImg"
@@ -83,14 +88,14 @@ export default {
 					image: require("../assets/img/apollo/Apollo7logo.svg"),
 					date: "1968",
 					title: "Apollo 7",
-					description:
-						"Apollo 7 est la première mission habitée du programme Apollo. ",
+					description: "Apollo 7 est la première mission habitée du programme Apollo. ",
 				},
 				{
 					image: require("../assets/img/apollo/Apollo8logo.svg"),
 					date: "1968",
 					title: "Luna 8",
-					description: "La mission Apollo 8 est le premier vol habité à quitter l’orbite terrestre. ",
+					description:
+						"La mission Apollo 8 est le premier vol habité à quitter l’orbite terrestre. ",
 				},
 				{
 					image: require("../assets/img/apollo/Apollo9logo.svg"),
@@ -110,14 +115,14 @@ export default {
 					image: require("../assets/img/apollo/Apollo11logo.svg"),
 					date: "1969",
 					title: "Apollo 11",
-					description: "« C’est un petit pas pour [un] homme, mais un bond de géant pour l’Humanité »",
+					description:
+						"« C’est un petit pas pour [un] homme, mais un bond de géant pour l’Humanité »",
 				},
 				{
 					image: require("../assets/img/apollo/Apollo12logo.svg"),
 					date: "1969",
 					title: "Apollo 12",
-					description:
-						"Apollo 12, et la deuxième à se poser sur la Lune.",
+					description: "Apollo 12, et la deuxième à se poser sur la Lune.",
 				},
 				{
 					image: require("../assets/img/apollo/Apollo13logo.svg"),
@@ -129,8 +134,7 @@ export default {
 					image: require("../assets/img/apollo/Apollo14logo.svg"),
 					date: "1971",
 					title: "Apollo 14",
-					description:
-						" Il s'agit de la première mission dont le but principal est scientifique",
+					description: " Il s'agit de la première mission dont le but principal est scientifique",
 				},
 				{
 					image: require("../assets/img/apollo/Apollo15logo.svg"),
@@ -150,11 +154,20 @@ export default {
 					image: require("../assets/img/apollo/Apollo17logo.svg"),
 					date: "1976",
 					title: "Apollo 17",
-					description:
-						"Apollo 17 et la dernière mission du programme spatial Apollo",
+					description: "Apollo 17 et la dernière mission du programme spatial Apollo",
 				},
 			],
 		}
+	},
+	methods: {
+		scrollHorizontal(e) {
+			e = window.event || e
+			let delta = Math.max(-1, Math.min(1, e.wheelDelta))
+			let scrollSpeed = 10
+			document.documentElement.scrollLeft -= delta * scrollSpeed
+			this.$refs.bodyScroll.scrollLeft -= delta * scrollSpeed
+			e.preventDefault()
+		},
 	},
 }
 </script>

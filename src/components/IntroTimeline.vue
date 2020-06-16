@@ -5,7 +5,7 @@
 			<div class="introTimeline__content--title">
 				{{ introTitle }}
 			</div>
-			<video class="introTimeline__content--video" controls>
+			<video class="introTimeline__content--video" controls ref="video">
 				<source :src="introTimelineVideoSrc" type="video/mp4" />
 			</video>
 		</div>
@@ -23,13 +23,10 @@ export default {
 	},
 	methods: {
 		startAutoplay() {
-			var c = document.querySelector(".introTimeline__content--video")
-			c.play()
+			this.$refs.video.play()
 		},
 	},
-	mounted() {
-		console.log(document.querySelector("source"))
-	},
+	mounted() {},
 }
 </script>
 
