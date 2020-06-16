@@ -1,5 +1,6 @@
 <template>
 	<div id="app">
+		{{ data.videoURL }}
 		<div id="nav">
 			<!-- <router-link to="/">Home</router-link> -->
 		</div>
@@ -8,6 +9,28 @@
 		</transition>
 	</div>
 </template>
+
+<script>
+export default {
+	name: "App",
+	data() {
+		return {
+			data: {},
+		}
+	},
+	beforeMount() {
+		this.getName()
+	},
+	methods: {
+		async getName() {
+			const res = await fetch("https://spacemoonapis.frb.io/webdocressources/1")
+			const data = await res.json()
+			console.log(res, data)
+			this.data = data
+		},
+	},
+}
+</script>
 
 <style lang="scss">
 .page {

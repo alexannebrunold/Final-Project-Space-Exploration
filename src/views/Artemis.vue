@@ -46,18 +46,20 @@
 				.
 			</p>
 		</div>
+		<PrimaryButton textPrimaryButton="Artemis" @click.native="$router.push('/end')" />
 	</div>
 </template>
 
 <script>
 import IntroTimeline from "@/components/IntroTimeline.vue"
 import Timeline from "@/components/Timeline.vue"
-
+import PrimaryButton from "@/components/PrimaryButton.vue"
 export default {
 	name: "lancement",
 	components: {
 		Timeline,
 		IntroTimeline,
+		PrimaryButton,
 	},
 	data() {
 		return {
