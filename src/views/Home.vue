@@ -1,30 +1,46 @@
 <template>
-<div>
-	<Disclaimer :is="dynamicComponent"/>
-	<Main/>
-		<video rel="preload" ref="video" loop class="home__video">
-			<source src="../assets/videos/bg-video.mp4" type="video/mp4">
-		</video>
-		<img @click="toggleMute" class="home__sound" src="../assets/img/home/sound.svg" alt="" />
-</div>
-</template>
+  <div @click="playVideo()" class="home">
+   <Disclaimer v-show="disclaimer" />
+  <div v-show="!disclaimer">
+    <Main />
+    <video rel="preload" autoplay ref="video" loop class="home__video">
+        <source src="../assets/videos/bg-video.mp4" type="video/mp4">
+    </video>
+    <img @click="toggleMute" class="home__sound" src="../assets/img/home/sound.svg" alt="" />
+  </div>
+  </div>
+ </template>
 
-<script defer>
+<script>
+
 import Main from "@/components/Main.vue";
 import Disclaimer from "@/components/Disclaimer.vue";
+
 export default {
 	name: "home",
+  data() {
+    return {
+      disclaimer: true,
+      initVideo : false,
+    };
+  },
   components: {
 		Main,
 		Disclaimer,
 	},
-	mounted() {
-		this.play()
-	},
+  mounted () {
+    setTimeout(()=> {
+      this.disclaimer = false
+    }, 8000)
+  },
 	methods: {
-		play() {
-			this.$refs.video.play()
-		},
+    playVideo () {
+      console.log( !this.initVideo && !this.disclaimer, 'ici' )
+      if (!this.initVideo && !this.disclaimer ) {
+        this.initVideo = true
+        this.$refs.video.play()
+      }
+    },
 		toggleMute() {
 			var vid = this.$refs.video
 			vid.muted = !vid.muted
