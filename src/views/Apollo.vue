@@ -1,10 +1,5 @@
 <template>
-	<div
-		class="apollo page"
-		id="horizontal__scroll"
-		@mousewheel="scrollHorizontal()"
-		ref="bodyScroll"
-	>
+	<div class="apollo page" @mousewheel="scrollHorizontal()" ref="bodyScroll">
 		<IntroTimeline
 			introTitle="Apollo"
 			:backgroundImg="backgroundImg"

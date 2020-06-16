@@ -1,5 +1,5 @@
 <template>
-	<div class="artemis page">
+	<div class="artemis page" @mousewheel="scrollHorizontal()" ref="bodyScroll">
 		<IntroTimeline
 			:backgroundImg="backgroundImg"
 			introTitle="Artemis"
@@ -101,6 +101,16 @@ export default {
 				},
 			],
 		}
+	},
+	methods: {
+		scrollHorizontal(e) {
+			e = window.event || e
+			let delta = Math.max(-1, Math.min(1, e.wheelDelta))
+			let scrollSpeed = 40
+			document.documentElement.scrollLeft -= delta * scrollSpeed
+			this.$refs.bodyScroll.scrollLeft -= delta * scrollSpeed
+			e.preventDefault()
+		},
 	},
 }
 </script>
