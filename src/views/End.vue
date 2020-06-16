@@ -1,58 +1,52 @@
 <template>
-	<div class="end page">
-		<svg class="end__logo" viewBox="0 0 160 160" width="60" height="60" fill="black">
-			<circle cx="80" cy="80" r="50" />
-			<g transform=" matrix(0.866, -0.5, 0.25, 0.433, 80, 80)">
-				<path d="M 0,70 A 65,70 0 0,0 65,0 5,5 0 0,1 75,0 75,70 0 0,1 0,70Z" fill="white">
-					<animateTransform
-						attributeName="transform"
-						type="rotate"
-						from="360 0 0"
-						to="0 0 0"
-						dur="2s"
-						repeatCount="indefinite"
-					/>
-				</path>
-			</g>
-			<path d="M 50,0 A 50,50 0 0,0 -50,0Z" transform="matrix(0.866, -0.5, 0.5, 0.866, 80, 80)" />
+	<div  class="end page">
+    <svg class="end__logo" viewBox="0 0 160 160" width="60" height="60" fill="black">
+      <circle cx="80" cy="80" r="50" />
+        <g transform=" matrix(0.866, -0.5, 0.25, 0.433, 80, 80)">
+          <path d="M 0,70 A 65,70 0 0,0 65,0 5,5 0 0,1 75,0 75,70 0 0,1 0,70Z" fill="white">
+            <animateTransform attributeName="transform" type="rotate" from="360 0 0" to="0 0 0" dur="2s" repeatCount="indefinite" />
+          </path> 
+        </g>
+			<path d="M 50,0 A 50,50 0 0,0 -50,0Z" transform="matrix(0.866, -0.5, 0.5, 0.866, 80, 80)"/>
 		</svg>
 		<div class="end__title">
 			<h1>Merci</h1>
 		</div>
 		<div class="end__image">
-			<img src="../assets/img/moon.png" alt="" />
+      <img src="../assets/img/moon.png" alt="" />
 			<p>Visez les étoiles et vous atteindrez la lune.</p>
 		</div>
-		<div class="end__textRight">
-			<p>Ce site est issu d’un projet étudiant</p>
-			<img src="../assets/img/github.svg" alt="" />
-		</div>
-		<div class="end__name">
-			<p class="end__name--1">Thomas Monmousseau</p>
-			<p class="end__name--2">Alexanne Brunold</p>
-			<p class="end__name--3">Jason Leroy</p>
-			<p class="end__name--4">Kayse Sulejman</p>
-			<p class="end__name--5">Théo Rougier</p>
-			<p class="end__name--6">Patxi Manzano</p>
-		</div>
-		<vue-particles
-			class="end__particule"
-			color="#dedede"
-			:particleOpacity="0.7"
-			:particlesNumber="50"
-			shapeType="circle"
-			:particleSize="4"
-			linesColor="#dedede"
-			:linesWidth="0"
-			:lineLinked="true"
-			:lineOpacity="0"
-			:linesDistance="0"
-			:moveSpeed="3"
-			:hoverEffect="true"
-			hoverMode="grab"
-			:clickEffect="true"
-			clickMode="push"
-		></vue-particles>
+    <div class="end__textRight">
+      <p>Ce site est issu d’un projet étudiant</p>
+      <img src="../assets/img/github.svg" alt="">
+    </div>
+    <div class="end__name">
+      <p class="end__name--1">Thomas Monmousseau</p>
+      <p class="end__name--2">Alexanne Brunold</p>
+      <p class="end__name--3">Jason Leroy</p>
+      <p class="end__name--4">Kayse Sulejman</p>
+      <p class="end__name--5">Théo Rougier</p>
+      <p class="end__name--6">Patxi Manzano</p>
+    </div>
+      <vue-particles
+      class="end__particule"
+        color="#dedede"
+        :particleOpacity="0.7"
+        :particlesNumber="50"
+        shapeType="circle"
+        :particleSize="4"
+        linesColor="#dedede"
+        :linesWidth="0"
+        :lineLinked="true"
+        :lineOpacity="0"
+        :linesDistance="0"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+      >
+      </vue-particles>
 	</div>
 </template>
 
@@ -328,11 +322,11 @@ export default {}
 	}
 }
 @keyframes rotate {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(359deg);
-	}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 </style>

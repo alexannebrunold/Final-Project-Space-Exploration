@@ -68,8 +68,7 @@ export default {
 		}
 	}
 }
-
-.fade-enter {
+/*.fade-enter {
 	opacity: 0.8;
 }
 
@@ -85,5 +84,5 @@ export default {
 .fade-leave-active {
 	transition: opacity 0.4s ease-in;
 	background-color: #000000;
-}
+}*/
 </style>

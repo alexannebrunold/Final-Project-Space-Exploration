@@ -13,7 +13,7 @@
 				:showCursor="false"
 				:startDelay="800"
 			>
-				<p class="typing"></p>
+				<p class="typing Text"></p>
 			</vue-typed-js>
 		</div>
 
@@ -27,7 +27,7 @@
 				:showCursor="false"
 				:startDelay="7500"
 			>
-				<p class="typing"></p>
+				<p class="typing Subtext"></p>
 			</vue-typed-js>
 		</div>
 	</div>

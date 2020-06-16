@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		<div class="nasa__btn">
-			<PrimaryButton textPrimaryButton="En savoir plus" class="nasa__btn1" />
+			<PrimaryButton textPrimaryButton="En savoir plus" class="nasa__btn1" @click.native="$router.push('/nasa/more')"/>
 			<NextButton class="nasa__btn2" />
 		</div>
 	</div>

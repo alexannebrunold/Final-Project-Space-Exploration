@@ -56,6 +56,7 @@
               fill="white"
             />
           </svg>
+          <div class="button"><NextButton /></div>
         </div>
       </div>
 
@@ -88,6 +89,7 @@
 </template>
 
 <script>
+import NextButton from "@/components/NextButton.vue"
 export default {
   data() {
     return {
@@ -99,10 +101,13 @@ export default {
       this.visible = !this.visible;
     },
   },
+  components: {
+		NextButton,
+	},
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .rocard {
   background-color: $black;
   display: flex;
@@ -355,5 +360,9 @@ export default {
     height: 46px;
     animation-duration: 442ms;
   }
+}
+.button {
+  margin-top: 40px;
+  justify-self: right;
 }
 </style>

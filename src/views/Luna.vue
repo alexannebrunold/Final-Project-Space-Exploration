@@ -38,9 +38,9 @@
 				<PrimaryButton
 					textPrimaryButton="Apollo"
 					class="endTimeline__buttons--firstButton"
-					@click.native="$router.push('/apollo')"
+					@click.native="$router.push('/kennedy')"
 				/>
-				<PrimaryButton textPrimaryButton="Artemis" @click.native="$router.push('/artemis')" />
+				<PrimaryButton textPrimaryButton="Artemis" @click.native="$router.push('/clep')" />
 			</div>
 		</div>
 	</div>
