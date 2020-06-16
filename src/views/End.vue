@@ -53,7 +53,6 @@
 
 <script>
 export default {
-
 }
 </script>
 
@@ -77,7 +76,6 @@ export default {
 		@include pc {
 			font-size: 36px;
 		}
-
 		& h1 {
 			transition: linear 0.8s;
       padding-top: 2%;
@@ -96,7 +94,6 @@ export default {
       left: 0;
       right: 0;
       margin: auto;
-
 			@include tablet {
 				font-size: 110px;
 			}
@@ -112,10 +109,8 @@ export default {
       transition: linear 0.8s;
     }
   }
-
   &__logo {
     display: none;
-
     @include tablet {
       display: block;
       transition: linear 0.8s;
@@ -131,7 +126,6 @@ export default {
     transform: scale(1.5);
     fill: white;
   }
-
   &__image {
     padding-top: 7%;
     display: flex;
@@ -169,10 +163,8 @@ export default {
       }
     }
   }
-
   &__textRight {
     display: none;
-
 		@include tablet {
       display: block;
       display: flex;
@@ -200,13 +192,11 @@ export default {
 			font-size: 25px;
 		}
 	}
-
 	&__textRight:hover {
 		transform: translateX(-10px);
 		transition: linear 0.4s;
 		cursor: pointer;
 	}
-
 	&__textRight::selection {
 		background: black;
 	}
@@ -220,7 +210,6 @@ export default {
     font-size: 14px;
     font-family: "Poppins";
     font-weight: normal;
-
     @include laptop {
       font-size: 16px;
       display: flex;
@@ -230,7 +219,6 @@ export default {
     @include pc {
       font-size: 22px;
     }
-
     &--1 {
       transition: ease-in-out 0.4s;
       margin-bottom: 0.5em;
@@ -324,19 +312,17 @@ export default {
     
     &__particule{
       z-index: -10;
+    }
   }
 }
-
 @keyframes hover {
   from {
     transform: translateY(-10px);
   }
-
   to {
     transform: translateY(10px);
   }
 }
-
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -344,6 +330,5 @@ export default {
   to {
     transform: rotate(359deg);
   }
-}
 }
 </style>
