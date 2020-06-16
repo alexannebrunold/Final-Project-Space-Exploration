@@ -1,7 +1,11 @@
 <template>
   <div class="moreInfo page" to="">
     <div class="moreInfo__back">
-      <BackButton textBackButton="Retour" @click.native="$router.go(-1)" />
+      <BackButton
+        :svgUrl="svgSrc"
+        textBackButton="Retour"
+        @click.native="$router.go(-1)"
+      />
     </div>
     <div class="moreInfo__left">
       <img class="moreInfo__left--img" :src="imageUrlLeft" />
@@ -35,6 +39,11 @@ import NextButton from "@/components/NextButton.vue";
 import BackButton from "@/components/BackButton.vue";
 export default {
   name: "MoreInfo",
+  data() {
+    return {
+      svgSrc: require("../assets/img/arrow.svg"),
+    };
+  },
   components: {
     NextButton,
     BackButton,
