@@ -148,14 +148,14 @@ export default {
 	display: flex;
 	flex-direction: row;
 	width: fit-content;
+	background-image: url("~@/assets/img/luna_background.jpg");
 }
 .endTimeline {
+	background-image: url("~@/assets/img/luna_end.jpg");
 	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 1%;
-	margin-right: 1%;
 	margin-left: 1%;
 
 	@include tablet {
