@@ -126,6 +126,11 @@ const routes = [
     name: "End",
     component: () => import("@/views/End.vue"),
   },
+  {
+    path: "/kennedy",
+    name: "Kennedy",
+    component: () => import("@/views/Kennedy.vue"),
+  },
 ];
 
 const router = new VueRouter({
