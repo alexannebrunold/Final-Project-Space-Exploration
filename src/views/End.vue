@@ -330,3 +330,4 @@ export default {
     transform: rotate(359deg);
   }
 }
+</style>
