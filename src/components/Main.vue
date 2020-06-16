@@ -23,7 +23,7 @@
 		<PrimaryButton
 			textPrimaryButton="Décollage"
 			class="home__decollage"
-			@click.native="$router.push('/Loading')"
+			@click.native="$router.push('/end')"
 		/>
 		<div class="home__better ">
 			<p>For a better experience use</p>
