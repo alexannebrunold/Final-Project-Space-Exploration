@@ -1,6 +1,6 @@
 <template>
 	<div  class="end page">
-    <div class="end__particules">
+    <div class="end__particules page">
       <vue-particles
         color="ffffff"
         :particleOpacity="0.7"
@@ -66,8 +66,8 @@ export default {}
   overflow: hidden;
 
   &__particules {
-    position: fixed;
-    height: 100vh;
+    position: absolute;
+    min-height: 100vh;
   }
 	&__title {
 		padding-top: 2%;
