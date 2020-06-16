@@ -22,19 +22,9 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.fade-enter-active,
-.fade-leave-active {
-	transition: 0.3s ease;
-}
-
-.fade-enter,
-.fade-leave-active {
-	transition: 0.5s ease;
-	opacity: 0;
-}
-
+<style lang="scss" scoped>
 .disclaimer {
+  background-color: black;
   display: flex;
   flex-flow: column;
   width: fit-content;

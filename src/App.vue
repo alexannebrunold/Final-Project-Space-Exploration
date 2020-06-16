@@ -41,7 +41,7 @@
 		color: $white;
 
 		&.router-link-exact-active {
-			color: $white;
+			color: $black;
 		}
 	}
 }
