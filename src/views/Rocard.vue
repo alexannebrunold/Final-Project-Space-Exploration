@@ -22,7 +22,7 @@
           </p>
         </div>
         <div class="rocard__trait"></div>
-        <div class="rocard__svg">
+        <div id="svgplay" class="rocard__svg" @click="toggle">
           <svg
             width="41"
             height="41"
@@ -43,7 +43,7 @@
           </p>
         </div>
         <div class="rocard__trait"></div>
-        <div class="rocard__svg">
+        <div id="svgplay" class="rocard__svg" @click="toggle">
           <svg
             width="41"
             height="41"
@@ -59,8 +59,8 @@
         </div>
       </div>
 
-      <div class="rocard__wave">
-        <div class="rocard__wave1">
+      <div class="rocard__soundwave">
+        <div id="wave" class="rocard__wave" v-if="visible">
           <i class="bar"></i>
           <i class="bar"></i>
           <i class="bar"></i>
@@ -87,7 +87,20 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      visible: true,
+    };
+  },
+  methods: {
+    toggle: function() {
+      this.visible = !this.visible;
+    },
+  },
+};
+</script>
 
 <style lang="scss">
 .rocard {
@@ -187,15 +200,14 @@
     }
   }
 
-  &__wave {
+  &__soundwave {
     @include laptop {
       display: flex;
       justify-content: center;
     }
   }
 
-  &__wave1 {
-    display: none;
+  &__wave {
     @include laptop {
       position: absolute;
       bottom: 0;
@@ -207,9 +219,7 @@
     }
   }
   .bar {
-    display: none;
     @include laptop {
-      display: block;
       background: white;
       animation: sound 0ms -800ms linear infinite alternate;
       transition: height 0.8s;

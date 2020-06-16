@@ -1,6 +1,15 @@
 <template>
-	<div  class="home page">
-		<p class="home__missions">Spoutnik | Apollo | Luna | Artemis</P>
+	<div class="home page">
+		<p class="home__missions">Spoutnik | Apollo | Luna | Artemis</p>
+		<svg class="home__logo" viewBox="0 0 160 160" width="60" height="60" fill="#191919">
+      <circle cx="80" cy="80" r="50" />
+        <g transform=" matrix(0.866, -0.5, 0.25, 0.433, 80, 80)">
+          <path d="M 0,70 A 65,70 0 0,0 65,0 5,5 0 0,1 75,0 75,70 0 0,1 0,70Z" fill="white">
+            <animateTransform attributeName="transform" type="rotate" from="360 0 0" to="0 0 0" dur="2s" repeatCount="indefinite" />
+          </path> 
+        </g>
+			<path d="M 50,0 A 50,50 0 0,0 -50,0Z" transform="matrix(0.866, -0.5, 0.5, 0.866, 80, 80)"/>
+		</svg>
 		<div class="home__title">
 			<p>We choose to go to the</p>
 			<h1>Moon</h1>
@@ -60,7 +69,25 @@ export default {
 	}
 	&__missions::selection {
 		background: black;
-	}
+  }
+  
+  &__logo {
+    top: 7%;
+    transition: linear 0.8s;
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+    @include tablet {
+      top: 5px;
+      left: 5px;
+    }
+  }
+
+  &__logo:hover {
+    transition: linear 0.8s;
+    transform: scale(1.5);
+    fill: white;
+  }
 	&__title {
 		font-size: 18px;
 		padding-bottom: 10px;
@@ -144,12 +171,13 @@ export default {
 			font-size: 65px;
 		}
 		@include pc {
-			font-size: 90px;
+			font-size: 80px;
 		}
 	}
 
 	&__textLeft:hover {
 		color: white;
+		transform: translateX(5px);
 		transition: linear 0.4s;
 		cursor: pointer;
 	}
