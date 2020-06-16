@@ -1,10 +1,5 @@
 <template>
-	<div
-		class="apollo page"
-		id="horizontal__scroll"
-		@mousewheel="scrollHorizontal()"
-		ref="bodyScroll"
-	>
+	<div class="apollo page" id="horizontal__scroll" ref="bodyScroll">
 		<IntroTimeline
 			introTitle="Apollo"
 			:backgroundImg="backgroundImg"
@@ -158,16 +153,6 @@ export default {
 				},
 			],
 		}
-	},
-	methods: {
-		scrollHorizontal(e) {
-			e = window.event || e
-			let delta = Math.max(-1, Math.min(1, e.wheelDelta))
-			let scrollSpeed = 10
-			document.documentElement.scrollLeft -= delta * scrollSpeed
-			this.$refs.bodyScroll.scrollLeft -= delta * scrollSpeed
-			e.preventDefault()
-		},
 	},
 }
 </script>
