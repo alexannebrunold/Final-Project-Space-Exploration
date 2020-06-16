@@ -4,14 +4,31 @@
 			<h1>Attention</h1>
 		</div>
 		<div class="disclaimer__Text">
-			Ce webdocumentaire est réalisé pour un projet d'étude bachelor Web à l'école d'études
-			supérieur Hétic
+			<vue-typed-js
+				:strings="[
+					'Ce webdocumentaire est réalisé pour un projet d\'étude bachelor web à l\'école d\'études supérieures Hétic',
+				]"
+				:typeSpeed="40"
+				:smartBackspace="true"
+				:showCursor="false"
+				:startDelay="800"
+			>
+				<p class="typing"></p>
+			</vue-typed-js>
 		</div>
+
 		<div class="disclaimer__Subtext">
-			<p>
-				Toutes les informations utilisés sur ce site sont strictement à titre informatif, et ne nous
-				appartiennent pas.
-			</p>
+			<vue-typed-js
+				:strings="[
+					'Toutes les informations utilisées sur ce site sont strictement à titre informatif, et ne nous appartiennent pas.',
+				]"
+				:typeSpeed="28"
+				:smartBackspace="true"
+				:showCursor="false"
+				:startDelay="7500"
+			>
+				<p class="typing"></p>
+			</vue-typed-js>
 		</div>
 	</div>
 </template>
@@ -24,11 +41,11 @@ export default {
 
 <style lang="scss" scoped>
 .disclaimer {
-  background-color: black;
-  display: flex;
-  flex-flow: column;
-  width: fit-content;
-  justify-content: space-between;
+	background-color: black;
+	display: flex;
+	flex-flow: column;
+	width: fit-content;
+	justify-content: space-between;
 
 	&__Title {
 		margin: 25% auto;
