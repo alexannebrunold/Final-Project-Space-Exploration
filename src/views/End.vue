@@ -51,13 +51,13 @@
 </template>
 
 <script>
-export default {
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
 
 .end {
+
   position: absolute;
   background-color: $black;
   display: flex;
@@ -68,10 +68,9 @@ export default {
   &__particules {
     position: fixed;
     height: 100vh;
- 
   }
 	&__title {
-     padding-top: 2%;
+		padding-top: 2%;
 		font-size: 18px;
 		font-family: "Poppins";
 		font-weight: lighter;
@@ -86,22 +85,22 @@ export default {
 		}
 		& h1 {
 			transition: linear 0.8s;
-      padding-top: 2%;
+			padding-top: 2%;
 			text-transform: uppercase;
 			background-clip: text;
 			background-size: cover;
 			-webkit-text-stroke: 1px;
 			-webkit-text-stroke-color: $white;
 			color: transparent;
-      animation: 3s infinite ease-in-out alternate hover;
+			animation: 3s infinite ease-in-out alternate hover;
 			cursor: pointer;
 			font-weight: bold;
-      font-size: 80px;
-      width: fit-content;
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin: auto;
+			font-size: 80px;
+			width: fit-content;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
 			@include tablet {
 				font-size: 110px;
 			}
@@ -111,87 +110,87 @@ export default {
 			@include pc {
 				font-size: 140px;
 			}
-    }
-    & h1:hover {
-      color: white;
-      transition: linear 0.8s;
-    }
-  }
-  &__logo {
-    display: none;
-    @include tablet {
-      display: block;
-      transition: linear 0.8s;
-      position: absolute;
-      z-index: 20;
-      cursor: pointer;
-      top: 5px;
-      left: 5px;
-    }
-  }
-  &__logo:hover {
-    transition: linear 0.8s;
-    transform: scale(1.5);
-    fill: white;
-  }
-  &__image {
-    padding-top: 7%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    img {
-      animation: 180s linear infinite rotate; 
-      height: 40vh;
-      width: auto;
-      object-fit: cover;
-      @include tablet {
-        height: 45vh;
-      }
-      @include laptop {
-        height: 55vh;
-      }
-    }
-    
-    p {
-      margin-bottom: 5%;
-      width: 75%;
-      font-size: 18px;
-      font-family: "Poppins";
-      font-weight: normal;
-      @include tablet {
-        width: 75%;
-        font-size: 24px;
-        margin-top: 10px;
-      }
-      @include laptop {
-        font-size: 28px;
-      }
-      @include pc {
-        font-size: 40px;
-      }
-    }
-  }
-  &__textRight {
-    display: none;
+		}
+		& h1:hover {
+			color: white;
+			transition: linear 0.8s;
+		}
+	}
+	&__logo {
+		display: none;
 		@include tablet {
-      display: block;
-      display: flex;
-      flex-direction: row;
-      height: 100%;
-      font-family: "Poppins";
-      font-weight: normal;
-      top: 0;
-      bottom: 0;
-      position: absolute;
-      transition: linear 0.4s;
-      right: 10px;
-      justify-content: center;
-      text-orientation: sideways-right;
-      writing-mode: vertical-rl;
+			display: block;
+			transition: linear 0.8s;
+			position: absolute;
+			z-index: 20;
+			cursor: pointer;
+			top: 5px;
+			left: 5px;
+		}
+	}
+	&__logo:hover {
+		transition: linear 0.8s;
+		transform: scale(1.5);
+		fill: white;
+	}
+	&__image {
+		padding-top: 7%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		img {
+			animation: 180s linear infinite rotate;
+			height: 40vh;
+			width: auto;
+			object-fit: cover;
+			@include tablet {
+				height: 45vh;
+			}
+			@include laptop {
+				height: 55vh;
+			}
+		}
+
+		p {
+			margin-bottom: 5%;
+			width: 75%;
+			font-size: 18px;
+			font-family: "Poppins";
+			font-weight: normal;
+			@include tablet {
+				width: 75%;
+				font-size: 24px;
+				margin-top: 10px;
+			}
+			@include laptop {
+				font-size: 28px;
+			}
+			@include pc {
+				font-size: 40px;
+			}
+		}
+	}
+	&__textRight {
+		display: none;
+		@include tablet {
+			display: block;
+			display: flex;
+			flex-direction: row;
+			height: 100%;
+			font-family: "Poppins";
+			font-weight: normal;
+			top: 0;
+			bottom: 0;
+			position: absolute;
+			transition: linear 0.4s;
+			right: 10px;
+			justify-content: center;
+			text-orientation: sideways-right;
+			writing-mode: vertical-rl;
 			font-size: 15px;
-      img {
-        margin-top: 10px;
-      }
+			img {
+				margin-top: 10px;
+			}
 		}
 		@include laptop {
 			font-size: 20px;
@@ -208,7 +207,7 @@ export default {
 	&__textRight::selection {
 		background: black;
 	}
-  
+
   &__name {
     position: absolute;
     margin-bottom: 1%;
@@ -320,12 +319,12 @@ export default {
   }
 }
 @keyframes hover {
-  from {
-    transform: translateY(-10px);
-  }
-  to {
-    transform: translateY(10px);
-  }
+	from {
+		transform: translateY(-10px);
+	}
+	to {
+		transform: translateY(10px);
+	}
 }
 @keyframes rotate {
   from {
