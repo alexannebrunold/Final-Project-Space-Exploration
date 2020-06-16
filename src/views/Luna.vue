@@ -106,7 +106,8 @@ export default {
 					image: require("../assets/img/Luna/Luna11-14.svg"),
 					date: "1966 - 68",
 					title: "Luna 11-14",
-					description: "Séries de sondes en orbite lunaire avec pour objectifs diverses études scientifiques.",
+					description:
+						"Séries de sondes en orbite lunaire avec pour objectifs diverses études scientifiques.",
 				},
 				{
 					image: require("../assets/img/Luna/Luna16.svg"),
@@ -147,14 +148,14 @@ export default {
 	display: flex;
 	flex-direction: row;
 	width: fit-content;
+	background-image: url("~@/assets/img/luna_background.jpg");
 }
 .endTimeline {
+	background-image: url("~@/assets/img/luna_end.jpg");
 	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 1%;
-	margin-right: 1%;
 	margin-left: 1%;
 
 	@include tablet {

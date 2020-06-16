@@ -11,9 +11,9 @@
 				<h2>1 octobre 1958</h2>
 				<vue-typed-js
 					:strings="[
-						'Dans un contexte de Guerre Froid une compétition entre les Etats-Unis et l\'Union soviétique apparait entre 1957 et 1975. Ils essayent, par l\'astronautique de prouver leur supériorité politique.',
+						'Dans un contexte de Guerre Froide une compétition entre les Etats-Unis et l\'Union soviétique apparait entre 1957 et 1975. Ils essayent, par l\'astronautique de prouver leur supériorité politique.',
 					]"
-					:typeSpeed="80"
+					:typeSpeed="60"
 					:smartBackspace="true"
 					:showCursor="false"
 				>

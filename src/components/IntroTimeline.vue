@@ -8,13 +8,11 @@
 			<video class="introTimeline__content--video" controls>
 				<source :src="introTimelineVideoSrc" type="video/mp4" />
 			</video>
-			<p>Scroll à gauche pour voir la frise</p>
 		</div>
 	</div>
 </template>
 
 <script>
-// import PrimaryButton from "@/components/PrimaryButton.vue"
 export default {
 	name: "Info",
 	components: {},
@@ -50,6 +48,7 @@ export default {
 		overflow: hidden;
 		height: 100%;
 		width: auto;
+		object-fit: cover;
 	}
 	&__content {
 		display: flex;
