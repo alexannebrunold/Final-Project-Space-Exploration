@@ -1,10 +1,10 @@
 <template>
 	<div class="choice page">
-		<div class="choice__US" @click="$router.push('/Vostok')">
+		<div class="choice__US" @click="$router.push('/Houbolt')">
 			<img src="../assets/img/Astronaute.jpg" alt="Astronaute US" />
 			<p>USA</p>
 		</div>
-		<div class="choice__URSS" @click="$router.push('/luna')">
+		<div class="choice__URSS" @click="$router.push('/Vostok')">
 			<img src="../assets/img/Youri-Gagarine.jpg" alt="Youri Gargarine URSS" />
 			<p>URSS</p>
 		</div>

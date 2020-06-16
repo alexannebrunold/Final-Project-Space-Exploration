@@ -41,7 +41,6 @@ const routes = [
 	{
 		path: "/choice",
 		name: "Choice",
-		nextPage: "Vostok",
 		component: () => import("@/views/Choice.vue"),
 	},
 	{
