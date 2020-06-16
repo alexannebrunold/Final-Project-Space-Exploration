@@ -179,9 +179,6 @@ export default {
 	flex-direction: row;
 	width: fit-content;
 	background-image: url("~@/assets/img/apollo_background.jpg");
-	&::-webkit-scrollbar {
-		display: none;
-	}
 }
 .endTimeline {
 	background-image: url("~@/assets/img/apollo_end.jpg");
