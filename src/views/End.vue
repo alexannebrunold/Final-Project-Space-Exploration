@@ -1,5 +1,4 @@
 <template>
-  
 	<div  class="end page">
     <svg class="end__logo" viewBox="0 0 160 160" width="60" height="60" fill="black">
       <circle cx="80" cy="80" r="50" />

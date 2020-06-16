@@ -1,6 +1,5 @@
 <template>
 	<div class="home page">
-		<p class="home__missions">Spoutnik | Apollo | Luna | Artemis</p>
 		<svg class="home__logo" viewBox="0 0 160 160" width="60" height="60" fill="#191919">
       <circle cx="80" cy="80" r="50" />
         <g transform=" matrix(0.866, -0.5, 0.25, 0.433, 80, 80)">
@@ -52,21 +51,8 @@ export default {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	position: relative;
-
-	&__missions {
-		display: none; 
-	@include tablet {
-		display: block;
-		position: absolute;
-		top: 5px;
-		right: 5px;
-		font-size: 18px;
-		font-family: "Poppins";
-		font-weight: lighter;
-		cursor: pointer;
-		}
-	}
+  position: relative;
+  
 	&__missions::selection {
 		background: black;
   }
