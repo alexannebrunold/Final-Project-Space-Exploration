@@ -1,4 +1,5 @@
 <template>
+  
 	<div  class="end page">
     <svg class="end__logo" viewBox="0 0 160 160" width="60" height="60" fill="black">
       <circle cx="80" cy="80" r="50" />
@@ -28,6 +29,25 @@
       <p class="end__name--5">Théo Rougier</p>
       <p class="end__name--6">Patxi Manzano</p>
     </div>
+      <vue-particles
+      class="end__particule"
+        color="#dedede"
+        :particleOpacity="0.7"
+        :particlesNumber="50"
+        shapeType="circle"
+        :particleSize="4"
+        linesColor="#dedede"
+        :linesWidth="0"
+        :lineLinked="true"
+        :lineOpacity="0"
+        :linesDistance="0"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+      >
+      </vue-particles>
 	</div>
 </template>
 
@@ -294,12 +314,16 @@ export default {
         margin-left: 1em;
       }
     }
+    
     &--6:hover {
       z-index: 100;
       transform: scale(1.1);
       transition: ease-in-out 0.4s;
       margin-left: 1.5em;
     }
+    
+    &__particule{
+      z-index: -10;
   }
 }
 
