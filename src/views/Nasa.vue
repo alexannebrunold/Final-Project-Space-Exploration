@@ -13,7 +13,7 @@
 					:strings="[
 						'Dans un contexte de Guerre Froide une compétition entre les Etats-Unis et l\'Union soviétique apparait entre 1957 et 1975. Ils essayent, par l\'astronautique de prouver leur supériorité politique.',
 					]"
-					:typeSpeed="60"
+					:typeSpeed="25"
 					:smartBackspace="true"
 					:showCursor="false"
 				>
