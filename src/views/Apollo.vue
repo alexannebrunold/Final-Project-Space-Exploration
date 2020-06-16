@@ -1,5 +1,10 @@
 <template>
-	<div class="apollo page" id="horizontal__scroll" ref="bodyScroll">
+	<div
+		class="apollo page"
+		id="horizontal__scroll"
+		@mousewheel="scrollHorizontal()"
+		ref="bodyScroll"
+	>
 		<IntroTimeline
 			introTitle="Apollo"
 			:backgroundImg="backgroundImg"
@@ -154,6 +159,16 @@ export default {
 			],
 		}
 	},
+	methods: {
+		scrollHorizontal(e) {
+			e = window.event || e
+			let delta = Math.max(-1, Math.min(1, e.wheelDelta))
+			let scrollSpeed = 20
+			document.documentElement.scrollLeft -= delta * scrollSpeed
+			this.$refs.bodyScroll.scrollLeft -= delta * scrollSpeed
+			e.preventDefault()
+		},
+	},
 }
 </script>
 
@@ -164,6 +179,9 @@ export default {
 	flex-direction: row;
 	width: fit-content;
 	background-image: url("~@/assets/img/apollo_background.jpg");
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 .endTimeline {
 	background-image: url("~@/assets/img/apollo_end.jpg");
