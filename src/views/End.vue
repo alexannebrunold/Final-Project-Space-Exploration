@@ -324,6 +324,7 @@ export default {
     
     &__particule{
       z-index: -10;
+    }
   }
 }
 
