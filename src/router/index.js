@@ -124,6 +124,12 @@ const routes = [
 		nextPage: "Artemis",
 	},
 	{
+		path: "/artemis",
+		name: "Artemis",
+		nextPage: "Nasa",
+		component: () => import("@/views/Artemis.vue"),
+	},
+	{
 		path: "/end",
 		name: "End",
 		component: () => import("@/views/End.vue"),

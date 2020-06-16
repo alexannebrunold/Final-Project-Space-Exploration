@@ -3,8 +3,8 @@ import App from "./App.vue"
 import router from "./router"
 import store from "./store"
 import VueTypedJs from "vue-typed-js"
-// import VueParticles from 'vue-particles'
-// Vue.use(VueParticles)
+import VueParticles from "vue-particles"
+Vue.use(VueParticles)
 
 Vue.config.productionTip = false
 Vue.use(VueTypedJs)
