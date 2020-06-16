@@ -48,25 +48,30 @@ export default {
 	z-index: 2;
 	display: table;
 	height: 538px;
-
 	text-align: left;
 	padding-left: 1%;
 	padding-right: 1%;
-
+	transition: ease-in 0.2s;
 	&:hover {
-		transform: scale(1.16);
-		padding-top: 2px;
+		transform: scale(1.06);
+		pointer-events: auto;
+		// padding-top: 2px;
 		cursor: pointer;
-		margin-top: 8px;
-		background-color: #4141412d;
-		height: 400px;
-		border-radius: 8px;
-		width: 100px;
-		box-shadow: 20px 12px 8px rgb(22, 19, 19);
+		margin-top: 8.2px;
+		transition: ease-in 0.2s;
+		// background-color: #4141412d;
+		// height: 400px;
+		// border-radius: 8px;
+		// width: 100px;
+		// border: 1px solid $white;
+		// // box-shadow: 20px 12px 8px rgb(22, 19, 19);
 	}
 	&__div {
 		display: table;
 		margin-bottom: 4%;
+		&:hover {
+			pointer-events: none;
+		}
 		&--circle {
 			margin: 0 auto;
 			width: 20px;
@@ -74,14 +79,11 @@ export default {
 			border-radius: 20px;
 			background: #c4c4c4;
 			margin-top: 4%;
-
 			&:hover {
-				background: $white;
-				cursor: pointer;
+				pointer-events: none;
 			}
 		}
 	}
-
 	&__date {
 		font-size: 32px;
 		font-weight: 800;
