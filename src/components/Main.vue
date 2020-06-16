@@ -87,7 +87,6 @@ export default {
     transition: linear 0.8s;
     transform: scale(1.5);
     fill: white;
-    
   }
 	&__title {
 		font-size: 18px;

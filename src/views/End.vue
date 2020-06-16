@@ -1,5 +1,14 @@
 <template>
 	<div  class="end page">
+    <svg class="end__logo" viewBox="0 0 160 160" width="60" height="60" fill="black">
+      <circle cx="80" cy="80" r="50" />
+        <g transform=" matrix(0.866, -0.5, 0.25, 0.433, 80, 80)">
+          <path d="M 0,70 A 65,70 0 0,0 65,0 5,5 0 0,1 75,0 75,70 0 0,1 0,70Z" fill="white">
+            <animateTransform attributeName="transform" type="rotate" from="360 0 0" to="0 0 0" dur="2s" repeatCount="indefinite" />
+          </path> 
+        </g>
+			<path d="M 50,0 A 50,50 0 0,0 -50,0Z" transform="matrix(0.866, -0.5, 0.5, 0.866, 80, 80)"/>
+		</svg>
 		<div class="end__title">
 			<h1>Merci</h1>
 		</div>
@@ -51,17 +60,22 @@ export default {
 
 		& h1 {
 			transition: linear 0.8s;
-      padding-top: 3%;
+      padding-top: 2%;
 			text-transform: uppercase;
 			background-clip: text;
 			background-size: cover;
 			-webkit-text-stroke: 1px;
 			-webkit-text-stroke-color: $white;
 			color: transparent;
-      animation: 2s linear infinite alternate hover; 
+      animation: 3s infinite ease-in-out alternate hover;
 			cursor: pointer;
 			font-weight: bold;
-			font-size: 80px;
+      font-size: 80px;
+      width: fit-content;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
 
 			@include tablet {
 				font-size: 110px;
@@ -79,7 +93,27 @@ export default {
     }
   }
 
+  &__logo {
+    display: none;
+
+    @include tablet {
+      display: block;
+      transition: linear 0.8s;
+      position: absolute;
+      z-index: 20;
+      cursor: pointer;
+      top: 5px;
+      left: 5px;
+    }
+  }
+  &__logo:hover {
+    transition: linear 0.8s;
+    transform: scale(1.5);
+    fill: white;
+  }
+
   &__image {
+    padding-top: 7%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,6 +129,7 @@ export default {
         height: 55vh;
       }
     }
+    
     p {
       margin-bottom: 5%;
       width: 75%;
@@ -165,9 +200,7 @@ export default {
     font-size: 14px;
     font-family: "Poppins";
     font-weight: normal;
-    @include tablet {
 
-    }
     @include laptop {
       font-size: 16px;
       display: flex;
@@ -179,47 +212,94 @@ export default {
     }
 
     &--1 {
+      transition: ease-in-out 0.4s;
       margin-bottom: 0.5em;
+      cursor: pointer;
       @include laptop {
         margin-left: 1em;
       }
+    }
+    &--1:hover {
+      z-index: 100;
+      transform: scale(1.1);
+      transition: ease-in-out 0.4s;
+      margin-left: 1.5em;
     }
     
     &--2 {
+      transition: ease-in-out 0.4s;
       margin-bottom: 0.5em;
+      cursor: pointer;
       @include laptop {
         margin-left: 1em;
       }
+    }
+    &--2:hover {
+      z-index: 100;
+      transform: scale(1.1);
+      transition: ease-in-out 0.4s;
+      margin-left: 1.5em;
     }
     
     &--3 {
+      transition: ease-in-out 0.4s;
       margin-bottom: 0.5em;
+      cursor: pointer;
       @include laptop {
         margin-left: 1em;
       }
+    }
+    &--3:hover {
+      z-index: 100;
+      transform: scale(1.1);
+      transition: ease-in-out 0.4s;
+      margin-left: 1.5em;
     }
     
     &--4 {
+      transition: ease-in-out 0.4s;
       margin-bottom: 0.5em;
+      cursor: pointer;
       @include laptop {
         margin-left: 1em;
       }
+    }
+    &--4:hover {
+      z-index: 100;
+      transform: scale(1.1);
+      transition: ease-in-out 0.4s;
+      margin-left: 1.5em;
     }
     
     &--5 {
+      transition: ease-in-out 0.4s;
       margin-bottom: 0.5em;
+      cursor: pointer;
       @include laptop {
         margin-left: 1em;
       }
+    }
+    &--5:hover {
+      z-index: 100;
+      transform: scale(1.1);
+      transition: ease-in-out 0.4s;
+      margin-left: 1.5em;
     }
     
     &--6 {
+      transition: ease-in-out 0.4s;
       margin-bottom: 0.5em;
+      cursor: pointer;
       @include laptop {
         margin-left: 1em;
       }
     }
-    
+    &--6:hover {
+      z-index: 100;
+      transform: scale(1.1);
+      transition: ease-in-out 0.4s;
+      margin-left: 1.5em;
+    }
   }
 }
 
