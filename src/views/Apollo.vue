@@ -42,9 +42,9 @@
 				<PrimaryButton
 					textPrimaryButton="Luna"
 					class="endTimeline__buttons--firstButton"
-					@click.native="$router.push('/luna')"
+					@click.native="$router.push('/vostok')"
 				/>
-				<PrimaryButton textPrimaryButton="Artemis" @click.native="$router.push('/artemis')" />
+				<PrimaryButton textPrimaryButton="Artemis" @click.native="$router.push('/clep')" />
 			</div>
 		</div>
 	</div>
