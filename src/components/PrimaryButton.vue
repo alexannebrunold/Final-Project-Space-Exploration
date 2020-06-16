@@ -1,7 +1,9 @@
 <template>
-  <button class="primaryButton">
-    {{ textPrimaryButton }}
-  </button>
+  <router-link :to="{ name: LearnPageName }">
+    <button class="primaryButton">
+      {{ textPrimaryButton }}
+    </button>
+  </router-link>
 </template>
 
 <script>
@@ -10,6 +12,7 @@ export default {
   props: {
     textPrimaryButton: String,
     name: String,
+    LearnPageName: String,
   },
   mounted() {
     console.log("aaaa" + this.$router.params);

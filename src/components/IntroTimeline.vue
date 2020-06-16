@@ -5,16 +5,14 @@
 			<div class="introTimeline__content--title">
 				{{ introTitle }}
 			</div>
-			<video class="introTimeline__content--video" controls>
+			<video class="introTimeline__content--video" controls ref="video">
 				<source :src="introTimelineVideoSrc" type="video/mp4" />
 			</video>
-			<p>Scroll à gauche pour voir la frise</p>
 		</div>
 	</div>
 </template>
 
 <script>
-// import PrimaryButton from "@/components/PrimaryButton.vue"
 export default {
 	name: "Info",
 	components: {},
@@ -25,13 +23,10 @@ export default {
 	},
 	methods: {
 		startAutoplay() {
-			var c = document.querySelector(".introTimeline__content--video")
-			c.play()
+			this.$refs.video.play()
 		},
 	},
-	mounted() {
-		console.log(document.querySelector("source"))
-	},
+	mounted() {},
 }
 </script>
 
@@ -50,6 +45,7 @@ export default {
 		overflow: hidden;
 		height: 100%;
 		width: auto;
+		object-fit: cover;
 	}
 	&__content {
 		display: flex;

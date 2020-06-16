@@ -61,7 +61,7 @@ export default {
 	},
 	data() {
 		return {
-			backgroundImg: require("@/assets/img/Artemis/ApolloBackground.svg"),
+			backgroundImg: require("@/assets/img/artemis_intro.jpg"),
 			introTimelineVideoSrc: require("@/assets/videos/Artemis.mp4"),
 			tableauTimeline: [
 				{
@@ -111,14 +111,14 @@ export default {
 	display: flex;
 	flex-direction: row;
 	width: fit-content;
+	background-image: url("~@/assets/img/artemis_background.jpg");
 }
 .endTimeline {
+	background-image: url("~@/assets/img/artemis_end.jpg");
 	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 1%;
-	margin-right: 1%;
 	margin-left: 1%;
 
 	@include tablet {
