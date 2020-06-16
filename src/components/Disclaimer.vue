@@ -8,7 +8,7 @@
 				:strings="[
 					'Ce webdocumentaire est réalisé pour un projet d\'étude bachelor web à l\'école d\'études supérieures Hétic',
 				]"
-				:typeSpeed="40"
+				:typeSpeed="30"
 				:smartBackspace="true"
 				:showCursor="false"
 				:startDelay="800"
