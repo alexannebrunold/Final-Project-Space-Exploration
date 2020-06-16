@@ -48,10 +48,18 @@ const routes = [
     name: "Luna",
     component: () => import("@/views/Luna.vue"),
   },
+
   {
-    path: "/apollo",
-    name: "Apollo",
-    component: () => import("@/views/Apollo.vue"),
+    path: "/houbolt",
+    name: "Houbolt",
+    component: () => import("@/views/Houbolt.vue"),
+    nextPage: "Morgan",
+  },
+  {
+    path: "/houbolt/nasa",
+    name: "HouboltNasa",
+    component: () => import("@/views/HouboltNasa.vue"),
+    nextPage: "Morgan",
   },
   {
     path: "/morgan",
@@ -61,15 +69,14 @@ const routes = [
   },
   {
     path: "/morgan/more",
-    name: "Morgan",
+    name: "MorganMore",
     component: () => import("@/views/MorganMore.vue"),
     nextPage: "Apollo",
   },
   {
-    path: "/houbolt",
-    name: "Houbolt",
-    component: () => import("@/views/Houbolt.vue"),
-    nextPage: "Morgan",
+    path: "/apollo",
+    name: "Apollo",
+    component: () => import("@/views/Apollo.vue"),
   },
   {
     path: "/vostok",
@@ -107,12 +114,6 @@ const routes = [
     name: "NasaMore",
     component: () => import("@/views/NasaMore.vue"),
     nextPage: "Choice",
-  },
-  {
-    path: "/houbolt/nasa",
-    name: "HouboltNasa",
-    component: () => import("@/views/HouboltNasa.vue"),
-    nextPage: "Morgan",
   },
 ];
 

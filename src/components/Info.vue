@@ -17,28 +17,14 @@
       <div class="info__Content__Text">
         {{ textInfo }}
       </div>
-      <div class="info__Content__Button">
-        <div class="info__Content__Button__LearnMore">
-          <PrimaryButton textPrimaryButton="En savoir plus" />
-        </div>
-        <div class="info__Content__Button__Next">
-          <NextButton class="next"
-          />
-        </div>
-      </div>
     </div>
   </div>
 </template>
 
 <script>
-import PrimaryButton from "@/components/PrimaryButton.vue"
-import NextButton from "@/components/NextButton.vue"
 export default {
   name: "Info",
-  components: {
-    PrimaryButton,
-    NextButton,
-  },
+  components: {},
   props: {
     imageUrl: {},
     quoteInfo: String,
@@ -55,7 +41,7 @@ export default {
   color: white;
   display: flex;
   flex-flow: column;
-	background-color: $black;
+  background-color: $black;
   @include tablet {
     flex-flow: row;
   }
@@ -64,55 +50,54 @@ export default {
     max-height: 25vh;
     width: auto;
     position: relative;
-		display: flex;
+    display: flex;
     @include tablet {
-			max-height: 100vh;
+      max-height: 100vh;
       height: 100vh;
       width: auto;
-			width: 40%;
-			max-height: auto;
-			width: 50%;
-		}
-		@include laptop {
-			width: 40%;
-		}
+      width: 40%;
+      max-height: auto;
+      width: 50%;
+    }
+    @include laptop {
+      width: 40%;
+    }
 
     &__Url {
       width: 100%;
       height: inherit;
       object-fit: cover;
-			object-position: top;
-			@include tablet {
-				object-position: 20%;
-			}
+      object-position: top;
+      @include tablet {
+        object-position: 20%;
+      }
     }
 
     &__Quote {
       background: black;
       opacity: 40%;
       padding: 10px;
-			font-size: 8px;
-			width: fit-content;
+      font-size: 8px;
+      width: fit-content;
       position: absolute;
       bottom: 5px;
       left: 0;
-			right: 0;
-			margin: auto;
+      right: 0;
+      margin: auto;
 
       @include tablet {
         font-size: 10px;
         width: fit-content;
-         bottom: 15px;
+        bottom: 15px;
       }
       @include laptop {
         font-size: 12px;
         bottom: 25px;
+      }
 
-			}
-			
-			@include pc {
-				font-size: 15px;
-			}
+      @include pc {
+        font-size: 15px;
+      }
       & p {
         background: none;
       }
@@ -197,13 +182,13 @@ export default {
     }
 
     &__Button {
-			display: flex;
+      display: flex;
 
       &__LearnMore {
-				margin-left: 3%;
-			}
+        margin-left: 3%;
+      }
       &__Next {
-				margin-right: 3%;
+        margin-right: 3%;
         padding-top: 15%;
         width: fit-content;
         @include tablet {
@@ -216,60 +201,44 @@ export default {
         }
       }
     }
-    
-		&__Subtitle {
-			font-size: 24px;
-			font-weight: 300;
-			width: 100%;
-			margin: 0 auto;
-			@include tablet {
-				font-size: 40px;
-				width: 85%;
-				padding-top: 75px;
-			}
-			@include laptop {
-				font-size: 45px;
-				padding-top: 100px;
-				font-weight: 400;
-			}
-			@include pc {
-				font-size: 60px;
-				padding-top: 100px;
-			}
-		}
-		&__Text {
-			line-height: 130%;
-			font-size: 14px;
-			font-weight: 300;
-			margin: 0 auto;
-			padding-top: 10%;
-			@include tablet {
-				font-size: 16px;
-				width: 85%;
-			}
-			@include laptop {
-				font-size: 18px;
-			}
-			@include pc {
-				font-size: 24px;
-			}
-		}
-		&__Button {
-			display: flex;
-			justify-content: space-between;
-			&__LearnMore,
-			&__Next {
-				padding-top: 15%;
-				@include tablet {
-					margin: 0 7.5%;
-					padding-top: 25pt;
-				}
-				@include laptop {
-					padding-top: 55pt;
-					line-height: 120%;
-				}
-			}
-		}
-	}
+
+    &__Subtitle {
+      font-size: 24px;
+      font-weight: 300;
+      width: 100%;
+      margin: 0 auto;
+      @include tablet {
+        font-size: 40px;
+        width: 85%;
+        padding-top: 75px;
+      }
+      @include laptop {
+        font-size: 45px;
+        padding-top: 100px;
+        font-weight: 400;
+      }
+      @include pc {
+        font-size: 60px;
+        padding-top: 100px;
+      }
+    }
+    &__Text {
+      line-height: 130%;
+      font-size: 14px;
+      font-weight: 300;
+      margin: 0 auto;
+      padding-top: 10%;
+      @include tablet {
+        font-size: 16px;
+        width: 85%;
+      }
+      @include laptop {
+        font-size: 18px;
+      }
+      @include pc {
+        font-size: 24px;
+      }
+    }
+  }
 }
 </style>
