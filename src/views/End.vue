@@ -1,4 +1,5 @@
 <template>
+  
 	<div  class="end page">
 		<div class="end__title">
 			<h1>Merci</h1>
@@ -19,6 +20,25 @@
       <p class="end__name--5">Théo Rougier</p>
       <p class="end__name--6">Patxi Manzano</p>
     </div>
+      <vue-particles
+      class="end__particule"
+        color="#dedede"
+        :particleOpacity="0.7"
+        :particlesNumber="50"
+        shapeType="circle"
+        :particleSize="4"
+        linesColor="#dedede"
+        :linesWidth="0"
+        :lineLinked="true"
+        :lineOpacity="0"
+        :linesDistance="0"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+      >
+      </vue-particles>
 	</div>
 </template>
 
@@ -219,7 +239,9 @@ export default {
         margin-left: 1em;
       }
     }
-    
+    &__particule{
+      z-index: -10;
+    }
   }
 }
 
