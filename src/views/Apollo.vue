@@ -163,7 +163,7 @@ export default {
 		scrollHorizontal(e) {
 			e = window.event || e
 			let delta = Math.max(-1, Math.min(1, e.wheelDelta))
-			let scrollSpeed = 10
+			let scrollSpeed = 20
 			document.documentElement.scrollLeft -= delta * scrollSpeed
 			this.$refs.bodyScroll.scrollLeft -= delta * scrollSpeed
 			e.preventDefault()
@@ -179,6 +179,9 @@ export default {
 	flex-direction: row;
 	width: fit-content;
 	background-image: url("~@/assets/img/apollo_background.jpg");
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 .endTimeline {
 	background-image: url("~@/assets/img/apollo_end.jpg");
