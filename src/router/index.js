@@ -99,7 +99,8 @@ const routes = [
 	{
 		path: "/rocard",
 		name: "Rocard",
-		component: () => import("@/views/Rocard.vue"),
+    component: () => import("@/views/Rocard.vue"),
+    nextPage: "StartArtemis",
 	},
 	{
 		path: "/artemis",
@@ -122,6 +123,12 @@ const routes = [
 		name: "StartArtemis",
 		component: () => import("@/views/StartArtemis.vue"),
 		nextPage: "Artemis",
+  },
+  {
+		path: "/clep",
+		name: "Clep",
+		component: () => import("@/views/Clep.vue"),
+		nextPage: "Rocard",
 	},
 	{
 		path: "/end",
