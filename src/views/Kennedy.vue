@@ -1,28 +1,23 @@
 <template>
-  <div class="rocard page">
-    <div class="rocard__Img">
-      <img class="rocard__Img__Laptop" src="../assets/img/francisrocard.png" />
-      <img
-        class="rocard__Img__Phone"
-        src="../assets/img/francisrocard_phone.png"
-      />
+  <div class="kennedy page">
+    <div class="kennedy__Img">
+      <img class="kennedy__Img__Laptop" src="../assets/img/kennedy.png" />
+      <img class="kennedy__Img__Phone" src="../assets/img/kennedy_phone.png" />
     </div>
-    <div class="rocard__container">
-      <div class="rocard__title">
-        <h1>Francis Rocard,</h1>
-        <h2>
-          Responsable des programmes d'exploitation du système solaire (CNES)
-        </h2>
+    <div class="kennedy__container">
+      <div class="kennedy__title">
+        <h1>Le discours du président Kennedy</h1>
       </div>
-      <div class="rocard__citation">
-        <div class="rocard__citation1">
+      <div class="kennedy__citation">
+        <div class="kennedy__citation1">
           <p>
-            "Ca ne sert à rien, on est les meilleurs, à quoi bon continuer ?" A
-            propos de la conquête lunaire arrêtée.
+            En réaction au succès du premier homme "Youri Gargarine" envoyé dans
+            l'espace par l'URSS. Le président Kennedy annonce le lancement du
+            programme Apollo devant le congrès américain le 25 mai 1961.
           </p>
         </div>
-        <div class="rocard__trait"></div>
-        <div id="svgplay" class="rocard__svg" @click="toggle">
+        <div class="kennedy__trait"></div>
+        <div id="svgplay" class="kennedy__svg" @click="toggle">
           <svg
             width="41"
             height="41"
@@ -36,14 +31,14 @@
             />
           </svg>
         </div>
-        <div class="rocard__citation2">
+        <div class="kennedy__citation2">
           <p>
-            "La lune est un banc d'essai" qui permet de mieux appréhender les
-            missions pour Mars.
+            Il confirme sa décision dans un autre discours resté célèbre "We
+            choose to go to the Moon" le 12 septembre 1962.
           </p>
         </div>
-        <div class="rocard__trait"></div>
-        <div id="svgplay" class="rocard__svg" @click="toggle">
+        <div class="kennedy__trait"></div>
+        <div id="svgplay" class="kennedy__svg" @click="toggle">
           <svg
             width="41"
             height="41"
@@ -59,8 +54,8 @@
         </div>
       </div>
 
-      <div class="rocard__soundwave">
-        <div id="wave" class="rocard__wave" v-if="visible">
+      <div class="kennedy__soundwave">
+        <div id="wave" class="kennedy__wave" v-if="visible">
           <i class="bar"></i>
           <i class="bar"></i>
           <i class="bar"></i>
@@ -103,7 +98,7 @@ export default {
 </script>
 
 <style lang="scss">
-.rocard {
+.kennedy {
   background-color: $black;
   display: flex;
   flex-direction: column;

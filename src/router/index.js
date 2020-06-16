@@ -114,6 +114,11 @@ const routes = [
     component: () => import("@/views/HouboltNasa.vue"),
     nextPage: "Morgan",
   },
+  {
+    path: "/kennedy",
+    name: "Kennedy",
+    component: () => import("@/views/Kennedy.vue"),
+  },
 ];
 
 const router = new VueRouter({
