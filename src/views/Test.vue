@@ -1,5 +1,5 @@
 <template>
-	<div class="test page">
+	<div class="test page" @click="play()">
 		<div>
 			<BackButton
 				class="test__back"
@@ -12,15 +12,21 @@
 				:strings="[
 					'La course à l\'espace démarre le 4 Octobre 1957',
 					'Le petit satellite Soviétique Spoutnik 1 est envoyé dans l\'espace',
+					' ',
 				]"
 				:typeSpeed="60"
-				:smartBackspace="true"
 				:showCursor="false"
 			>
 				<p class="typing"></p>
 			</vue-typed-js>
 		</div>
-		<video rel="preload" autoplay ref="video" class="test__video" @click="play()">
+		<video
+			rel="preload"
+			autoplay
+			ref="video"
+			class="test__video"
+			@ended="$router.push('/lancement')"
+		>
 			<source src="@/assets/videos/sputnik_1.mp4" type="video/mp4" />
 		</video>
 	</div>
@@ -31,9 +37,11 @@ import BackButton from "@/components/BackButton.vue"
 
 export default {
 	name: "lancement",
+
 	data() {
 		return {
 			disclaimer: true,
+			duration: " ",
 		}
 	},
 	components: {
@@ -45,11 +53,7 @@ export default {
 			console.log(this.$refs.video.play())
 		},
 	},
-	mounted() {
-		setTimeout(() => {
-			this.$router.push("/lancement")
-		}, 20000)
-	},
+	mounted() {},
 }
 </script>
 
