@@ -1,5 +1,5 @@
 <template>
-	<div class="artemis page">
+	<div class="artemis page" @mousewheel="scrollHorizontal()" ref="bodyScroll">
 		<IntroTimeline
 			:backgroundImg="backgroundImg"
 			introTitle="Artemis"
@@ -46,18 +46,20 @@
 				.
 			</p>
 		</div>
+		<PrimaryButton textPrimaryButton="Artemis" @click.native="$router.push('/end')" />
 	</div>
 </template>
 
 <script>
 import IntroTimeline from "@/components/IntroTimeline.vue"
 import Timeline from "@/components/Timeline.vue"
-
+import PrimaryButton from "@/components/PrimaryButton.vue"
 export default {
 	name: "lancement",
 	components: {
 		Timeline,
 		IntroTimeline,
+		PrimaryButton,
 	},
 	data() {
 		return {
@@ -101,6 +103,16 @@ export default {
 				},
 			],
 		}
+	},
+	methods: {
+		scrollHorizontal(e) {
+			e = window.event || e
+			let delta = Math.max(-1, Math.min(1, e.wheelDelta))
+			let scrollSpeed = 40
+			document.documentElement.scrollLeft -= delta * scrollSpeed
+			this.$refs.bodyScroll.scrollLeft -= delta * scrollSpeed
+			e.preventDefault()
+		},
 	},
 }
 </script>

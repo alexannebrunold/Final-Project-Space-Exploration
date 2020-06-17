@@ -1,5 +1,5 @@
 <template>
-	<div class="luna page">
+	<div class="luna page" @mousewheel="scrollHorizontal()" ref="bodyScroll">
 		<IntroTimeline
 			:backgroundImg="backgroundImg"
 			introTitle="Luna"
@@ -38,9 +38,9 @@
 				<PrimaryButton
 					textPrimaryButton="Apollo"
 					class="endTimeline__buttons--firstButton"
-					@click.native="$router.push('/apollo')"
+					@click.native="$router.push('/kennedy')"
 				/>
-				<PrimaryButton textPrimaryButton="Artemis" @click.native="$router.push('/artemis')" />
+				<PrimaryButton textPrimaryButton="Artemis" @click.native="$router.push('/clep')" />
 			</div>
 		</div>
 	</div>
@@ -138,6 +138,16 @@ export default {
 				},
 			],
 		}
+	},
+	methods: {
+		scrollHorizontal(e) {
+			e = window.event || e
+			let delta = Math.max(-1, Math.min(1, e.wheelDelta))
+			let scrollSpeed = 40
+			document.documentElement.scrollLeft -= delta * scrollSpeed
+			this.$refs.bodyScroll.scrollLeft -= delta * scrollSpeed
+			e.preventDefault()
+		},
 	},
 }
 </script>

@@ -115,6 +115,7 @@ export default {
     @include laptop {
       width: 50%;
       padding-top: 0px;
+      padding-bottom: 200px;
     }
     &__Title {
       width: fit-content;
@@ -134,74 +135,6 @@ export default {
         -webkit-text-stroke-color: $white;
       }
     }
-
-    &__Subtitle,
-    &__Text {
-      padding-top: 15%;
-      line-height: 150%;
-      @include laptop {
-        padding-top: 55pt;
-        margin: 0 10%;
-        line-height: 120%;
-      }
-    }
-
-    &__Subtitle {
-      font-size: 24px;
-      font-weight: 300;
-      width: 100%;
-      margin: 0 auto;
-
-      @include tablet {
-        font-size: 40px;
-        width: 85%;
-        padding-top: 75px;
-      }
-
-      @include laptop {
-        font-size: 58px;
-        padding-top: 100px;
-      }
-    }
-
-    &__Text {
-      font-size: 14px;
-      font-weight: 300;
-      margin: 0 auto;
-      padding-top: 10%;
-
-      @include tablet {
-        font-size: 24px;
-        font-weight: 200;
-        width: 85%;
-      }
-
-      @include laptop {
-        font-size: 28px;
-      }
-    }
-
-    &__Button {
-      display: flex;
-
-      &__LearnMore {
-        margin-left: 3%;
-      }
-      &__Next {
-        margin-right: 3%;
-        padding-top: 15%;
-        width: fit-content;
-        @include tablet {
-          margin: 0 7.5%;
-          padding-top: 25pt;
-        }
-        @include laptop {
-          padding-top: 55pt;
-          line-height: 120%;
-        }
-      }
-    }
-
     &__Subtitle {
       font-size: 24px;
       font-weight: 300;

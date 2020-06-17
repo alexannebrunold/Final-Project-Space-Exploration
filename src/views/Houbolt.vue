@@ -64,13 +64,13 @@ export default {
     }
     &__LearnMore,
     &__Next {
-      width: fit-content;
       padding-top: 15%;
       margin: auto 15px;
       @include tablet {
         padding-top: 25pt;
       }
       @include laptop {
+        padding-right: 150px;//ici le pading marche
         padding-top: 55pt;
         line-height: 120%;
       }

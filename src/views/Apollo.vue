@@ -1,10 +1,5 @@
 <template>
-	<div
-		class="apollo page"
-		id="horizontal__scroll"
-		@mousewheel="scrollHorizontal()"
-		ref="bodyScroll"
-	>
+	<div class="apollo page" @mousewheel="scrollHorizontal()" ref="bodyScroll">
 		<IntroTimeline
 			introTitle="Apollo"
 			:backgroundImg="backgroundImg"
@@ -47,9 +42,9 @@
 				<PrimaryButton
 					textPrimaryButton="Luna"
 					class="endTimeline__buttons--firstButton"
-					@click.native="$router.push('/luna')"
+					@click.native="$router.push('/vostok')"
 				/>
-				<PrimaryButton textPrimaryButton="Artemis" @click.native="$router.push('/artemis')" />
+				<PrimaryButton textPrimaryButton="Artemis" @click.native="$router.push('/clep')" />
 			</div>
 		</div>
 	</div>

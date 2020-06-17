@@ -2,12 +2,13 @@
   <div class="moreInfo page" to="">
     <div class="moreInfo__back">
       <BackButton
-				textBackButton="Retour"
-				@click.native="$router.push('/Contexte')"
-			/>
+        :svgUrl="svgSrc"
+        textBackButton="Retour"
+        @click.native="$router.go(-1)"
+      />
     </div>
     <div class="moreInfo__left">
-      <img class="moreInfo__left--img" :src="imageUrlLeft"/>
+      <img class="moreInfo__left--img" :src="imageUrlLeft" />
       <h1 class="moreInfo__left--title">
         {{ titleInfoLeft }}
       </h1>
@@ -17,13 +18,15 @@
     </div>
     <span class="moreInfo__line"></span>
     <div class="moreInfo__right">
-      <img class="moreInfo__right--img" :src="imageUrlRight"/>
+      <img class="moreInfo__right--img" :src="imageUrlRight" />
       <h1 class="moreInfo__right--title">
         {{ titleInfoRight }}
       </h1>
       <p p class="moreInfo__right--text">
         {{ textInfoRight }}
-      <p>
+      </p>
+
+      <p></p>
       <div class="moreInfo__next">
         <NextButton />
       </div>
@@ -36,6 +39,11 @@ import NextButton from "@/components/NextButton.vue";
 import BackButton from "@/components/BackButton.vue";
 export default {
   name: "MoreInfo",
+  data() {
+    return {
+      svgSrc: require("../assets/img/arrow.svg"),
+    };
+  },
   components: {
     NextButton,
     BackButton,
@@ -52,7 +60,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .moreInfo {
   display: flex;
   flex-direction: column;
@@ -68,7 +75,7 @@ export default {
     left: 15px;
     top: 5px;
   }
-  
+
   &__left {
     padding-top: 40px;
     @include tablet {
@@ -77,7 +84,6 @@ export default {
       margin-left: 50px;
     }
     @include laptop {
-      
     }
   }
   &__left--img {
@@ -115,7 +121,7 @@ export default {
     font-family: "Poppins";
     font-size: 14px;
     font-weight: 300;
-    color: #DBDBDB;
+    color: #dbdbdb;
     text-align: left;
     margin: 0 20px;
     @include tablet {
@@ -148,7 +154,6 @@ export default {
       margin-right: 50px;
     }
     @include laptop {
-
     }
   }
 
@@ -165,7 +170,7 @@ export default {
     }
   }
 
-    &__right--title {
+  &__right--title {
     font-family: "Poppins";
     font-size: 22px;
     font-weight: 300;
@@ -182,14 +187,13 @@ export default {
     }
   }
 
-
   &__right--text {
     line-height: 130%;
     font-family: "Poppins";
     font-size: 14px;
     font-weight: 300;
-    color: #DBDBDB;
-    line-height: auto ;
+    color: #dbdbdb;
+    line-height: auto;
     text-align: left;
     margin: 0 20px 40px;
     @include tablet {
@@ -206,7 +210,7 @@ export default {
   &__next {
     margin-bottom: 30px;
     @include tablet {
-     text-align: right;
+      text-align: right;
     }
   }
 }

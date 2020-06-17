@@ -63,6 +63,7 @@
               fill="white"
             />
           </svg>
+          <div class="button"><NextButton /></div>
         </div>
         <div class="rocard__citation2">
           <p>
@@ -102,6 +103,7 @@
 </template>
 
 <script>
+import NextButton from "@/components/NextButton.vue"
 export default {
   name: "app",
   data() {
@@ -142,10 +144,13 @@ export default {
     this.current = this.songs[this.index];
     this.player.src = this.current.src;
   },
+  components: {
+		NextButton,
+	},
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .rocard {
   background-color: $black;
   display: flex;
@@ -397,5 +402,9 @@ export default {
     width: 30px;
     height: 30px;
   }
+}
+.button {
+  margin-top: 40px;
+  justify-self: right;
 }
 </style>

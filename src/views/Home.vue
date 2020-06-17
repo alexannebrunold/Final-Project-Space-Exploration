@@ -3,6 +3,12 @@
 		<Disclaimer v-show="disclaimer" />
 		<div v-show="!disclaimer">
 			<Main />
+			<ul class="home__missions">
+				<li @click="$router.push('/contexte')">Spoutnik</li>
+				<li @click="$router.push('/kennedy')">Apollo</li>
+				<li @click="$router.push('/vostok')">Luna</li>
+				<li @click="$router.push('/clep')">Artemis</li>
+			</ul>
 			<video rel="preload" autoplay ref="video" loop class="home__video">
 				<source src="../assets/videos/bg-video.mp4" type="video/mp4" />
 			</video>
@@ -50,6 +56,35 @@ export default {
 
 <style scoped lang="scss">
 .home {
+
+  &__missions {
+		display: none; 
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: absolute;
+      top: 5px;
+      right: 15px;
+      font-size: 18px;
+      font-family: "Poppins";
+      font-weight: lighter;
+    
+      li {
+        cursor: pointer;
+        margin-left: 0.7em;
+        transition: ease-in-out 0.4s;
+        z-index: 200;
+        user-select: none;
+      }
+      li:hover {
+        transition: ease-in-out 0.4s;
+        transform: translateY(5px);
+      }
+		}
+	}
+  
+
 	&__video {
 		position: fixed;
 		right: 0;
