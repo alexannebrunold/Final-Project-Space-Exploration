@@ -42,15 +42,16 @@ export default {
   display: flex;
   text-align: center;
   background-color: $black;
-  height: 100vh;
+  position: relative;
+  overflow: hidden;
   & img {
     z-index: 0;
     position: absolute;
-    filter: opacity(20%);
+    filter: opacity(50%);
     overflow: hidden;
-    height: 100%;
-    width: auto;
     object-fit: cover;
+    width: 100%;
+    height: auto;
   }
   &__content {
     display: flex;
@@ -63,7 +64,7 @@ export default {
       // width: 50%;
     }
     &--title {
-      margin: 15% auto 0 auto;
+      margin: 2% auto 0 auto;
       width: fit-content;
       font-size: 50px;
       font-weight: 200;
@@ -82,7 +83,7 @@ export default {
       }
     }
     &--video {
-      width: 600px;
+      width: 50%;
       height: auto;
       margin: auto;
     }
