@@ -5,7 +5,7 @@
       :imageUrl="imageSrc"
       quoteInfo=" J'ai aidé à envoyer 12 personnes sur la Lune. Et j'aime le raconter à tout le monde"
       subtitleInfo="Les pionnières de la conquête spatiale."
-      textInfo="Après la mission Apollo, JoAnn Morgan est devenue la première femme haute dirigeante du Centre spatial Kennedy (Floride). Aujourd'hui retraitée, elle aime se rappeler son rôle dans la mission Apollo. "
+      textInfo="Après la mission Apollo, Joann Morgan est devenue la première femme haute dirigeante du Centre spatial Kennedy (Floride). Aujourd'hui retraitée, elle aime se rappeler son rôle dans la mission Apollo. "
     />
     <div class="morgan__Button">
       <div class="morgan__Button__LearnMore">
@@ -74,6 +74,7 @@ export default {
         padding-top: 25pt;
       }
       @include laptop {
+        padding-right: 150px;//ici le pading marche
         padding-top: 55pt;
         line-height: 120%;
       }
