@@ -51,7 +51,7 @@ export default {
 		margin: 25% auto;
 		@include text-stroke;
 		font-size: 40px;
-
+		animation: 1.1s infinite ease-in alternate grow;
 		@include tablet {
 			font-size: 80px;
 			margin: 15% auto;
@@ -91,4 +91,14 @@ export default {
 		}
 	}
 }
+@keyframes grow {
+	from {
+		color: white;
+	}
+	to {
+		color: transparent;
+	}
+}
+
+
 </style>
