@@ -109,10 +109,6 @@ export default {
           title: "We choose to go to the moon",
           src: require("../assets/audio/gotothemoon.mp3"),
         },
-        {
-          title: "JFK speech congress",
-          src: require("../assets/audio/jfkcongress.mp3"),
-        },
       ],
       player: new Audio(),
     };

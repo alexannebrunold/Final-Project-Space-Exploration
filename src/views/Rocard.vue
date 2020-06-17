@@ -111,7 +111,7 @@ export default {
       isPlaying: false,
       songs: [
         {
-          src: require("../assets/audio/djomb.mp3"),
+          src: require("../assets/audio/rocard.mp3"),
         },
       ],
       player: new Audio(),
