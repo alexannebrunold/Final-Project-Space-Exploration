@@ -12,6 +12,7 @@
 				allow="accelerometer; autoplay; encrypted-media; gyroscope; "
 				start="1"
 				autoplay="1"
+				controls="2"
 			></iframe>
 		</div>
 	</div>

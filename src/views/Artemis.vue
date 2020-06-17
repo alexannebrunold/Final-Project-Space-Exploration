@@ -1,22 +1,18 @@
 <template>
-  <div class="artemis page" @mousewheel="scrollHorizontal()" ref="bodyScroll">
-    <IntroTimeline
-      :backgroundImg="backgroundImg"
-      introTitle="Artemis"
-      :introTimelineVideoSrc="introTimelineVideoSrc"
-    />
-    <Timeline :tableauTimeline="tableauTimeline" class="timelineComponent" />
-    <div class="endTimeline">
-      <div class="endTimeline--title">
-        <p>We choose to go to the</p>
-        <h1>Moon</h1>
-      </div>
-      <p class="endTimeline--paragraphe">
-        La
-        <span>Lune</span>
-        fut donc un enjeu politique majeur durant la guerre froide, grâce à
-        <span>Apollo 11</span>
-        les
+	<div class="artemis page" @mousewheel="scrollHorizontal()" ref="bodyScroll">
+		<IntroTimeline :backgroundImg="backgroundImg" introTitle="Artemis" :introVideo="urlVideo" />
+		<Timeline :tableauTimeline="tableauTimeline" class="timelineComponent" />
+		<div class="endTimeline">
+			<div class="endTimeline--title">
+				<p>We choose to go to the</p>
+				<h1>Moon</h1>
+			</div>
+			<p class="endTimeline--paragraphe">
+				La
+				<span>Lune</span>
+				fut donc un enjeu politique majeur durant la guerre froide, grâce à
+				<span>Apollo 11</span>
+				les
 
         <span>Etats-Unis</span>
         finissent
@@ -56,70 +52,80 @@
 </template>
 
 <script>
-import IntroTimeline from "@/components/IntroTimeline.vue";
-import Timeline from "@/components/Timeline.vue";
-import PrimaryButton from "@/components/PrimaryButton.vue";
+import axios from "axios"
+import IntroTimeline from "@/components/IntroTimeline.vue"
+import Timeline from "@/components/Timeline.vue"
+import PrimaryButton from "@/components/PrimaryButton.vue"
 export default {
-  name: "lancement",
-  components: {
-    Timeline,
-    IntroTimeline,
-    PrimaryButton,
-  },
-  data() {
-    return {
-      backgroundImg: require("@/assets/img/artemis_intro.jpg"),
-      introTimelineVideoSrc: require("@/assets/videos/Artemis.mp4"),
-      tableauTimeline: [
-        {
-          image: require("../assets/img/Artemis/Artemis.svg"),
-          date: "2019",
-          title: "Annonce",
-          description:
-            "Le programme Artemis est un programme spatial habité de la NASA, l'agence spatiale américaine, dont l'objectif est d'amener un équipage sur le sol lunaire d'ici 2024",
-        },
-        {
-          image: require("../assets/img/Artemis/Artemis1.svg"),
-          date: "2020-21",
-          title: "Artemis 1",
-          description:
-            "L'objectif principal est de valider le fonctionnement du nouveau lanceur Space Launch System ainsi que celui du vaisseau Orion sans équipage. ",
-        },
-        {
-          image: require("../assets/img/Artemis/Artemis2.svg"),
-          date: "2022-2023",
-          title: "Artemis 2",
-          description:
-            "Artemis 2  est le second vol prévu du lanceur américain Space Launch System et le premier avec un équipage du vaisseau spatial Orion. Le lancement est prévu pour 2022-20233",
-        },
-        {
-          image: require("../assets/img/Artemis/Artemis3.svg"),
-          date: "2024",
-          title: "Artemis 3",
-          description:
-            "Artemis 3 est le troisième vol du vaisseau Orion et la première mission du programme Artemis qui déposera un équipage à la surface de la Lune.",
-        },
-        {
-          image: require("../assets/img/Artemis/Mars.svg"),
-          date: "Projection",
-          title: "Mars",
-          description:
-            "Ces missions sont les premières d'une longue série dont l'objectif est d'effectuer des séjours  à la surface de la Lune  et mettre au point les techniques nécessaires à des missions habitées à la surface de Mars.",
-        },
-      ],
-    };
-  },
-  methods: {
-    scrollHorizontal(e) {
-      e = window.event || e;
-      let delta = Math.max(-1, Math.min(1, e.wheelDelta));
-      let scrollSpeed = 40;
-      document.documentElement.scrollLeft -= delta * scrollSpeed;
-      this.$refs.bodyScroll.scrollLeft -= delta * scrollSpeed;
-      e.preventDefault();
-    },
-  },
-};
+	name: "lancement",
+	components: {
+		Timeline,
+		IntroTimeline,
+		PrimaryButton,
+	},
+	data() {
+		return {
+			urlVideo: " ",
+			backgroundImg: require("@/assets/img/artemis_intro.jpg"),
+			tableauTimeline: [
+				{
+					image: require("../assets/img/Artemis/Artemis.svg"),
+					date: "2019",
+					title: "Annonce",
+					description:
+						"Le programme Artemis est un programme spatial habité de la NASA, l'agence spatiale américaine, dont l'objectif est d'amener un équipage sur le sol lunaire d'ici 2024",
+				},
+				{
+					image: require("../assets/img/Artemis/Artemis1.svg"),
+					date: "2020-21",
+					title: "Artemis 1",
+					description:
+						"L'objectif principal est de valider le fonctionnement du nouveau lanceur Space Launch System ainsi que celui du vaisseau Orion sans équipage. ",
+				},
+				{
+					image: require("../assets/img/Artemis/Artemis2.svg"),
+					date: "2022-2023",
+					title: "Artemis 2",
+					description:
+						"Artemis 2  est le second vol prévu du lanceur américain Space Launch System et le premier avec un équipage du vaisseau spatial Orion. Le lancement est prévu pour 2022-20233",
+				},
+				{
+					image: require("../assets/img/Artemis/Artemis3.svg"),
+					date: "2024",
+					title: "Artemis 3",
+					description:
+						"Artemis 3 est le troisième vol du vaisseau Orion et la première mission du programme Artemis qui déposera un équipage à la surface de la Lune.",
+				},
+				{
+					image: require("../assets/img/Artemis/Mars.svg"),
+					date: "Projection",
+					title: "Mars",
+					description:
+						"Ces missions sont les premières d'une longue série dont l'objectif est d'effectuer des séjours  à la surface de la Lune  et mettre au point les techniques nécessaires à des missions habitées à la surface de Mars.",
+				},
+			],
+		}
+	},
+	mounted() {
+		const CORS = "https://cors-anywhere.herokuapp.com/"
+		const API_URL = "https://spacemoonapis.frb.io/webdocressources/"
+		axios.get(CORS + API_URL + "7").then((response) => {
+			console.log(response.data.data[0].videoURL)
+			this.urlVideo = response.data.data[0].videoURL
+			console.log(this.urlVideo)
+		})
+	},
+	methods: {
+		scrollHorizontal(e) {
+			e = window.event || e
+			let delta = Math.max(-1, Math.min(1, e.wheelDelta))
+			let scrollSpeed = 40
+			document.documentElement.scrollLeft -= delta * scrollSpeed
+			this.$refs.bodyScroll.scrollLeft -= delta * scrollSpeed
+			e.preventDefault()
+		},
+	},
+}
 </script>
 
 <style lang="scss">
