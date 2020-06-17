@@ -9,9 +9,9 @@
 				:strings="[
 					'Ce webdocumentaire est réalisé pour un projet d\'étude bachelor web à l\'école d\'études supérieures Hétic',
 				]"
-				:typeSpeed="30"
+				:typeSpeed="20"
 				:smartBackspace="true"
-				:showCursor="false"
+				:showCursor="true"
 				:startDelay="800"
 			>
 				<p class="typing Text"></p>
@@ -23,31 +23,34 @@
 				:strings="[
 					'Toutes les informations utilisées sur ce site sont strictement à titre informatif, et ne nous appartiennent pas.',
 				]"
-				:typeSpeed="28"
+				:typeSpeed="20"
 				:smartBackspace="true"
 				:showCursor="false"
-				:startDelay="7500"
+				:startDelay="5000"
 			>
 				<p class="typing Subtext"></p>
 			</vue-typed-js>
 		</div>
-		<PrimaryButton
-		textPrimaryButton="Suivant"
-		class="disclaimer__next"
-		@click.native="$router.push('/')"
-		/>
+		<div class="disclaimer__here">
+			<vue-typed-js
+				:strings="[
+					'Clique sur la page',
+				]"
+				:typeSpeed="75"
+				:smartBackspace="true"
+				:showCursor="false"
+				:startDelay="9000"
+			>
+				<p class="typing here"></p>
+			</vue-typed-js>
+			</div>
 	</div>
 
 </template>
 
 <script>
-import PrimaryButton from "@/components/PrimaryButton.vue"
-
 export default {
 	name: "disclaimer",
-	components: {
-		PrimaryButton,
-	},
 };
 </script>
 
@@ -68,16 +71,10 @@ export default {
 			font-size: 80px;
 			margin: 10% auto;
 		}
-    
-		@include pc {
+		@include laptop {
 			margin: 10% auto;
-			font-size: 120px;
+			font-size: 95px;
 		}
-
-    @include pc {
-      margin: 10% auto;
-      font-size: 120px;
-    }
   }
 
   &__Text,
@@ -86,44 +83,46 @@ export default {
     margin: auto;
   }
 
-  &__Text {
-    font-size: 14px;
-    @include tablet {
-      font-size: 28px;
-    }
-    @include pc {
-      font-size: 30px;
-    }
-  }
-
 	&__Text {
+		font-family: "Poppins";
 		font-size: 14px;
 		@include tablet {
-			font-size: 28px;
+			font-size: 22px;
 			width: fit-content;
 		}
-		@include pc {
-			font-size: 30px;
+		@include laptop {
+			font-size: 26px;
 		}
 	}
 
 	&__Subtext {
+		font-family: "Poppins";
 		display: flex;
 		justify-content: center;
-		font-size: 12px;
+		font-size: 14px;
 		@include tablet {
 			font-size: 20px;
 		}
-		@include pc {
+		@include laptop {
 			font-size: 24px;
 		}
 	}
 
-	&__next {
-		padding-top: 5%;
-		padding-bottom: 5%;
+		&__here {
+		font-weight: bold;
+		font-family: "Poppins";
+		display: flex;
+		justify-content: center;
+		font-size: 14px;
+		padding-bottom: 15%;
+		@include tablet {
+			font-size: 20px;
+			padding-bottom: 7%;
+		}
+		@include laptop {
+			font-size: 24px;
+		}
 	}
-
 }
 
 @keyframes grow {
