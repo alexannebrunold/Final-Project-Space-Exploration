@@ -1,14 +1,14 @@
 <template>
-	<div  class="start page">
+  <div class="start page">
     <video rel="preload" autoplay ref="video" loop class="start__video">
       <source src="../assets/videos/moonloop.mp4" type="video/mp4" />
     </video>
-		<div class="start__svg">
-			<img src="../assets/img/Artemis.svg" alt="">
-		</div>
+    <div class="start__svg">
+      <img src="../assets/img/Artemis.svg" alt="" />
+    </div>
     <div class="start__title"><h1>L’HUMANITÉ RETOURNE SUR LA LUNE</h1></div>
     <NextButton class="next" />
-	</div>
+  </div>
 </template>
 
 <script>
@@ -59,13 +59,16 @@ export default {
     h1 {
       font-family: "Poppins";
       font-weight: normal;
-      font-size: 20px;
-      
+      font-size: 30px;
+
       @include tablet {
-        font-size: 30px;
+        font-size: 40px;
       }
       @include laptop {
-        font-size: 40px;
+        font-size: 50px;
+      }
+      @include pc {
+        font-size: 70px;
       }
     }
   }

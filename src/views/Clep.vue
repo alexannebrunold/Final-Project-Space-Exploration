@@ -2,29 +2,37 @@
   <div class="clep page">
     <div class="clep__Img">
       <img class="clep__Img__Laptop" src="../assets/img/clepDesktop.jpg" />
-      <img
-        class="clep__Img__Phone"
-        src="../assets/img/clepMobile.jpg"
-      />
+      <img class="clep__Img__Phone" src="../assets/img/clepMobile.jpg" />
     </div>
     <div class="clep__container">
       <div class="clep__title">
+        <h1>CLEP</h1>
+      </div>
+      <div class="clep__subtitle">
         <h2>Le Programme Chinois d’Exploration Lunaire (CLEP)</h2>
       </div>
 
-        <div class="clep__citation">
-          <p>Le Programme Chinois d'Exploration Lunaire, a pour but l'étude et l'exploration de la Lune par des robots, puis, à l'horizon 2025-2030, par des missions spatiales habitées. Ce programme s'est concrétisé, jusqu'en 2019, par le lancement par des fusées Longue Marche de trois sondes spatiales Chang'e depuis 2007, l'atterrissage d'un robot explorateur en 2013 et la mission Chang'e 4, qui est la première mission humaine à se poser sur la face cachée de la Lune.</p>
+      <div class="clep__citation">
+        <p>
+          Le Programme Chinois d'Exploration Lunaire, a pour but l'étude et
+          l'exploration de la Lune par des robots, puis, à l'horizon 2025-2030,
+          par des missions spatiales habitées. Ce programme s'est concrétisé,
+          jusqu'en 2019, par le lancement par des fusées Longue Marche de trois
+          sondes spatiales Chang'e depuis 2007, l'atterrissage d'un robot
+          explorateur en 2013 et la mission Chang'e 4, qui est la première
+          mission humaine à se poser sur la face cachée de la Lune.
+        </p>
 
         <div id="svgplay" class="clep__svg" @click="toggle">
-        <div class="button"><NextButton /></div>
-      </div>
+          <div class="button"><NextButton /></div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import NextButton from "@/components/NextButton.vue"
+import NextButton from "@/components/NextButton.vue";
 export default {
   data() {
     return {
@@ -37,16 +45,15 @@ export default {
     },
   },
   components: {
-		NextButton,
-	},
+    NextButton,
+  },
 };
 </script>
 
 <style lang="scss">
 .clep {
   background-color: $black;
-  display: flex;
-  flex-direction: column;
+
   @include laptop {
     display: flex;
     flex-direction: row-reverse;
@@ -80,8 +87,32 @@ export default {
       }
     }
   }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   &__title {
+    width: fit-content;
+    margin: 0 auto;
+    @include text-stroke;
+    text-align: center;
+
+    @include tablet {
+      padding-top: 25px;
+      font-size: 80px;
+    }
+
+    @include laptop {
+      padding-top: 0px;
+      font-size: 106px;
+      -webkit-text-stroke: 2px;
+      -webkit-text-stroke-color: $white;
+    }
+  }
+
+  &__subtitle {
     text-align: left;
     padding: 20px 20px 20px 20px;
     @include laptop {
