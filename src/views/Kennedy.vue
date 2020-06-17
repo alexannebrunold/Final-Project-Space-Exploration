@@ -14,6 +14,9 @@
             En réaction au succès du premier homme "Youri Gargarine" envoyé dans
             l'espace par l'URSS. Le président Kennedy annonce le lancement du
             programme Apollo devant le congrès américain le 25 mai 1961.
+            <br /><br />
+            Il confirme sa décision dans un autre discours resté célèbre "We
+            choose to go to the Moon" le 12 septembre 1962.
           </p>
         </div>
         <div class="kennedy__trait"></div>
@@ -59,13 +62,7 @@
             />
           </svg>
         </div>
-        <div class="kennedy__citation2">
-          <p>
-            Il confirme sa décision dans un autre discours resté célèbre "We
-            choose to go to the Moon" le 12 septembre 1962.
-          </p>
-        </div>
-        <div class="kennedy__trait"></div>
+        <div class="kennedy__button"><NextButton /></div>
       </div>
 
       <div class="kennedy__soundwave">
@@ -97,6 +94,7 @@
 </template>
 
 <script>
+import NextButton from "@/components/NextButton.vue";
 export default {
   name: "app",
   data() {
@@ -108,7 +106,8 @@ export default {
       isPlaying: false,
       songs: [
         {
-          src: require("../assets/audio/djomb.mp3"),
+          title: "We choose to go to the moon",
+          src: require("../assets/audio/gotothemoon.mp3"),
         },
       ],
       player: new Audio(),
@@ -136,6 +135,9 @@ export default {
   created() {
     this.current = this.songs[this.index];
     this.player.src = this.current.src;
+  },
+  components: {
+    NextButton,
   },
 };
 </script>
@@ -210,18 +212,10 @@ export default {
     }
   }
   &__citation1 {
+    font-size: 15px;
     padding-bottom: 10px;
     @include laptop {
       font-size: 20px;
-      padding-bottom: 15px;
-    }
-  }
-
-  &__citation2 {
-    padding-bottom: 10px;
-    @include laptop {
-      font-size: 20px;
-      padding-top: 15%;
       padding-bottom: 15px;
     }
   }
@@ -235,6 +229,17 @@ export default {
     @include laptop {
       display: flex;
       justify-content: center;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    @include laptop {
+      padding-top: 40px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
     }
   }
 
@@ -391,6 +396,7 @@ export default {
     padding-top: 10px;
     width: 30px;
     height: 30px;
+    padding-bottom: 10px;
   }
 }
 </style>

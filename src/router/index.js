@@ -111,6 +111,7 @@ const routes = [
     path: "/kennedy",
     name: "Kennedy",
     component: () => import("@/views/Kennedy.vue"),
+    nextPage: "Houbolt",
   },
   {
     path: "/artemis",
