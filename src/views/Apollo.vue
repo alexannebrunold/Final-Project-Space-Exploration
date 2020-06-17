@@ -180,17 +180,16 @@ export default {
 	flex-direction: row;
 	width: fit-content;
 	background-image: url("~@/assets/img/apollo_background.jpg");
+	height: 100vh;
 }
 .endTimeline {
 	background-image: url("~@/assets/img/apollo_end.jpg");
-	background-size: cover;
-	background-position: top;
-	background-repeat: no-repeat;
-	min-width: 100vw;
+	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	margin-left: 1%;
+	display: flex;
 	@include tablet {
 		width: 90vw;
 	}
