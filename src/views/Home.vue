@@ -9,15 +9,25 @@
 				<li @click="$router.push('/vostok')">Luna</li>
 				<li @click="$router.push('/clep')">Artemis</li>
 			</ul>
-			<video rel="preload" autoplay ref="video" loop class="home__video">
-				<source src="../assets/videos/bg-video.mp4" type="video/mp4" />
-			</video>
+			<!-- <video rel="preload" autoplay ref="video" loop class="home__video"> -->
+			<!-- <source :src="urlVideo" type="video/mp4" /> -->
+			<!-- </video> -->
+			<iframe
+				width="900"
+				height="506"
+				:src="urlVideo"
+				allow="accelerometer; autoplay; encrypted-media; gyroscope; "
+				class="home__video"
+				controls="0"
+				autoplay="1"
+			></iframe>
 			<img @click="toggleMute" class="home__sound" src="../assets/img/home/sound.svg" alt="" />
 		</div>
 	</div>
 </template>
 
 <script>
+import axios from "axios"
 import Main from "@/components/Main.vue"
 import Disclaimer from "@/components/Disclaimer.vue"
 
@@ -27,6 +37,7 @@ export default {
 		return {
 			disclaimer: true,
 			initVideo: false,
+			urlVideo: " ",
 		}
 	},
 	components: {
@@ -37,13 +48,20 @@ export default {
 		setTimeout(() => {
 			this.disclaimer = false
 		}, 16000)
+
+		const API_URL = "https://spacemoonapis.frb.io/webdocressources/"
+		axios.get(API_URL + "3").then((response) => {
+			console.log(response.data.data[0].videoURL)
+			this.urlVideo = response.data.data[0].videoURL
+			console.log(this.urlVideo)
+		})
 	},
 	methods: {
 		playVideo() {
 			console.log(!this.initVideo && !this.disclaimer, "ici")
 			if (!this.initVideo && !this.disclaimer) {
 				this.initVideo = true
-				this.$refs.video.play()
+				this.$refs.iframe.play()
 			}
 		},
 		toggleMute() {

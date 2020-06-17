@@ -5,9 +5,14 @@
 			<div class="introTimeline__content--title">
 				{{ introTitle }}
 			</div>
-			<video class="introTimeline__content--video" controls ref="video">
-				<source :src="introTimelineVideoSrc" type="video/mp4" />
-			</video>
+			<iframe
+				width="900"
+				height="506"
+				:src="introVideo"
+				allow="accelerometer; autoplay; encrypted-media; gyroscope; "
+				start="1"
+				autoplay="1"
+			></iframe>
 		</div>
 	</div>
 </template>
@@ -18,7 +23,7 @@ export default {
 	components: {},
 	props: {
 		backgroundImg: String,
-		introTimelineVideoSrc: String,
+		introVideo: String,
 		introTitle: String,
 	},
 	methods: {
