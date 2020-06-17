@@ -1,33 +1,38 @@
 <template>
-  <div class="introTimeline" @click="startAutoplay()">
-    <img :src="backgroundImg" alt="" />
-    <div class="introTimeline__content">
-      <div class="introTimeline__content--title">
-        {{ introTitle }}
-      </div>
-      <video class="introTimeline__content--video" controls ref="video">
-        <source :src="introTimelineVideoSrc" type="video/mp4" />
-      </video>
-    </div>
-  </div>
+	<div class="introTimeline" @click="startAutoplay()">
+		<img :src="backgroundImg" alt="" />
+		<div class="introTimeline__content">
+			<div class="introTimeline__content--title">
+				{{ introTitle }}
+			</div>
+			<iframe
+				width="900"
+				height="506"
+				:src="introVideo"
+				allow="accelerometer; autoplay; encrypted-media; gyroscope; "
+				start="1"
+				autoplay="1"
+			></iframe>
+		</div>
+	</div>
 </template>
 
 <script>
 export default {
-  name: "Info",
-  components: {},
-  props: {
-    backgroundImg: String,
-    introTimelineVideoSrc: String,
-    introTitle: String,
-  },
-  methods: {
-    startAutoplay() {
-      this.$refs.video.play();
-    },
-  },
-  mounted() {},
-};
+	name: "Info",
+	components: {},
+	props: {
+		backgroundImg: String,
+		introVideo: String,
+		introTitle: String,
+	},
+	methods: {
+		startAutoplay() {
+			this.$refs.video.play()
+		},
+	},
+	mounted() {},
+}
 </script>
 
 <style lang="scss" scoped>

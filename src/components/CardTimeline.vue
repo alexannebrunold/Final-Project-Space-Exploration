@@ -48,33 +48,31 @@ export default {
 	z-index: 2;
 	display: table;
 	height: 538px;
-	width: auto;
 	text-align: left;
 	padding-left: 1%;
 	padding-right: 1%;
-	& img {
-		&:hover {
-			transform: scale(1.1);
-			cursor: pointer;
-		}
+	transition: ease-in 0.2s;
+	&:hover {
+		transform: scale(1.06);
+		cursor: pointer;
+		margin-top: 1px;
+		transition: ease-in 0.2s;
+		background-color: #2c2c2c0e;
+		height: 400px;
+		border-radius: 8px;
 	}
 	&__div {
 		display: table;
 		margin-bottom: 4%;
 		&--circle {
 			margin: 0 auto;
-			width: 16px;
-			height: 16px;
+			width: 20px;
+			height: 20px;
 			border-radius: 20px;
 			background: #c4c4c4;
 			margin-top: 4%;
-			&:hover {
-				background: $white;
-				cursor: pointer;
-			}
 		}
 	}
-
 	&__date {
 		font-size: 32px;
 		font-weight: 800;

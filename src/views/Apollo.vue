@@ -1,16 +1,11 @@
 <template>
-  <div
-    class="apollo page"
-    id="horizontal__scroll"
-    @mousewheel="scrollHorizontal()"
-    ref="bodyScroll"
-  >
-    <IntroTimeline
-      introTitle="Apollo"
-      :backgroundImg="backgroundImg"
-      :introTimelineVideoSrc="introTimelineVideoSrc"
-    />
-    <Timeline :tableauTimeline="tableauTimeline" />
+	<div class="apollo page" @mousewheel="scrollHorizontal()" ref="bodyScroll">
+		<IntroTimeline
+			introTitle="Apollo"
+			:backgroundImg="backgroundImg"
+			:introTimelineVideoSrc="introTimelineVideoSrc"
+		/>
+		<Timeline :tableauTimeline="tableauTimeline" />
 
     <div class="endTimeline">
       <h1 class="endTimeline--title">La fin prématurée du programme Apollo</h1>
@@ -35,28 +30,25 @@
         <br />
         <br />
 
-        Par ailleurs, les priorités des
-        <span>États-Unis</span>
-        ont changé : les dispositifs sociaux mis en place par le président
-        Lyndon Johnson dans le cadre de sa
-        <span>guerre contre la pauvreté</span>
-        (Medicare et Medicaid) et surtout un
-        <span>conflit vietnamien</span>
-        qui s'envenime prélèvent une part croissante du budget.
-      </p>
-      <div class="endTimeline__buttons">
-        <PrimaryButton
-          textPrimaryButton="Luna"
-          class="endTimeline__buttons--firstButton"
-          @click.native="$router.push('/luna')"
-        />
-        <PrimaryButton
-          textPrimaryButton="Artemis"
-          @click.native="$router.push('/artemis')"
-        />
-      </div>
-    </div>
-  </div>
+				Par ailleurs, les priorités des
+				<span>États-Unis</span>
+				ont changé : les dispositifs sociaux mis en place par le président Lyndon Johnson dans le
+				cadre de sa
+				<span>guerre contre la pauvreté</span>
+				(Medicare et Medicaid) et surtout un
+				<span>conflit vietnamien</span>
+				qui s'envenime prélèvent une part croissante du budget.
+			</p>
+			<div class="endTimeline__buttons">
+				<PrimaryButton
+					textPrimaryButton="Luna"
+					class="endTimeline__buttons--firstButton"
+					@click.native="$router.push('/vostok')"
+				/>
+				<PrimaryButton textPrimaryButton="Artemis" @click.native="$router.push('/clep')" />
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>

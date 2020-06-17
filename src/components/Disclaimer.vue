@@ -1,4 +1,5 @@
 <template>
+
 	<div class="disclaimer page">
 		<div class="disclaimer__Title">
 			<h1>Attention</h1>
@@ -13,7 +14,7 @@
 				:showCursor="false"
 				:startDelay="800"
 			>
-				<p class="typing"></p>
+				<p class="typing Text"></p>
 			</vue-typed-js>
 		</div>
 
@@ -27,52 +28,79 @@
 				:showCursor="false"
 				:startDelay="7500"
 			>
-				<p class="typing"></p>
+				<p class="typing Subtext"></p>
 			</vue-typed-js>
 		</div>
+		<PrimaryButton
+		textPrimaryButton="Suivant"
+		class="disclaimer__next"
+		@click.native="$router.push('/')"
+		/>
 	</div>
+
 </template>
 
 <script>
+import PrimaryButton from "@/components/PrimaryButton.vue"
+
 export default {
 	name: "disclaimer",
-}
+	components: {
+		PrimaryButton,
+	},
+};
 </script>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 .disclaimer {
-	background-color: black;
-	display: flex;
-	flex-flow: column;
-	width: fit-content;
-	justify-content: space-between;
+  background-color: black;
+  display: flex;
+  flex-flow: column;
+  width: fit-content;
+  justify-content: space-between;
 
 	&__Title {
-		margin: 25% auto;
+		margin: auto;
 		@include text-stroke;
 		font-size: 40px;
-
+		animation: 1.1s infinite ease-in alternate grow;
 		@include tablet {
 			font-size: 80px;
-			margin: 15% auto;
+			margin: 10% auto;
 		}
-
+    
 		@include pc {
 			margin: 10% auto;
 			font-size: 120px;
 		}
-	}
 
-	&__Text,
-	&__Subtext {
-		width: 75%;
-		margin: auto;
-	}
+    @include pc {
+      margin: 10% auto;
+      font-size: 120px;
+    }
+  }
+
+  &__Text,
+  &__Subtext {
+    width: 75%;
+    margin: auto;
+  }
+
+  &__Text {
+    font-size: 14px;
+    @include tablet {
+      font-size: 28px;
+    }
+    @include pc {
+      font-size: 30px;
+    }
+  }
 
 	&__Text {
 		font-size: 14px;
 		@include tablet {
 			font-size: 28px;
+			width: fit-content;
 		}
 		@include pc {
 			font-size: 30px;
@@ -80,13 +108,30 @@ export default {
 	}
 
 	&__Subtext {
-		font-size: 10px;
+		display: flex;
+		justify-content: center;
+		font-size: 12px;
 		@include tablet {
 			font-size: 20px;
 		}
 		@include pc {
 			font-size: 24px;
 		}
+	}
+
+	&__next {
+		padding-top: 5%;
+		padding-bottom: 5%;
+	}
+
+}
+
+@keyframes grow {
+	from {
+		color: white;
+	}
+	to {
+		color: transparent;
 	}
 }
 </style>

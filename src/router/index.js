@@ -7,8 +7,13 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Home",
+    name: "test",
     component: Home,
+  },
+  {
+    path: "/test",
+    name: "TestApiView",
+    component: () => import("@/views/TestApiView.vue"),
   },
   {
     path: "/contexte",
@@ -81,11 +86,13 @@ const routes = [
   {
     path: "/vostok",
     name: "Vostok",
+    nextPage: "Programluna",
     component: () => import("@/views/Vostok.vue"),
   },
   {
     path: "/programluna",
     name: "Programluna",
+    nextPage: "Luna",
     component: () => import("@/views/ProgramLuna.vue"),
   },
   {
@@ -98,6 +105,12 @@ const routes = [
     path: "/rocard",
     name: "Rocard",
     component: () => import("@/views/Rocard.vue"),
+    nextPage: "StartArtemis",
+  },
+  {
+    path: "/kennedy",
+    name: "Kennedy",
+    component: () => import("@/views/Kennedy.vue"),
   },
   {
     path: "/artemis",
@@ -114,6 +127,24 @@ const routes = [
     name: "NasaMore",
     component: () => import("@/views/NasaMore.vue"),
     nextPage: "Choice",
+  },
+  {
+    path: "/startArtemis",
+    name: "StartArtemis",
+    component: () => import("@/views/StartArtemis.vue"),
+    nextPage: "Artemis",
+  },
+  {
+    path: "/clep",
+    name: "Clep",
+    component: () => import("@/views/Clep.vue"),
+    nextPage: "Rocard",
+  },
+  {
+    path: "/artemis",
+    name: "Artemis",
+    nextPage: "Nasa",
+    component: () => import("@/views/Artemis.vue"),
   },
   {
     path: "/end",
