@@ -66,86 +66,86 @@ export default {
 			backgroundImg: require("@/assets/img/apollo_intro.jpg"),
 			tableauTimeline: [
 				{
-					image: require("../assets/img/apollo/Apollo1logo.svg"),
+					image: require("../assets/img/apollo/Apollo1logo.png"),
 					date: "1961",
 					title: "Apollo 1",
 					description:
 						" Un incendie se déclare dans le vaisseau Apollo lors d’une répétition au sol en conditions réelles,",
 				},
 				{
-					image: require("../assets/img/apollo/Apollo2-6logo.svg"),
+					image: require("../assets/img/apollo/Apollo2-6logo.png"),
 					date: "1962-1968",
 					title: "Apollo-2-6",
 					description: " mission non habitée, essai du lanceur Saturn V et du module lunaire.",
 				},
 				{
-					image: require("../assets/img/apollo/Apollo7logo.svg"),
+					image: require("../assets/img/apollo/Apollo7logo.png"),
 					date: "1968",
 					title: "Apollo 7",
 					description: "Apollo 7 est la première mission habitée du programme Apollo. ",
 				},
 				{
-					image: require("../assets/img/apollo/Apollo8logo.svg"),
+					image: require("../assets/img/apollo/Apollo8logo.png"),
 					date: "1968",
 					title: "Apollo 8",
 					description:
 						"La mission Apollo 8 est le premier vol habité à quitter l’orbite terrestre. ",
 				},
 				{
-					image: require("../assets/img/apollo/Apollo9logo.svg"),
+					image: require("../assets/img/apollo/Apollo9logo.png"),
 					date: "1969",
 					title: "Apollo 9",
 					description:
 						"Apollo 9 constitue le premier essai en vol de l’ensemble des équipements prévus pour une mission lunaire.",
 				},
 				{
-					image: require("../assets/img/apollo/Apollo10logo.svg"),
+					image: require("../assets/img/apollo/Apollo10logo.png"),
 					date: "1969",
 					title: "Apollo 10",
 					description:
 						"Cette mission à failli être celle du premier atterrissage sur le sol lunaire.",
 				},
 				{
-					image: require("../assets/img/apollo/Apollo11logo.svg"),
+					image: require("../assets/img/apollo/Apollo11logo.png"),
 					date: "1969",
 					title: "Apollo 11",
 					description:
 						"« C’est un petit pas pour [un] homme, mais un bond de géant pour l’Humanité »",
 				},
 				{
-					image: require("../assets/img/apollo/Apollo12logo.svg"),
+					image: require("../assets/img/apollo/Apollo12logo.png"),
 					date: "1969",
 					title: "Apollo 12",
 					description: "Apollo 12, et la deuxième à se poser sur la Lune.",
 				},
 				{
-					image: require("../assets/img/apollo/Apollo13logo.svg"),
+					image: require("../assets/img/apollo/Apollo13logo.png"),
 					title: "Apollo 13",
 					date: "1970",
 					description: "Cette mission à failli tourner au drame a cause de problèmes techniques.",
 				},
 				{
-					image: require("../assets/img/apollo/Apollo14logo.svg"),
+					image: require("../assets/img/apollo/Apollo14logo.png"),
 					date: "1971",
 					title: "Apollo 14",
 					description: " Il s'agit de la première mission dont le but principal est scientifique",
 				},
 				{
-					image: require("../assets/img/apollo/Apollo15logo.svg"),
+					image: require("../assets/img/apollo/Apollo15logo.png"),
 					date: "1971",
 					title: "Apollo 15",
 					description:
 						"Apollo 15 et la cinquième mission ayant pour objectif de déposer un équipage à la surface de la Lune.",
 				},
 				{
-					image: require("../assets/img/apollo/Apollo16logo.svg"),
+					image: require("../assets/img/apollo/Apollo16logo.png"),
 					date: "1972",
 					title: "Apollo 16",
 					description:
 						"Apollo 16 est la première mission à se poser sur de hauts plateaux lunaires",
 				},
 				{
-					image: require("../assets/img/apollo/Apollo17logo.svg"),
+					image: require("../assets/img/apollo/Apollo17logo.png"),
 					date: "1976",
 					title: "Apollo 17",
 					description: "Apollo 17 et la dernière mission du programme spatial Apollo",
