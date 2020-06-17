@@ -80,6 +80,8 @@ export default {
 	}
 
 	&__Subtext {
+		display: flex;
+		justify-content: center;
 		font-size: 10px;
 		@include tablet {
 			font-size: 20px;
