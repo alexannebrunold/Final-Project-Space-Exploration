@@ -1,4 +1,6 @@
-# final-project-space-exploration
+# Webdocumentaire à propos de la conquête Lunaire
+
+## Description 
 
 ## Project setup
 ```
@@ -19,6 +21,12 @@ npm run build
 ```
 npm run lint
 ```
+## Ce qu'on a utilisé :
 
+Front : VueJs, Sass
+
+Back-end : PHP, MySQL
+
+FortRabbit
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
