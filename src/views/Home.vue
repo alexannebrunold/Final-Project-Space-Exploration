@@ -1,20 +1,22 @@
 <template>
-	<div @click="playVideo()" class="home">
-		<Disclaimer v-show="disclaimer" />
-		<div v-show="!disclaimer">
-			<Main />
-			<ul class="home__missions">
-				<li @click="$router.push('/contexte')">Spoutnik</li>
-				<li @click="$router.push('/kennedy')">Apollo</li>
-				<li @click="$router.push('/vostok')">Luna</li>
-				<li @click="$router.push('/clep')">Artemis</li>
-			</ul>
-			<video rel="preload" autoplay ref="video" loop class="home__video">
-				<source src="@/assets/videos/bg-video.mp4" type="video/mp4" />
-			</video>
-			<img @click="toggleMute" class="home__sound" src="../assets/img/home/sound.svg" alt="" />
+		<div @click="showMain()" class="home">
+			<Disclaimer v-show="disclaimer" />
+			<transition name="top">
+				<div v-show="!disclaimer">
+					<Main />
+					<ul class="home__missions">
+						<li @click="$router.push('/contexte')">Spoutnik</li>
+						<li @click="$router.push('/kennedy')">Apollo</li>
+						<li @click="$router.push('/vostok')">Luna</li>
+						<li @click="$router.push('/clep')">Artemis</li>
+					</ul>
+					<video rel="preload" autoplay ref="video" loop class="home__video">
+						<source src="@/assets/videos/bg-video.mp4" type="video/mp4" />
+					</video>
+					<img @click="toggleMute" class="home__sound" src="../assets/img/home/sound.svg" alt="" />
+				</div>
+			</transition>
 		</div>
-	</div>
 </template>
 
 <script>
@@ -34,22 +36,14 @@ export default {
 		Main,
 		Disclaimer,
 	},
-	mounted() {
-		setTimeout(() => {
-			this.disclaimer = false
-		}, 13500)
-	},
 	methods: {
-		playVideo() {
-			console.log(!this.initVideo && !this.disclaimer, "ici")
-			if (!this.initVideo && !this.disclaimer) {
-				this.initVideo = true
-				this.$refs.iframe.play()
-			}
-		},
 		toggleMute() {
 			var vid = this.$refs.video
 			vid.muted = !vid.muted
+		},
+		showMain() {
+			this.disclaimer = false
+			this.initVideo = true
 		},
 	},
 }
@@ -57,6 +51,7 @@ export default {
 
 <style scoped lang="scss">
 .home {
+	background-color: black;
 	&__missions {
 		display: none;
 		@include tablet {
@@ -105,5 +100,12 @@ export default {
 			bottom: 25px;
 		}
 	}
+}
+.top-enter-active,
+.top-leave-active { transition: ease-in-out 2s; }
+.top-enter,
+.top-leave-to {
+  opacity: 0;
+  transform: translate3d(0, -100px, 0);
 }
 </style>
