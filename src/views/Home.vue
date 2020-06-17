@@ -56,34 +56,32 @@ export default {
 
 <style scoped lang="scss">
 .home {
+	&__missions {
+		display: none;
+		@include tablet {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			position: absolute;
+			top: 5px;
+			right: 15px;
+			font-size: 18px;
+			font-family: "Poppins";
+			font-weight: lighter;
 
-  &__missions {
-		display: none; 
-    @include tablet {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: absolute;
-      top: 5px;
-      right: 15px;
-      font-size: 18px;
-      font-family: "Poppins";
-      font-weight: lighter;
-    
-      li {
-        cursor: pointer;
-        margin-left: 0.7em;
-        transition: ease-in-out 0.4s;
-        z-index: 200;
-        user-select: none;
-      }
-      li:hover {
-        transition: ease-in-out 0.4s;
-        transform: translateY(5px);
-      }
+			li {
+				cursor: pointer;
+				margin-left: 0.7em;
+				transition: ease-in-out 0.4s;
+				z-index: 200;
+				user-select: none;
+			}
+			li:hover {
+				transition: ease-in-out 0.4s;
+				transform: translateY(5px);
+			}
 		}
 	}
-  
 
 	&__video {
 		position: fixed;
