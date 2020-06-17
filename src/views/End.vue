@@ -59,16 +59,16 @@
       <p>Visez les étoiles et vous atteindrez la lune.</p>
     </div>
     <div class="end__textRight">
-      <p>Ce site est issu d’un projet étudiant</p>
+      <p><a class="end__textRight__p" href="https://github.com/alexannebrunold/Final-Project-Space-Exploration">Ce site est issu d’un projet étudiant</a></p>
       <img src="../assets/img/github.svg" alt="" />
     </div>
     <div class="end__name">
-      <p class="end__name--1">Thomas Monmousseau</p>
-      <p class="end__name--2">Alexanne Brunold</p>
-      <p class="end__name--3">Jason Leroy</p>
-      <p class="end__name--4">Kayse Sulejman</p>
-      <p class="end__name--5">Théo Rougier</p>
-      <p class="end__name--6">Patxi Manzano</p>
+      <p class="end__name--1"><a class="end__name--1" href="https://www.linkedin.com/in/thomas-monmousseau-0152371a4/">Thomas Monmousseau</a></p>
+      <p class="end__name--2"><a class="end__name--2" href="https://www.linkedin.com/in/alexanne-brunold-7842381a4/">Alexanne Brunold</a></p>
+      <p class="end__name--3"><a class="end__name--3" href="https://www.linkedin.com/in/jason-leroy-503b29192/">Jason Leroy</a></p>
+      <p class="end__name--4"><a class="end__name--4" href="https://www.linkedin.com/in/kayse-sulejman-83a7191a0/">Kayse Sulejman</a></p>
+      <p class="end__name--5"><a class="end__name--5" href="https://www.linkedin.com/in/th%C3%A9o-rougier/">Théo Rougier</a></p>
+      <p class="end__name--6"><a class="end__name--6" href="https://www.linkedin.com/in/patxi-manzano/">Patxi Manzano</a></p>
     </div>
   </div>
 </template>
@@ -219,6 +219,7 @@ export default {
       font-size: 18px;
       font-family: "Poppins";
       font-weight: normal;
+      text-decoration: none;
       @include tablet {
         width: 75%;
         font-size: 24px;
@@ -250,6 +251,11 @@ export default {
       text-orientation: sideways-right;
       writing-mode: vertical-rl;
       font-size: 15px;
+
+      &__p {
+        text-decoration: none;
+        color: white;
+      }
       img {
         margin-top: 10px;
       }
@@ -289,6 +295,8 @@ export default {
       font-size: 22px;
     }
     &--1 {
+      text-decoration: none;
+      color: white;
       transition: ease-in-out 0.4s;
       margin-bottom: 0.5em;
       cursor: pointer;
@@ -298,12 +306,14 @@ export default {
     }
     &--1:hover {
       z-index: 100;
-      transform: scale(1.1);
+      transform: scale(1.2);
       transition: ease-in-out 0.4s;
-      margin-left: 1.5em;
+      margin-left: 1em;
     }
 
     &--2 {
+      text-decoration: none;
+      color: white;
       transition: ease-in-out 0.4s;
       margin-bottom: 0.5em;
       cursor: pointer;
@@ -313,12 +323,14 @@ export default {
     }
     &--2:hover {
       z-index: 100;
-      transform: scale(1.1);
+      transform: scale(1.2);
       transition: ease-in-out 0.4s;
-      margin-left: 1.5em;
+      margin-left: 1em;
     }
 
     &--3 {
+      text-decoration: none;
+      color: white;
       transition: ease-in-out 0.4s;
       margin-bottom: 0.5em;
       cursor: pointer;
@@ -328,12 +340,14 @@ export default {
     }
     &--3:hover {
       z-index: 100;
-      transform: scale(1.1);
+      transform: scale(1.2);
       transition: ease-in-out 0.4s;
-      margin-left: 1.5em;
+      margin-left: 1em;
     }
 
     &--4 {
+      text-decoration: none;
+      color: white;
       transition: ease-in-out 0.4s;
       margin-bottom: 0.5em;
       cursor: pointer;
@@ -343,12 +357,14 @@ export default {
     }
     &--4:hover {
       z-index: 100;
-      transform: scale(1.1);
+      transform: scale(1.2);
       transition: ease-in-out 0.4s;
-      margin-left: 1.5em;
+      margin-left: 1em;
     }
 
     &--5 {
+      text-decoration: none;
+      color: white;
       transition: ease-in-out 0.4s;
       margin-bottom: 0.5em;
       cursor: pointer;
@@ -358,12 +374,14 @@ export default {
     }
     &--5:hover {
       z-index: 100;
-      transform: scale(1.1);
+      transform: scale(1.2);
       transition: ease-in-out 0.4s;
-      margin-left: 1.5em;
+      margin-left: 1em;
     }
 
     &--6 {
+      text-decoration: none;
+      color: white;
       transition: ease-in-out 0.4s;
       margin-bottom: 0.5em;
       cursor: pointer;
@@ -374,9 +392,9 @@ export default {
 
     &--6:hover {
       z-index: 100;
-      transform: scale(1.1);
+      transform: scale(1.2);
       transition: ease-in-out 0.4s;
-      margin-left: 1.5em;
+      margin-left: 1em;
     }
   }
 }
