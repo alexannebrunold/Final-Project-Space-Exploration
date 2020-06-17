@@ -1,22 +1,12 @@
 <template>
 	<div class="launch page">
 		<div>
-			<BackButton
-				class="launch__back"
-				textBackButton="Retour"
-				@click.native="$router.push('/Contexte')"
-			/>
+			<BackButton class="launch__back" textBackButton="Retour" @click.native="$router.go(-1)" />
 			<PrimaryButton
 				textPrimaryButton="Lancer Spoutnik 1"
 				class="launch__button"
 				@click.native="$router.push('/Liftoff')"
 			/>
-		</div>
-		<div class="launch__container">
-			<p>
-				La course à l’espace démarre le 4 octobre 1957, Le petit satellite soviétique Spoutnik 1 est
-				envoyé dans l’espace.
-			</p>
 		</div>
 	</div>
 </template>
@@ -49,44 +39,5 @@ export default {
 		top: 10px;
 		left: 10px;
 	}
-
-	&__container {
-		display: flex;
-		justify-content: center;
-		position: absolute;
-		bottom: 5%;
-		min-width: 100vw;
-
-		& p {
-			font-family: "Poppins";
-			font-weight: normal;
-			font-size: 18px;
-			width: 85%;
-			line-height: 130%;;
-			@include tablet {
-				width: 70%;
-				font-size: 24px;
-			}
-			@include laptop {
-				width: 50%;
-				font-size: 28px;
-			}
-		}
-
-		& p::selection {
-			background: black;
-		}
-	}
 }
-
-/*@keyframes  animatedBackground {
-	from {
-		background-size: 120%;
-		
-	}
-
-	to {
-		background-size: 100%;
-	}
-}*/
 </style>

@@ -14,12 +14,12 @@ const routes = [
 		path: "/contexte",
 		name: "Contexte",
 		component: () => import("@/views/Contexte.vue"),
-		nextPage: "Lancement",
+		nextPage: "Spoutnik",
 	},
 	{
-		path: "/test",
-		name: "Test",
-		component: () => import("@/views/Test.vue"),
+		path: "/spoutnik",
+		name: "Spoutnik",
+		component: () => import("@/views/Spoutnik.vue"),
 		nextPage: "Lancement",
 	},
 	{
