@@ -12,15 +12,6 @@
 			<video rel="preload" autoplay ref="video" loop class="home__video">
 				<source src="@/assets/videos/bg-video.mp4" type="video/mp4" />
 			</video>
-			<!-- <iframe
-				width="900"
-				height="506"
-				:src="urlVideo"
-				allow="accelerometer; autoplay; encrypted-media; gyroscope; "
-				class="home__video"
-				controls="0"
-				autoplay="1" 
-			></iframe> -->
 			<img @click="toggleMute" class="home__sound" src="../assets/img/home/sound.svg" alt="" />
 		</div>
 	</div>
