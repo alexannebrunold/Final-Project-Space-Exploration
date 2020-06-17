@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-* .home {
+ .home {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
