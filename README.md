@@ -37,6 +37,8 @@ npm run lint
 
 Front : VueJs, Sass
 
+Librairies : Vue-type-js, vue-particles, vue-page-transition
+
 Back-end : PHP, MySQL
 
 FortRabbit
