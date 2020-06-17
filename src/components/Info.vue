@@ -115,6 +115,7 @@ export default {
     @include laptop {
       width: 50%;
       padding-top: 0px;
+      padding-bottom: 200px;
     }
     &__Title {
       width: fit-content;
