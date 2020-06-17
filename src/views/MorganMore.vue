@@ -14,7 +14,7 @@
 
 <script>
 import axios from "axios"
-import MoreInfo from "@/components/MoreInfo.vue"
+import MoreInfo from "@/components/MoreInfoVideo.vue"
 
 export default {
 	name: "Learn",
