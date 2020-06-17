@@ -3,12 +3,12 @@
 		<Disclaimer v-show="disclaimer" />
 		<div v-show="!disclaimer">
 			<Main />
-      <ul class="home__missions">
-        <li>Spoutnik</li>
-        <li>Apollo</li>
-        <li>Luna</li>
-        <li>Artemis</li>
-      </ul>
+			<ul class="home__missions">
+				<li @click="$router.push('/contexte')">Spoutnik</li>
+				<li @click="$router.push('/kennedy')">Apollo</li>
+				<li @click="$router.push('/vostok')">Luna</li>
+				<li @click="$router.push('/clep')">Artemis</li>
+			</ul>
 			<video rel="preload" autoplay ref="video" loop class="home__video">
 				<source src="../assets/videos/bg-video.mp4" type="video/mp4" />
 			</video>

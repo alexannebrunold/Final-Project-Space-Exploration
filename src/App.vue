@@ -4,9 +4,9 @@
 		<div id="nav">
 			<!-- <router-link to="/">Home</router-link> -->
 		</div>
-		<transition name="fade" mode="out-in">
+		<vue-page-transition name="overlay-up">
 			<router-view />
-		</transition>
+		</vue-page-transition>
 	</div>
 </template>
 
@@ -68,21 +68,9 @@ export default {
 		}
 	}
 }
-/*.fade-enter {
-	opacity: 0.8;
-}
 
-.fade-enter-active {
-	transition: opacity 1s ease-in;
-	background-color: #000000;
-}
 
-.fade-leave {
-	opacity: 1;
+.overlay-left,  .overlay-right,  .overlay-top,  .overlay-bottom   {
+    background: #191919 !important;
 }
-
-.fade-leave-active {
-	transition: opacity 0.4s ease-in;
-	background-color: #000000;
-}*/
 </style>
