@@ -407,7 +407,7 @@ export default {
     &__Date {
       text-align: end;
       font-size: 12px;
-      padding: 5%;
+      padding: 5% 5% 0 5%;
 
       @include tablet {
         font-size: 18px;
