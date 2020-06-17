@@ -20,8 +20,8 @@
 				<p class="typing"></p>
 			</vue-typed-js>
 		</div>
-		<video rel="preload" autoplay ref="video" controls class="test__video" @click="play()">
-			<source src="@/assets/videos/bg-video.mp4" type="video/mp4" />
+		<video rel="preload" autoplay ref="video" class="test__video" @click="play()">
+			<source src="@/assets/videos/sputnik_1.mp4" type="video/mp4" />
 		</video>
 	</div>
 </template>
@@ -55,7 +55,6 @@ export default {
 
 <style scoped lang="scss">
 .test {
-	background-color: $black;
 	&__back {
 		position: absolute;
 		top: 10px;
