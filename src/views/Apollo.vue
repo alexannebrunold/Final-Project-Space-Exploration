@@ -1,10 +1,6 @@
 <template>
-	<div class="apollo page" @mousewheel="scrollHorizontal()" ref="bodyScroll" :introVideo="urlVideo">
-		<IntroTimeline
-			introTitle="Apollo"
-			:backgroundImg="backgroundImg"
-			:introTimelineVideoSrc="introTimelineVideoSrc"
-		/>
+	<div class="apollo page" @mousewheel="scrollHorizontal()" ref="bodyScroll">
+		<IntroTimeline :backgroundImg="backgroundImg" introTitle="Apollo" :introVideo="urlVideo" />
 		<Timeline :tableauTimeline="tableauTimeline" />
 
 		<div class="endTimeline">
@@ -158,7 +154,7 @@ export default {
 	mounted() {
 		const CORS = "https://cors-anywhere.herokuapp.com/"
 		const API_URL = "https://spacemoonapis.frb.io/webdocressources/"
-		axios.get(CORS + API_URL + "3").then((response) => {
+		axios.get(CORS + API_URL + "8").then((response) => {
 			console.log(response.data.data[0].videoURL)
 			this.urlVideo = response.data.data[0].videoURL
 			console.log(this.urlVideo)
