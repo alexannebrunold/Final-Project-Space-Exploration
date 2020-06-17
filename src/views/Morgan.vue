@@ -80,5 +80,8 @@ export default {
       }
     }
   }
+  &__info {
+    
+  }
 }
 </style>
