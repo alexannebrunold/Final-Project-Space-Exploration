@@ -4,8 +4,7 @@ import router from "./router"
 import store from "./store"
 import VueTypedJs from "vue-typed-js"
 import VueParticles from "vue-particles"
-import VuePageTransition from 'vue-page-transition'
-
+import VuePageTransition from "vue-page-transition"
 
 Vue.config.productionTip = false
 
@@ -18,6 +17,3 @@ new Vue({
 	store,
 	render: (h) => h(App),
 }).$mount("#app")
-
-
-
