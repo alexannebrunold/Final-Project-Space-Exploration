@@ -1,4 +1,5 @@
 <template>
+
 	<div class="disclaimer page">
 		<div class="disclaimer__Title">
 			<h1>Attention</h1>
@@ -31,21 +32,23 @@
 			</vue-typed-js>
 		</div>
 	</div>
+
 </template>
 
 <script>
 export default {
-	name: "disclaimer",
-}
+  name: "disclaimer",
+};
 </script>
 
 <style lang="scss" scoped>
 .disclaimer {
-	background-color: black;
-	display: flex;
-	flex-flow: column;
-	width: fit-content;
-	justify-content: space-between;
+  background-color: black;
+  display: flex;
+  flex-flow: column;
+  width: fit-content;
+  justify-content: space-between;
+
 
 	&__Title {
 		margin: 25% auto;
@@ -57,27 +60,29 @@ export default {
 			margin: 15% auto;
 		}
 
-		@include pc {
-			margin: 10% auto;
-			font-size: 120px;
-		}
-	}
 
-	&__Text,
-	&__Subtext {
-		width: 75%;
-		margin: auto;
-	}
+    @include pc {
+      margin: 10% auto;
+      font-size: 120px;
+    }
+  }
 
-	&__Text {
-		font-size: 14px;
-		@include tablet {
-			font-size: 28px;
-		}
-		@include pc {
-			font-size: 30px;
-		}
-	}
+  &__Text,
+  &__Subtext {
+    width: 75%;
+    margin: auto;
+  }
+
+  &__Text {
+    font-size: 14px;
+    @include tablet {
+      font-size: 28px;
+    }
+    @include pc {
+      font-size: 30px;
+    }
+  }
+
 
 	&__Subtext {
 		display: flex;
@@ -90,6 +95,7 @@ export default {
 			font-size: 24px;
 		}
 	}
+
 }
 @keyframes grow {
 	from {
