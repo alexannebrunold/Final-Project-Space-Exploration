@@ -1,62 +1,53 @@
 <template>
-  <div class="luna page" @mousewheel="scrollHorizontal()" ref="bodyScroll">
-    <IntroTimeline
-      :backgroundImg="backgroundImg"
-      introTitle="Luna"
-      :introVideo="urlVideo"
-    />
+	<div class="luna page" @mousewheel="scrollHorizontal()" ref="bodyScroll">
+		<IntroTimeline :backgroundImg="backgroundImg" introTitle="Luna" :introVideo="urlVideo" />
 
-    <Timeline :tableauTimeline="tableauTimeline" />
-    <div class="endTimeline">
-      <h1 class="endTimeline--title">Le manque de moyens de l’URSS</h1>
-      <p class="endTimeline--paragraphe">
-        Le programme
-        <span>Luna</span>
-        regroupe toutes les missions spatiales automatiques lancées par
-        <span>l’Union soviétique</span>
-        vers la Lune entre 1959 et 1976.
-        <br />
-        <br />
-        Vingt-quatre
-        <span>sondes spatiales</span>
-        font officiellement partie de ce programme mais il y en eut en réalité
-        45 en tout. Quinze de ces missions ont atteint leurs objectifs. Dès le
-        début, les considérations politiques visant à démontrer la supériorité
-        du savoir-faire
-        <span>soviétique</span>
-        sur celui des
-        <span>États-Unis</span>
-        ont eu le pas sur les motivations scientifiques. Lorsque les enjeux de
-        la
-        <span>course à l'espace</span>
-        disparaissent, le programme Luna prend fin tandis que les
-        <span>États-Unis</span>
-        orientent leur programme d'Exploration principalement vers
-        <span>Mars</span>
-        et les planètes externes du
-        <span>système solaire</span>
-        .
-      </p>
-      <div class="endTimeline__buttons">
-        <PrimaryButton
-          textPrimaryButton="Apollo"
-          class="endTimeline__buttons--firstButton"
-          @click.native="$router.push('/kennedy')"
-        />
-        <PrimaryButton
-          textPrimaryButton="Artemis"
-          @click.native="$router.push('/clep')"
-        />
-      </div>
-    </div>
-  </div>
+		<Timeline :tableauTimeline="tableauTimeline" />
+		<div class="endTimeline">
+			<h1 class="endTimeline--title">Le manque de moyens de l’URSS</h1>
+			<p class="endTimeline--paragraphe">
+				Le programme
+				<span>Luna</span>
+				regroupe toutes les missions spatiales automatiques lancées par
+				<span>l’Union soviétique</span>
+				vers la Lune entre 1959 et 1976.
+				<br />
+				<br />
+				Vingt-quatre
+				<span>sondes spatiales</span>
+				font officiellement partie de ce programme mais il y en eut en réalité 45 en tout. Quinze de
+				ces missions ont atteint leurs objectifs. Dès le début, les considérations politiques visant
+				à démontrer la supériorité du savoir-faire
+				<span>soviétique</span>
+				sur celui des
+				<span>États-Unis</span>
+				ont eu le pas sur les motivations scientifiques. Lorsque les enjeux de la
+				<span>course à l'espace</span>
+				disparaissent, le programme Luna prend fin tandis que les
+				<span>États-Unis</span>
+				orientent leur programme d'Exploration principalement vers
+				<span>Mars</span>
+				et les planètes externes du
+				<span>système solaire</span>
+				.
+			</p>
+			<div class="endTimeline__buttons">
+				<div class="endTimeline__buttons--firstButton">
+					<PrimaryButton textPrimaryButton="Apollo" @click.native="$router.push('/kennedy')" />
+				</div>
+				<div class="endTimeline__buttons--secondButton">
+					<PrimaryButton textPrimaryButton="Artemis" @click.native="$router.push('/clep')" />
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
-import axios from "axios";
-import IntroTimeline from "@/components/IntroTimeline.vue";
-import Timeline from "@/components/Timeline.vue";
-import PrimaryButton from "@/components/PrimaryButton.vue";
+import axios from "axios"
+import IntroTimeline from "@/components/IntroTimeline.vue"
+import Timeline from "@/components/Timeline.vue"
+import PrimaryButton from "@/components/PrimaryButton.vue"
 export default {
 	name: "lancement",
 	components: {
@@ -169,7 +160,7 @@ export default {
 
 <style lang="scss">
 .line[data-v-7f3aebf1] {
-  top: 46%;
+	top: 46%;
 }
 .luna {
 	background-color: $black;
@@ -177,6 +168,7 @@ export default {
 	flex-direction: row;
 	width: fit-content;
 	background-image: url("~@/assets/img/luna_background.jpg");
+	height: 100vh;
 }
 .endTimeline {
 	background-image: url("~@/assets/img/luna_end.jpg");
@@ -185,7 +177,7 @@ export default {
 	flex-direction: column;
 	align-items: center;
 	margin-left: 1%;
-
+	display: flex;
 	@include tablet {
 		width: 90vw;
 	}
@@ -234,12 +226,12 @@ export default {
 		}
 	}
 	&__buttons {
+		margin-top: 4%;
 		display: flex;
-		flex-direction: row;
 		justify-content: center;
-		margin-top: 8%;
+
 		&--firstButton {
-			margin-right: 18%;
+			margin-right: 50%;
 		}
 	}
 }
