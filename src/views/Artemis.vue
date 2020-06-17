@@ -1,10 +1,6 @@
 <template>
 	<div class="artemis page" @mousewheel="scrollHorizontal()" ref="bodyScroll">
-		<IntroTimeline
-			:backgroundImg="backgroundImg"
-			introTitle="Artemis"
-			:introTimelineVideoSrc="introTimelineVideoSrc"
-		/>
+		<IntroTimeline :backgroundImg="backgroundImg" introTitle="Artemis" :introVideo="urlVideo" />
 		<Timeline :tableauTimeline="tableauTimeline" class="timelineComponent" />
 		<div class="endTimeline">
 			<div class="endTimeline--title">
@@ -51,6 +47,7 @@
 </template>
 
 <script>
+import axios from "axios"
 import IntroTimeline from "@/components/IntroTimeline.vue"
 import Timeline from "@/components/Timeline.vue"
 import PrimaryButton from "@/components/PrimaryButton.vue"
@@ -63,8 +60,8 @@ export default {
 	},
 	data() {
 		return {
+			urlVideo: " ",
 			backgroundImg: require("@/assets/img/artemis_intro.jpg"),
-			introTimelineVideoSrc: require("@/assets/videos/Artemis.mp4"),
 			tableauTimeline: [
 				{
 					image: require("../assets/img/Artemis/Artemis.svg"),
@@ -103,6 +100,15 @@ export default {
 				},
 			],
 		}
+	},
+	mounted() {
+		const CORS = "https://cors-anywhere.herokuapp.com/"
+		const API_URL = "https://spacemoonapis.frb.io/webdocressources/"
+		axios.get(CORS + API_URL + "7").then((response) => {
+			console.log(response.data.data[0].videoURL)
+			this.urlVideo = response.data.data[0].videoURL
+			console.log(this.urlVideo)
+		})
 	},
 	methods: {
 		scrollHorizontal(e) {
