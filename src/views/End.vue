@@ -21,6 +21,8 @@
       </vue-particles>
     </div>
     <svg
+      @click="play"
+      @click.prevent="toggle"
       class="end__logo"
       viewBox="0 0 160 160"
       width="60"
@@ -51,7 +53,8 @@
     <div class="end__title">
       <h1>Merci</h1>
     </div>
-    <div class="end__image">
+    <div class="end__image"
+     @click="pause" @click.prevent="toggle">
       <img src="../assets/img/moon.png" alt="" />
       <p>Visez les étoiles et vous atteindrez la lune.</p>
     </div>
@@ -71,7 +74,48 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "app",
+  data() {
+    return {
+      visible: false,
+
+      current: {},
+      index: 0,
+      isPlaying: false,
+      songs: [
+        {
+          title: "We choose to go to the moon",
+          src: require("../assets/audio/easteregg.mp3"),
+        },
+      ],
+      player: new Audio(),
+    };
+  },
+  methods: {
+    toggle: function() {
+      this.visible = !this.visible;
+    },
+    play(song) {
+      if (typeof song.src != "undefined") {
+        this.current = song;
+
+        this.player.src = this.current.src;
+      }
+
+      this.player.play();
+      this.isPlaying = true;
+    },
+    pause() {
+      this.player.pause();
+      this.isPlaying = false;
+    },
+  },
+  created() {
+    this.current = this.songs[this.index];
+    this.player.src = this.current.src;
+  },
+};
 </script>
 
 <style lang="scss" scoped>
