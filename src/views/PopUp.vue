@@ -36,7 +36,7 @@ export default {
       svgSrc: require("../assets/img/PopUp/close.svg"),
 
       "luna-1": {
-        image: require("../assets/img/PopUp/Luna/Luna1.svg"),
+        image: require("../assets/img/PopUp/Luna/Luna1.jpg"),
         title: "LUNA 1",
         subtitle: "Premier essai, première réussite, premier échec",
         text:
@@ -44,7 +44,7 @@ export default {
         date: "2 Janvier 1959",
       },
       "luna-2": {
-        image: require("../assets/img/PopUp/Luna/Luna2.svg"),
+        image: require("../assets/img/PopUp/Luna/Luna2.jpg"),
         title: "LUNA 2",
         subtitle: "Le début d'une course effrénée",
         text:
@@ -52,7 +52,7 @@ export default {
         date: "14 Septembre 1959",
       },
       "luna-3": {
-        image: require("../assets/img/PopUp/Luna/Luna3.svg"),
+        image: require("../assets/img/PopUp/Luna/Luna3.jpg"),
         title: "LUNA 3",
         subtitle: "Un angle de vue inédit",
         text:
@@ -60,7 +60,7 @@ export default {
         date: "4 octobre 1959",
       },
       "luna-4-8": {
-        image: require("../assets/img/PopUp/Luna/Luna4-8.svg"),
+        image: require("../assets/img/PopUp/Luna/Luna4-8.jpg"),
         title: "LUNA 4-8",
         subtitle: "Des échecs répétés",
         text:
@@ -68,7 +68,7 @@ export default {
         date: "11963-1965",
       },
       "luna-9": {
-        image: require("../assets/img/PopUp/Luna/Luna9.svg"),
+        image: require("../assets/img/PopUp/Luna/Luna9.jpg"),
         title: "LUNA 9",
         subtitle: "Atterrir sur la Lune, une réalité",
         text:
@@ -76,7 +76,7 @@ export default {
         date: "	31 janvier 1966",
       },
       "luna-10": {
-        image: require("../assets/img/PopUp/Luna/Luna10.svg"),
+        image: require("../assets/img/PopUp/Luna/Luna10.jpg"),
         title: "LUNA 10",
         subtitle: "L’orbite lunaire",
         text:
@@ -84,7 +84,7 @@ export default {
         date: "31 mars 1966",
       },
       "luna-11-14": {
-        image: require("../assets/img/PopUp/Luna/Luna11-14.svg"),
+        image: require("../assets/img/PopUp/Luna/Luna11-14.jpg"),
         title: "LUNA 11-14",
         subtitle: "Des missions qui se diversifient",
         text:
@@ -92,7 +92,7 @@ export default {
         date: "1966-1968",
       },
       "luna-16": {
-        image: require("../assets/img/PopUp/Luna/Luna16.svg"),
+        image: require("../assets/img/PopUp/Luna/Luna16.jpg"),
         title: "LUNA 16",
         subtitle: "Le premier échantillon lunaire",
         text:
@@ -100,7 +100,7 @@ export default {
         date: "	12 septembre 1970",
       },
       "luna-17": {
-        image: require("../assets/img/PopUp/Luna/Luna17.svg"),
+        image: require("../assets/img/PopUp/Luna/Luna17.jpg"),
         title: "LUNA 17",
         subtitle: "Le premier échantillon lunaire",
         text:
@@ -108,7 +108,7 @@ export default {
         date: "15 novembre 1970",
       },
       "luna-18-23": {
-        image: require("../assets/img/PopUp/Luna/Luna18-23.svg"),
+        image: require("../assets/img/PopUp/Luna/Luna18-23.jpg"),
         title: "LUNA 18-23",
         subtitle: "Une exploration complète",
         text:
@@ -116,7 +116,7 @@ export default {
         date: "1971-1974",
       },
       "luna-24": {
-        image: require("../assets/img/PopUp/Luna/Luna24.svg"),
+        image: require("../assets/img/PopUp/Luna/Luna24.jpg"),
         title: "LUNA 24",
         subtitle: "Une dernière mission",
         text:
@@ -220,35 +220,35 @@ export default {
         date: "7 décembre 1972",
       },
       annonce: {
-        image: require("../assets/img/PopUp/Artemis/Artemis-0.svg"),
+        image: require("../assets/img/PopUp/Artemis/Artemis-0.jpg"),
         title: "Artemis",
         subtitle: "Le Programme Artemis",
         text:
           "Le programme Artemis est un programme spatial habité de la NASA, l'agence spatiale américaine, dont l'objectif est d'amener un équipage sur le sol lunaire d'ici 2024",
       },
       "artemis-1": {
-        image: require("../assets/img/PopUp/Artemis/Artemis-1.svg"),
+        image: require("../assets/img/PopUp/Artemis/Artemis-1.jpg"),
         title: "Artemis 1",
         subtitle: "Premier essai du lanceur",
         text:
           "L'objectif principal est de valider le fonctionnement du nouveau lanceur Space Launch System ainsi que celui du vaisseau Orion sans équipage. Ce dernier sera testé durant les différentes phases d'une mission autour de la Lune : insertion en orbite autour de celle-ci, modification de l'orbite, injection sur une orbite de retour vers la Terre, rentrée atmosphérique à grande vitesse.",
       },
       "artemis-2": {
-        image: require("../assets/img/PopUp/Artemis/Artemis-2.svg"),
+        image: require("../assets/img/PopUp/Artemis/Artemis-2.jpg"),
         title: "Artemis 2",
         subtitle: "Premier essai du lanceur",
         text:
           "L'objectif principal est de valider le fonctionnement du nouveau lanceur Space Launch System ainsi que celui du vaisseau Orion sans équipage. Ce dernier sera testé durant les différentes phases d'une mission autour de la Lune : insertion en orbite autour de celle-ci, modification de l'orbite, injection sur une orbite de retour vers la Terre, rentrée atmosphérique à grande vitesse.",
       },
       "artemis-3": {
-        image: require("../assets/img/PopUp/Artemis/Artemis-3.svg"),
+        image: require("../assets/img/PopUp/Artemis/Artemis-3.jpg"),
         title: "Artemis 3",
         subtitle: "De retour sur la lune",
         text:
           "L'objectif principal est de valider le fonctionnement du nouveau lanceur Space Launch System ainsi que celui du vaisseau Orion sans équipage. Ce dernier sera testé durant les différentes phases d'une mission autour de la Lune : insertion en orbite autour de celle-ci, modification de l'orbite, injection sur une orbite de retour vers la Terre, rentrée atmosphérique à grande vitesse.",
       },
       mars: {
-        image: require("../assets/img/PopUp/Artemis/Mars.svg"),
+        image: require("../assets/img/PopUp/Artemis/Mars.jpg"),
         title: "ET APRÈS ?",
         subtitle: "Objectif Mars",
         text:
