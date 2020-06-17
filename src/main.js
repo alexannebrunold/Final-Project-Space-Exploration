@@ -6,6 +6,7 @@ import VueTypedJs from "vue-typed-js"
 import VueParticles from "vue-particles"
 import VuePageTransition from 'vue-page-transition'
 
+
 Vue.config.productionTip = false
 
 Vue.use(VuePageTransition)
