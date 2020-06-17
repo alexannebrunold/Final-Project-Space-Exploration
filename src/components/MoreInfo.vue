@@ -5,6 +5,15 @@
 		</div>
 		<div class="moreInfo__left">
 			<img class="moreInfo__left--img" :src="imageUrlLeft" />
+			<iframe
+				width="500"
+				height="406"
+				:src="imageUrlLeft"
+				allow="accelerometer; autoplay; encrypted-media; gyroscope; "
+				start="1"
+				autoplay="1"
+				controls="2"
+			></iframe>
 			<h1 class="moreInfo__left--title">
 				{{ titleInfoLeft }}
 			</h1>
@@ -17,7 +26,7 @@
 			<iframe
 				width="500"
 				height="406"
-				:src="imageUrlRight"
+				:src="videoUrlRight"
 				allow="accelerometer; autoplay; encrypted-media; gyroscope; "
 				start="1"
 				autoplay="1"
@@ -54,7 +63,7 @@ export default {
 	},
 	props: {
 		imageUrlLeft: {},
-		imageUrlRight: {},
+		videoUrlRight: {},
 		titleInfoLeft: String,
 		titleInfoRight: String,
 		textInfoLeft: String,
