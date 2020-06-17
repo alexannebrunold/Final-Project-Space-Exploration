@@ -8,7 +8,7 @@
 			<iframe
 				width="500"
 				height="406"
-				:src="imageUrlLeft"
+				:src="videoUrlLeft"
 				allow="accelerometer; autoplay; encrypted-media; gyroscope; "
 				start="1"
 				autoplay="1"
@@ -63,6 +63,7 @@ export default {
 	},
 	props: {
 		imageUrlLeft: {},
+		videoUrlLeft: {},
 		videoUrlRight: {},
 		titleInfoLeft: String,
 		titleInfoRight: String,

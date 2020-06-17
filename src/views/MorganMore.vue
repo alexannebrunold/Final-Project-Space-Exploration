@@ -2,8 +2,8 @@
 	<div class="learn">
 		<MoreInfo
 			class="enSavoirPlus__Info"
-			:imageUrlLeft="urlVideo"
-			:videoUrlRight="urlVideoo"
+			:videoUrlLeft="urlVideoLeft"
+			:videoUrlRight="urlVideoRight"
 			titleInfoLeft="Katherine Johnson, mathématicienne afro-américaine"
 			titleInfoRight="Margaret Hamilton, informaticienne et ingénieure"
 			textInfoLeft="Née le 26 août 1918, Katherine Johnson est la première femme afro-américaine, et mère célibataire, à travailler pour la NASA. Embauchée en 1953 par l’agence spatiale américaine, elle était chargée de valider les calculs mathématiques de ses supérieurs."
@@ -20,10 +20,8 @@ export default {
 	name: "Learn",
 	data() {
 		return {
-			urlVideo: " ",
-			urlVideoo: " ",
-			// imageSrcLeft: require("../assets/img/KatherineJohnson.jpg"),
-			// imageSrcRight: require("../assets/img/MargaretHamilton.jpg"),
+			urlVideoLeft: " ",
+			urlVideoRight: " ",
 		}
 	},
 	components: {
@@ -31,16 +29,13 @@ export default {
 	},
 	mounted() {
 		const CORS = "https://cors-anywhere.herokuapp.com/"
-		let one = "https://spacemoonapis.frb.io/webdocressources/12"
-		let two = "https://spacemoonapis.frb.io/webdocressources/13"
-		const requestOne = axios.get(CORS + one)
-		const requestTwo = axios.get(CORS + two)
-		axios.all([requestOne, requestTwo]).then(
-			axios.spread((...response) => {
-				this.urlVideo = response.data.data[0].videoURL
-				this.urlVideoo = response.data.data[1].videoURL
-			})
-		)
+		const API_URL = "https://spacemoonapis.frb.io/webdocressources/"
+		axios.get(CORS + API_URL + "12").then((response) => {
+			this.urlVideoLeft = response.data.data[0].videoURL
+		})
+		axios.get(CORS + API_URL + "11").then((response) => {
+			this.urlVideoRight = response.data.data[0].videoURL
+		})
 	},
 }
 </script>
