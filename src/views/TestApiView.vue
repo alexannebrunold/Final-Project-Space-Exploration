@@ -22,9 +22,6 @@ export default {
 		const API_URL = "https://spacemoonapis.frb.io/webdocressources/"
 		axios.get(API_URL + "3").then((response) => {
 			console.log(response.data.data[0].videoURL)
-			// this.urlVideo = response.data.data[0].videoURL + "&output=embed"
-			// window.location.replace(this.urlVideo)
-			// this.urlVideo = response.data.data[0].videoURL.replace("watch?v=", "v/")
 			this.urlVideo = response.data.data[0].videoURL
 			console.log(this.urlVideo)
 		})
