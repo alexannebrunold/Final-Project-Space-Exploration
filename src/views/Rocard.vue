@@ -9,7 +9,7 @@
     </div>
     <div class="rocard__container">
       <div class="rocard__title">
-        <h1>Francis Rocard,</h1>
+        <h1>Francis Rocard</h1>
         <h2>
           Responsable des programmes d'exploitation du système solaire (CNES)
         </h2>
@@ -17,12 +17,11 @@
       <div class="rocard__citation">
         <div class="rocard__citation1">
           <p>
-            "Ca ne sert à rien, on est les meilleurs, à quoi bon continuer ?" En
+            "ça ne sert à rien, on est les meilleurs, à quoi bon continuer ?" En
             parlant des Etats-Unis et de l'arrêt de la conquête lunaire.
           </p>
-        </div>
-        <div class="rocard__trait"></div>
-        <div id="svgplay" class="rocard__svg">
+          <div class="rocard__trait"></div>
+          <div id="svgplay" class="rocard__svg"></div>
           <svg
             class="play"
             v-if="!isPlaying"
@@ -63,12 +62,12 @@
               fill="white"
             />
           </svg>
-          <div class="rocard__citation1">
-            <p>
-              "La lune est un banc d'essai" qui permet de mieux appréhender et
-              concevoir les missions futures pour Mars.
-            </p>
-          </div>
+        </div>
+        <div class="rocard__citation1">
+          <p>
+            "La lune est un banc d'essai" qui permet de mieux appréhender et
+            concevoir les missions futures pour Mars.
+          </p>
           <div class="rocard__trait"></div>
         </div>
         <div class="rocard__button"><NextButton /></div>
@@ -185,31 +184,67 @@ export default {
       padding: 50px 50px 50px 50px;
     }
     h1 {
+      font-weight: bold;
+      padding: 20px 0;
       font-size: 22px;
+      @include tablet {
+        font-size: 42px;
+      }
       @include laptop {
-        font-size: 52px;
+        padding: 20px 0 50px 0;
+        font-size: 62px;
       }
     }
     h2 {
+      padding: 20px 0;
       font-size: 18px;
+      @include tablet {
+        font-size: 26px;
+      }
       @include laptop {
+        padding: 20px 0 50px 0;
         font-size: 32px;
       }
     }
   }
   &__citation {
-    padding: 20px 20px;
+    padding: 0 20px;
     text-align: left;
+
+    & p::first-letter {
+      text-transform: uppercase;
+    }
+
+    @include tablet {
+      padding: 20px 20px;
+    }
+
     @include laptop {
       padding: 20px 50px 20px 50px;
       width: 70%;
     }
   }
   &__citation1 {
-    padding-bottom: 10px;
-    @include laptop {
+    padding: 20px 0;
+
+    @include tablet {
       font-size: 22px;
-      padding-bottom: 15px;
+    }
+
+    @include laptop {
+      font-size: 26px;
+    }
+
+    & p {
+      padding: 10px 0;
+
+      @include tablet {
+        padding: 15px 0;
+      }
+
+      @include laptop {
+        padding: 20px 0;
+      }
     }
   }
   &__trait {
@@ -219,7 +254,11 @@ export default {
   &__button {
     display: flex;
     justify-content: center;
-    padding-top: 60px;
+    padding: 20px;
+
+    @include tablet {
+      padding: 50px;
+    }
     @include laptop {
       display: flex;
       justify-content: flex-end;
@@ -359,10 +398,15 @@ export default {
   }
   .play,
   .pause {
-    padding-bottom: 30px;
-    padding-top: 10px;
+    padding: 20px 0;
     width: 30px;
     height: 30px;
+
+    @include laptop {
+      padding: 20px 0;
+      width: 40px;
+      height: 40px;
+    }
   }
 }
 </style>
