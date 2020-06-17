@@ -7,28 +7,14 @@
 		<div class="disclaimer__Text">
 			<vue-typed-js
 				:strings="[
-					'Ce webdocumentaire est réalisé pour un projet d\'étude bachelor web à l\'école d\'études supérieures Hétic',
-				]"
-				:typeSpeed="20"
-				:smartBackspace="true"
-				:showCursor="true"
-				:startDelay="800"
-			>
-				<p class="typing Text"></p>
-			</vue-typed-js>
-		</div>
-
-		<div class="disclaimer__Subtext">
-			<vue-typed-js
-				:strings="[
-					'Toutes les informations utilisées sur ce site sont strictement à titre informatif, et ne nous appartiennent pas.',
+					'Ce site a été réalisé à des fins pédagogiques dans le cadre du cursus Bachelor de l’école HETIC. Les contenus présentés n\'ont pas fait l\'objet d\'une demande de droit d\'utilisation. Ce site ne sera en aucun cas exploité à des fins commerciales et ne sera pas publié.',
 				]"
 				:typeSpeed="20"
 				:smartBackspace="true"
 				:showCursor="false"
-				:startDelay="5000"
+				:startDelay="800"
 			>
-				<p class="typing Subtext"></p>
+				<p class="typing Text"></p>
 			</vue-typed-js>
 		</div>
 		<div class="disclaimer__here">
@@ -39,7 +25,7 @@
 				:typeSpeed="75"
 				:smartBackspace="true"
 				:showCursor="false"
-				:startDelay="9000"
+				:startDelay="9500"
 			>
 				<p class="typing here"></p>
 			</vue-typed-js>
@@ -84,6 +70,7 @@ export default {
   }
 
 	&__Text {
+		line-height: 140%;
 		font-family: "Poppins";
 		font-size: 14px;
 		@include tablet {
@@ -92,23 +79,13 @@ export default {
 		}
 		@include laptop {
 			font-size: 26px;
+			width: 75%;
 		}
 	}
 
-	&__Subtext {
-		font-family: "Poppins";
-		display: flex;
-		justify-content: center;
-		font-size: 14px;
-		@include tablet {
-			font-size: 20px;
-		}
-		@include laptop {
-			font-size: 24px;
-		}
-	}
 
-		&__here {
+
+	&__here {
 		font-weight: bold;
 		font-family: "Poppins";
 		display: flex;
