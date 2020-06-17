@@ -30,12 +30,22 @@
 				<p class="typing Subtext"></p>
 			</vue-typed-js>
 		</div>
+		<PrimaryButton
+		textPrimaryButton="Suivant"
+		class="disclaimer__next"
+		@click.native="$router.push('/')"
+		/>
 	</div>
 </template>
 
 <script>
+import PrimaryButton from "@/components/PrimaryButton.vue"
+
 export default {
 	name: "disclaimer",
+	components: {
+		PrimaryButton,
+	},
 }
 </script>
 
@@ -48,15 +58,14 @@ export default {
 	justify-content: space-between;
 
 	&__Title {
-		margin: 25% auto;
+		margin: auto;
 		@include text-stroke;
 		font-size: 40px;
 		animation: 1.1s infinite ease-in alternate grow;
 		@include tablet {
 			font-size: 80px;
-			margin: 15% auto;
+			margin: 10% auto;
 		}
-
 		@include pc {
 			margin: 10% auto;
 			font-size: 120px;
@@ -73,6 +82,7 @@ export default {
 		font-size: 14px;
 		@include tablet {
 			font-size: 28px;
+			width: fit-content;
 		}
 		@include pc {
 			font-size: 30px;
@@ -82,13 +92,18 @@ export default {
 	&__Subtext {
 		display: flex;
 		justify-content: center;
-		font-size: 10px;
+		font-size: 12px;
 		@include tablet {
 			font-size: 20px;
 		}
 		@include pc {
 			font-size: 24px;
 		}
+	}
+
+	&__next {
+		padding-top: 5%;
+		padding-bottom: 5%;
 	}
 }
 @keyframes grow {
