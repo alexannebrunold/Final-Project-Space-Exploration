@@ -124,7 +124,7 @@ export default {
         date: "13 août 1976",
       },
       "apollo-1": {
-        image: require("../assets/img/PopUp/Apollo/Apollo1.svg"),
+        image: require("../assets/img/PopUp/Apollo/Apollo1.jpg"),
         title: "APOLLO 1",
         subtitle: "L'incendie du module de commande et de service d’Apollo 1",
         text:
@@ -132,7 +132,7 @@ export default {
         date: "27 Janvier 1967",
       },
       "apollo-2-6": {
-        image: require("../assets/img/PopUp/Apollo/Apollo2-6.svg"),
+        image: require("../assets/img/PopUp/Apollo/Apollo2-6.jpg"),
         title: "APOLLO 2-6",
         subtitle: "Des missions test sans équipage",
         text:
@@ -140,7 +140,7 @@ export default {
         date: "1962-1968 ",
       },
       "apollo-7": {
-        image: require("../assets/img/PopUp/Apollo/Apollo7.svg"),
+        image: require("../assets/img/PopUp/Apollo/Apollo7.jpg"),
         title: "APOLLO 7",
         subtitle: "Les vols habités préparatoires",
         text:
@@ -148,7 +148,7 @@ export default {
         date: "11 octobre 1968",
       },
       "apollo-8": {
-        image: require("../assets/img/PopUp/Apollo/Apollo8.svg"),
+        image: require("../assets/img/PopUp/Apollo/Apollo8.jpg"),
         title: "APOLLO 8",
         subtitle: "Un pari risqué",
         text:
@@ -156,7 +156,7 @@ export default {
         date: "21 décembre 1968",
       },
       "apollo-9": {
-        image: require("../assets/img/PopUp/Apollo/Apollo9.svg"),
+        image: require("../assets/img/PopUp/Apollo/Apollo9.jpg"),
         title: "APOLLO 9",
         subtitle: "Un entrainement stricte",
         text:
@@ -164,7 +164,7 @@ export default {
         date: "3 mars 1969 ",
       },
       "apollo-10": {
-        image: require("../assets/img/PopUp/Apollo/Apollo10.svg"),
+        image: require("../assets/img/PopUp/Apollo/Apollo10.jpg"),
         title: "APOLLO 10",
         subtitle: "La fin d'un cycle",
         text:
@@ -172,7 +172,7 @@ export default {
         date: "18 mai 1969",
       },
       "apollo-11": {
-        image: require("../assets/img/PopUp/Apollo/Apollo11.svg"),
+        image: require("../assets/img/PopUp/Apollo/Apollo11.jpg"),
         title: "APOLLO 11",
         subtitle: "Le premier homme sur la lune",
         text:
@@ -180,7 +180,7 @@ export default {
         date: "20 juillet 1969 à 20 h 17 min 40 s",
       },
       "apollo-13": {
-        image: require("../assets/img/PopUp/Apollo/Apollo13.svg"),
+        image: require("../assets/img/PopUp/Apollo/Apollo13.jpg"),
         title: "APOLLO 13",
         subtitle: "Un abandon technique",
         text:
@@ -188,7 +188,7 @@ export default {
         date: "11 avril 1970",
       },
       "apollo-14": {
-        image: require("../assets/img/PopUp/Apollo/Apollo14.svg"),
+        image: require("../assets/img/PopUp/Apollo/Apollo14.jpg"),
         title: "APOLLO 14",
         subtitle: "Une mission scientifique",
         text:
@@ -196,7 +196,7 @@ export default {
         date: "31 janvier 1971",
       },
       "apollo-15": {
-        image: require("../assets/img/PopUp/Apollo/Apollo15.svg"),
+        image: require("../assets/img/PopUp/Apollo/Apollo15.jpg"),
         title: "APOLLO 15",
         subtitle: "Des échantillons important",
         text:
@@ -204,7 +204,7 @@ export default {
         date: "26 juillet 1971",
       },
       "apollo-16": {
-        image: require("../assets/img/PopUp/Apollo/Apollo16.svg"),
+        image: require("../assets/img/PopUp/Apollo/Apollo16.jpg"),
         title: "APOLLO 16",
         subtitle: "Une mission lunaire de trois jours",
         text:
@@ -212,7 +212,7 @@ export default {
         date: "16 avril 1972",
       },
       "apollo-17": {
-        image: require("../assets/img/PopUp/Apollo/Apollo17.svg"),
+        image: require("../assets/img/PopUp/Apollo/Apollo17.jpg"),
         title: "APOLLO 17",
         subtitle: "Une dernière mission",
         text:
