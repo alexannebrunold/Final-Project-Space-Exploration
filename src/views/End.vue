@@ -57,7 +57,6 @@ export default {}
 <style lang="scss" scoped>
 
 .end {
-
   position: absolute;
   background-color: $black;
   display: flex;
