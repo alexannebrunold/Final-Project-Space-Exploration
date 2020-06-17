@@ -17,6 +17,12 @@ const routes = [
 		nextPage: "Lancement",
 	},
 	{
+		path: "/test",
+		name: "Test",
+		component: () => import("@/views/Test.vue"),
+		nextPage: "Lancement",
+	},
+	{
 		path: "/lancement",
 		name: "Lancement",
 		component: () => import("@/views/Lancement.vue"),
