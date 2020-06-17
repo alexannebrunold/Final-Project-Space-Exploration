@@ -7,8 +7,13 @@ Vue.use(VueRouter)
 const routes = [
 	{
 		path: "/",
-		name: "Home",
+		name: "test",
 		component: Home,
+	},
+	{
+		path: "/test",
+		name: "TestApiView",
+		component: () => import("@/views/TestApiView.vue"),
 	},
 	{
 		path: "/contexte",
@@ -99,8 +104,8 @@ const routes = [
 	{
 		path: "/rocard",
 		name: "Rocard",
-    component: () => import("@/views/Rocard.vue"),
-    nextPage: "StartArtemis",
+		component: () => import("@/views/Rocard.vue"),
+		nextPage: "StartArtemis",
 	},
 	{
 		path: "/artemis",
@@ -123,8 +128,8 @@ const routes = [
 		name: "StartArtemis",
 		component: () => import("@/views/StartArtemis.vue"),
 		nextPage: "Artemis",
-  },
-  {
+	},
+	{
 		path: "/clep",
 		name: "Clep",
 		component: () => import("@/views/Clep.vue"),
