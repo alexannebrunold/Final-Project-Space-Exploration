@@ -28,5 +28,8 @@ Front : VueJs, Sass
 Back-end : PHP, MySQL
 
 FortRabbit
+
+## Participants
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
