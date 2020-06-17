@@ -1,10 +1,7 @@
 <template>
 	<div class="luna page" @mousewheel="scrollHorizontal()" ref="bodyScroll">
-		<IntroTimeline
-			:backgroundImg="backgroundImg"
-			introTitle="Luna"
-			:introTimelineVideoSrc="introTimelineVideoSrc"
-		/>
+		<IntroTimeline :backgroundImg="backgroundImg" introTitle="Luna" :introVideo="urlVideo" />
+
 		<Timeline :tableauTimeline="tableauTimeline" />
 		<div class="endTimeline">
 			<h1 class="endTimeline--title">Le manque de moyens de l’URSS</h1>
@@ -47,6 +44,7 @@
 </template>
 
 <script>
+import axios from "axios"
 import IntroTimeline from "@/components/IntroTimeline.vue"
 import Timeline from "@/components/Timeline.vue"
 import PrimaryButton from "@/components/PrimaryButton.vue"
@@ -59,9 +57,9 @@ export default {
 	},
 	data() {
 		return {
+			urlVideo: " ",
 			backgroundImg: require("@/assets/img/Luna/LunaBackground.svg"),
-			introTimelineVideoSrc: require("@/assets/videos/1959-luna-2-ussr (1).mp4"),
-
+			// introTimelineVideoSrc: require("@/assets/videos/1959-luna-2-ussr (1).mp4"),
 			tableauTimeline: [
 				{
 					image: require("../assets/img/Luna/Luna1.svg"),
@@ -138,6 +136,14 @@ export default {
 				},
 			],
 		}
+	},
+	mounted() {
+		const API_URL = "https://spacemoonapis.frb.io/webdocressources/"
+		axios.get(API_URL + "5").then((response) => {
+			console.log(response.data.data[0].videoURL)
+			this.urlVideo = response.data.data[0].videoURL
+			console.log(this.urlVideo)
+		})
 	},
 	methods: {
 		scrollHorizontal(e) {
