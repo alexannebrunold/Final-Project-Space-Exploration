@@ -1,13 +1,9 @@
 <template>
-	<div class="test page" @click="play()">
+	<div class="spoutnik page" @click="play()">
 		<div>
-			<BackButton
-				class="test__back"
-				textBackButton="Retour"
-				@click.native="$router.push('/Contexte')"
-			/>
+			<BackButton class="spoutnik__back" textBackButton="Retour" @click.native="$router.go(-1)" />
 		</div>
-		<div class="test__container">
+		<div class="spoutnik__container">
 			<vue-typed-js
 				:strings="[
 					'La course à l\'espace démarre le 4 Octobre 1957',
@@ -24,19 +20,22 @@
 			rel="preload"
 			autoplay
 			ref="video"
-			class="test__video"
+			class="spoutnik__video"
 			@ended="$router.push('/lancement')"
 		>
 			<source src="@/assets/videos/sputnik_1.mp4" type="video/mp4" />
 		</video>
+		<div class="spoutnik__button">
+			<PrimaryButton textPrimaryButton="Passer" @click.native="$router.push('/lancement')" />
+		</div>
 	</div>
 </template>
 
 <script>
 import BackButton from "@/components/BackButton.vue"
-
+import PrimaryButton from "@/components/PrimaryButton.vue"
 export default {
-	name: "lancement",
+	name: "spoutnik",
 
 	data() {
 		return {
@@ -46,6 +45,7 @@ export default {
 	},
 	components: {
 		BackButton,
+		PrimaryButton,
 	},
 	methods: {
 		play() {
@@ -58,7 +58,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.test {
+.spoutnik {
 	&__back {
 		position: absolute;
 		top: 10px;
@@ -95,6 +95,12 @@ export default {
 		min-height: 100%;
 		z-index: -1;
 		filter: brightness(50%);
+	}
+	&__button {
+		position: absolute;
+		bottom: 50px;
+		right: 50px;
+		z-index: 1;
 	}
 }
 </style>
