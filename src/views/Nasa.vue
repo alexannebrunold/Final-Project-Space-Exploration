@@ -8,7 +8,8 @@
 			</div>
 			<div class="nasa__title">
 				<h1>Création de la NASA</h1>
-				<h2>1 octobre 1958</h2>
+				<Roller text="1 octobre 1958" transition="1.5"  class="nasa__roller">
+				</Roller>
 				<vue-typed-js
 					:strings="[
 						'Dans un contexte de Guerre Froide une compétition entre les Etats-Unis et l\'Union soviétique apparait entre 1957 et 1975. Ils essayent, par l\'astronautique de prouver leur supériorité politique.',
@@ -30,11 +31,14 @@
 <script>
 import PrimaryButton from "@/components/PrimaryButton.vue"
 import NextButton from "@/components/NextButton.vue"
+import Roller from "vue-roller";
+
 export default {
 	name: "lancement",
 	components: {
 		PrimaryButton,
 		NextButton,
+		Roller,
 	},
 }
 </script>
@@ -99,19 +103,7 @@ export default {
 				font-size: 60px;
 			}
 		}
-		h2 {
-			font-size: 24px;
-			color: white;
-			font-family: "Poppins";
-			font-weight: lighter;
-			text-transform: uppercase;
-			text-align: center;
-			padding-bottom: 50px;
-			@include tablet {
-				text-align: right;
-				padding-bottom: 10px;
-			}
-		}
+
 		p {
 			line-height: 130%;
 			padding-bottom: 30px;
@@ -131,6 +123,18 @@ export default {
 			@include pc {
 				font-size: 24px;
 			}
+		}
+	}
+
+	&__roller {
+		font-size: 24px;
+		color: white;
+		font-family: "Poppins";
+		font-weight: lighter;
+		text-transform: uppercase;
+		text-align: center;
+		@include tablet {
+			text-align: right;
 		}
 	}
 	&__btn {
