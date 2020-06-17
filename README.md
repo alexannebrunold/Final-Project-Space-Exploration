@@ -13,6 +13,26 @@ We Choose to go to the moon, est un webdocumentaire ayant pour but de retracer l
 
 https://spacemoon.netlify.app/
 
+## Ce qu'on a utilisé :
+
+Front : VueJs, Sass
+
+Librairies : Vue-type-js, vue-particles, vue-page-transition
+
+Back-end : PHP, MySQL
+
+FortRabbit
+
+## Participants
+
+MONMOUSSEAU Thomas, LEROY Jason,
+SULEJMAN Kayse, BRUNOLD Alexanne,
+MANZANO Patxi, ROUGIER Théo
+
+## GITHUB API
+
+https://github.com/theorougier/Api-Space-Final-Project
+
 ## Project setup
 
 ```
@@ -36,26 +56,6 @@ npm run build
 ```
 npm run lint
 ```
-
-## Ce qu'on a utilisé :
-
-Front : VueJs, Sass
-
-Librairies : Vue-type-js, vue-particles, vue-page-transition
-
-Back-end : PHP, MySQL
-
-FortRabbit
-
-## Participants
-
-MONMOUSSEAU Thomas, LEROY Jason,
-SULEJMAN Kayse, BRUNOLD Alexanne,
-MANZANO Patxi, ROUGIER Théo
-
-## GITHUB API
-
-https://github.com/theorougier/Api-Space-Final-Project
 
 ### Customize configuration
 
