@@ -35,14 +35,12 @@
 				qui s'envenime prélèvent une part croissante du budget.
 			</p>
 			<div class="endTimeline__buttons">
-        <div class="endTimeline__buttons--firstButton">
-          <PrimaryButton
-					textPrimaryButton="Luna"
-					@click.native="$router.push('/vostok')"/>
-        </div>
-        <div class="endTimeline__buttons--secondButton">
-          <PrimaryButton textPrimaryButton="Artemis" @click.native="$router.push('/clep')" />
-        </div>
+				<div class="endTimeline__buttons--firstButton">
+					<PrimaryButton textPrimaryButton="Luna" @click.native="$router.push('/vostok')" />
+				</div>
+				<div class="endTimeline__buttons--secondButton">
+					<PrimaryButton textPrimaryButton="Artemis" @click.native="$router.push('/clep')" />
+				</div>
 			</div>
 		</div>
 	</div>
@@ -156,7 +154,7 @@ export default {
 	mounted() {
 		const CORS = "https://cors-anywhere.herokuapp.com/"
 		const API_URL = "https://spacemoonapis.frb.io/webdocressources/"
-		axios.get(CORS + API_URL + "8").then((response) => {
+		axios.get(CORS + API_URL + "3").then((response) => {
 			console.log(response.data.data[0].videoURL)
 			this.urlVideo = response.data.data[0].videoURL
 			console.log(this.urlVideo)
@@ -177,77 +175,77 @@ export default {
 
 <style lang="scss">
 .apollo {
-  background-color: $black;
-  display: flex;
-  flex-direction: row;
-  width: fit-content;
-  background-image: url("~@/assets/img/apollo_background.jpg");
+	background-color: $black;
+	display: flex;
+	flex-direction: row;
+	width: fit-content;
+	background-image: url("~@/assets/img/apollo_background.jpg");
 }
 .endTimeline {
-  background-image: url("~@/assets/img/apollo_end.jpg");
-  background-size: cover;
-  background-position: top;
+	background-image: url("~@/assets/img/apollo_end.jpg");
+	background-size: cover;
+	background-position: top;
 	background-repeat: no-repeat;
-  min-width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 1%;
-  @include tablet {
-    width: 90vw;
-  }
-  @include laptop {
-    width: 80vw;
-  }
-  &--title {
-    padding-top: 5%;
-    font-size: 24px;
-    font-family: "Poppins";
-    text-align: center;
-    @include tablet {
-      font-size: 40px;
-    }
-    @include laptop {
-      font-size: 48px;
-      margin-top: 1%;
-    }
-    @include pc {
-      font-size: 60px;
-    }
-  }
-  &--paragraphe {
-    padding-bottom: 30px;
-    font-size: 14px;
-    font-family: "Poppins";
-    width: 60%;
-    margin-top: 8%;
-    text-align: left;
-    font-weight: 300;
-    & span {
-      font-weight: 500;
-    }
-    @include tablet {
-      font-size: 16px;
-    }
-    @include laptop {
-      font-size: 18px;
-      width: 65vw;
-      margin-top: 6%;
-      padding-bottom: 0px;
-      line-height: 140%;
-    }
-    @include pc {
-      font-size: 24px;
-    }
-  }
-  &__buttons {
-    margin-top: 4%;
-    display: flex;
-    justify-content: center;
-    
-    &--firstButton {
-      margin-right: 50%;
-    }
-  }
+	min-width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-left: 1%;
+	@include tablet {
+		width: 90vw;
+	}
+	@include laptop {
+		width: 80vw;
+	}
+	&--title {
+		padding-top: 5%;
+		font-size: 24px;
+		font-family: "Poppins";
+		text-align: center;
+		@include tablet {
+			font-size: 40px;
+		}
+		@include laptop {
+			font-size: 48px;
+			margin-top: 1%;
+		}
+		@include pc {
+			font-size: 60px;
+		}
+	}
+	&--paragraphe {
+		padding-bottom: 30px;
+		font-size: 14px;
+		font-family: "Poppins";
+		width: 60%;
+		margin-top: 8%;
+		text-align: left;
+		font-weight: 300;
+		& span {
+			font-weight: 500;
+		}
+		@include tablet {
+			font-size: 16px;
+		}
+		@include laptop {
+			font-size: 18px;
+			width: 65vw;
+			margin-top: 6%;
+			padding-bottom: 0px;
+			line-height: 140%;
+		}
+		@include pc {
+			font-size: 24px;
+		}
+	}
+	&__buttons {
+		margin-top: 4%;
+		display: flex;
+		justify-content: center;
+
+		&--firstButton {
+			margin-right: 50%;
+		}
+	}
 }
 </style>
