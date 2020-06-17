@@ -3,7 +3,7 @@
 			<Disclaimer v-show="disclaimer" />
 			<transition name="top">
 				<div v-show="!disclaimer">
-					<Main />
+					<Main class="home__main"/>
 					<ul class="home__missions">
 						<li @click="$router.push('/contexte')">Spoutnik</li>
 						<li @click="$router.push('/kennedy')">Apollo</li>
@@ -51,7 +51,11 @@ export default {
 
 <style scoped lang="scss">
 .home {
-	background-color: black;
+	background: black;
+	&__main {
+		z-index: 10;
+		background: transparent;
+	}
 	&__missions {
 		display: none;
 		@include tablet {
@@ -64,6 +68,7 @@ export default {
 			font-size: 18px;
 			font-family: "Poppins";
 			font-weight: lighter;
+			z-index: 10;
 
 			li {
 				cursor: pointer;
@@ -85,13 +90,14 @@ export default {
 		bottom: 0;
 		min-width: 100%;
 		min-height: 100%;
-		z-index: -10;
+		z-index: 5;
 		filter: brightness(50%);
 	}
 	&__sound {
 		position: absolute;
 		bottom: 55px;
 		width: 25px;
+		z-index: 10;
 		user-select: none;
 		cursor: pointer;
 		@include tablet {
