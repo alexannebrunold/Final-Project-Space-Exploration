@@ -159,76 +159,79 @@ export default {
 </script>
 
 <style lang="scss">
+.line[data-v-7f3aebf1] {
+  top: 46.7%;
+}
 .luna {
-	background-color: $black;
-	display: flex;
-	flex-direction: row;
-	width: fit-content;
-	background-image: url("~@/assets/img/luna_background.jpg");
+  background-color: $black;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  background-image: url("~@/assets/img/luna_background.jpg");
 }
 .endTimeline {
-	background-image: url("~@/assets/img/luna_end.jpg");
-	width: 100vw;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-left: 1%;
+  background-image: url("~@/assets/img/luna_end.jpg");
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 1%;
 
-	@include tablet {
-		width: 90vw;
-	}
-	@include laptop {
-		width: 80vw;
-	}
-	&--title {
-		font-size: 24px;
-		font-family: "Poppins";
-		text-align: center;
+  @include tablet {
+    width: 90vw;
+  }
+  @include laptop {
+    width: 80vw;
+  }
+  &--title {
+    font-size: 24px;
+    font-family: "Poppins";
+    text-align: center;
 
-		@include tablet {
-			font-size: 40px;
-		}
-		@include laptop {
-			font-size: 48px;
-			margin-top: 2%;
-		}
-		@include pc {
-			font-size: 60px;
-		}
-	}
-	&--paragraphe {
-		padding-bottom: 30px;
-		font-size: 14px;
-		font-family: "Poppins";
-		width: 100%;
-		margin-top: 8%;
-		text-align: left;
-		font-weight: 300;
-		& span {
-			font-weight: 500;
-		}
-		@include tablet {
-			font-size: 16px;
-		}
-		@include laptop {
-			font-size: 18px;
-			width: 80%;
-			margin-top: 8%;
-			padding-bottom: 0px;
-			line-height: 140%;
-		}
-		@include pc {
-			font-size: 24px;
-		}
-	}
-	&__buttons {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		margin-top: 8%;
-		&--firstButton {
-			margin-right: 18%;
-		}
-	}
+    @include tablet {
+      font-size: 40px;
+    }
+    @include laptop {
+      font-size: 48px;
+      margin-top: 2%;
+    }
+    @include pc {
+      font-size: 60px;
+    }
+  }
+  &--paragraphe {
+    padding-bottom: 30px;
+    font-size: 14px;
+    font-family: "Poppins";
+    width: 100%;
+    margin-top: 8%;
+    text-align: left;
+    font-weight: 300;
+    & span {
+      font-weight: 500;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+    @include laptop {
+      font-size: 18px;
+      width: 80%;
+      margin-top: 8%;
+      padding-bottom: 0px;
+      line-height: 140%;
+    }
+    @include pc {
+      font-size: 24px;
+    }
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 8%;
+    &--firstButton {
+      margin-right: 18%;
+    }
+  }
 }
 </style>
