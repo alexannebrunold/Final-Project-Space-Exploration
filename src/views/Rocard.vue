@@ -17,8 +17,11 @@
       <div class="rocard__citation">
         <div class="rocard__citation1">
           <p>
-            "Ca ne sert à rien, on est les meilleurs, à quoi bon continuer ?" A
-            propos de la conquête lunaire arrêtée.
+            "Ca ne sert à rien, on est les meilleurs, à quoi bon continuer ?" En
+            parlant des Etats-Unis et de l'arrêt de la conquête lunaire.
+            <br /><br />
+            "La lune est un banc d'essai" qui permet de mieux appréhender et
+            concevoir les missions futures pour Mars.
           </p>
         </div>
         <div class="rocard__trait"></div>
@@ -63,15 +66,8 @@
               fill="white"
             />
           </svg>
-          <div class="button"><NextButton /></div>
         </div>
-        <div class="rocard__citation2">
-          <p>
-            "La lune est un banc d'essai" qui permet de mieux appréhender les
-            missions pour Mars.
-          </p>
-        </div>
-        <div class="rocard__trait"></div>
+        <div class="rocard__button"><NextButton /></div>
       </div>
 
       <div class="rocard__soundwave">
@@ -103,7 +99,7 @@
 </template>
 
 <script>
-import NextButton from "@/components/NextButton.vue"
+import NextButton from "@/components/NextButton.vue";
 export default {
   name: "app",
   data() {
@@ -145,8 +141,8 @@ export default {
     this.player.src = this.current.src;
   },
   components: {
-		NextButton,
-	},
+    NextButton,
+  },
 };
 </script>
 
@@ -222,16 +218,7 @@ export default {
   &__citation1 {
     padding-bottom: 10px;
     @include laptop {
-      font-size: 20px;
-      padding-bottom: 15px;
-    }
-  }
-
-  &__citation2 {
-    padding-bottom: 10px;
-    @include laptop {
-      font-size: 20px;
-      padding-top: 15%;
+      font-size: 22px;
       padding-bottom: 15px;
     }
   }
@@ -239,6 +226,16 @@ export default {
   &__trait {
     border: 1px solid #c4c4c4;
     width: 100%;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    @include laptop {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+    }
   }
 
   &__soundwave {
