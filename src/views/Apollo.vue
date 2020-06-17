@@ -40,12 +40,14 @@
 				qui s'envenime prélèvent une part croissante du budget.
 			</p>
 			<div class="endTimeline__buttons">
-				<PrimaryButton
+        <div class="endTimeline__buttons--firstButton">
+          <PrimaryButton
 					textPrimaryButton="Luna"
-					class="endTimeline__buttons--firstButton"
-					@click.native="$router.push('/vostok')"
-				/>
-				<PrimaryButton textPrimaryButton="Artemis" @click.native="$router.push('/clep')" />
+					@click.native="$router.push('/vostok')"/>
+        </div>
+        <div class="endTimeline__buttons--secondButton">
+          <PrimaryButton textPrimaryButton="Artemis" @click.native="$router.push('/clep')" />
+        </div>
 			</div>
 		</div>
 	</div>
@@ -183,7 +185,10 @@ export default {
 }
 .endTimeline {
   background-image: url("~@/assets/img/apollo_end.jpg");
-  width: 100vw;
+  background-size: cover;
+  background-position: top;
+	background-repeat: no-repeat;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -196,6 +201,7 @@ export default {
     width: 80vw;
   }
   &--title {
+    padding-top: 5%;
     font-size: 24px;
     font-family: "Poppins";
     text-align: center;
@@ -215,7 +221,7 @@ export default {
     padding-bottom: 30px;
     font-size: 14px;
     font-family: "Poppins";
-    width: 100%;
+    width: 60%;
     margin-top: 8%;
     text-align: left;
     font-weight: 300;
@@ -227,7 +233,7 @@ export default {
     }
     @include laptop {
       font-size: 18px;
-      width: 80%;
+      width: 65vw;
       margin-top: 6%;
       padding-bottom: 0px;
       line-height: 140%;
@@ -237,12 +243,12 @@ export default {
     }
   }
   &__buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    
     &--firstButton {
-      margin-right: 18%;
+      margin-right: 50%;
     }
   }
 }

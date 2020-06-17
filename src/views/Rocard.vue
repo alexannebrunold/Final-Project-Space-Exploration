@@ -156,7 +156,7 @@ export default {
       isPlaying: false,
       songs: [
         {
-          src: require("../assets/audio/djomb.mp3"),
+          src: require("../assets/audio/rocard.mp3"),
         },
       ],
       player: new Audio(),
@@ -291,6 +291,16 @@ export default {
   &__trait {
     border: 1px solid #c4c4c4;
     width: 100%;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    @include laptop {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+    }
   }
 
   &__soundwave {

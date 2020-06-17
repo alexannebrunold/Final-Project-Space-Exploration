@@ -47,8 +47,7 @@ export default {
 	mounted() {
 		setTimeout(() => {
 			this.disclaimer = false
-		}, 16000)
-
+		}, 13500)
 		const API_URL = "https://spacemoonapis.frb.io/webdocressources/"
 		axios.get(API_URL + "3").then((response) => {
 			console.log(response.data.data[0].videoURL)

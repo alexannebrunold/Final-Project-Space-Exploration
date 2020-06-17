@@ -46,7 +46,7 @@ const routes = [
   {
     path: "/choice",
     name: "Choice",
-    component: () => import("@/views/Choice.vue"),
+    component: () => import("@/views/Kennedy.vue"),
   },
   {
     path: "/luna",
@@ -111,6 +111,7 @@ const routes = [
     path: "/kennedy",
     name: "Kennedy",
     component: () => import("@/views/Kennedy.vue"),
+    nextPage: "Houbolt",
   },
   {
     path: "/artemis",
