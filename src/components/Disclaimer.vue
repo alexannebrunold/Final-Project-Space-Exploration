@@ -1,4 +1,5 @@
 <template>
+
 	<div class="disclaimer page">
 		<div class="disclaimer__Title">
 			<h1>Attention</h1>
@@ -31,55 +32,61 @@
 			</vue-typed-js>
 		</div>
 	</div>
+
 </template>
 
 <script>
 export default {
-	name: "disclaimer",
-}
+  name: "disclaimer",
+};
 </script>
 
 <style lang="scss" scoped>
 .disclaimer {
-	background-color: black;
-	display: flex;
-	flex-flow: column;
-	width: fit-content;
-	justify-content: space-between;
+  background-color: black;
+  display: flex;
+  flex-flow: column;
+  width: fit-content;
+  justify-content: space-between;
+
 
 	&__Title {
 		margin: 25% auto;
 		@include text-stroke;
 		font-size: 40px;
-
+		animation: 1.1s infinite ease-in alternate grow;
 		@include tablet {
 			font-size: 80px;
 			margin: 15% auto;
 		}
 
-		@include pc {
-			margin: 10% auto;
-			font-size: 120px;
-		}
-	}
 
-	&__Text,
+    @include pc {
+      margin: 10% auto;
+      font-size: 120px;
+    }
+  }
+
+  &__Text,
+  &__Subtext {
+    width: 75%;
+    margin: auto;
+  }
+
+  &__Text {
+    font-size: 14px;
+    @include tablet {
+      font-size: 28px;
+    }
+    @include pc {
+      font-size: 30px;
+    }
+  }
+
+
 	&__Subtext {
-		width: 75%;
-		margin: auto;
-	}
-
-	&__Text {
-		font-size: 14px;
-		@include tablet {
-			font-size: 28px;
-		}
-		@include pc {
-			font-size: 30px;
-		}
-	}
-
-	&__Subtext {
+		display: flex;
+		justify-content: center;
 		font-size: 10px;
 		@include tablet {
 			font-size: 20px;
@@ -88,5 +95,16 @@ export default {
 			font-size: 24px;
 		}
 	}
+
 }
+@keyframes grow {
+	from {
+		color: white;
+	}
+	to {
+		color: transparent;
+	}
+}
+
+
 </style>

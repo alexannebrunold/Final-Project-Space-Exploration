@@ -1,5 +1,24 @@
 <template>
 	<div  class="end page">
+    <div class="end__particules page">
+      <vue-particles
+        color="ffffff"
+        :particleOpacity="0.7"
+        :particlesNumber="50"
+        shapeType="circle"
+        :particleSize="4"
+        linesColor="#dedede"
+        :linesWidth="0"
+        :lineLinked="true"
+        :lineOpacity="0"
+        :linesDistance="0"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push">
+      </vue-particles>
+    </div>
     <svg class="end__logo" viewBox="0 0 160 160" width="60" height="60" fill="black">
       <circle cx="80" cy="80" r="50" />
         <g transform=" matrix(0.866, -0.5, 0.25, 0.433, 80, 80)">
@@ -28,25 +47,6 @@
       <p class="end__name--5">Théo Rougier</p>
       <p class="end__name--6">Patxi Manzano</p>
     </div>
-      <vue-particles
-      class="end__particule"
-        color="#dedede"
-        :particleOpacity="0.7"
-        :particlesNumber="50"
-        shapeType="circle"
-        :particleSize="4"
-        linesColor="#dedede"
-        :linesWidth="0"
-        :lineLinked="true"
-        :lineOpacity="0"
-        :linesDistance="0"
-        :moveSpeed="3"
-        :hoverEffect="true"
-        hoverMode="grab"
-        :clickEffect="true"
-        clickMode="push"
-      >
-      </vue-particles>
 	</div>
 </template>
 
@@ -55,11 +55,19 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
+
 .end {
-	background-color: $black;
-	display: flex;
-	flex-direction: column;
-	position: relative;
+  position: absolute;
+  background-color: $black;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+
+  &__particules {
+    position: absolute;
+    min-height: 100vh;
+  }
 	&__title {
 		padding-top: 2%;
 		font-size: 18px;
@@ -199,119 +207,115 @@ export default {}
 		background: black;
 	}
 
-	&__name {
-		position: absolute;
-		margin-bottom: 1%;
-		bottom: 5%;
-		left: 0;
-		right: 0;
-		font-size: 14px;
-		font-family: "Poppins";
-		font-weight: normal;
-		@include laptop {
-			font-size: 16px;
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-		}
-		@include pc {
-			font-size: 22px;
-		}
-		&--1 {
-			transition: ease-in-out 0.4s;
-			margin-bottom: 0.5em;
-			cursor: pointer;
-			@include laptop {
-				margin-left: 1em;
-			}
-		}
-		&--1:hover {
-			z-index: 100;
-			transform: scale(1.1);
-			transition: ease-in-out 0.4s;
-			margin-left: 1.5em;
-		}
-
-		&--2 {
-			transition: ease-in-out 0.4s;
-			margin-bottom: 0.5em;
-			cursor: pointer;
-			@include laptop {
-				margin-left: 1em;
-			}
-		}
-		&--2:hover {
-			z-index: 100;
-			transform: scale(1.1);
-			transition: ease-in-out 0.4s;
-			margin-left: 1.5em;
-		}
-
-		&--3 {
-			transition: ease-in-out 0.4s;
-			margin-bottom: 0.5em;
-			cursor: pointer;
-			@include laptop {
-				margin-left: 1em;
-			}
-		}
-		&--3:hover {
-			z-index: 100;
-			transform: scale(1.1);
-			transition: ease-in-out 0.4s;
-			margin-left: 1.5em;
-		}
-
-		&--4 {
-			transition: ease-in-out 0.4s;
-			margin-bottom: 0.5em;
-			cursor: pointer;
-			@include laptop {
-				margin-left: 1em;
-			}
-		}
-		&--4:hover {
-			z-index: 100;
-			transform: scale(1.1);
-			transition: ease-in-out 0.4s;
-			margin-left: 1.5em;
-		}
-
-		&--5 {
-			transition: ease-in-out 0.4s;
-			margin-bottom: 0.5em;
-			cursor: pointer;
-			@include laptop {
-				margin-left: 1em;
-			}
-		}
-		&--5:hover {
-			z-index: 100;
-			transform: scale(1.1);
-			transition: ease-in-out 0.4s;
-			margin-left: 1.5em;
-		}
-
-		&--6 {
-			transition: ease-in-out 0.4s;
-			margin-bottom: 0.5em;
-			cursor: pointer;
-			@include laptop {
-				margin-left: 1em;
-			}
-		}
-
-		&--6:hover {
-			z-index: 100;
-			transform: scale(1.1);
-			transition: ease-in-out 0.4s;
-			margin-left: 1.5em;
-		}
-
-		&__particule {
-			z-index: -10;
-		}
-	}
+  &__name {
+    position: absolute;
+    margin-bottom: 1%;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    font-family: "Poppins";
+    font-weight: normal;
+    @include laptop {
+      font-size: 16px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    @include pc {
+      font-size: 22px;
+    }
+    &--1 {
+      transition: ease-in-out 0.4s;
+      margin-bottom: 0.5em;
+      cursor: pointer;
+      @include laptop {
+        margin-left: 1em;
+      }
+    }
+    &--1:hover {
+      z-index: 100;
+      transform: scale(1.1);
+      transition: ease-in-out 0.4s;
+      margin-left: 1.5em;
+    }
+    
+    &--2 {
+      transition: ease-in-out 0.4s;
+      margin-bottom: 0.5em;
+      cursor: pointer;
+      @include laptop {
+        margin-left: 1em;
+      }
+    }
+    &--2:hover {
+      z-index: 100;
+      transform: scale(1.1);
+      transition: ease-in-out 0.4s;
+      margin-left: 1.5em;
+    }
+    
+    &--3 {
+      transition: ease-in-out 0.4s;
+      margin-bottom: 0.5em;
+      cursor: pointer;
+      @include laptop {
+        margin-left: 1em;
+      }
+    }
+    &--3:hover {
+      z-index: 100;
+      transform: scale(1.1);
+      transition: ease-in-out 0.4s;
+      margin-left: 1.5em;
+    }
+    
+    &--4 {
+      transition: ease-in-out 0.4s;
+      margin-bottom: 0.5em;
+      cursor: pointer;
+      @include laptop {
+        margin-left: 1em;
+      }
+    }
+    &--4:hover {
+      z-index: 100;
+      transform: scale(1.1);
+      transition: ease-in-out 0.4s;
+      margin-left: 1.5em;
+    }
+    
+    &--5 {
+      transition: ease-in-out 0.4s;
+      margin-bottom: 0.5em;
+      cursor: pointer;
+      @include laptop {
+        margin-left: 1em;
+      }
+    }
+    &--5:hover {
+      z-index: 100;
+      transform: scale(1.1);
+      transition: ease-in-out 0.4s;
+      margin-left: 1.5em;
+    }
+    
+    &--6 {
+      transition: ease-in-out 0.4s;
+      margin-bottom: 0.5em;
+      cursor: pointer;
+      @include laptop {
+        margin-left: 1em;
+      }
+    }
+    
+    &--6:hover {
+      z-index: 100;
+      transform: scale(1.1);
+      transition: ease-in-out 0.4s;
+      margin-left: 1.5em;
+    }
+  }
 }
 @keyframes hover {
 	from {

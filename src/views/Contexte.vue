@@ -69,6 +69,7 @@ export default {
         padding-top: 25pt;
       }
       @include laptop {
+        padding-right: 150px;//ici le pading marche
         padding-top: 55pt;
         line-height: 120%;
       }
