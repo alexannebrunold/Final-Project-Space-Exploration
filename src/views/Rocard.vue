@@ -9,7 +9,7 @@
     </div>
     <div class="rocard__container">
       <div class="rocard__title">
-        <h1>Francis Rocard,</h1>
+        <h1>Francis Rocard</h1>
         <h2>
           Responsable des programmes d'exploitation du système solaire (CNES)
         </h2>
@@ -17,7 +17,7 @@
       <div class="rocard__citation">
         <div class="rocard__citation1">
           <p>
-            "Ca ne sert à rien, on est les meilleurs, à quoi bon continuer ?" A
+            "ça ne sert à rien, on est les meilleurs, à quoi bon continuer ?" A
             propos de la conquête lunaire arrêtée.
           </p>
         </div>
@@ -63,17 +63,58 @@
               fill="white"
             />
           </svg>
-          <div class="button"><NextButton /></div>
         </div>
         <div class="rocard__citation2">
           <p>
-            "La lune est un banc d'essai" qui permet de mieux appréhender les
+            "la lune est un banc d'essai" qui permet de mieux appréhender les
             missions pour Mars.
           </p>
         </div>
         <div class="rocard__trait"></div>
+        <div id="svgplay" class="rocard__svg">
+          <svg
+            class="play"
+            v-if="!isPlaying"
+            @click="play"
+            @click.prevent="toggle"
+            width="36"
+            height="36"
+            viewBox="0 0 36 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 0C8.05982 0 0 8.05982 0 18C0 27.9402 8.05982 36 18 36C27.9402 36 36 27.9402 36 18C36 8.05982 27.9402 0 18 0ZM23.7897 18.2772L15.0147 24.6616C14.9666 24.6962 14.9099 24.7168 14.8508 24.7213C14.7918 24.7257 14.7326 24.7138 14.6799 24.6868C14.6272 24.6598 14.5829 24.6188 14.5519 24.5683C14.521 24.5178 14.5046 24.4597 14.5045 24.4004V11.6397C14.5043 11.5804 14.5205 11.5221 14.5514 11.4714C14.5823 11.4207 14.6266 11.3796 14.6794 11.3525C14.7323 11.3255 14.7916 11.3136 14.8508 11.3182C14.9099 11.3228 14.9667 11.3437 15.0147 11.3786L23.7897 17.7589C23.8312 17.7882 23.865 17.8271 23.8883 17.8722C23.9117 17.9173 23.9239 17.9673 23.9239 18.0181C23.9239 18.0689 23.9117 18.1189 23.8883 18.164C23.865 18.2091 23.8312 18.2479 23.7897 18.2772Z"
+              fill="white"
+            />
+          </svg>
+          <svg
+            class="pause"
+            v-else
+            @click="pause"
+            @click.prevent="toggle"
+            width="512"
+            height="512"
+            viewBox="0 0 512 512"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M437.02 74.98C388.667 26.629 324.38 0 256 0C187.62 0 123.333 26.629 74.98 74.98C26.629 123.333 0 187.62 0 256C0 324.38 26.629 388.667 74.98 437.02C123.333 485.371 187.62 512 256 512C324.38 512 388.667 485.371 437.02 437.02C485.371 388.667 512 324.38 512 256C512 187.62 485.371 123.333 437.02 74.98V74.98ZM256 482C131.383 482 30 380.617 30 256C30 131.383 131.383 30 256 30C380.617 30 482 131.383 482 256C482 380.617 380.617 482 256 482V482Z"
+              fill="white"
+            />
+            <path
+              d="M346 141H286C277.716 141 271 147.716 271 156V356C271 364.284 277.716 371 286 371H346C354.284 371 361 364.284 361 356V156C361 147.716 354.284 141 346 141ZM331 341H301V171H331V341Z"
+              fill="white"
+            />
+            <path
+              d="M226 141H166C157.716 141 151 147.716 151 156V356C151 364.284 157.716 371 166 371H226C234.284 371 241 364.284 241 356V156C241 147.716 234.284 141 226 141ZM211 341H181V171H211V341Z"
+              fill="white"
+            />
+          </svg>
+        </div>
       </div>
-
+      <div class="button"><NextButton /></div>
       <div class="rocard__soundwave">
         <div id="wave" class="rocard__wave" v-if="visible">
           <i class="bar"></i>
@@ -103,7 +144,7 @@
 </template>
 
 <script>
-import NextButton from "@/components/NextButton.vue"
+import NextButton from "@/components/NextButton.vue";
 export default {
   name: "app",
   data() {
@@ -145,8 +186,8 @@ export default {
     this.player.src = this.current.src;
   },
   components: {
-		NextButton,
-	},
+    NextButton,
+  },
 };
 </script>
 
@@ -190,6 +231,7 @@ export default {
   }
 
   &__title {
+    margin-top: 5%;
     text-align: left;
     padding: 20px 20px 20px 20px;
     @include laptop {
@@ -197,14 +239,19 @@ export default {
     }
 
     h1 {
-      font-size: 22px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 24px;
+      padding: 15px 0;
       @include laptop {
         font-size: 52px;
       }
     }
 
     h2 {
+      font-weight: lighter;
       font-size: 18px;
+      padding: 15px 0;
       @include laptop {
         font-size: 32px;
       }
@@ -212,27 +259,32 @@ export default {
   }
 
   &__citation {
-    padding: 20px 20px;
+    padding: 0 20px;
     text-align: left;
     @include laptop {
       padding: 20px 50px 20px 50px;
       width: 70%;
     }
+
+    & p::first-letter {
+      text-transform: uppercase;
+    }
   }
   &__citation1 {
-    padding-bottom: 10px;
+    padding: 20px 0;
     @include laptop {
-      font-size: 20px;
-      padding-bottom: 15px;
+      margin-top: 10%;
+      font-size: 22px;
+      padding: 20px 0;
     }
   }
 
   &__citation2 {
-    padding-bottom: 10px;
+    padding: 20px 0;
     @include laptop {
-      font-size: 20px;
-      padding-top: 15%;
-      padding-bottom: 15px;
+      font-size: 22px;
+      margin-top: 10%;
+      padding: 20px 0;
     }
   }
 
@@ -398,13 +450,23 @@ export default {
   }
   .play,
   .pause {
-    padding-top: 10px;
+    padding: 15px 0;
     width: 30px;
     height: 30px;
+
+    @include laptop {
+      width: 40px;
+      height: 40px;
+      padding: 20px 0;
+    }
   }
 }
 .button {
-  margin-top: 40px;
-  justify-self: right;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 20px;
+  @include laptop {
+    padding: 50px;
+  }
 }
 </style>
