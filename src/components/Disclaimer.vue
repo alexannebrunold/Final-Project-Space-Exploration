@@ -48,16 +48,16 @@ export default {
 	components: {
 		PrimaryButton,
 	},
-}
+};
+</script>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 .disclaimer {
   background-color: black;
   display: flex;
   flex-flow: column;
   width: fit-content;
   justify-content: space-between;
-
 
 	&__Title {
 		margin: auto;
@@ -73,7 +73,6 @@ export default {
 			margin: 10% auto;
 			font-size: 120px;
 		}
-	}
 
     @include pc {
       margin: 10% auto;
@@ -124,7 +123,9 @@ export default {
 		padding-top: 5%;
 		padding-bottom: 5%;
 	}
+
 }
+
 @keyframes grow {
 	from {
 		color: white;
@@ -133,5 +134,4 @@ export default {
 		color: transparent;
 	}
 }
-
 </style>
