@@ -36,7 +36,7 @@ export default {
 	mounted() {
 		setTimeout(() => {
 			this.disclaimer = false
-		}, 16000)
+		}, 13500)
 	},
 	methods: {
 		playVideo() {
