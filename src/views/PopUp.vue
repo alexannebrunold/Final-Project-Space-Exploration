@@ -3,10 +3,10 @@
     <div class="popup__Img">
       <img class="popup__Img__Url" :src="currentPage.image" />
     </div>
+    <div class="popup__Close">
+      <BackButton :svgUrl="svgSrc" @click.native="$router.go(-1)" />
+    </div>
     <div class="popup__Content">
-      <div class="popup__Content__Close">
-        <BackButton :svgUrl="svgSrc" @click.native="$router.go(-1)" />
-      </div>
       <div class="popup__Content__Title">
         {{ currentPage.title }}
         <img class="popup__Content__Title__Logo" :src="logoUrl" />
@@ -271,6 +271,8 @@ export default {
   display: flex;
   flex-flow: column;
   background-color: $black;
+  position: relative;
+
   @include tablet {
     flex-flow: row;
   }
@@ -303,6 +305,14 @@ export default {
     }
   }
 
+  &__Close {
+    position: absolute;
+    width: fit-content;
+    top: 15px;
+    right: 5px;
+    z-index: 500;
+  }
+
   &__Content {
     display: flex;
     flex-direction: column;
@@ -311,16 +321,10 @@ export default {
     width: 80%;
     margin: 0 auto;
     justify-content: center;
+    position: relative;
     @include laptop {
       width: 50%;
       padding-top: 0px;
-    }
-
-    &__Close {
-      display: flex;
-      width: 100%;
-      height: auto;
-      justify-content: flex-end;
     }
 
     &__Title {
@@ -332,7 +336,6 @@ export default {
       @include text-stroke;
       text-align: center;
       align-items: center;
-      height: 150px;
       justify-content: space-between;
 
       @include tablet {
@@ -378,7 +381,7 @@ export default {
       @include tablet {
         font-size: 40px;
         width: 85%;
-        padding-top: 75px;
+        padding-top: 20px;
       }
 
       @include laptop {
@@ -392,15 +395,16 @@ export default {
       font-weight: 200;
       margin: 0 auto;
       padding-top: 10%;
+      line-height: 140%;
 
       @include tablet {
-        font-size: 24px;
-        font-weight: 200;
+        font-size: 16px;
+        font-weight: 300;
         width: 85%;
       }
 
       @include laptop {
-        font-size: 28px;
+        font-size: 18px;
       }
     }
 

@@ -2,8 +2,8 @@
 	<div class="learn">
 		<MoreInfo
 			class="enSavoirPlus__Info"
-			:imageUrlLeft="imageSrcLeft"
-			:videoUrlRight="imageSrcRight"
+      :imageSrcLeft="imageSrcLeft"
+      :imageSrcRight="imageSrcRight"
 			titleInfoLeft=""
 			titleInfoRight=""
 			textInfoLeft="Le bâtiment d'assemblage (VAB) de la fusée Saturn V ; la fusée de 110 mètres de haut en cours de déplacement donne l'échelle.Le Centre spatial Kennedy (KSC), situé sur l'île Meritt en Floride, est le site d'où sont lancées les fusées géantes du programme Apollo. La NASA, qui a besoin d'installations à l'échelle de la fusée Saturn V, met en construction en 1963 cette nouvelle base de lancement qui jouxte celle de Cap Canaveral appartenant à l'Armée de l'Air américaine."

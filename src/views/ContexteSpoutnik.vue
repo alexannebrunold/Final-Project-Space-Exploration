@@ -2,8 +2,8 @@
   <div class="learn">
     <MoreInfo
       class="enSavoirPlus__Info"
-      :imageUrlLeft="imageSrcLeft"
-      :imageUrlRight="imageSrcRight"
+      :imageSrcLeft="imageSrcLeft"
+      :imageSrcRight="imageSrcRight"
       titleInfoLeft="R-7 Semiorka, lanceur de Spoutnik 1"
       titleInfoRight="Spoutnik 1, premier satellite artificel de la Terre"
       textInfoLeft="Premier missile balistique intercontinental développé par l'Union soviétique. 

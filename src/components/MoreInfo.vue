@@ -4,16 +4,7 @@
 			<BackButton :svgUrl="svgSrc" textBackButton="Retour" @click.native="$router.go(-1)" />
 		</div>
 		<div class="moreInfo__left">
-			<img class="moreInfo__left--img" :src="imageUrlLeft" />
-			<iframe
-				width="500"
-				height="406"
-				:src="videoUrlLeft"
-				allow="accelerometer; autoplay; encrypted-media; gyroscope; "
-				start="1"
-				autoplay="1"
-				controls="2"
-			></iframe>
+			<img class="moreInfo__left--img" :src="imageSrcLeft" />
 			<h1 class="moreInfo__left--title">
 				{{ titleInfoLeft }}
 			</h1>
@@ -23,22 +14,13 @@
 		</div>
 		<span class="moreInfo__line"></span>
 		<div class="moreInfo__right">
-			<iframe
-				width="500"
-				height="406"
-				:src="videoUrlRight"
-				allow="accelerometer; autoplay; encrypted-media; gyroscope; "
-				start="1"
-				autoplay="1"
-				controls="2"
-			></iframe>
+      <img class="moreInfo__left--img" :src="imageSrcRight" />
 			<h1 class="moreInfo__right--title">
 				{{ titleInfoRight }}
 			</h1>
 			<p p class="moreInfo__right--text">
 				{{ textInfoRight }}
 			</p>
-
 			<p></p>
 			<div class="moreInfo__next">
 				<NextButton />
@@ -62,9 +44,8 @@ export default {
 		BackButton,
 	},
 	props: {
-		imageUrlLeft: {},
-		videoUrlLeft: {},
-		videoUrlRight: {},
+		imageSrcLeft: {},
+		imageSrcRight: {},
 		titleInfoLeft: String,
 		titleInfoRight: String,
 		textInfoLeft: String,
@@ -80,6 +61,7 @@ export default {
 	background-color: $black;
 	position: relative;
 	overflow: hidden;
+  max-height: 100vh;
 	@include tablet {
 		flex-direction: row;
 	}
@@ -169,19 +151,6 @@ export default {
 			height: 100vh;
 		}
 		@include laptop {
-		}
-	}
-
-	&__right--video {
-		width: 100vw;
-
-		object-fit: cover;
-		@include tablet {
-			max-width: 100%;
-			height: auto;
-		}
-		@include laptop {
-			max-width: 65%;
 		}
 	}
 
