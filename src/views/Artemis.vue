@@ -129,7 +129,7 @@ export default {
 
 <style lang="scss">
 .line[data-v-7f3aebf1] {
-	top: 37%;
+	top: 30%;
 	left: 100px;
 }
 
