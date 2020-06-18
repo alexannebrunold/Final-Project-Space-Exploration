@@ -128,8 +128,8 @@ export default {
 </script>
 
 <style lang="scss">
-.line[data-v-7f3aebf1] {
-	top: 30%;
+.line[data-v-2aa9efe1] {
+	top: 37%;
 	left: 100px;
 }
 
