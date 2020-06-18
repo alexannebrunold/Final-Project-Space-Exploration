@@ -58,6 +58,7 @@ export default {
 <style lang="scss">
 .clep {
 	background-color: $black;
+
 	@include laptop {
 		display: flex;
 		flex-direction: row-reverse;
