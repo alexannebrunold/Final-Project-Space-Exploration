@@ -155,6 +155,11 @@ export default {
 		display: flex;
 		flex-direction: row-reverse;
 	}
+	&__container {
+		@include pc {
+			margin-right: 10%;
+		}
+	}
 	&__Img {
 		height: auto;
 		width: 100%;
@@ -167,6 +172,10 @@ export default {
 			height: inherit;
 			@include laptop {
 				display: block;
+				object-fit: cover;
+			}
+			@include pc {
+				width: 35vw;
 			}
 		}
 		&__Phone {
@@ -182,9 +191,9 @@ export default {
 	}
 	&__title {
 		text-align: left;
-		padding: 20px 20px 20px 20px;
+		padding: 10px;
 		@include laptop {
-			padding: 50px 50px 50px 50px;
+			padding: 50px;
 		}
 		h1 {
 			font-weight: bold;
@@ -194,19 +203,24 @@ export default {
 				font-size: 42px;
 			}
 			@include laptop {
-				padding: 20px 0 50px 0;
+				padding: 40px 0;
 				font-size: 62px;
+			}
+			@include pc {
+				padding: 60px 0;
 			}
 		}
 		h2 {
-			padding: 20px 0;
+			padding: 10px 0;
 			font-size: 18px;
 			@include tablet {
 				font-size: 26px;
 			}
 			@include laptop {
-				padding: 20px 0 50px 0;
-				font-size: 32px;
+				font-size: 26px;
+			}
+			@include pc {
+				font-size: 28px;
 			}
 		}
 	}
@@ -223,19 +237,22 @@ export default {
 		}
 
 		@include laptop {
-			padding: 20px 50px 20px 50px;
+			padding: 0 50px 0 50px;
 			width: 70%;
+		}
+		@include pc {
+			width: 80%;
 		}
 	}
 	&__citation1 {
 		padding: 20px 0;
 
 		@include tablet {
-			font-size: 22px;
+			font-size: 16px;
 		}
 
 		@include laptop {
-			font-size: 26px;
+			font-size: 18px;
 		}
 
 		& p {
@@ -260,7 +277,7 @@ export default {
 		padding: 20px;
 
 		@include tablet {
-			padding: 50px;
+			padding: 30px;
 		}
 		@include laptop {
 			display: flex;

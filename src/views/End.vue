@@ -5,6 +5,7 @@
 			<li @click="$router.push('/kennedy')">Apollo</li>
 			<li @click="$router.push('/vostok')">Luna</li>
 			<li @click="$router.push('/clep')">Artemis</li>
+			<li @click="$router.push('/end')" class="currentPart">End</li>
 		</ul>
 		<div class="end__particules page">
 			<vue-particles

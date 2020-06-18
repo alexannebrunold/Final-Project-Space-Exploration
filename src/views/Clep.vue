@@ -5,6 +5,7 @@
 			<li @click="$router.push('/kennedy')">Apollo</li>
 			<li @click="$router.push('/vostok')">Luna</li>
 			<li @click="$router.push('/clep')" class="currentPart">Artemis</li>
+			<li @click="$router.push('/end')">End</li>
 		</ul>
 		<div class="clep__Img">
 			<img class="clep__Img__Laptop" src="../assets/img/clepDesktop.jpg" />
@@ -101,6 +102,7 @@ export default {
 	&__title {
 		width: fit-content;
 		margin: 0 auto;
+		font-size: 60px;
 		@include text-stroke;
 		text-align: center;
 
@@ -110,10 +112,13 @@ export default {
 		}
 
 		@include laptop {
-			padding-top: 0px;
 			font-size: 106px;
 			-webkit-text-stroke: 2px;
 			-webkit-text-stroke-color: $white;
+		}
+		@include pc {
+			font-size: 150px;
+			padding-bottom: 5%;
 		}
 	}
 
@@ -128,8 +133,11 @@ export default {
 			font-size: 18px;
 			line-height: 140%;
 			@include laptop {
-				font-size: 42px;
+				font-size: 26px;
 				width: 80%;
+			}
+			@include pc {
+				font-size: 36px;
 			}
 		}
 	}
@@ -143,12 +151,16 @@ export default {
 		@include laptop {
 			padding: 20px 50px 20px 50px;
 			width: 70%;
-			font-size: 24px;
+			font-size: 18px;
+		}
+		@include pc {
+			font-size: 22px;
 		}
 	}
 }
 .button {
 	margin-top: 40px;
-	justify-self: right;
+	margin-right: 20px;
+	text-align: right;
 }
 </style>
