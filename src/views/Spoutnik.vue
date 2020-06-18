@@ -1,7 +1,7 @@
 <template>
 	<div class="spoutnik page" @click="play()">
 		<div>
-			<BackButton class="spoutnik__back" textBackButton="Retour" @click.native="$router.go(-1)" />
+			<BackButton :svgUrl="svgSrc" class="spoutnik__back" textBackButton="Retour" @click.native="$router.go(-1)" />
 		</div>
 		<div class="spoutnik__container">
 			<vue-typed-js
@@ -39,6 +39,7 @@ export default {
 
 	data() {
 		return {
+			svgSrc: require("../assets/img/arrow.svg"),
 			disclaimer: true,
 			duration: " ",
 		}

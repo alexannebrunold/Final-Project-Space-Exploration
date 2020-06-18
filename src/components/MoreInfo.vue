@@ -113,7 +113,7 @@ export default {
 	}
 
 	&__left--text {
-		line-height: 130%;
+		line-height: 140%;
 		font-family: "Poppins";
 		font-size: 14px;
 		font-weight: 300;
@@ -127,7 +127,7 @@ export default {
 			font-size: 16px;
 		}
 		@include pc {
-			font-size: 24px;
+			font-size: 20px;
 		}
 	}
 
@@ -172,7 +172,7 @@ export default {
 	}
 
 	&__right--text {
-		line-height: 130%;
+		line-height: 140%;
 		font-family: "Poppins";
 		font-size: 14px;
 		font-weight: 300;
@@ -187,7 +187,7 @@ export default {
 			font-size: 16px;
 		}
 		@include pc {
-			font-size: 24px;
+			font-size: 20px;
 		}
 	}
 

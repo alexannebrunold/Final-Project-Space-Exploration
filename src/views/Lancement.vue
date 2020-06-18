@@ -7,7 +7,7 @@
 			<li @click="$router.push('/clep')">Artemis</li>
 		</ul>
 		<div>
-			<BackButton class="launch__back" textBackButton="Retour" @click.native="$router.go(-1)" />
+			<BackButton :svgUrl="svgSrc" class="launch__back" textBackButton="Retour" @click.native="$router.go(-1)" />
 			<PrimaryButton
 				textPrimaryButton="Lancer Spoutnik 1"
 				class="launch__button"
@@ -27,6 +27,11 @@ export default {
 		PrimaryButton,
 		BackButton,
 	},
+	data() {
+	return {
+		svgSrc: require("../assets/img/arrow.svg"),
+	}
+},
 	methods: {
 		play() {
 			this.$refs.video.play()
