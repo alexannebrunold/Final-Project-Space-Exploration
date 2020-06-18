@@ -5,6 +5,7 @@
 			<li @click="$router.push('/kennedy')">Apollo</li>
 			<li @click="$router.push('/vostok')" class="currentPart">Luna</li>
 			<li @click="$router.push('/clep')">Artemis</li>
+			<li @click="$router.push('/end')">End</li>
 		</ul>
 		<Info
 			class="vostok__info"

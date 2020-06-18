@@ -9,6 +9,7 @@
 					<li @click="$router.push('/kennedy')">Apollo</li>
 					<li @click="$router.push('/vostok')">Luna</li>
 					<li @click="$router.push('/clep')">Artemis</li>
+					<li @click="$router.push('/end')">End</li>
 				</ul>
 				<video rel="preload" autoplay ref="video" loop class="home__video">
 					<source src="@/assets/videos/bg-video.mp4" type="video/mp4" />

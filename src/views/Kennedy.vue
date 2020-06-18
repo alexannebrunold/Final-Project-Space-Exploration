@@ -5,6 +5,7 @@
 			<li @click="$router.push('/kennedy')" class="currentPart">Apollo</li>
 			<li @click="$router.push('/vostok')">Luna</li>
 			<li @click="$router.push('/clep')">Artemis</li>
+			<li @click="$router.push('/end')">End</li>
 		</ul>
 		<div class="kennedy__Img">
 			<img class="kennedy__Img__Laptop" src="../assets/img/kennedy.png" />
