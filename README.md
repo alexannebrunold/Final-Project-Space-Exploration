@@ -15,7 +15,7 @@ https://onthemoon.netlify.app/
 
 ## Ce qu'on a utilisé :
 
-Front : VueJs, Sass
+Front : VueJs, Vue Router, Sass
 
 Librairies : Vue-type-js, vue-particles, vue-page-transition
 
