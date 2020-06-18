@@ -9,7 +9,7 @@
 		<Info
 			class="context__info"
 			:imageUrl="imageSrc"
-			quoteInfo="Moi envoyer fusée dans espace faire vroum"
+			quoteInfo="Это задача человека: покорить пространство"
 			titleInfo="Sergei"
 			subtitleInfo="Le premier satellite dans l'espace"
 			textInfo="Ingénieur soviétique à l'origine de nombreuses grandes premières spatiales, Sergueï Pavlovitch Korolev naît à Jitomir, en Ukraine, le 12 janvier 1907."
