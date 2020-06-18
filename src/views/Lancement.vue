@@ -1,5 +1,5 @@
 <template>
-	<div class="launch page" @click="play()">
+	<div class="launch page">
 		<ul class="nav__missions">
 			<li @click="$router.push('/contexte')" class="currentPart">Spoutnik</li>
 			<li @click="$router.push('/kennedy')">Apollo</li>
@@ -12,6 +12,7 @@
 				textPrimaryButton="Lancer Spoutnik 1"
 				class="launch__button"
 				@click.native="$router.push('/Liftoff')"
+				@click="play()"
 			/>
 		</div>
 	</div>
