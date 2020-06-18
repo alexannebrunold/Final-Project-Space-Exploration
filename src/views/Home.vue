@@ -5,7 +5,7 @@
 			<div v-show="!disclaimer">
 				<Main class="home__main" />
 				<ul class="nav__missions">
-					<li @click="$router.push('/home')" class="currentPart">Home</li>
+					<li @click="$router.push('/')" class="currentPart">Home</li>
 					<li @click="$router.push('/contexte')">Spoutnik</li>
 					<li @click="$router.push('/kennedy')">Apollo</li>
 					<li @click="$router.push('/vostok')">Luna</li>
