@@ -159,7 +159,7 @@ export default {
 </script>
 
 <style lang="scss">
-.line[data-v-7f3aebf1] {
+.line[data-v-2aa9efe1] {
 	top: 46%;
 }
 .luna {
