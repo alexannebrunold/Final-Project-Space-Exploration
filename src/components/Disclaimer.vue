@@ -1,5 +1,4 @@
 <template>
-
 	<div class="disclaimer page">
 		<div class="disclaimer__Title">
 			<h1>Attention</h1>
@@ -19,9 +18,7 @@
 		</div>
 		<div class="disclaimer__here">
 			<vue-typed-js
-				:strings="[
-					'Clique sur la page',
-				]"
+				:strings="['Clique sur la page']"
 				:typeSpeed="75"
 				:smartBackspace="true"
 				:showCursor="false"
@@ -29,24 +26,23 @@
 			>
 				<p class="typing here"></p>
 			</vue-typed-js>
-			</div>
+		</div>
 	</div>
-
 </template>
 
 <script>
 export default {
 	name: "disclaimer",
-};
+}
 </script>
 
 <style scoped lang="scss">
 .disclaimer {
-  background-color: black;
-  display: flex;
-  flex-flow: column;
-  width: fit-content;
-  justify-content: space-between;
+	background-color: black;
+	display: flex;
+	flex-flow: column;
+	width: fit-content;
+	justify-content: space-between;
 
 	&__Title {
 		margin: auto;
@@ -61,13 +57,13 @@ export default {
 			margin: 10% auto;
 			font-size: 95px;
 		}
-  }
+	}
 
-  &__Text,
-  &__Subtext {
-    width: 75%;
-    margin: auto;
-  }
+	&__Text,
+	&__Subtext {
+		width: 75%;
+		margin: auto;
+	}
 
 	&__Text {
 		line-height: 140%;
@@ -82,8 +78,6 @@ export default {
 			width: 75%;
 		}
 	}
-
-
 
 	&__here {
 		font-weight: bold;
