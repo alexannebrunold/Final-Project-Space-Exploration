@@ -1,5 +1,5 @@
 <template>
-	<div class="launch page">
+	<div class="launch page" @click="play()">
 		<div>
 			<BackButton class="launch__back" textBackButton="Retour" @click.native="$router.go(-1)" />
 			<PrimaryButton
@@ -19,6 +19,12 @@ export default {
 	components: {
 		PrimaryButton,
 		BackButton,
+	},
+	methods: {
+		play() {
+			this.$refs.video.play()
+			console.log(this.$refs.video.play())
+		},
 	},
 }
 </script>
