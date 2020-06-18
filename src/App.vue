@@ -52,8 +52,10 @@ export default {
 	}
 }
 
-
-.overlay-left,  .overlay-right,  .overlay-top,  .overlay-bottom   {
-    background: #191919 !important;
+.overlay-left,
+.overlay-right,
+.overlay-top,
+.overlay-bottom {
+	background: #191919 !important;
 }
 </style>
