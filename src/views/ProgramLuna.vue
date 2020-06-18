@@ -1,6 +1,6 @@
 <template>
 	<div class="programluna">
-		<ul class="programluna__missions">
+		<ul class="nav__missions">
 			<li @click="$router.push('/contexte')">Spoutnik</li>
 			<li @click="$router.push('/kennedy')">Apollo</li>
 			<li @click="$router.push('/vostok')" class="currentPart">Luna</li>
@@ -49,31 +49,6 @@ export default {
 
 .programluna {
 	position: relative;
-	&__missions {
-		display: none;
-		@include tablet {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			position: absolute;
-			top: 5px;
-			right: 15px;
-			font-size: 18px;
-			font-family: "Poppins";
-			font-weight: lighter;
-			li {
-				cursor: pointer;
-				margin-left: 0.7em;
-				transition: ease-in-out 0.4s;
-				z-index: 200;
-				user-select: none;
-			}
-			li:hover {
-				transition: ease-in-out 0.4s;
-				transform: translateY(5px);
-			}
-		}
-	}
 	&__Button {
 		position: absolute;
 		width: auto;

@@ -1,6 +1,6 @@
 <template>
 	<div class="kennedy page">
-		<ul class="kennedy__missions">
+		<ul class="nav__missions">
 			<li @click="$router.push('/contexte')">Spoutnik</li>
 			<li @click="$router.push('/kennedy')" class="currentPart">Apollo</li>
 			<li @click="$router.push('/vostok')">Luna</li>
@@ -154,33 +154,6 @@ export default {
 	background-color: $black;
 	display: flex;
 	flex-direction: column;
-	&__missions {
-		display: none;
-		color: $black;
-		@include tablet {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			position: absolute;
-			top: 5px;
-			right: 15px;
-			font-size: 18px;
-			font-family: "Poppins";
-			font-weight: lighter;
-
-			li {
-				cursor: pointer;
-				margin-left: 0.7em;
-				transition: ease-in-out 0.4s;
-				z-index: 200;
-				user-select: none;
-			}
-			li:hover {
-				transition: ease-in-out 0.4s;
-				transform: translateY(5px);
-			}
-		}
-	}
 	@include laptop {
 		display: flex;
 		flex-direction: row-reverse;
