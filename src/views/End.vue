@@ -55,7 +55,7 @@
 		</div>
 		<div class="end__image" @click="pause" @click.prevent="toggle">
 			<img src="../assets/img/moon.png" alt="" />
-			<p>Visez les étoiles et vous atteindrez la lune.</p>
+			<p>Visez les étoiles et vous atteindrez la Lune.</p>
 		</div>
 		<div class="end__textRight">
 			<p>
@@ -66,7 +66,11 @@
 					Ce site est issu d’un projet étudiant
 				</a>
 			</p>
-			<img src="../assets/img/github.svg" alt="" />
+			<img
+				src="../assets/img/github.svg"
+				alt=""
+				href="https://github.com/alexannebrunold/Final-Project-Space-Exploration"
+			/>
 		</div>
 		<div class="end__name">
 			<p class="end__name--1">
