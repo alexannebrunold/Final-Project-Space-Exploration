@@ -1,6 +1,7 @@
 <template>
 	<div class="kennedy page">
 		<ul class="nav__missions">
+			<li @click="$router.push('/home')">Home</li>
 			<li @click="$router.push('/contexte')">Spoutnik</li>
 			<li @click="$router.push('/kennedy')" class="currentPart">Apollo</li>
 			<li @click="$router.push('/vostok')">Luna</li>

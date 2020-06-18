@@ -1,13 +1,20 @@
 <template>
 	<div class="launch page">
 		<ul class="nav__missions">
+			<li @click="$router.push('/home')">Home</li>
 			<li @click="$router.push('/contexte')" class="currentPart">Spoutnik</li>
 			<li @click="$router.push('/kennedy')">Apollo</li>
 			<li @click="$router.push('/vostok')">Luna</li>
 			<li @click="$router.push('/clep')">Artemis</li>
+			<li @click="$router.push('/end')">End</li>
 		</ul>
 		<div>
-			<BackButton :svgUrl="svgSrc" class="launch__back" textBackButton="Retour" @click.native="$router.go(-1)" />
+			<BackButton
+				:svgUrl="svgSrc"
+				class="launch__back"
+				textBackButton="Retour"
+				@click.native="$router.go(-1)"
+			/>
 			<PrimaryButton
 				textPrimaryButton="Lancer Spoutnik 1"
 				class="launch__button"
@@ -28,10 +35,10 @@ export default {
 		BackButton,
 	},
 	data() {
-	return {
-		svgSrc: require("../assets/img/arrow.svg"),
-	}
-},
+		return {
+			svgSrc: require("../assets/img/arrow.svg"),
+		}
+	},
 	methods: {
 		play() {
 			this.$refs.video.play()

@@ -1,10 +1,12 @@
 <template>
 	<div class="houbolt">
 		<ul class="nav__missions">
+			<li @click="$router.push('/home')">Home</li>
 			<li @click="$router.push('/contexte')">Spoutnik</li>
 			<li @click="$router.push('/kennedy')" class="currentPart">Apollo</li>
 			<li @click="$router.push('/vostok')">Luna</li>
 			<li @click="$router.push('/clep')">Artemis</li>
+			<li @click="$router.push('/end')">End</li>
 		</ul>
 		<Info
 			class="houbolt__info"
