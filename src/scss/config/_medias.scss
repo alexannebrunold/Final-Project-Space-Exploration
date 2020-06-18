@@ -1,18 +1,45 @@
 @mixin tablet {
-     @media (min-width:$tablet){
-        @content;
-    }
- }
+	@media (min-width: $tablet) {
+		@content;
+	}
+}
 
 @mixin laptop {
-  @media (min-width: $laptop) {
-    @content;
-  }
+	@media (min-width: $laptop) {
+		@content;
+	}
 }
 
 @mixin pc {
-  @media (min-width: $pc) {
-    @content;
-  }
+	@media (min-width: $pc) {
+		@content;
+	}
 }
 
+.nav__missions {
+	display: none;
+	@include tablet {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: absolute;
+		top: 5px;
+		right: 15px;
+		font-size: 18px;
+		font-family: "Poppins";
+		font-weight: lighter;
+		z-index: 10;
+
+		li {
+			cursor: pointer;
+			margin-left: 0.7em;
+			transition: ease-in-out 0.4s;
+			z-index: 200;
+			user-select: none;
+		}
+		li:hover {
+			transition: ease-in-out 0.4s;
+			transform: translateY(5px);
+		}
+	}
+}

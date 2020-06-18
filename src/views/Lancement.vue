@@ -1,5 +1,11 @@
 <template>
-	<div class="launch page">
+	<div class="launch page" @click="play()">
+		<ul class="nav__missions">
+			<li @click="$router.push('/contexte')" class="currentPart">Spoutnik</li>
+			<li @click="$router.push('/kennedy')">Apollo</li>
+			<li @click="$router.push('/vostok')">Luna</li>
+			<li @click="$router.push('/clep')">Artemis</li>
+		</ul>
 		<div>
 			<BackButton class="launch__back" textBackButton="Retour" @click.native="$router.go(-1)" />
 			<PrimaryButton
@@ -19,6 +25,12 @@ export default {
 	components: {
 		PrimaryButton,
 		BackButton,
+	},
+	methods: {
+		play() {
+			this.$refs.video.play()
+			console.log(this.$refs.video.play())
+		},
 	},
 }
 </script>
