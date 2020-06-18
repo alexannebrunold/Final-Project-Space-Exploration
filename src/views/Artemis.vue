@@ -49,7 +49,7 @@
       </p>
       <PrimaryButton
         class="endTimeline--button"
-        textPrimaryButton="Artemis"
+        textPrimaryButton="END"
         @click.native="$router.push('/end')"
       />
     </div>
